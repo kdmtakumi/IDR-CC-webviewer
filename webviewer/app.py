@@ -364,32 +364,51 @@ def compute_subcellular_counts(
     params: Sequence[Any],
 ) -> Tuple[List[Tuple[str, int]], int, int]:
     conn = get_db_connection()
-    query = f"SELECT subcellular_location FROM {table} p {where_clause}"
-    counts: Dict[str, int] = {}
+    counts: List[Tuple[str, int]] = []
     total_entries = 0
     unknown_count = 0
-    with conn.cursor(name="subcellular_cursor") as cur:
-        cur.itersize = 1000
-        cur.execute(query, params)
-        for (value,) in cur:
-            total_entries += 1
-            if not value:
-                unknown_count += 1
-                continue
-            unique_locations = set()
-            for raw in value.split(","):
-                key = raw.strip()
-                if not key:
-                    continue
-                lowered = key.lower()
-                if lowered in unique_locations:
-                    continue
-                unique_locations.add(lowered)
-                counts[key] = counts.get(key, 0) + 1
-            if not unique_locations:
-                unknown_count += 1
-    ordered = sorted(counts.items(), key=lambda item: item[1], reverse=True)
-    return ordered, total_entries, unknown_count
+
+    stats_sql = f"""
+        SELECT
+            COUNT(*) AS total_entries,
+            COUNT(*) FILTER (
+                WHERE COALESCE(TRIM(subcellular_location), '') = ''
+            ) AS unknown_count
+        FROM {table} p
+        {where_clause}
+    """
+    with conn.cursor() as cur:
+        cur.execute(stats_sql, params)
+        row = cur.fetchone()
+        if row:
+            total_entries = row[0] or 0
+            unknown_count = row[1] or 0
+
+    if total_entries:
+        counts_sql = f"""
+            WITH filtered AS (
+                SELECT subcellular_location
+                FROM {table} p
+                {where_clause}
+            ), exploded AS (
+                SELECT TRIM(value) AS loc
+                FROM filtered,
+                     LATERAL regexp_split_to_table(
+                         COALESCE(subcellular_location, ''), ','
+                     ) AS value
+            )
+            SELECT loc, COUNT(*) AS cnt
+            FROM exploded
+            WHERE loc <> ''
+            GROUP BY loc
+            ORDER BY cnt DESC
+            LIMIT 100
+        """
+        with conn.cursor() as cur:
+            cur.execute(counts_sql, params)
+            counts = [(row[0], int(row[1])) for row in cur.fetchall()]
+
+    return counts, total_entries, unknown_count
 
 
 def fetch_protein_detail(uniprot_id: str) -> Optional[Dict[str, Any]]:
