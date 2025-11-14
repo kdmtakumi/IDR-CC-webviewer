@@ -52,3 +52,14 @@ Open `http://127.0.0.1:5000/` and authenticate with the shared password (default
 
 ## Outstanding Tasks
 - Some of the 3,070 additional entries still lack gene/protein/location/domain annotations because the information is not yet released on UniProt. Fetch the latest metadata through the UniProt API when needed.
+
+## Deployment (Render)
+1. Push your code to GitHub (`kdmtakumi/IDR-CC-webviewer`).
+2. On Render, create a new **Web Service** with Runtime = Native.
+3. Build command: `pip install --upgrade pip && pip install -r requirements.txt`
+4. Start command: `gunicorn app:app --chdir webviewer --bind 0.0.0.0:$PORT`
+5. Environment variables:
+   - `SUPABASE_DB_URL` = `postgresql://postgres.stjtqqlqpoxcpzywrxrz:ShimoLAB0501@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres?sslmode=require&client_encoding=utf8`
+   - `IDRCC_PASSWORD` = `ShimoLAB0501`
+   - `IDRCC_SECRET_KEY` = (任意の長い文字列)
+6. Deploy and access https://idr-cc-webviewer.onrender.com
