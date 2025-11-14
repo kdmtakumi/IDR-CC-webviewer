@@ -113,6 +113,26 @@
         value="{{ location_term or '' }}"
         placeholder="Location keyword"
       />
+      <label class="inline-label" for="length_range">Protein length (aa)</label>
+      <span class="range-wrap">
+        <input
+          type="number"
+          id="length_min"
+          name="length_min"
+          min="0"
+          value="{{ length_min if length_min is not none else '' }}"
+          placeholder="min"
+        />
+        <span class="range-separator">to</span>
+        <input
+          type="number"
+          id="length_max"
+          name="length_max"
+          min="0"
+          value="{{ length_max if length_max is not none else '' }}"
+          placeholder="max"
+        />
+      </span>
       <label class="checkbox-inline" for="hide_missing_protein">
         <input
           type="checkbox"
