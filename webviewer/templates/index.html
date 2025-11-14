@@ -311,6 +311,19 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
               }
             }
+          },
+          onClick: (evt, elements) => {
+            if (!elements || !elements.length) {
+              return;
+            }
+            const idx = elements[0].index;
+            const selectedLabel = labels[idx];
+            const locationInput = document.getElementById('location_term');
+            const form = document.querySelector('.filter-form');
+            if (selectedLabel && locationInput && form) {
+              locationInput.value = selectedLabel;
+              form.submit();
+            }
           }
         }
       });
