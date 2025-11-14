@@ -1,0 +1,335 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ page_title or 'Browse Human IDR+CC Entries' }}{% endblock %}
+
+{% block content %}
+  <h1>{{ page_title or 'Browse entries' }}</h1>
+  {% if dataset_note %}
+    <p class="dataset-note">{{ dataset_note }}</p>
+  {% endif %}
+
+  <div class="filters">
+    <form method="get" action="{{ form_action or url_for('index') }}" class="filter-form">
+      <label for="search">
+        <span>Filter:</span>
+      </label>
+      <input
+        type="text"
+        id="search"
+        name="search"
+        value="{{ search }}"
+        placeholder="Gene, UniProt ID, protein name, location..."
+      />
+      <label for="search_mode">Search field:</label>
+      <select id="search_mode" name="search_mode">
+        {% set current_mode = search_mode or 'all' %}
+        {% for value, label in SEARCH_MODE_OPTIONS %}
+          <option value="{{ value }}" {% if value == current_mode %}selected{% endif %}>
+            {{ label }}
+          </option>
+        {% endfor %}
+      </select>
+      <label for="per_page">Per page:</label>
+      <select id="per_page" name="per_page">
+        {% for option in [10, 25, 50, 100] %}
+          <option value="{{ option }}" {% if option == per_page %}selected{% endif %}>
+            {{ option }}
+          </option>
+        {% endfor %}
+      </select>
+      <label for="idr_min">IDR length (aa) ≥</label>
+      <input
+        type="number"
+        id="idr_min"
+        name="idr_min"
+        min="0"
+        value="{{ idr_min if idr_min is not none else '' }}"
+        placeholder="e.g. 100"
+      />
+      <label for="cc_min">CC length (aa) ≥</label>
+      <input
+        type="number"
+        id="cc_min"
+        name="cc_min"
+        min="0"
+        value="{{ cc_min if cc_min is not none else '' }}"
+        placeholder="e.g. 50"
+      />
+      <label for="idr_pct_min">IDR%</label>
+      <input
+        type="number"
+        id="idr_pct_min"
+        name="idr_pct_min"
+        step="0.1"
+        min="0"
+        max="100"
+        value="{{ idr_pct_min if idr_pct_min is not none else '' }}"
+        placeholder="min"
+      />
+      <span class="range-separator">to</span>
+      <input
+        type="number"
+        id="idr_pct_max"
+        name="idr_pct_max"
+        step="0.1"
+        min="0"
+        max="100"
+        value="{{ idr_pct_max if idr_pct_max is not none else '' }}"
+        placeholder="max"
+      />
+      <label for="cc_pct_min">CC%</label>
+      <input
+        type="number"
+        id="cc_pct_min"
+        name="cc_pct_min"
+        step="0.1"
+        min="0"
+        max="100"
+        value="{{ cc_pct_min if cc_pct_min is not none else '' }}"
+        placeholder="min"
+      />
+      <span class="range-separator">to</span>
+      <input
+        type="number"
+        id="cc_pct_max"
+        name="cc_pct_max"
+        step="0.1"
+        min="0"
+        max="100"
+        value="{{ cc_pct_max if cc_pct_max is not none else '' }}"
+        placeholder="max"
+      />
+      <input
+        type="text"
+        id="domain_term"
+        name="domain_term"
+        value="{{ domain_term or '' }}"
+        placeholder="Domain keyword"
+      />
+      <input
+        type="text"
+        id="location_term"
+        name="location_term"
+        value="{{ location_term or '' }}"
+        placeholder="Location keyword"
+      />
+      <label class="checkbox-inline" for="hide_missing_protein">
+        <input
+          type="checkbox"
+          id="hide_missing_protein"
+          name="hide_missing_protein"
+          value="1"
+          {% if hide_missing_protein %}checked{% endif %}
+        />
+        Hide entries with missing protein names
+      </label>
+      <button type="submit">Apply</button>
+      {% if search or (search_mode and search_mode != 'all') or hide_missing_protein or idr_min is not none or cc_min is not none or idr_pct_min is not none or idr_pct_max is not none or cc_pct_min is not none or cc_pct_max is not none or (domain_term or location_term) or per_page != 25 %}
+        <a class="clear-filter" href="{{ form_action or url_for('index') }}">Clear</a>
+      {% endif %}
+    </form>
+  </div>
+
+  <table class="results-table">
+    <thead>
+      <tr>
+        <th class="col-small">#</th>
+        <th class="col-narrow">UniProt ID</th>
+        <th class="col-narrow">Gene Name</th>
+        <th class="col-wide">Protein Name</th>
+        <th class="col-wide">Subcellular Location</th>
+        <th class="col-small">Length</th>
+        <th class="col-small">IDR %</th>
+        <th class="col-small">CC %</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for record in records %}
+        <tr>
+          <td class="col-small">{{ loop.index + (page - 1) * per_page }}</td>
+          <td class="col-narrow">
+            <a href="{{ url_for('protein_detail', uniprot_id=record.uniprot_id, return_to=current_path) }}">
+              {{ record.uniprot_id }}
+            </a>
+          </td>
+          <td class="col-narrow">{{ record.gene_name }}</td>
+          <td class="col-wide">{{ record.protein_name }}</td>
+          <td class="col-wide">
+            {% if record.subcellular_location %}
+              <span class="location-text" title="{{ record.subcellular_location }}">{{ record.subcellular_location }}</span>
+            {% else %}
+              —
+            {% endif %}
+          </td>
+          <td class="col-small">{{ "{:,}".format(record.sequence_length) }}</td>
+          <td class="col-small">{{ "%.2f"|format(record.idr_percentage) }}</td>
+          <td class="col-small">{{ "%.2f"|format(record.cc_percentage) }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  <div class="summary">
+    {% if total_items %}
+      Showing {{ start_item }} – {{ end_item }} of {{ "{:,}".format(total_items) }} entries
+    {% else %}
+      No entries match the current filters.
+    {% endif %}
+  </div>
+
+  <div class="chart-controls">
+    <button id="show-location-chart" data-url="{{ location_chart_url or url_for('subcellular_distribution_api') }}">
+      Subcellular location chart
+    </button>
+  </div>
+  <div id="location-chart-wrapper" class="chart-wrapper">
+    <canvas id="location-chart"></canvas>
+    <p class="chart-note">Known entries (chart total): <span id="location-chart-total"></span></p>
+    <p class="chart-note" id="location-chart-unknown-note">
+      Unknown entries (excluded): <span id="location-chart-unknown"></span>
+    </p>
+  </div>
+
+{% if total_pages > 1 and page_numbers %}
+    <nav class="pagination">
+      {% if page > 1 %}
+        <a href="{{ page_url(1) }}">&laquo; First</a>
+        <a href="{{ page_url(page - 1) }}">&lsaquo; Prev</a>
+      {% else %}
+        <span class="disabled">&laquo; First</span>
+        <span class="disabled">&lsaquo; Prev</span>
+      {% endif %}
+
+      {% if show_first %}
+        <a href="{{ page_url(1) }}">1</a>
+        <span class="ellipsis">…</span>
+      {% endif %}
+
+      {% for p in page_numbers %}
+        {% if p == page %}
+          <span class="current">{{ p }}</span>
+        {% else %}
+          <a href="{{ page_url(p) }}">{{ p }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if show_last %}
+        <span class="ellipsis">…</span>
+        <a href="{{ page_url(total_pages) }}">{{ total_pages }}</a>
+      {% endif %}
+
+      {% if page < total_pages %}
+        <a href="{{ page_url(page + 1) }}">Next &rsaquo;</a>
+        <a href="{{ page_url(total_pages) }}">Last &raquo;</a>
+      {% else %}
+        <span class="disabled">Next &rsaquo;</span>
+        <span class="disabled">Last &raquo;</span>
+      {% endif %}
+    </nav>
+  {% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const button = document.getElementById('show-location-chart');
+  const wrapper = document.getElementById('location-chart-wrapper');
+  if (!button || !wrapper) {
+    return;
+  }
+  const canvas = document.getElementById('location-chart');
+  const totalElem = document.getElementById('location-chart-total');
+  const unknownElem = document.getElementById('location-chart-unknown');
+  const unknownNote = document.getElementById('location-chart-unknown-note');
+  let chartInstance = null;
+  wrapper.style.display = 'none';
+  const baseUrl = button.dataset.url || '';
+  if (!baseUrl) {
+    button.disabled = true;
+    return;
+  }
+  if (unknownNote) {
+    unknownNote.style.display = 'none';
+  }
+
+  const buildChartUrl = () => {
+    const filterQuery = window.location.search || '';
+    if (!filterQuery) {
+      return baseUrl;
+    }
+    return baseUrl.includes('?')
+      ? `${baseUrl}&${filterQuery.substring(1)}`
+      : `${baseUrl}${filterQuery}`;
+  };
+
+  button.addEventListener('click', async () => {
+    button.disabled = true;
+    const originalLabel = button.textContent;
+    button.textContent = 'Loading...';
+    try {
+      const url = buildChartUrl();
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw new Error('Request failed');
+      }
+      const data = await response.json();
+      const labels = data.labels || [];
+      const values = data.values || [];
+      const knownTotal = Number(data.total_known ?? data.total ?? 0);
+      const unknownCount = Number(data.unknown_count ?? 0);
+      const chartDenominator = knownTotal > 0 ? knownTotal : 1;
+      wrapper.style.display = 'block';
+      if (chartInstance) {
+        chartInstance.destroy();
+      }
+      const palette = [
+        '#4e79a7', '#f28e2b', '#e15759', '#76b7b2', '#59a14f',
+        '#edc948', '#b07aa1', '#ff9da7', '#9c755f', '#bab0ab'
+      ];
+      chartInstance = new Chart(canvas, {
+        type: 'pie',
+        data: {
+          labels: labels,
+          datasets: [{
+            data: values,
+            backgroundColor: labels.map((_, idx) => palette[idx % palette.length])
+          }]
+        },
+        options: {
+          responsive: true,
+          plugins: {
+            legend: {
+              position: 'right'
+            },
+            tooltip: {
+              callbacks: {
+                label: function(context) {
+                  const value = context.parsed;
+                  const total = chartDenominator || 1;
+                  const percentage = total ? ((value / total) * 100).toFixed(1) : '0.0';
+                  return `${context.label}: ${value.toLocaleString()} (${percentage}%)`;
+                }
+              }
+            }
+          }
+        }
+      });
+      if (totalElem) {
+        totalElem.textContent = knownTotal.toLocaleString();
+      }
+      if (unknownElem && unknownNote) {
+        unknownElem.textContent = unknownCount.toLocaleString();
+        unknownNote.style.display = unknownCount ? 'block' : 'none';
+      }
+      button.textContent = 'Update Subcellular Chart';
+    } catch (error) {
+      console.error(error);
+      alert('Subcellular location chart could not be loaded.');
+      button.textContent = originalLabel;
+    } finally {
+      button.disabled = false;
+    }
+  });
+});
+</script>
+{% endblock %}

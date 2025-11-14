@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+
+{% block title %}IDR Detail — {{ record.UniProt_ID }} ({{ record.IDR_Number }}){% endblock %}
+
+{% macro render_table(field_pairs) -%}
+  <table class="detail-table">
+    <tbody>
+      {% for key, label in field_pairs %}
+        {% set value = record.get(key) %}
+        {% if value is none or value != value or (value|string).strip() == '' %}
+          {% set display = '—' %}
+        {% else %}
+          {% set display = value %}
+        {% endif %}
+        <tr>
+          <th>{{ label }}</th>
+          <td>{{ display }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{%- endmacro %}
+
+{% block content %}
+  <div class="detail-header">
+    <a href="{{ return_to or url_for('idr_index') }}" class="back-link">&lsaquo; Back to IDR list</a>
+    <h1>{{ record.Protein_Name }}</h1>
+    <p>
+      <strong>UniProt ID:</strong>
+      <a href="{{ url_for('protein_detail', uniprot_id=record.UniProt_ID) }}">{{ record.UniProt_ID }}</a>
+      <span class="divider">|</span>
+      <strong>Gene:</strong> {{ record.Gene_Name }}
+      <span class="divider">|</span>
+      <strong>IDR #:</strong> {{ record.IDR_Number }}
+    </p>
+  </div>
+
+  <section class="detail-section">
+    <h2>IDR Summary</h2>
+    <ul class="summary-list">
+      <li><span>Length:</span> {{ record.IDR_Length }} aa</li>
+      <li><span>Position:</span> {{ record.IDR_Start }} – {{ record.IDR_End }}</li>
+      <li><span>IDR percentage:</span> {{ '%.2f'|format((record.IDR_Percentage_in_Protein|default(0, true))|float) }}%</li>
+      <li><span>Cluster:</span>
+        {% if record.cluster_k30 is not none and record.cluster_k30 == record.cluster_k30 %}
+          {{ record.cluster_k30|int }}
+        {% else %}
+          —
+        {% endif %}
+      </li>
+      <li><span>d_min:</span>
+        {% if record.d_min is not none and record.d_min == record.d_min %}
+          {{ '%.3f'|format((record.d_min|float)) }}
+        {% else %}
+          —
+        {% endif %}
+      </li>
+      <li><span>Mean Score:</span> {{ record.Mean_Disorder_Score }}</li>
+      <li><span>Max Score:</span> {{ record.Max_Disorder_Score }}</li>
+      <li><span>Total IDRs:</span> {{ record.Num_IDRs }}</li>
+      <li><span>Total IDR residues:</span> {{ record.IDR_Residues }}</li>
+    </ul>
+    <div class="sequence-preview">
+      <span>Segment sequence:</span>
+      <code class="mono">{{ record.IDR_Sequence }}</code>
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <h2>Protein metadata</h2>
+    {{ render_table([
+      ('Sequence_Length', 'Sequence Length'),
+      ('Status', 'Status'),
+      ('Processing_Status', 'Processing Status'),
+      ('Is_Selenoprotein', 'Is Selenoprotein'),
+      ('Unknown_AA_Count', 'Unknown AA Count'),
+      ('Unknown_AA_Percentage', 'Unknown AA %'),
+      ('Subcellular_Location', 'Subcellular Location'),
+      ('Domain_Information', 'Domain Information')
+    ]) }}
+  </section>
+
+  <section class="detail-section">
+    <h2>Disorder & Coiled-coil metrics</h2>
+    <div class="two-column">
+      {{ render_table([
+        ('Has_IDR', 'Has IDR'),
+        ('IDR_Boundaries', 'IDR Boundaries'),
+        ('IDR_Percentage', 'IDR % (Protein)'),
+        ('Mean_Disorder_Score', 'Mean Disorder Score'),
+        ('Max_Disorder_Score', 'Max Disorder Score'),
+        ('IDR_Number', 'IDR Number'),
+        ('IDR_Start', 'IDR Start'),
+        ('IDR_End', 'IDR End'),
+        ('IDR_Length', 'IDR Length'),
+        ('IDR_Percentage_in_Protein', 'IDR % (Segment)')
+      ]) }}
+      {{ render_table([
+        ('Num_CC_Domains', '# CC Domains'),
+        ('Total_CC_Length', 'Total CC Length'),
+        ('CC_Percentage', 'CC %'),
+        ('Longest_CC_Domain_Length', 'Longest CC Domain'),
+        ('Mean_CC_Domain_Length', 'Mean CC Domain Length'),
+        ('CC_Mean_Score', 'CC Mean Score'),
+        ('CC_Max_Score', 'CC Max Score')
+      ]) }}
+    </div>
+  </section>
+
+  <section class="detail-section">
+    <h2>PPI / GO predictions (80% precision)</h2>
+    {{ render_table([
+      ('Interactors_80pct', 'Interactors'),
+      ('Diseases_80pct', 'Diseases'),
+      ('Processes_80pct', 'Processes'),
+      ('Functions_80pct', 'Functions')
+    ]) }}
+  </section>
+
+  <section class="detail-section">
+    <h2>PPI / GO predictions (90% precision)</h2>
+    {{ render_table([
+      ('Interactors_90pct', 'Interactors'),
+      ('Diseases_90pct', 'Diseases'),
+      ('Processes_90pct', 'Processes'),
+      ('Functions_90pct', 'Functions')
+    ]) }}
+  </section>
+
+  <section class="detail-section">
+    <h2>Protein sequence</h2>
+    <details class="sequence-details">
+      <summary>Show sequence</summary>
+      {% set seq = record.Sequence %}
+      {% if seq is not none and seq == seq and (seq|string).strip() %}
+        <pre class="mono sequence-block">{{ seq }}</pre>
+      {% else %}
+        <p>Sequence is not available.</p>
+      {% endif %}
+    </details>
+  </section>
+
+{% endblock %}

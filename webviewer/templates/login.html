@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}Protected Access{% endblock %}
+
+{% block content %}
+  <div class="login-card">
+    <h1>IDR+CC Viewer Login</h1>
+    <p>Enter the access password to continue.</p>
+    {% if error %}
+      <p class="error">{{ error }}</p>
+    {% endif %}
+    <form method="post" class="login-form">
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" autofocus required />
+      <button type="submit">Unlock</button>
+    </form>
+  </div>
+{% endblock %}

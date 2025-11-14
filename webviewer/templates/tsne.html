@@ -1,0 +1,306 @@
+{% extends "layout.html" %}
+
+{% block title %}t-SNE Visualization{% endblock %}
+
+{% block content %}
+  <h1>t-SNE Visualization (ver9 IDR)</h1>
+  {% if not tsne_available %}
+    <div class="tsne-panel">
+      <p class="notice">
+        Could not find the t-SNE source files. Please ensure `tsne_coords.npy` and related assets exist.
+      </p>
+    </div>
+  {% else %}
+    <div class="tsne-container">
+      <div class="tsne-plot-wrapper">
+        <div id="tsne-plot" class="tsne-plot"></div>
+      </div>
+      <aside class="tsne-panel">
+        <section>
+          <h2>Hovered IDR</h2>
+          <pre id="hover-info">Hover over a point to see details.</pre>
+        </section>
+        <section>
+          <h2>Distance between two points</h2>
+          <pre id="selection-info">Drag to select exactly two points and view their distance.</pre>
+        </section>
+        <section class="notice">
+          <strong>Usage tips</strong>
+          <ul>
+            <li>Scroll to zoom and drag to pan.</li>
+            <li>Use box or lasso select to pick exactly two points for distance calculations.</li>
+            <li>Add `?uid=UniProt&idr=number` to the URL to highlight a specific IDR.</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+  {% endif %}
+{% endblock %}
+
+{% block scripts %}
+  {% if tsne_available %}
+    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+    <script>
+      const highlightUid = "{{ highlight_uid or '' }}".toUpperCase();
+      const highlightIdr = "{{ highlight_idr or '' }}";
+      const clusterColors = {{ tsne_colors|tojson }};
+      const plotElement = document.getElementById("tsne-plot");
+      const hoverInfo = document.getElementById("hover-info");
+      const selectionInfo = document.getElementById("selection-info");
+
+      function formatInfo(item) {
+        if (!item) {
+          return "No data";
+        }
+        return [
+          `UniProt: ${item.UniProt_ID}`,
+          `Gene: ${item.Gene_Name || "-"}`,
+          `IDR #: ${item.IDR_Number}`,
+          `Cluster: ${item.cluster_k30 !== null ? item.cluster_k30 : "-"}`,
+          `d_min: ${item.d_min !== null ? item.d_min.toFixed(3) : "-"}`,
+          `Length: ${item.IDR_Length} aa`,
+          `IDR %: ${item.IDR_Percentage_in_Protein !== null ? item.IDR_Percentage_in_Protein.toFixed(2) : "-"}`,
+        ].join("\n");
+      }
+
+      async function loadTsneData() {
+        const response = await fetch("{{ url_for('tsne_payload_api') }}", {cache: "no-store"});
+        if (!response.ok) {
+          throw new Error("Failed to load t-SNE payload");
+        }
+        return await response.json();
+      }
+
+      function compute2dDistance(a, b) {
+        const dx = a.tsne_x - b.tsne_x;
+        const dy = a.tsne_y - b.tsne_y;
+        return Math.sqrt(dx * dx + dy * dy);
+      }
+
+      async function computeHighDimDistance(a, b) {
+        const res = await fetch("{{ url_for('tsne_distance_api') }}", {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify({
+            points: [
+              {UniProt_ID: a.UniProt_ID, IDR_Number: a.IDR_Number},
+              {UniProt_ID: b.UniProt_ID, IDR_Number: b.IDR_Number},
+            ],
+          }),
+        });
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.error || "Distance computation failed");
+        }
+        return await res.json();
+      }
+
+      function createPlot(data) {
+        const hoverText = data.map(d => `${d.UniProt_ID} #${d.IDR_Number}<br>Cluster ${d.cluster_k30 ?? "-"}`);
+        const customData = data.map(d => [
+          d.UniProt_ID,
+          d.Gene_Name,
+          Number(d.IDR_Number),
+          d.cluster_k30 === null ? null : Number(d.cluster_k30),
+          d.d_min === null ? null : Number(d.d_min),
+          Number(d.IDR_Length),
+          d.IDR_Percentage_in_Protein === null ? null : Number(d.IDR_Percentage_in_Protein),
+        ]);
+
+        const colorscale = [];
+        const steps = Math.max(1, clusterColors.length - 1);
+        clusterColors.forEach((color, idx) => {
+          const start = steps === 0 ? 0 : idx / steps;
+          const end = steps === 0 ? 1 : Math.min(1, (idx + 1) / steps);
+          colorscale.push([start, color]);
+          if (idx < clusterColors.length - 1) {
+            colorscale.push([end, color]);
+          }
+        });
+
+        const scatterData = data.map((item, idx) => ({item, idx, y: item.tsne_y})).sort((a, b) => a.y - b.y);
+
+        const trace = {
+          type: "scattergl",
+          mode: "markers",
+          x: scatterData.map(d => d.item.tsne_x),
+          y: scatterData.map(d => d.item.tsne_y),
+          text: scatterData.map(d => `${d.item.UniProt_ID} #${d.item.IDR_Number}<br>Cluster ${d.item.cluster_k30 ?? "-"}`),
+          customdata: scatterData.map(d => [
+            d.item.UniProt_ID,
+            d.item.Gene_Name,
+            Number(d.item.IDR_Number),
+            d.item.cluster_k30 === null ? null : Number(d.item.cluster_k30),
+            d.item.d_min === null ? null : Number(d.item.d_min),
+            Number(d.item.IDR_Length),
+            d.item.IDR_Percentage_in_Protein === null ? null : Number(d.item.IDR_Percentage_in_Protein),
+            d.idx,
+          ]),
+          marker: {
+            size: 5,
+            opacity: 0.7,
+            color: scatterData.map(d => (d.item.cluster_k30 === null ? null : Number(d.item.cluster_k30))),
+            cmin: -0.5,
+            cmax: clusterColors.length - 0.5,
+            colorscale: colorscale,
+            colorbar: {
+              title: {
+                text: "cluster_k30",
+                side: "right",
+              },
+              tickvals: Array.from({length: clusterColors.length}, (_, i) => i),
+              ticktext: Array.from({length: clusterColors.length}, (_, i) => String(i)),
+              thickness: 16,
+              len: 0.9,
+              tickfont: {size: 9},
+              titlefont: {size: 11},
+            },
+            showscale: true,
+            line: {width: 0},
+          },
+          hovertemplate: [
+            "<b>%{customdata[0]}</b> (IDR %{customdata[2]})<br>",
+            "Cluster: %{customdata[3]}<br>",
+            "d_min: %{customdata[4]:.3f}<br>",
+            "Length: %{customdata[5]} aa<br>",
+            "IDR %: %{customdata[6]:.2f}",
+            "<extra></extra>",
+          ].join(""),
+        };
+
+        const traces = [trace];
+        let highlightIndex = -1;
+        if (highlightUid && highlightIdr) {
+          highlightIndex = scatterData.findIndex(
+            d =>
+              d.item.UniProt_ID.toUpperCase() === highlightUid &&
+              String(d.item.IDR_Number) === highlightIdr
+          );
+          if (highlightIndex >= 0) {
+            const item = scatterData[highlightIndex].item;
+            traces.push({
+              type: "scattergl",
+              mode: "markers",
+              x: [item.tsne_x],
+              y: [item.tsne_y],
+              marker: {
+                size: 14,
+                color: "#d62728",
+                line: {width: 2, color: "#ffffff"},
+              },
+              hoverinfo: "skip",
+              showlegend: false,
+            });
+          }
+        }
+
+        const layout = {
+          dragmode: "lasso",
+          hovermode: "closest",
+          title: {text: "t-SNE (ver9 IDR)", x: 0.02},
+          margin: {l: 60, r: 110, t: 65, b: 60},
+          paper_bgcolor: "#ffffff",
+          plot_bgcolor: "#ffffff",
+          xaxis: {
+            title: "t-SNE 1",
+            zeroline: false,
+            showgrid: false,
+          },
+          yaxis: {
+            title: "t-SNE 2",
+            zeroline: false,
+            showgrid: false,
+            scaleanchor: "x",
+            scaleratio: 1,
+          },
+        };
+
+        const config = {
+          responsive: true,
+          displaylogo: false,
+          scrollZoom: true,
+          doubleClick: false,
+        };
+
+        const adjustSize = () => {
+          const width = plotElement.clientWidth || 900;
+          const height = Math.max(540, width * 0.78);
+          Plotly.relayout(plotElement, {height});
+        };
+
+        Plotly.newPlot(plotElement, traces, layout, config).then(() => {
+          adjustSize();
+        });
+
+        window.addEventListener("resize", adjustSize);
+
+        plotElement.on("plotly_hover", evt => {
+          const point = evt.points?.[0];
+          if (!point) {
+            hoverInfo.textContent = "Hover over a point to see details.";
+            return;
+          }
+          hoverInfo.textContent = formatInfo(data[point.pointIndex]);
+        });
+
+        plotElement.on("plotly_unhover", () => {
+          hoverInfo.textContent = "Hover over a point to see details.";
+        });
+
+        plotElement.on("plotly_selected", async evt => {
+          const pts = evt?.points || [];
+          if (pts.length !== 2) {
+            selectionInfo.textContent = "Drag to select exactly two points and view their distance.";
+            return;
+          }
+          const a = data[pts[0].pointIndex];
+          const b = data[pts[1].pointIndex];
+          const dist2d = compute2dDistance(a, b);
+          selectionInfo.textContent = [
+            formatInfo(a),
+            "",
+            formatInfo(b),
+            "",
+            `2D distance (t-SNE): ${dist2d.toFixed(4)}`,
+            "Fetching high-dimensional distance...",
+          ].join("\n");
+          try {
+            const highDim = await computeHighDimDistance(a, b);
+            const lines = [
+              formatInfo(a),
+              "",
+              formatInfo(b),
+              "",
+              `2D distance (t-SNE): ${dist2d.toFixed(4)}`,
+            ];
+            if (typeof highDim.distance_90d === "number") {
+              lines.push(`90D Z-score distance: ${highDim.distance_90d.toFixed(4)}`);
+            }
+            selectionInfo.textContent = lines.join("\n");
+          } catch (error) {
+            selectionInfo.textContent += `\nDistance error: ${error.message}`;
+          }
+        });
+
+        plotElement.on("plotly_deselect", () => {
+          selectionInfo.textContent = "Drag to select exactly two points and view their distance.";
+        });
+
+        if (highlightIndex >= 0) {
+          Plotly.Fx.hover(plotElement, [{curveNumber: 0, pointNumber: highlightIndex}]);
+        }
+
+        Plotly.relayout(plotElement, {
+          "xaxis.range": [-100, 100],
+          "yaxis.range": [-100, 100],
+        });
+      }
+
+      loadTsneData()
+        .then(createPlot)
+        .catch(error => {
+          hoverInfo.textContent = `Failed to load data: ${error.message}`;
+        });
+    </script>
+  {% endif %}
+{% endblock %}

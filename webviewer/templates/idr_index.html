@@ -1,0 +1,152 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ page_title or 'IDR Sequences (≥30 aa)' }}{% endblock %}
+
+{% block content %}
+  <h1>{{ page_title or 'IDR sequences (≥30 aa)' }}</h1>
+  {% if dataset_note %}
+    <p class="dataset-note">{{ dataset_note }}</p>
+  {% endif %}
+
+  <div class="filters">
+    <form method="get" action="{{ url_for('idr_index') }}" class="filter-form">
+      <label for="search"><span>Filter:</span></label>
+      <input
+        type="text"
+        id="search"
+        name="search"
+        value="{{ search }}"
+        placeholder="UniProt, Gene, Protein name"
+      />
+      <label for="length_min">Length</label>
+      <input
+        type="number"
+        id="length_min"
+        name="length_min"
+        min="0"
+        value="{{ length_min if length_min is not none else '' }}"
+        placeholder="min"
+      />
+      <span class="range-separator">〜</span>
+      <input
+        type="number"
+        id="length_max"
+        name="length_max"
+        min="0"
+        value="{{ length_max if length_max is not none else '' }}"
+        placeholder="max"
+      />
+      <label for="per_page">Per page:</label>
+      <select id="per_page" name="per_page">
+        {% for option in [10, 25, 50, 100] %}
+          <option value="{{ option }}" {% if option == per_page %}selected{% endif %}>{{ option }}</option>
+        {% endfor %}
+      </select>
+      <button type="submit">Apply</button>
+      {% if search or length_min is not none or length_max is not none or per_page != 25 %}
+        <a class="clear-filter" href="{{ url_for('idr_index') }}">Clear</a>
+      {% endif %}
+    </form>
+  </div>
+
+  <div class="table-wrapper">
+    <table class="results-table">
+      <thead>
+        <tr>
+          <th class="col-small">#</th>
+          <th class="col-narrow">UniProt ID</th>
+          <th class="col-narrow">Gene</th>
+          <th class="col-wide">Protein</th>
+          <th class="col-small">IDR No.</th>
+          <th class="col-range">Range (aa)</th>
+          <th class="col-small">Length</th>
+          <th class="col-small">IDR %</th>
+          <th class="col-cluster">Cluster</th>
+          <th class="col-dmin">d_min</th>
+      </tr>
+      </thead>
+      <tbody>
+        {% for _, row in df.iterrows() %}
+          <tr>
+            <td class="col-small">{{ loop.index + (page - 1) * per_page }}</td>
+            <td class="col-narrow">
+              <a href="{{ url_for('idr_detail', uid=row.UniProt_ID, number=row.IDR_Number, return_to=current_path) }}">{{ row.UniProt_ID }}</a>
+            </td>
+            <td class="col-narrow">{{ row.Gene_Name }}</td>
+            <td class="col-wide">
+              <span class="protein-name" title="{{ row.Protein_Name }}">{{ row.Protein_Name }}</span>
+            </td>
+            <td class="col-small">{{ row.IDR_Number }}</td>
+            <td class="col-range">
+              {{ row.IDR_Start }} – {{ row.IDR_End }}
+            </td>
+            <td class="col-small">{{ row.IDR_Length }}</td>
+            <td class="col-small">
+              <span class="badge badge-idr">{{ '%.1f'|format((row.IDR_Percentage_in_Protein|default(0, true))|float) }}%</span>
+            </td>
+            <td class="col-cluster">
+              {% if row.cluster_k30 is not none and row.cluster_k30 == row.cluster_k30 %}
+                {{ row.cluster_k30|int }}
+              {% else %}
+                —
+              {% endif %}
+            </td>
+            <td class="col-dmin">
+              {% if row.d_min is not none and row.d_min == row.d_min %}
+                {{ '%.3f'|format((row.d_min|float)) }}
+              {% else %}
+                —
+              {% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  <div class="summary">
+    {% if total_items %}
+      Showing {{ start_item }} – {{ end_item }} of {{ "{:,}".format(total_items) }} entries
+    {% else %}
+      No entries match the current filters.
+    {% endif %}
+  </div>
+
+  {% if total_pages > 1 and page_numbers %}
+    <nav class="pagination">
+      {% if page > 1 %}
+        <a href="{{ page_url(1) }}">&laquo; First</a>
+        <a href="{{ page_url(page - 1) }}">&lsaquo; Prev</a>
+      {% else %}
+        <span class="disabled">&laquo; First</span>
+        <span class="disabled">&lsaquo; Prev</span>
+      {% endif %}
+
+      {% if show_first %}
+        <a href="{{ page_url(1) }}">1</a>
+        <span class="ellipsis">…</span>
+      {% endif %}
+
+      {% for p in page_numbers %}
+        {% if p == page %}
+          <span class="current">{{ p }}</span>
+        {% else %}
+          <a href="{{ page_url(p) }}">{{ p }}</a>
+        {% endif %}
+      {% endfor %}
+
+      {% if show_last %}
+        <span class="ellipsis">…</span>
+        <a href="{{ page_url(total_pages) }}">{{ total_pages }}</a>
+      {% endif %}
+
+      {% if page < total_pages %}
+        <a href="{{ page_url(page + 1) }}">Next &rsaquo;</a>
+        <a href="{{ page_url(total_pages) }}">Last &raquo;</a>
+      {% else %}
+        <span class="disabled">Next &rsaquo;</span>
+        <span class="disabled">Last &raquo;</span>
+      {% endif %}
+    </nav>
+  {% endif %}
+{% endblock %}

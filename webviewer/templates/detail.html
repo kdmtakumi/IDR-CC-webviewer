@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ record.uniprot_id }} &mdash; Protein Details{% endblock %}
+
+{% block content %}
+  <div class="detail-header">
+    <a href="{{ return_to or url_for('index') }}" class="back-link">&lsaquo; Back to list</a>
+    <h1>{{ record.protein_name }}</h1>
+    <p>
+      <strong>UniProt ID:</strong> {{ record.uniprot_id }} |
+      <strong>Gene:</strong> {{ record.gene_name }} |
+      <strong>Length:</strong> {{ "{:,}".format(record.sequence_length) }} aa
+    </p>
+  </div>
+
+  <section class="detail-section">
+    <h2>Summary</h2>
+    <ul class="summary-list">
+      <li><span>IDR percentage:</span> {{ "%.2f"|format(record.idr_percentage) }}%</li>
+      <li><span>CC percentage:</span> {{ "%.2f"|format(record.cc_percentage) }}%</li>
+      <li><span>Num IDRs:</span> {{ record.row["Num_IDRs"] }}</li>
+      <li><span>Num CC domains:</span> {{ record.row["Num_CC_Domains"] }}</li>
+    </ul>
+  </section>
+
+  {% if plot_url %}
+    <section class="detail-section">
+      <h2>IDR/CC Prediction Plot</h2>
+      <div class="plot-wrapper">
+        <img src="{{ plot_url }}" alt="IDR/CC threshold plot for {{ record.uniprot_id }}" />
+      </div>
+    </section>
+  {% endif %}
+
+  <section class="detail-section">
+    <h2>Raw record</h2>
+    <table class="detail-table">
+      <tbody>
+        {% for column, value in record.row.items() %}
+          <tr>
+            <th>{{ column }}</th>
+            <td>{{ value }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+{% endblock %}
