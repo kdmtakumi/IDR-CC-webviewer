@@ -365,37 +365,59 @@ def fetch_protein_page(
     return records, total_items, (where_sql, params)
 
 
+def _append_condition(where_clause: str, condition: str) -> str:
+    if where_clause:
+        return f"{where_clause} AND {condition}"
+    return f"WHERE {condition}"
+
+
 def compute_subcellular_counts(
     table: str,
     where_clause: str,
     params: Sequence[Any],
 ) -> Tuple[List[Tuple[str, int]], int, int]:
     conn = get_db_connection()
-    query = f"SELECT subcellular_location FROM {table} p {where_clause}"
-    counts: Dict[str, int] = {}
-    total_entries = 0
-    unknown_count = 0
-    with conn.cursor(name="subcellular_cursor") as cur:
-        cur.itersize = 1000
-        cur.execute(query, params)
-        for (value,) in cur:
-            total_entries += 1
-            if not value:
-                unknown_count += 1
-                continue
-            unique_locations = set()
-            for raw in value.split(","):
-                key = raw.strip()
-                if not key:
-                    continue
-                lowered = key.lower()
-                if lowered in unique_locations:
-                    continue
-                unique_locations.add(lowered)
-                counts[key] = counts.get(key, 0) + 1
-            if not unique_locations:
-                unknown_count += 1
-    ordered = sorted(counts.items(), key=lambda item: item[1], reverse=True)
+    base_params = tuple(params)
+    total_sql = f"SELECT COUNT(*) FROM {table} p {where_clause}"
+    unknown_condition = _append_condition(where_clause, "NULLIF(TRIM(COALESCE(p.subcellular_location, '')), '') IS NULL")
+    counts_sql = f"""
+        WITH filtered AS (
+            SELECT p.uniprot_id, COALESCE(p.subcellular_location, '') AS subcellular_location
+            FROM {table} p
+            {where_clause}
+        ),
+        expanded AS (
+            SELECT
+                f.uniprot_id,
+                NULLIF(TRIM(loc), '') AS location
+            FROM filtered f
+            CROSS JOIN LATERAL regexp_split_to_table(f.subcellular_location, ',') AS t(loc)
+        ),
+        dedup AS (
+            SELECT DISTINCT
+                uniprot_id,
+                LOWER(location) AS normalized_location,
+                location
+            FROM expanded
+            WHERE location IS NOT NULL
+        )
+        SELECT MIN(location) AS label, COUNT(*) AS freq
+        FROM dedup
+        GROUP BY normalized_location
+        ORDER BY freq DESC
+    """
+
+    with conn.cursor() as cur:
+        cur.execute(total_sql, base_params)
+        total_entries = cur.fetchone()[0] or 0
+
+        cur.execute(f"SELECT COUNT(*) FROM {table} p {unknown_condition}", base_params)
+        unknown_count = cur.fetchone()[0] or 0
+
+        cur.execute(counts_sql, base_params)
+        rows = cur.fetchall()
+
+    ordered = [(label, freq) for label, freq in rows if label]
     return ordered, total_entries, unknown_count
 
 
