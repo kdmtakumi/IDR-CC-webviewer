@@ -187,9 +187,9 @@
               —
             {% endif %}
           </td>
-          <td class="col-small">{{ "{:,}".format(record.sequence_length) }}</td>
-          <td class="col-small">{{ "%.2f"|format(record.idr_percentage) }}</td>
-          <td class="col-small">{{ "%.2f"|format(record.cc_percentage) }}</td>
+          <td class="col-small">{{ record.sequence_length and "{:,}".format(record.sequence_length) }}</td>
+          <td class="col-small">{{ "%.2f"|format((record.idr_percentage or 0.0)|float) }}</td>
+          <td class="col-small">{{ "%.2f"|format((record.cc_percentage or 0.0)|float) }}</td>
         </tr>
       {% endfor %}
     </tbody>
