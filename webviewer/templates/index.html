@@ -10,143 +10,140 @@
 
   <div class="filters">
     <form method="get" action="{{ form_action or url_for('index') }}" class="filter-form">
-      <label for="search">
-        <span>Filter:</span>
-      </label>
-      <input
-        type="text"
-        id="search"
-        name="search"
-        value="{{ search }}"
-        placeholder="Gene, UniProt ID, protein name, location..."
-      />
-      <label for="search_mode">Search field:</label>
-      <select id="search_mode" name="search_mode">
-        {% set current_mode = search_mode or 'all' %}
-        {% for value, label in SEARCH_MODE_OPTIONS %}
-          <option value="{{ value }}" {% if value == current_mode %}selected{% endif %}>
-            {{ label }}
-          </option>
-        {% endfor %}
-      </select>
-      <label for="per_page">Per page:</label>
-      <select id="per_page" name="per_page">
-        {% for option in [10, 25, 50, 100] %}
-          <option value="{{ option }}" {% if option == per_page %}selected{% endif %}>
-            {{ option }}
-          </option>
-        {% endfor %}
-      </select>
-      <label for="idr_min">IDR length (aa) ≥</label>
-      <input
-        type="number"
-        id="idr_min"
-        name="idr_min"
-        min="0"
-        value="{{ idr_min if idr_min is not none else '' }}"
-        placeholder="e.g. 100"
-      />
-      <label for="cc_min">CC length (aa) ≥</label>
-      <input
-        type="number"
-        id="cc_min"
-        name="cc_min"
-        min="0"
-        value="{{ cc_min if cc_min is not none else '' }}"
-        placeholder="e.g. 50"
-      />
-      <label for="idr_pct_min">IDR%</label>
-      <input
-        type="number"
-        id="idr_pct_min"
-        name="idr_pct_min"
-        step="0.1"
-        min="0"
-        max="100"
-        value="{{ idr_pct_min if idr_pct_min is not none else '' }}"
-        placeholder="min"
-      />
-      <span class="range-separator">to</span>
-      <input
-        type="number"
-        id="idr_pct_max"
-        name="idr_pct_max"
-        step="0.1"
-        min="0"
-        max="100"
-        value="{{ idr_pct_max if idr_pct_max is not none else '' }}"
-        placeholder="max"
-      />
-      <label for="cc_pct_min">CC%</label>
-      <input
-        type="number"
-        id="cc_pct_min"
-        name="cc_pct_min"
-        step="0.1"
-        min="0"
-        max="100"
-        value="{{ cc_pct_min if cc_pct_min is not none else '' }}"
-        placeholder="min"
-      />
-      <span class="range-separator">to</span>
-      <input
-        type="number"
-        id="cc_pct_max"
-        name="cc_pct_max"
-        step="0.1"
-        min="0"
-        max="100"
-        value="{{ cc_pct_max if cc_pct_max is not none else '' }}"
-        placeholder="max"
-      />
-      <input
-        type="text"
-        id="domain_term"
-        name="domain_term"
-        value="{{ domain_term or '' }}"
-        placeholder="Domain keyword"
-      />
-      <input
-        type="text"
-        id="location_term"
-        name="location_term"
-        value="{{ location_term or '' }}"
-        placeholder="Location keyword"
-      />
-      <label class="inline-label" for="length_range">Protein length (aa)</label>
-      <span class="range-wrap">
+      <div class="filter-row filter-row-primary">
+        <label for="search">
+          <span>Filter:</span>
+        </label>
+        <input
+          type="text"
+          id="search"
+          name="search"
+          value="{{ search }}"
+          placeholder="Gene, UniProt ID, protein name, location..."
+        />
+        <label for="search_mode">Search field:</label>
+        <select id="search_mode" name="search_mode">
+          {% set current_mode = search_mode or 'all' %}
+          {% for value, label in SEARCH_MODE_OPTIONS %}
+            <option value="{{ value }}" {% if value == current_mode %}selected{% endif %}>
+              {{ label }}
+            </option>
+          {% endfor %}
+        </select>
+        <label for="per_page">Per page:</label>
+        <select id="per_page" name="per_page">
+          {% for option in [10, 25, 50, 100] %}
+            <option value="{{ option }}" {% if option == per_page %}selected{% endif %}>
+              {{ option }}
+            </option>
+          {% endfor %}
+        </select>
+        <label for="idr_min">IDR length (aa) ≥</label>
         <input
           type="number"
-          id="length_min"
-          name="length_min"
+          id="idr_min"
+          name="idr_min"
           min="0"
-          value="{{ length_min if length_min is not none else '' }}"
+          value="{{ idr_min if idr_min is not none else '' }}"
+          placeholder="e.g. 100"
+        />
+        <label for="cc_min">CC length (aa) ≥</label>
+        <input
+          type="number"
+          id="cc_min"
+          name="cc_min"
+          min="0"
+          value="{{ cc_min if cc_min is not none else '' }}"
+          placeholder="e.g. 50"
+        />
+      </div>
+      <div class="filter-row filter-row-secondary">
+        <label for="idr_pct_min">IDR%</label>
+        <input
+          type="number"
+          id="idr_pct_min"
+          name="idr_pct_min"
+          step="0.1"
+          min="0"
+          max="100"
+          value="{{ idr_pct_min if idr_pct_min is not none else '' }}"
           placeholder="min"
         />
         <span class="range-separator">to</span>
         <input
           type="number"
-          id="length_max"
-          name="length_max"
+          id="idr_pct_max"
+          name="idr_pct_max"
+          step="0.1"
           min="0"
-          value="{{ length_max if length_max is not none else '' }}"
+          max="100"
+          value="{{ idr_pct_max if idr_pct_max is not none else '' }}"
           placeholder="max"
         />
-      </span>
-      <label class="checkbox-inline" for="hide_missing_protein">
+        <label for="cc_pct_min">CC%</label>
         <input
-          type="checkbox"
-          id="hide_missing_protein"
-          name="hide_missing_protein"
-          value="1"
-          {% if hide_missing_protein %}checked{% endif %}
+          type="number"
+          id="cc_pct_min"
+          name="cc_pct_min"
+          step="0.1"
+          min="0"
+          max="100"
+          value="{{ cc_pct_min if cc_pct_min is not none else '' }}"
+          placeholder="min"
         />
-        Hide entries with missing protein names
-      </label>
-      <button type="submit">Apply</button>
-      {% if search or (search_mode and search_mode != 'all') or hide_missing_protein or idr_min is not none or cc_min is not none or idr_pct_min is not none or idr_pct_max is not none or cc_pct_min is not none or cc_pct_max is not none or (domain_term or location_term) or per_page != 25 %}
-        <a class="clear-filter" href="{{ form_action or url_for('index') }}">Clear</a>
-      {% endif %}
+        <span class="range-separator">to</span>
+        <input
+          type="number"
+          id="cc_pct_max"
+          name="cc_pct_max"
+          step="0.1"
+          min="0"
+          max="100"
+          value="{{ cc_pct_max if cc_pct_max is not none else '' }}"
+          placeholder="max"
+        />
+        <label for="protein_len_min">Protein length (aa)</label>
+        <input
+          type="number"
+          id="protein_len_min"
+          name="protein_len_min"
+          min="0"
+          value="{{ protein_len_min if protein_len_min is not none else '' }}"
+          placeholder="e.g. 800"
+        />
+      </div>
+      <div class="filter-row filter-row-keywords">
+        <input
+          type="text"
+          id="domain_term"
+          name="domain_term"
+          value="{{ domain_term or '' }}"
+          placeholder="Domain keyword"
+        />
+        <input
+          type="text"
+          id="location_term"
+          name="location_term"
+          value="{{ location_term or '' }}"
+          placeholder="Location keyword"
+        />
+      </div>
+      <div class="filter-row filter-row-actions">
+        <label class="checkbox-inline" for="hide_missing_protein">
+          <input
+            type="checkbox"
+            id="hide_missing_protein"
+            name="hide_missing_protein"
+            value="1"
+            {% if hide_missing_protein %}checked{% endif %}
+          />
+          Hide entries with missing protein names
+        </label>
+        <button type="submit">Apply</button>
+        {% if search or (search_mode and search_mode != 'all') or hide_missing_protein or idr_min is not none or cc_min is not none or protein_len_min is not none or idr_pct_min is not none or idr_pct_max is not none or cc_pct_min is not none or cc_pct_max is not none or (domain_term or location_term) or per_page != 25 %}
+          <a class="clear-filter" href="{{ form_action or url_for('index') }}">Clear</a>
+        {% endif %}
+      </div>
     </form>
   </div>
 
@@ -182,8 +179,8 @@
             {% endif %}
           </td>
           <td class="col-small">{{ "{:,}".format(record.sequence_length) }}</td>
-          <td class="col-small">{{ "%.2f"|format((record.idr_percentage or 0.0)|float) }}</td>
-          <td class="col-small">{{ "%.2f"|format((record.cc_percentage or 0.0)|float) }}</td>
+          <td class="col-small">{{ "%.2f"|format(record.idr_percentage) }}</td>
+          <td class="col-small">{{ "%.2f"|format(record.cc_percentage) }}</td>
         </tr>
       {% endfor %}
     </tbody>
@@ -330,19 +327,6 @@ document.addEventListener('DOMContentLoaded', function () {
                   return `${context.label}: ${value.toLocaleString()} (${percentage}%)`;
                 }
               }
-            }
-          },
-          onClick: (evt, elements) => {
-            if (!elements || !elements.length) {
-              return;
-            }
-            const idx = elements[0].index;
-            const selectedLabel = labels[idx];
-            const locationInput = document.getElementById('location_term');
-            const form = document.querySelector('.filter-form');
-            if (selectedLabel && locationInput && form) {
-              locationInput.value = selectedLabel;
-              form.submit();
             }
           }
         }
