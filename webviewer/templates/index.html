@@ -109,7 +109,16 @@
           name="protein_len_min"
           min="0"
           value="{{ protein_len_min if protein_len_min is not none else '' }}"
-          placeholder="e.g. 800"
+          placeholder="min"
+        />
+        <span class="range-separator">to</span>
+        <input
+          type="number"
+          id="protein_len_max"
+          name="protein_len_max"
+          min="0"
+          value="{{ protein_len_max if protein_len_max is not none else '' }}"
+          placeholder="max"
         />
       </div>
       <div class="filter-row filter-row-keywords">
@@ -140,7 +149,7 @@
           Hide entries with missing protein names
         </label>
         <button type="submit">Apply</button>
-        {% if search or (search_mode and search_mode != 'all') or hide_missing_protein or idr_min is not none or cc_min is not none or protein_len_min is not none or idr_pct_min is not none or idr_pct_max is not none or cc_pct_min is not none or cc_pct_max is not none or (domain_term or location_term) or per_page != 25 %}
+        {% if search or (search_mode and search_mode != 'all') or hide_missing_protein or idr_min is not none or cc_min is not none or protein_len_min is not none or protein_len_max is not none or idr_pct_min is not none or idr_pct_max is not none or cc_pct_min is not none or cc_pct_max is not none or (domain_term or location_term) or per_page != 25 %}
           <a class="clear-filter" href="{{ form_action or url_for('index') }}">Clear</a>
         {% endif %}
       </div>

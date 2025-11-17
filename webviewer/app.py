@@ -178,6 +178,7 @@ def build_filter_conditions(
     min_idr_length: Optional[int],
     min_cc_length: Optional[int],
     min_protein_length: Optional[int],
+    max_protein_length: Optional[int],
     min_idr_pct: Optional[float],
     max_idr_pct: Optional[float],
     min_cc_pct: Optional[float],
@@ -209,6 +210,10 @@ def build_filter_conditions(
     if min_protein_length is not None:
         clauses.append(f"COALESCE({alias}.sequence_length, 0) >= %s")
         params.append(min_protein_length)
+
+    if max_protein_length is not None:
+        clauses.append(f"COALESCE({alias}.sequence_length, 0) <= %s")
+        params.append(max_protein_length)
 
     if min_idr_pct is not None:
         clauses.append(f"COALESCE({alias}.idr_percentage, 0) >= %s")
@@ -306,6 +311,7 @@ def fetch_protein_page(
         min_idr_length,
         min_cc_length,
         min_protein_length,
+        max_protein_length,
         min_idr_pct,
         max_idr_pct,
         min_cc_pct,
@@ -320,6 +326,7 @@ def fetch_protein_page(
         min_idr_length,
         min_cc_length,
         min_protein_length,
+        max_protein_length,
         min_idr_pct,
         max_idr_pct,
         min_cc_pct,
@@ -456,6 +463,7 @@ def extract_filters() -> Tuple[Any, ...]:
     min_idr_length = parse_int_param("idr_min")
     min_cc_length = parse_int_param("cc_min")
     min_protein_length = parse_int_param("protein_len_min")
+    max_protein_length = parse_int_param("protein_len_max")
     min_idr_pct = parse_float_param("idr_pct_min")
     max_idr_pct = parse_float_param("idr_pct_max")
     min_cc_pct = parse_float_param("cc_pct_min")
@@ -469,6 +477,7 @@ def extract_filters() -> Tuple[Any, ...]:
         min_idr_length,
         min_cc_length,
         min_protein_length,
+        max_protein_length,
         min_idr_pct,
         max_idr_pct,
         min_cc_pct,
@@ -549,6 +558,7 @@ def index():
         idr_min,
         cc_min,
         protein_len_min,
+        protein_len_max,
         idr_pct_min,
         idr_pct_max,
         cc_pct_min,
@@ -571,6 +581,7 @@ def index():
             idr_min=idr_min if idr_min is not None else None,
             cc_min=cc_min if cc_min is not None else None,
             protein_len_min=protein_len_min if protein_len_min is not None else None,
+            protein_len_max=protein_len_max if protein_len_max is not None else None,
             idr_pct_min=idr_pct_min if idr_pct_min is not None else None,
             idr_pct_max=idr_pct_max if idr_pct_max is not None else None,
             cc_pct_min=cc_pct_min if cc_pct_min is not None else None,
@@ -594,6 +605,7 @@ def index():
         idr_min=idr_min,
         cc_min=cc_min,
         protein_len_min=protein_len_min,
+        protein_len_max=protein_len_max,
         idr_pct_min=idr_pct_min,
         idr_pct_max=idr_pct_max,
         cc_pct_min=cc_pct_min,
@@ -629,6 +641,7 @@ def canonical_index():
         idr_min,
         cc_min,
         protein_len_min,
+        protein_len_max,
         idr_pct_min,
         idr_pct_max,
         cc_pct_min,
@@ -651,6 +664,7 @@ def canonical_index():
             idr_min=idr_min if idr_min is not None else None,
             cc_min=cc_min if cc_min is not None else None,
             protein_len_min=protein_len_min if protein_len_min is not None else None,
+            protein_len_max=protein_len_max if protein_len_max is not None else None,
             idr_pct_min=idr_pct_min if idr_pct_min is not None else None,
             idr_pct_max=idr_pct_max if idr_pct_max is not None else None,
             cc_pct_min=cc_pct_min if cc_pct_min is not None else None,
@@ -674,6 +688,7 @@ def canonical_index():
         idr_min=idr_min,
         cc_min=cc_min,
         protein_len_min=protein_len_min,
+        protein_len_max=protein_len_max,
         idr_pct_min=idr_pct_min,
         idr_pct_max=idr_pct_max,
         cc_pct_min=cc_pct_min,
