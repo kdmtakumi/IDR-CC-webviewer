@@ -22,10 +22,18 @@ FLASK_APP=app.py flask run
 ```
 Open `http://127.0.0.1:5000/` and authenticate with the shared password (default `ShimoLAB0501`).
 
+## Push Workflow
+Local work is staged and reviewed inside `/tmp/idr-cc-webviewer`. After syncing or applying patches, double-check the diff, run any needed tests, then (manually) publish the branch from that directory:
+```bash
+cd /tmp/idr-cc-webviewer
+git push origin main
+```
+The final push command above is always executed explicitly on the deployment machine; automation should stop short of running it.
+
 ## Features
 - Keyword search (UniProt ID / Gene Name / Protein Name / Subcellular Location) with selectable search scope
 - Pagination controls (10, 25, 50, 100 rows)
-- Filters for IDR/CC absolute length and percentage, domain/location keywords, and “hide missing protein names”
+- Filters for protein length plus IDR/CC absolute length and percentage, domain/location keywords, and “hide missing protein names”
 - Protein detail pages with threshold plots (when available)
 - Dedicated IDR list (≥30 aa) with cluster/distance metadata and per-IDR detail view
 - Subcellular location pie chart that respects current filters

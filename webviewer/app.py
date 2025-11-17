@@ -177,6 +177,7 @@ def build_filter_conditions(
     search_mode: str,
     min_idr_length: Optional[int],
     min_cc_length: Optional[int],
+    min_protein_length: Optional[int],
     min_idr_pct: Optional[float],
     max_idr_pct: Optional[float],
     min_cc_pct: Optional[float],
@@ -204,6 +205,10 @@ def build_filter_conditions(
     if min_cc_length is not None:
         clauses.append(f"COALESCE({alias}.total_cc_length, 0) >= %s")
         params.append(min_cc_length)
+
+    if min_protein_length is not None:
+        clauses.append(f"COALESCE({alias}.sequence_length, 0) >= %s")
+        params.append(min_protein_length)
 
     if min_idr_pct is not None:
         clauses.append(f"COALESCE({alias}.idr_percentage, 0) >= %s")
@@ -300,6 +305,7 @@ def fetch_protein_page(
         search_mode,
         min_idr_length,
         min_cc_length,
+        min_protein_length,
         min_idr_pct,
         max_idr_pct,
         min_cc_pct,
@@ -313,6 +319,7 @@ def fetch_protein_page(
         search_mode,
         min_idr_length,
         min_cc_length,
+        min_protein_length,
         min_idr_pct,
         max_idr_pct,
         min_cc_pct,
@@ -364,51 +371,32 @@ def compute_subcellular_counts(
     params: Sequence[Any],
 ) -> Tuple[List[Tuple[str, int]], int, int]:
     conn = get_db_connection()
-    counts: List[Tuple[str, int]] = []
+    query = f"SELECT subcellular_location FROM {table} p {where_clause}"
+    counts: Dict[str, int] = {}
     total_entries = 0
     unknown_count = 0
-
-    stats_sql = f"""
-        SELECT
-            COUNT(*) AS total_entries,
-            COUNT(*) FILTER (
-                WHERE COALESCE(TRIM(subcellular_location), '') = ''
-            ) AS unknown_count
-        FROM {table} p
-        {where_clause}
-    """
-    with conn.cursor() as cur:
-        cur.execute(stats_sql, params)
-        row = cur.fetchone()
-        if row:
-            total_entries = row[0] or 0
-            unknown_count = row[1] or 0
-
-    if total_entries:
-        counts_sql = f"""
-            WITH filtered AS (
-                SELECT subcellular_location
-                FROM {table} p
-                {where_clause}
-            ), exploded AS (
-                SELECT TRIM(value) AS loc
-                FROM filtered,
-                     LATERAL regexp_split_to_table(
-                         COALESCE(subcellular_location, ''), ','
-                     ) AS value
-            )
-            SELECT loc, COUNT(*) AS cnt
-            FROM exploded
-            WHERE loc <> ''
-            GROUP BY loc
-            ORDER BY cnt DESC
-            LIMIT 100
-        """
-        with conn.cursor() as cur:
-            cur.execute(counts_sql, params)
-            counts = [(row[0], int(row[1])) for row in cur.fetchall()]
-
-    return counts, total_entries, unknown_count
+    with conn.cursor(name="subcellular_cursor") as cur:
+        cur.itersize = 1000
+        cur.execute(query, params)
+        for (value,) in cur:
+            total_entries += 1
+            if not value:
+                unknown_count += 1
+                continue
+            unique_locations = set()
+            for raw in value.split(","):
+                key = raw.strip()
+                if not key:
+                    continue
+                lowered = key.lower()
+                if lowered in unique_locations:
+                    continue
+                unique_locations.add(lowered)
+                counts[key] = counts.get(key, 0) + 1
+            if not unique_locations:
+                unknown_count += 1
+    ordered = sorted(counts.items(), key=lambda item: item[1], reverse=True)
+    return ordered, total_entries, unknown_count
 
 
 def fetch_protein_detail(uniprot_id: str) -> Optional[Dict[str, Any]]:
@@ -445,6 +433,7 @@ def extract_filters() -> Tuple[Any, ...]:
         search_mode = "all"
     min_idr_length = parse_int_param("idr_min")
     min_cc_length = parse_int_param("cc_min")
+    min_protein_length = parse_int_param("protein_len_min")
     min_idr_pct = parse_float_param("idr_pct_min")
     max_idr_pct = parse_float_param("idr_pct_max")
     min_cc_pct = parse_float_param("cc_pct_min")
@@ -457,6 +446,7 @@ def extract_filters() -> Tuple[Any, ...]:
         search_mode,
         min_idr_length,
         min_cc_length,
+        min_protein_length,
         min_idr_pct,
         max_idr_pct,
         min_cc_pct,
@@ -531,6 +521,20 @@ def index():
     page = parse_page()
     per_page = get_page_size()
     filters = extract_filters()
+    (
+        search,
+        search_mode,
+        idr_min,
+        cc_min,
+        protein_len_min,
+        idr_pct_min,
+        idr_pct_max,
+        cc_pct_min,
+        cc_pct_max,
+        domain_term,
+        location_term,
+        hide_missing_protein,
+    ) = filters
     records, total_items, filter_clause = fetch_protein_page(PROTEINS_VER6, filters, page, per_page)
     page, start_item, end_item, page_numbers, show_first, show_last, total_pages = paginate(total_items, page, per_page)
     location_counts, location_total, unknown_count = compute_subcellular_counts(PROTEINS_VER6, *filter_clause)
@@ -540,17 +544,18 @@ def index():
             "index",
             page=target_page,
             per_page=per_page,
-            search=filters[0] or None,
-            search_mode=filters[1] if filters[1] != "all" else None,
-            idr_min=filters[2] if filters[2] is not None else None,
-            cc_min=filters[3] if filters[3] is not None else None,
-            idr_pct_min=filters[4] if filters[4] is not None else None,
-            idr_pct_max=filters[5] if filters[5] is not None else None,
-            cc_pct_min=filters[6] if filters[6] is not None else None,
-            cc_pct_max=filters[7] if filters[7] is not None else None,
-            domain_term=filters[8] or None,
-            location_term=filters[9] or None,
-            hide_missing_protein="1" if filters[10] else None,
+            search=search or None,
+            search_mode=search_mode if search_mode != "all" else None,
+            idr_min=idr_min if idr_min is not None else None,
+            cc_min=cc_min if cc_min is not None else None,
+            protein_len_min=protein_len_min if protein_len_min is not None else None,
+            idr_pct_min=idr_pct_min if idr_pct_min is not None else None,
+            idr_pct_max=idr_pct_max if idr_pct_max is not None else None,
+            cc_pct_min=cc_pct_min if cc_pct_min is not None else None,
+            cc_pct_max=cc_pct_max if cc_pct_max is not None else None,
+            domain_term=domain_term or None,
+            location_term=location_term or None,
+            hide_missing_protein="1" if hide_missing_protein else None,
         )
 
     dataset_note = "Source: ver6 integrated dataset (Supabase)."
@@ -562,17 +567,18 @@ def index():
         per_page=per_page,
         total_pages=total_pages,
         total_items=total_items,
-        search=filters[0],
-        search_mode=filters[1],
-        idr_min=filters[2],
-        cc_min=filters[3],
-        idr_pct_min=filters[4],
-        idr_pct_max=filters[5],
-        cc_pct_min=filters[6],
-        cc_pct_max=filters[7],
-        domain_term=filters[8],
-        location_term=filters[9],
-        hide_missing_protein=filters[10],
+        search=search,
+        search_mode=search_mode,
+        idr_min=idr_min,
+        cc_min=cc_min,
+        protein_len_min=protein_len_min,
+        idr_pct_min=idr_pct_min,
+        idr_pct_max=idr_pct_max,
+        cc_pct_min=cc_pct_min,
+        cc_pct_max=cc_pct_max,
+        domain_term=domain_term,
+        location_term=location_term,
+        hide_missing_protein=hide_missing_protein,
         page_url=page_url,
         start_item=start_item,
         end_item=end_item,
@@ -595,6 +601,20 @@ def canonical_index():
     page = parse_page()
     per_page = get_page_size()
     filters = extract_filters()
+    (
+        search,
+        search_mode,
+        idr_min,
+        cc_min,
+        protein_len_min,
+        idr_pct_min,
+        idr_pct_max,
+        cc_pct_min,
+        cc_pct_max,
+        domain_term,
+        location_term,
+        hide_missing_protein,
+    ) = filters
     records, total_items, filter_clause = fetch_protein_page(PROTEINS_VER9, filters, page, per_page)
     page, start_item, end_item, page_numbers, show_first, show_last, total_pages = paginate(total_items, page, per_page)
     location_counts, location_total, unknown_count = compute_subcellular_counts(PROTEINS_VER9, *filter_clause)
@@ -604,17 +624,18 @@ def canonical_index():
             "canonical_index",
             page=target_page,
             per_page=per_page,
-            search=filters[0] or None,
-            search_mode=filters[1] if filters[1] != "all" else None,
-            idr_min=filters[2] if filters[2] is not None else None,
-            cc_min=filters[3] if filters[3] is not None else None,
-            idr_pct_min=filters[4] if filters[4] is not None else None,
-            idr_pct_max=filters[5] if filters[5] is not None else None,
-            cc_pct_min=filters[6] if filters[6] is not None else None,
-            cc_pct_max=filters[7] if filters[7] is not None else None,
-            domain_term=filters[8] or None,
-            location_term=filters[9] or None,
-            hide_missing_protein="1" if filters[10] else None,
+            search=search or None,
+            search_mode=search_mode if search_mode != "all" else None,
+            idr_min=idr_min if idr_min is not None else None,
+            cc_min=cc_min if cc_min is not None else None,
+            protein_len_min=protein_len_min if protein_len_min is not None else None,
+            idr_pct_min=idr_pct_min if idr_pct_min is not None else None,
+            idr_pct_max=idr_pct_max if idr_pct_max is not None else None,
+            cc_pct_min=cc_pct_min if cc_pct_min is not None else None,
+            cc_pct_max=cc_pct_max if cc_pct_max is not None else None,
+            domain_term=domain_term or None,
+            location_term=location_term or None,
+            hide_missing_protein="1" if hide_missing_protein else None,
         )
 
     dataset_note = "Canonical subset (ver9) · UniProt UP000005640."
@@ -626,17 +647,18 @@ def canonical_index():
         per_page=per_page,
         total_pages=total_pages,
         total_items=total_items,
-        search=filters[0],
-        search_mode=filters[1],
-        idr_min=filters[2],
-        cc_min=filters[3],
-        idr_pct_min=filters[4],
-        idr_pct_max=filters[5],
-        cc_pct_min=filters[6],
-        cc_pct_max=filters[7],
-        domain_term=filters[8],
-        location_term=filters[9],
-        hide_missing_protein=filters[10],
+        search=search,
+        search_mode=search_mode,
+        idr_min=idr_min,
+        cc_min=cc_min,
+        protein_len_min=protein_len_min,
+        idr_pct_min=idr_pct_min,
+        idr_pct_max=idr_pct_max,
+        cc_pct_min=cc_pct_min,
+        cc_pct_max=cc_pct_max,
+        domain_term=domain_term,
+        location_term=location_term,
+        hide_missing_protein=hide_missing_protein,
         page_url=page_url,
         start_item=start_item,
         end_item=end_item,
