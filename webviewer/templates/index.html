@@ -260,6 +260,8 @@
 document.addEventListener('DOMContentLoaded', function () {
   const button = document.getElementById('show-location-chart');
   const wrapper = document.getElementById('location-chart-wrapper');
+  const locationInput = document.getElementById('location_term');
+  const filterForm = document.querySelector('.filter-form');
   if (!button || !wrapper) {
     return;
   }
@@ -340,6 +342,31 @@ document.addEventListener('DOMContentLoaded', function () {
           }
         }
       });
+      canvas.onclick = (event) => {
+        if (!chartInstance) {
+          return;
+        }
+        const points = chartInstance.getElementsAtEventForMode(
+          event,
+          'nearest',
+          { intersect: true },
+          true
+        );
+        if (!points.length) {
+          return;
+        }
+        const point = points[0];
+        const label = chartInstance.data.labels?.[point.index];
+        if (!label || !locationInput || !filterForm) {
+          return;
+        }
+        locationInput.value = label;
+        if (typeof filterForm.requestSubmit === 'function') {
+          filterForm.requestSubmit();
+        } else {
+          filterForm.submit();
+        }
+      };
       if (totalElem) {
         totalElem.textContent = knownTotal.toLocaleString();
       }
