@@ -23,12 +23,14 @@ FLASK_APP=app.py flask run
 Open `http://127.0.0.1:5000/` and authenticate with the shared password (default `ShimoLAB0501`).
 
 ## Push Workflow
-Local work is staged and reviewed inside `/tmp/idr-cc-webviewer`. After syncing or applying patches, double-check the diff, run any needed tests, then (manually) publish the branch from that directory:
-```bash
-cd /tmp/idr-cc-webviewer
-git push origin main
-```
-The final push command above is always executed explicitly on the deployment machine; automation should stop short of running it.
+1. Apply the latest patches or rebase work inside `/tmp/idr-cc-webviewer` (never push directly from the Desktop working copy).
+2. Verify the changes locally (diff, optional tests, `flask run` if needed).
+3. Only after confirming the state, manually publish the branch **from `/tmp/idr-cc-webviewer`**:
+   ```bash
+   cd /tmp/idr-cc-webviewer
+   git push origin main
+   ```
+   The `git push` step above is always performed manually by the deployment owner; automation or helper scripts must stop before running it.
 
 ## Features
 - Keyword search (UniProt ID / Gene Name / Protein Name / Subcellular Location) with selectable search scope
