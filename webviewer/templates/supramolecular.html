@@ -5,50 +5,11 @@
 {% block content %}
   <h1>Supramolecular interactions</h1>
   <p class="dataset-note">
-    BioGRID (multi-validated) + STRING (&gt;700). IDR/CC 条件は「片方が IDR 閾値以上、もう片方が CC 閾値以上」で合格（順不同）。
+    BioGRID (multi-validated) + STRING (&gt;700). IDR/CC rule: one partner meets the IDR threshold, the other meets the CC threshold (order-agnostic).
   </p>
 
   <div class="filters">
     <form method="get" action="{{ url_for('supramolecular') }}" class="filter-form">
-      <div class="filter-card">
-        <h3>PPI filter</h3>
-        <div class="filter-row filter-row-primary">
-          <label for="search"><span>Filter:</span></label>
-          <input type="text" id="search" name="search" value="{{ search or '' }}" placeholder="Gene, UniProt ID, protein name, location..." />
-          <label for="search_mode">Search field:</label>
-          <select id="search_mode" name="search_mode">
-            {% set current_mode = search_mode or 'all' %}
-            {% for value, label in SEARCH_MODE_OPTIONS %}
-              <option value="{{ value }}" {% if value == current_mode %}selected{% endif %}>{{ label }}</option>
-            {% endfor %}
-          </select>
-          <label for="per_page">Per page:</label>
-          <select id="per_page" name="per_page">
-            {% for option in [10,25,50,100] %}
-              <option value="{{ option }}" {% if option == per_page %}selected{% endif %}>{{ option }}</option>
-            {% endfor %}
-          </select>
-        </div>
-        <div class="filter-row filter-row-secondary">
-          <label for="source">Source</label>
-          <select name="source" id="source">
-            <option value="" {% if not source %}selected{% endif %}>All</option>
-            <option value="biogrid" {% if source == "biogrid" %}selected{% endif %}>BioGRID (multi-validated)</option>
-            <option value="string" {% if source == "string" %}selected{% endif %}>STRING (&gt;700)</option>
-          </select>
-          <label for="uniprot">UniProt ID</label>
-          <input type="text" id="uniprot" name="uniprot" value="{{ uniprot_id or '' }}" placeholder="e.g. O15083" />
-          <label for="score_min">Min STRING score</label>
-          <input type="number" id="score_min" name="score_min" value="{{ min_score if min_score is not none else '' }}" min="0" step="1" />
-        </div>
-        <div class="filter-row filter-row-actions">
-          <label class="checkbox-inline" for="require_both_sources">
-            <input type="checkbox" id="require_both_sources" name="require_both_sources" value="1" {% if require_both_sources %}checked{% endif %} />
-            Only pairs present in both BioGRID and STRING
-          </label>
-        </div>
-      </div>
-
       <div class="filter-card">
         <h3>IDR / CC filter (canonical style)</h3>
         <div class="filter-row filter-row-primary">
@@ -82,6 +43,45 @@
           {% if search or (search_mode and search_mode != 'all') or hide_missing_protein or min_idr_len is not none or min_cc_len is not none or min_protein_len is not none or max_protein_len is not none or min_idr_pct is not none or max_idr_pct is not none or min_cc_pct is not none or max_cc_pct is not none or min_score is not none or source or uniprot_id or per_page != 25 or domain_term or location_term %}
             <a class="clear-filter" href="{{ url_for('supramolecular') }}">Clear</a>
           {% endif %}
+        </div>
+      </div>
+
+      <div class="filter-card">
+        <h3>PPI filter</h3>
+        <div class="filter-row filter-row-primary">
+          <label for="search"><span>Filter:</span></label>
+          <input type="text" id="search" name="search" value="{{ search or '' }}" placeholder="Gene, UniProt ID, protein name, location..." />
+          <label for="search_mode">Search field:</label>
+          <select id="search_mode" name="search_mode">
+            {% set current_mode = search_mode or 'all' %}
+            {% for value, label in SEARCH_MODE_OPTIONS %}
+              <option value="{{ value }}" {% if value == current_mode %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+          </select>
+          <label for="per_page">Per page:</label>
+          <select id="per_page" name="per_page">
+            {% for option in [10,25,50,100] %}
+              <option value="{{ option }}" {% if option == per_page %}selected{% endif %}>{{ option }}</option>
+            {% endfor %}
+          </select>
+          <label for="source">Source</label>
+          <select name="source" id="source">
+            <option value="" {% if not source %}selected{% endif %}>All</option>
+            <option value="biogrid" {% if source == "biogrid" %}selected{% endif %}>BioGRID (multi-validated)</option>
+            <option value="string" {% if source == "string" %}selected{% endif %}>STRING (&gt;700)</option>
+          </select>
+        </div>
+        <div class="filter-row filter-row-secondary">
+          <label for="uniprot">UniProt ID</label>
+          <input type="text" id="uniprot" name="uniprot" value="{{ uniprot_id or '' }}" placeholder="e.g. O15083" />
+          <label for="score_min">Min STRING score</label>
+          <input type="number" id="score_min" name="score_min" value="{{ min_score if min_score is not none else '' }}" min="0" step="1" />
+        </div>
+        <div class="filter-row filter-row-actions">
+          <label class="checkbox-inline" for="require_both_sources">
+            <input type="checkbox" id="require_both_sources" name="require_both_sources" value="1" {% if require_both_sources %}checked{% endif %} />
+            Only pairs present in both BioGRID and STRING
+          </label>
         </div>
       </div>
     </form>
