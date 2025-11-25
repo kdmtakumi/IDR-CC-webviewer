@@ -34,6 +34,8 @@ if not SUPABASE_DB_URL:
 
 PROTEINS_VER6 = "proteins_ver6"
 PROTEINS_VER9 = "proteins_ver9"
+PROTEINS_VER10 = "proteins_ver10"
+PPI_EDGES = "ppi_edges"
 IDR_SEGMENTS_VER9 = "idr_segments_ver9"
 
 SEARCH_MODE_COLUMN_MAP: Dict[str, List[str]] = {
@@ -271,6 +273,42 @@ def build_idr_filter_conditions(
     if max_len is not None:
         clauses.append("COALESCE(idr.idr_length, 0) <= %s")
         params.append(max_len)
+
+    where_sql = "WHERE " + " AND ".join(clauses) if clauses else ""
+    return where_sql, params
+
+
+def build_ppi_filter_conditions(
+    source: Optional[str],
+    uniprot_id: Optional[str],
+    min_score: Optional[int],
+    min_idr_pct: Optional[float],
+    min_cc_pct: Optional[float],
+) -> Tuple[str, List[Any]]:
+    clauses: List[str] = []
+    params: List[Any] = []
+
+    if source in {"biogrid", "string"}:
+        clauses.append("e.source = %s")
+        params.append(source)
+
+    if uniprot_id:
+        clauses.append("(e.uniprot_a = %s OR e.uniprot_b = %s)")
+        params.extend([uniprot_id, uniprot_id])
+
+    if min_score is not None:
+        clauses.append("(e.source != 'string' OR COALESCE(e.combined_score, 0) >= %s)")
+        params.append(min_score)
+
+    if min_idr_pct is not None:
+        clauses.append("COALESCE(p1.idr_percentage, 0) >= %s")
+        clauses.append("COALESCE(p2.idr_percentage, 0) >= %s")
+        params.extend([min_idr_pct, min_idr_pct])
+
+    if min_cc_pct is not None:
+        clauses.append("COALESCE(p1.cc_percentage, 0) >= %s")
+        clauses.append("COALESCE(p2.cc_percentage, 0) >= %s")
+        params.extend([min_cc_pct, min_cc_pct])
 
     where_sql = "WHERE " + " AND ".join(clauses) if clauses else ""
     return where_sql, params
@@ -779,6 +817,109 @@ def subcellular_distribution_api():
             "total_entries": total_entries,
             "unknown_count": unknown_count,
         }
+    )
+
+
+@app.route("/supramolecular")
+def supramolecular():
+    page = parse_page()
+    per_page = get_page_size()
+    source = request.args.get("source", "").strip().lower()
+    source = source if source in {"biogrid", "string"} else None
+    uniprot_id = request.args.get("uniprot", "").strip().upper() or None
+    min_score = parse_int_param("score_min")
+    min_idr_pct = parse_float_param("idr_pct_min")
+    min_cc_pct = parse_float_param("cc_pct_min")
+
+    where_sql, params = build_ppi_filter_conditions(source, uniprot_id, min_score, min_idr_pct, min_cc_pct)
+
+    conn = get_db_connection()
+    with conn.cursor() as cur:
+        cur.execute(
+            f"""
+            SELECT COUNT(*)
+            FROM {PPI_EDGES} e
+            JOIN {PROTEINS_VER10} p1 ON e.uniprot_a = p1.uniprot_id
+            JOIN {PROTEINS_VER10} p2 ON e.uniprot_b = p2.uniprot_id
+            {where_sql}
+            """,
+            params,
+        )
+        total_items = cur.fetchone()[0]
+
+    records: List[Dict[str, Any]] = []
+    if total_items:
+        offset = (page - 1) * per_page
+        query = f"""
+            SELECT
+                e.source,
+                e.combined_score,
+                p1.uniprot_id AS a_id,
+                p1.gene_name AS a_gene,
+                p1.idr_percentage AS a_idr_pct,
+                p1.cc_percentage AS a_cc_pct,
+                p2.uniprot_id AS b_id,
+                p2.gene_name AS b_gene,
+                p2.idr_percentage AS b_idr_pct,
+                p2.cc_percentage AS b_cc_pct
+            FROM {PPI_EDGES} e
+            JOIN {PROTEINS_VER10} p1 ON e.uniprot_a = p1.uniprot_id
+            JOIN {PROTEINS_VER10} p2 ON e.uniprot_b = p2.uniprot_id
+            {where_sql}
+            ORDER BY e.source, e.combined_score DESC NULLS LAST, p1.uniprot_id, p2.uniprot_id
+            LIMIT %s OFFSET %s
+        """
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            cur.execute(query, params + [per_page, offset])
+            rows = cur.fetchall()
+            for r in rows:
+                records.append(
+                    {
+                        "source": r.get("source"),
+                        "combined_score": r.get("combined_score"),
+                        "a_id": r.get("a_id"),
+                        "a_gene": r.get("a_gene"),
+                        "a_idr_pct": r.get("a_idr_pct"),
+                        "a_cc_pct": r.get("a_cc_pct"),
+                        "b_id": r.get("b_id"),
+                        "b_gene": r.get("b_gene"),
+                        "b_idr_pct": r.get("b_idr_pct"),
+                        "b_cc_pct": r.get("b_cc_pct"),
+                    }
+                )
+
+    page, start_item, end_item, page_numbers, show_first, show_last, total_pages = paginate(total_items, page, per_page)
+
+    def page_url(target_page: int) -> str:
+        return url_for(
+            "supramolecular",
+            page=target_page,
+            per_page=per_page,
+            source=source or None,
+            uniprot=uniprot_id or None,
+            score_min=min_score if min_score is not None else None,
+            idr_pct_min=min_idr_pct if min_idr_pct is not None else None,
+            cc_pct_min=min_cc_pct if min_cc_pct is not None else None,
+        )
+
+    return render_template(
+        "supramolecular.html",
+        records=records,
+        total_items=total_items,
+        page=page,
+        start_item=start_item,
+        end_item=end_item,
+        page_numbers=page_numbers,
+        show_first=show_first,
+        show_last=show_last,
+        total_pages=total_pages,
+        per_page=per_page,
+        source=source,
+        uniprot_id=uniprot_id,
+        min_score=min_score,
+        min_idr_pct=min_idr_pct,
+        min_cc_pct=min_cc_pct,
+        page_url=page_url,
     )
 
 

@@ -30,11 +30,15 @@ Open `http://127.0.0.1:5000/` and authenticate with the shared password (default
 - Dedicated IDR list (≥30 aa) with cluster/distance metadata and per-IDR detail view
 - Subcellular location pie chart that respects current filters
 - Canonical view (ver9) covering all 83,607 canonical entries
+- Supramolecular PPI view powered by BioGRID multi-validated + STRING (>700) with source/IDR/CC/score filters
 
 ## Deploying on Render + Supabase
 1. **Supabase**
-   - Create the `proteins_ver6`, `proteins_ver9`, and `idr_segments_ver9` tables (see `app.py` for column lists).
-   - Upload the CSV files via `\copy` or Supabase Studio.
+   - Create the `proteins_ver6`, `proteins_ver9`, `proteins_ver10`, `idr_segments_ver9`, and `ppi_edges` tables (see `app.py` for column lists).
+   - Upload the CSV files via `\copy` or Supabase Studio. For PPI/supramolecular:
+     - `IDR+CC_DB_ver5-/all_human_protein_database_with_IDR-CCinformation_ver10.csv` → `proteins_ver10`
+     - `interaction_database/biogrid_edges.csv` → `ppi_edges` (columns: `uniprot_a,uniprot_b,source`)
+     - `interaction_database/string_edges.csv` → `ppi_edges` (columns: `uniprot_a,uniprot_b,source,combined_score`)
 2. **Render**
    - Connect the GitHub repository and create a “Web Service”.
    - Build command: `pip install --upgrade pip && pip install -r requirements.txt`
