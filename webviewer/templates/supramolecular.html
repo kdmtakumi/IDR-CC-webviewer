@@ -13,6 +13,21 @@
       <div class="filter-card">
         <h3>IDR / CC filter (canonical style)</h3>
         <div class="filter-row filter-row-primary">
+          <label for="search"><span>Filter:</span></label>
+          <input type="text" id="search" name="search" value="{{ search or '' }}" placeholder="Gene, UniProt ID, protein name, location..." />
+          <label for="search_mode">Search field:</label>
+          <select id="search_mode" name="search_mode">
+            {% set current_mode = search_mode or 'all' %}
+            {% for value, label in SEARCH_MODE_OPTIONS %}
+              <option value="{{ value }}" {% if value == current_mode %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+          </select>
+          <label for="per_page">Per page:</label>
+          <select id="per_page" name="per_page">
+            {% for option in [10,25,50,100] %}
+              <option value="{{ option }}" {% if option == per_page %}selected{% endif %}>{{ option }}</option>
+            {% endfor %}
+          </select>
           <label for="idr_len_min">IDR length (aa) ≥</label>
           <input type="number" id="idr_len_min" name="idr_len_min" min="0" value="{{ min_idr_len if min_idr_len is not none else '' }}" placeholder="e.g. 100" />
           <label for="cc_len_min">CC length (aa) ≥</label>
@@ -49,21 +64,6 @@
       <div class="filter-card">
         <h3>PPI filter</h3>
         <div class="filter-row filter-row-primary">
-          <label for="search"><span>Filter:</span></label>
-          <input type="text" id="search" name="search" value="{{ search or '' }}" placeholder="Gene, UniProt ID, protein name, location..." />
-          <label for="search_mode">Search field:</label>
-          <select id="search_mode" name="search_mode">
-            {% set current_mode = search_mode or 'all' %}
-            {% for value, label in SEARCH_MODE_OPTIONS %}
-              <option value="{{ value }}" {% if value == current_mode %}selected{% endif %}>{{ label }}</option>
-            {% endfor %}
-          </select>
-          <label for="per_page">Per page:</label>
-          <select id="per_page" name="per_page">
-            {% for option in [10,25,50,100] %}
-              <option value="{{ option }}" {% if option == per_page %}selected{% endif %}>{{ option }}</option>
-            {% endfor %}
-          </select>
           <label for="source">Source</label>
           <select name="source" id="source">
             <option value="" {% if not source %}selected{% endif %}>All</option>
