@@ -503,7 +503,7 @@ def enforce_password_gate():
     if session.get("authenticated"):
         return
     endpoint = request.endpoint or ""
-    if endpoint in {"login", "static"}:
+    if endpoint in {"login", "static", "health"}:
         return
     next_url = request.url
     return redirect(url_for("login", next=next_url))
