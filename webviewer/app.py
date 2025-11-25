@@ -755,6 +755,11 @@ def analysis_plot(filename: str):
     return send_from_directory(ANALYSIS_DIR, filename, as_attachment=False)
 
 
+@app.route("/health")
+def health():
+    return ("ok", 200, {"Content-Type": "text/plain; charset=utf-8"})
+
+
 @app.route("/api/subcellular_distribution")
 def subcellular_distribution_api():
     dataset = request.args.get("dataset", "").strip().lower()
