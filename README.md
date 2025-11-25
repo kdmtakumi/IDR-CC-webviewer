@@ -53,6 +53,11 @@ Open `http://127.0.0.1:5000/` and authenticate with the shared password (default
 ### Housekeeping
 - 開発途中の `webviewer_next/` フォルダは削除済み。Render では `webviewer/` のみをデプロイしているため、削除しても影響なし。
 
+### Interaction datasets (for PPI / supramolecular pages)
+- BioGRID multi-validated set: `interaction_database/Biogrid_physical_multivalidated_pmids_dedup.csv`（ヒト 9606、物理的相互作用、複数 PMID で裏付けがあるものを残し、無向ペア重複を除去）。
+- STRING high-score set: `interaction_database/9606.protein.links.detailed.v12.0.uniprot.score_gt700.csv`（ヒト 9606、UniProt整形版、combined_score > 700 をフィルタし、無向ペア重複を除去）。
+- Deduplication method: `uniprot1/uniprot2` をソートした無向ペアをキーにし、同一ペアの2行目以降を削除して一意化。
+
 ## Data Notes
 - Both “Browse” (ver6) and Canonical (ver9) tables originate from UniProt proteome UP000005640.
 - The canonical FASTA (`uniprotkb_proteome_UP000005640_2025_10_29_canonical.fasta`) plus ver6 annotations were merged to create `all_human_protein_database_with_IDR-CCinformation_ver9.csv` (83,607 entries).
