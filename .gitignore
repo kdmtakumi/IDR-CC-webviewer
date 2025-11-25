@@ -4,3 +4,9 @@ __pycache__/
 *.pyo
 *.DS_Store
 *.log
+# Uncomment if you don’t want to track raw CSV assets:
+# IDR+CC_DB_ver5-/
+
+# Large generated analysis artifacts
+ver6_all_analysis/csv/
+ver6_all_analysis/png/
