@@ -67,7 +67,7 @@ h1 {
   display: flex;
   flex-wrap: nowrap;
   align-items: center;
-  gap: 10px;
+  gap: 14px;
   width: 100%;
 }
 
@@ -618,6 +618,7 @@ footer {
 
   .filter-row {
     flex-wrap: wrap;
+    gap: 12px;
   }
 
   .summary-list {
