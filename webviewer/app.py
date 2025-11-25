@@ -283,10 +283,31 @@ def build_ppi_filter_conditions(
     uniprot_id: Optional[str],
     min_score: Optional[int],
     min_idr_pct: Optional[float],
+    max_idr_pct: Optional[float],
     min_cc_pct: Optional[float],
+    max_cc_pct: Optional[float],
+    min_idr_len: Optional[int],
+    min_cc_len: Optional[int],
+    min_protein_len: Optional[int],
+    max_protein_len: Optional[int],
+    search: Optional[str],
+    search_mode: str,
+    hide_missing_protein: bool,
 ) -> Tuple[str, List[Any]]:
     clauses: List[str] = []
     params: List[Any] = []
+
+    # Search across both partners
+    if search:
+        term = f"%{search.lower()}%"
+        mode = search_mode if search_mode in SEARCH_MODE_COLUMN_MAP else "all"
+        columns = SEARCH_MODE_COLUMN_MAP.get(mode, SEARCH_MODE_COLUMN_MAP["all"])
+        col_clauses = []
+        for col in columns:
+            col_clauses.append(f"LOWER(p1.{col}) LIKE %s")
+            col_clauses.append(f"LOWER(p2.{col}) LIKE %s")
+        clauses.append("(" + " OR ".join(col_clauses) + ")")
+        params.extend([term] * len(col_clauses))
 
     if source in {"biogrid", "string"}:
         clauses.append("e.source = %s")
@@ -300,27 +321,71 @@ def build_ppi_filter_conditions(
         clauses.append("(e.source != 'string' OR COALESCE(e.combined_score, 0) >= %s)")
         params.append(min_score)
 
-    if min_idr_pct is not None and min_cc_pct is not None:
-        clauses.append(
-            """
-            (
-                (COALESCE(p1.idr_percentage, 0) >= %s AND COALESCE(p2.cc_percentage, 0) >= %s)
-                OR
-                (COALESCE(p2.idr_percentage, 0) >= %s AND COALESCE(p1.cc_percentage, 0) >= %s)
-            )
-            """
-        )
-        params.extend([min_idr_pct, min_cc_pct, min_idr_pct, min_cc_pct])
-    elif min_idr_pct is not None:
-        clauses.append(
-            "(COALESCE(p1.idr_percentage, 0) >= %s OR COALESCE(p2.idr_percentage, 0) >= %s)"
-        )
-        params.extend([min_idr_pct, min_idr_pct])
-    elif min_cc_pct is not None:
-        clauses.append(
-            "(COALESCE(p1.cc_percentage, 0) >= %s OR COALESCE(p2.cc_percentage, 0) >= %s)"
-        )
-        params.extend([min_cc_pct, min_cc_pct])
+    # Protein length filters apply to both partners
+    if min_protein_len is not None:
+        clauses.append("COALESCE(p1.sequence_length, 0) >= %s")
+        clauses.append("COALESCE(p2.sequence_length, 0) >= %s")
+        params.extend([min_protein_len, min_protein_len])
+    if max_protein_len is not None:
+        clauses.append("COALESCE(p1.sequence_length, 0) <= %s")
+        clauses.append("COALESCE(p2.sequence_length, 0) <= %s")
+        params.extend([max_protein_len, max_protein_len])
+
+    # Helper to build threshold parts
+    def threshold_parts(alias: str, column: str, min_val: Optional[float], max_val: Optional[float]) -> Tuple[List[str], List[Any]]:
+        parts: List[str] = []
+        p: List[Any] = []
+        if min_val is not None:
+            parts.append(f"COALESCE({alias}.{column}, 0) >= %s")
+            p.append(min_val)
+        if max_val is not None:
+            parts.append(f"COALESCE({alias}.{column}, 0) <= %s")
+            p.append(max_val)
+        return parts, p
+
+    # IDR/CC percentage: one partner satisfies IDR range, the other CC range (either orientation)
+    idr_pct_parts_p1, idr_pct_params_p1 = threshold_parts("p1", "idr_percentage", min_idr_pct, max_idr_pct)
+    idr_pct_parts_p2, idr_pct_params_p2 = threshold_parts("p2", "idr_percentage", min_idr_pct, max_idr_pct)
+    cc_pct_parts_p1, cc_pct_params_p1 = threshold_parts("p1", "cc_percentage", min_cc_pct, max_cc_pct)
+    cc_pct_parts_p2, cc_pct_params_p2 = threshold_parts("p2", "cc_percentage", min_cc_pct, max_cc_pct)
+
+    pct_orientation_clauses: List[str] = []
+    pct_orientation_params: List[Any] = []
+    orient1 = idr_pct_parts_p1 + cc_pct_parts_p2
+    if orient1:
+        pct_orientation_clauses.append("(" + " AND ".join(orient1) + ")")
+        pct_orientation_params.extend(idr_pct_params_p1 + cc_pct_params_p2)
+    orient2 = idr_pct_parts_p2 + cc_pct_parts_p1
+    if orient2:
+        pct_orientation_clauses.append("(" + " AND ".join(orient2) + ")")
+        pct_orientation_params.extend(idr_pct_params_p2 + cc_pct_params_p1)
+    if pct_orientation_clauses:
+        clauses.append("(" + " OR ".join(pct_orientation_clauses) + ")")
+        params.extend(pct_orientation_params)
+
+    # IDR/CC length (aa): same orientation logic using idr_residues and total_cc_length
+    idr_len_parts_p1, idr_len_params_p1 = threshold_parts("p1", "idr_residues", min_idr_len, None)
+    idr_len_parts_p2, idr_len_params_p2 = threshold_parts("p2", "idr_residues", min_idr_len, None)
+    cc_len_parts_p1, cc_len_params_p1 = threshold_parts("p1", "total_cc_length", min_cc_len, None)
+    cc_len_parts_p2, cc_len_params_p2 = threshold_parts("p2", "total_cc_length", min_cc_len, None)
+
+    len_orientation_clauses: List[str] = []
+    len_orientation_params: List[Any] = []
+    orient_len1 = idr_len_parts_p1 + cc_len_parts_p2
+    if orient_len1:
+        len_orientation_clauses.append("(" + " AND ".join(orient_len1) + ")")
+        len_orientation_params.extend(idr_len_params_p1 + cc_len_params_p2)
+    orient_len2 = idr_len_parts_p2 + cc_len_parts_p1
+    if orient_len2:
+        len_orientation_clauses.append("(" + " AND ".join(orient_len2) + ")")
+        len_orientation_params.extend(idr_len_params_p2 + cc_len_params_p1)
+    if len_orientation_clauses:
+        clauses.append("(" + " OR ".join(len_orientation_clauses) + ")")
+        params.extend(len_orientation_params)
+
+    if hide_missing_protein:
+        clauses.append("NULLIF(TRIM(COALESCE(p1.protein_name, '')), '') IS NOT NULL")
+        clauses.append("NULLIF(TRIM(COALESCE(p2.protein_name, '')), '') IS NOT NULL")
 
     where_sql = "WHERE " + " AND ".join(clauses) if clauses else ""
     return where_sql, params
@@ -836,14 +901,40 @@ def subcellular_distribution_api():
 def supramolecular():
     page = parse_page()
     per_page = get_page_size()
+    search = request.args.get("search", "").strip()
+    search_mode = request.args.get("search_mode", "all").strip().lower() or "all"
+    if search_mode not in SEARCH_MODE_COLUMN_MAP:
+        search_mode = "all"
     source = request.args.get("source", "").strip().lower()
     source = source if source in {"biogrid", "string"} else None
     uniprot_id = request.args.get("uniprot", "").strip().upper() or None
     min_score = parse_int_param("score_min")
+    min_idr_len = parse_int_param("idr_len_min")
+    min_cc_len = parse_int_param("cc_len_min")
     min_idr_pct = parse_float_param("idr_pct_min")
+    max_idr_pct = parse_float_param("idr_pct_max")
     min_cc_pct = parse_float_param("cc_pct_min")
+    max_cc_pct = parse_float_param("cc_pct_max")
+    min_protein_len = parse_int_param("protein_len_min")
+    max_protein_len = parse_int_param("protein_len_max")
+    hide_missing_protein = request.args.get("hide_missing_protein", "").lower() in {"1", "true", "on"}
 
-    where_sql, params = build_ppi_filter_conditions(source, uniprot_id, min_score, min_idr_pct, min_cc_pct)
+    where_sql, params = build_ppi_filter_conditions(
+        source,
+        uniprot_id,
+        min_score,
+        min_idr_pct,
+        max_idr_pct,
+        min_cc_pct,
+        max_cc_pct,
+        min_idr_len,
+        min_cc_len,
+        min_protein_len,
+        max_protein_len,
+        search,
+        search_mode,
+        hide_missing_protein,
+    )
 
     conn = get_db_connection()
     with conn.cursor() as cur:
@@ -929,8 +1020,17 @@ def supramolecular():
         source=source,
         uniprot_id=uniprot_id,
         min_score=min_score,
+        min_idr_len=min_idr_len,
+        min_cc_len=min_cc_len,
         min_idr_pct=min_idr_pct,
+        max_idr_pct=max_idr_pct,
         min_cc_pct=min_cc_pct,
+        max_cc_pct=max_cc_pct,
+        min_protein_len=min_protein_len,
+        max_protein_len=max_protein_len,
+        search=search,
+        search_mode=search_mode,
+        hide_missing_protein=hide_missing_protein,
         page_url=page_url,
     )
 
