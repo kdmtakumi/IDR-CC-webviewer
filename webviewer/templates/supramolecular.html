@@ -3,106 +3,104 @@
 {% block title %}Supramolecular{% endblock %}
 
 {% block content %}
-<section class="panel">
   <h1>Supramolecular interactions</h1>
-  <p>Filter PPI pairs from BioGRID (multi-validated) and STRING (combined_score &gt; 700). IDR/CC thresholds apply to a pair where one partner has IDR ≥ threshold and the other has CC ≥ threshold (順不同)。</p>
-  <form method="get" class="filters">
-    <div class="form-row">
-      <label for="search">Search</label>
-      <input type="text" id="search" name="search" value="{{ search or '' }}" placeholder="UniProt / Gene / Protein / Location" />
-      <label for="search_mode">Field</label>
-      <select name="search_mode" id="search_mode">
-        {% for value, label in SEARCH_MODE_OPTIONS %}
-        <option value="{{ value }}" {% if search_mode == value %}selected{% endif %}>{{ label }}</option>
-        {% endfor %}
-      </select>
+  <p class="dataset-note">
+    BioGRID (multi-validated) + STRING (&gt;700). IDR/CC 条件は「片方が IDR 閾値以上、もう片方が CC 閾値以上」で合格（順不同）。
+  </p>
 
-      <label for="source">Source</label>
-      <select name="source" id="source">
-        <option value="" {% if not source %}selected{% endif %}>All</option>
-        <option value="biogrid" {% if source == "biogrid" %}selected{% endif %}>BioGRID (multi-validated)</option>
-        <option value="string" {% if source == "string" %}selected{% endif %}>STRING (&gt;700)</option>
-      </select>
+  <div class="filters">
+    <form method="get" action="{{ url_for('supramolecular') }}" class="filter-form">
+      <div class="filter-row filter-row-primary">
+        <label for="search"><span>Filter:</span></label>
+        <input type="text" id="search" name="search" value="{{ search or '' }}" placeholder="Gene, UniProt ID, protein name, location..." />
+        <label for="search_mode">Search field:</label>
+        <select id="search_mode" name="search_mode">
+          {% set current_mode = search_mode or 'all' %}
+          {% for value, label in SEARCH_MODE_OPTIONS %}
+            <option value="{{ value }}" {% if value == current_mode %}selected{% endif %}>{{ label }}</option>
+          {% endfor %}
+        </select>
+        <label for="source">Source</label>
+        <select name="source" id="source">
+          <option value="" {% if not source %}selected{% endif %}>All</option>
+          <option value="biogrid" {% if source == "biogrid" %}selected{% endif %}>BioGRID (multi-validated)</option>
+          <option value="string" {% if source == "string" %}selected{% endif %}>STRING (&gt;700)</option>
+        </select>
+        <label for="uniprot">UniProt ID</label>
+        <input type="text" id="uniprot" name="uniprot" value="{{ uniprot_id or '' }}" placeholder="e.g. O15083" />
+        <label for="per_page">Per page:</label>
+        <select id="per_page" name="per_page">
+          {% for option in [10,25,50,100] %}
+            <option value="{{ option }}" {% if option == per_page %}selected{% endif %}>{{ option }}</option>
+          {% endfor %}
+        </select>
+      </div>
+      <div class="filter-row filter-row-secondary">
+        <label for="idr_len_min">IDR length (aa) ≥</label>
+        <input type="number" id="idr_len_min" name="idr_len_min" min="0" value="{{ min_idr_len if min_idr_len is not none else '' }}" placeholder="e.g. 100" />
+        <label for="cc_len_min">CC length (aa) ≥</label>
+        <input type="number" id="cc_len_min" name="cc_len_min" min="0" value="{{ min_cc_len if min_cc_len is not none else '' }}" placeholder="e.g. 50" />
+        <label for="idr_pct_min">IDR%</label>
+        <input type="number" id="idr_pct_min" name="idr_pct_min" step="0.1" min="0" max="100" value="{{ min_idr_pct if min_idr_pct is not none else '' }}" placeholder="min" />
+        <span class="range-separator">to</span>
+        <input type="number" id="idr_pct_max" name="idr_pct_max" step="0.1" min="0" max="100" value="{{ max_idr_pct if max_idr_pct is not none else '' }}" placeholder="max" />
+        <label for="cc_pct_min">CC%</label>
+        <input type="number" id="cc_pct_min" name="cc_pct_min" step="0.1" min="0" max="100" value="{{ min_cc_pct if min_cc_pct is not none else '' }}" placeholder="min" />
+        <span class="range-separator">to</span>
+        <input type="number" id="cc_pct_max" name="cc_pct_max" step="0.1" min="0" max="100" value="{{ max_cc_pct if max_cc_pct is not none else '' }}" placeholder="max" />
+        <label for="protein_len_min">Protein length (aa)</label>
+        <input type="number" id="protein_len_min" name="protein_len_min" min="0" value="{{ min_protein_len if min_protein_len is not none else '' }}" placeholder="min" />
+        <span class="range-separator">to</span>
+        <input type="number" id="protein_len_max" name="protein_len_max" min="0" value="{{ max_protein_len if max_protein_len is not none else '' }}" placeholder="max" />
+      </div>
+      <div class="filter-row filter-row-secondary">
+        <label for="score_min">Min STRING score</label>
+        <input type="number" id="score_min" name="score_min" value="{{ min_score if min_score is not none else '' }}" min="0" step="1" />
+      </div>
+      <div class="filter-row filter-row-actions">
+        <label class="checkbox-inline" for="hide_missing_protein">
+          <input type="checkbox" id="hide_missing_protein" name="hide_missing_protein" value="1" {% if hide_missing_protein %}checked{% endif %} />
+          Hide entries with missing protein names
+        </label>
+        <button type="submit">Apply</button>
+        {% if search or (search_mode and search_mode != 'all') or hide_missing_protein or min_idr_len is not none or min_cc_len is not none or min_protein_len is not none or max_protein_len is not none or min_idr_pct is not none or max_idr_pct is not none or min_cc_pct is not none or max_cc_pct is not none or min_score is not none or source or uniprot_id or per_page != 25 %}
+          <a class="clear-filter" href="{{ url_for('supramolecular') }}">Clear</a>
+        {% endif %}
+      </div>
+    </form>
+  </div>
 
-      <label for="uniprot">UniProt ID</label>
-      <input type="text" id="uniprot" name="uniprot" value="{{ uniprot_id or '' }}" placeholder="e.g. O15083" />
+  <p class="meta">Showing {{ start_item }} – {{ end_item }} of {{ total_items }} pairs.</p>
 
-      <label for="score_min">Min STRING score</label>
-      <input type="number" id="score_min" name="score_min" value="{{ min_score if min_score is not none else '' }}" min="0" step="1" />
-    </div>
-    <div class="form-row">
-      <label for="idr_len_min">IDR length ≥</label>
-      <input type="number" id="idr_len_min" name="idr_len_min" value="{{ min_idr_len if min_idr_len is not none else '' }}" min="0" step="1" />
-
-      <label for="cc_len_min">CC length ≥</label>
-      <input type="number" id="cc_len_min" name="cc_len_min" value="{{ min_cc_len if min_cc_len is not none else '' }}" min="0" step="1" />
-
-      <label for="idr_pct_min">Min IDR %</label>
-      <input type="number" id="idr_pct_min" name="idr_pct_min" value="{{ min_idr_pct if min_idr_pct is not none else '' }}" min="0" max="100" step="0.1" />
-
-      <label for="idr_pct_max">to</label>
-      <input type="number" id="idr_pct_max" name="idr_pct_max" value="{{ max_idr_pct if max_idr_pct is not none else '' }}" min="0" max="100" step="0.1" />
-
-      <label for="cc_pct_min">Min CC %</label>
-      <input type="number" id="cc_pct_min" name="cc_pct_min" value="{{ min_cc_pct if min_cc_pct is not none else '' }}" min="0" max="100" step="0.1" />
-
-      <label for="cc_pct_max">to</label>
-      <input type="number" id="cc_pct_max" name="cc_pct_max" value="{{ max_cc_pct if max_cc_pct is not none else '' }}" min="0" max="100" step="0.1" />
-    </div>
-    <div class="form-row">
-      <label for="protein_len_min">Protein length</label>
-      <input type="number" id="protein_len_min" name="protein_len_min" value="{{ min_protein_len if min_protein_len is not none else '' }}" min="0" step="1" />
-      <label for="protein_len_max">to</label>
-      <input type="number" id="protein_len_max" name="protein_len_max" value="{{ max_protein_len if max_protein_len is not none else '' }}" min="0" step="1" />
-
-      <label for="per_page">Per page</label>
-      <select name="per_page" id="per_page">
-        {% for option in [10,25,50,100] %}
-        <option value="{{ option }}" {% if per_page == option %}selected{% endif %}>{{ option }}</option>
-        {% endfor %}
-      </select>
-
-      <label class="checkbox">
-        <input type="checkbox" name="hide_missing_protein" value="1" {% if hide_missing_protein %}checked{% endif %}>
-        Hide entries with missing protein names
-      </label>
-
-      <button type="submit">Filter</button>
-    </div>
-    <p class="meta">IDR/CC 条件: 片方が IDR ≥ 指定値、もう片方が CC ≥ 指定値で合格。</p>
-  </form>
-
-  <p class="meta">Found {{ total_items }} pairs. Showing {{ start_item }}–{{ end_item }}.</p>
-
-  <table class="data">
+  <table class="results-table">
     <thead>
       <tr>
-        <th>Source</th>
-        <th>UniProt A</th>
-        <th>Gene A</th>
-        <th>IDR% A</th>
-        <th>CC% A</th>
-        <th>UniProt B</th>
-        <th>Gene B</th>
-        <th>IDR% B</th>
-        <th>CC% B</th>
-        <th>Score</th>
+        <th class="col-narrow">Source</th>
+        <th class="col-narrow">UniProt A</th>
+        <th class="col-narrow">Gene A</th>
+        <th class="col-small">IDR % A</th>
+        <th class="col-small">CC % A</th>
+        <th class="col-narrow">UniProt B</th>
+        <th class="col-narrow">Gene B</th>
+        <th class="col-small">IDR % B</th>
+        <th class="col-small">CC % B</th>
+        <th class="col-small">Score</th>
       </tr>
     </thead>
     <tbody>
       {% if records %}
         {% for r in records %}
         <tr>
-          <td>{{ r.source }}</td>
-          <td><a href="{{ url_for('protein_detail', uniprot_id=r.a_id, return_to=request.full_path) }}">{{ r.a_id }}</a></td>
-          <td>{{ r.a_gene }}</td>
-          <td>{{ "%.2f"|format(r.a_idr_pct) if r.a_idr_pct is not none else "" }}</td>
-          <td>{{ "%.2f"|format(r.a_cc_pct) if r.a_cc_pct is not none else "" }}</td>
-          <td><a href="{{ url_for('protein_detail', uniprot_id=r.b_id, return_to=request.full_path) }}">{{ r.b_id }}</a></td>
-          <td>{{ r.b_gene }}</td>
-          <td>{{ "%.2f"|format(r.b_idr_pct) if r.b_idr_pct is not none else "" }}</td>
-          <td>{{ "%.2f"|format(r.b_cc_pct) if r.b_cc_pct is not none else "" }}</td>
-          <td>{{ r.combined_score if r.combined_score is not none else "" }}</td>
+          <td class="col-narrow">{{ r.source }}</td>
+          <td class="col-narrow"><a href="{{ url_for('protein_detail', uniprot_id=r.a_id, return_to=request.full_path) }}">{{ r.a_id }}</a></td>
+          <td class="col-narrow">{{ r.a_gene }}</td>
+          <td class="col-small">{{ "%.2f"|format(r.a_idr_pct) if r.a_idr_pct is not none else "" }}</td>
+          <td class="col-small">{{ "%.2f"|format(r.a_cc_pct) if r.a_cc_pct is not none else "" }}</td>
+          <td class="col-narrow"><a href="{{ url_for('protein_detail', uniprot_id=r.b_id, return_to=request.full_path) }}">{{ r.b_id }}</a></td>
+          <td class="col-narrow">{{ r.b_gene }}</td>
+          <td class="col-small">{{ "%.2f"|format(r.b_idr_pct) if r.b_idr_pct is not none else "" }}</td>
+          <td class="col-small">{{ "%.2f"|format(r.b_cc_pct) if r.b_cc_pct is not none else "" }}</td>
+          <td class="col-small">{{ r.combined_score if r.combined_score is not none else "" }}</td>
         </tr>
         {% endfor %}
       {% else %}
@@ -124,5 +122,4 @@
     {% if show_last %}<a href="{{ page_url(total_pages) }}">{{ total_pages }}</a>{% endif %}
   </div>
   {% endif %}
-</section>
 {% endblock %}
