@@ -44,6 +44,11 @@ Open `http://127.0.0.1:5000/` and authenticate with the shared password (default
      - `IDRCC_PASSWORD` (shared password) and `IDRCC_SECRET_KEY`
 3. Set the Render instance to the same region as Supabase (or nearby) for lower latency.
 
+### Health Check (Render / UptimeRobot)
+- Purpose: external uptime monitoring without authentication; `/health` returns plain `ok` and is exempt from the login gate.
+- UptimeRobot example: HTTP(s) monitor → URL `https://idr-cc-webviewer.onrender.com/health` → interval 5 minutes → Custom HTTP Header `User-Agent: Mozilla/5.0` (任意の一般的な UA) → 通知先のみ選択。
+- Access log負荷を抑えるため、監視間隔は5分程度を推奨（現状のログ量は微小）。
+
 ## Data Notes
 - Both “Browse” (ver6) and Canonical (ver9) tables originate from UniProt proteome UP000005640.
 - The canonical FASTA (`uniprotkb_proteome_UP000005640_2025_10_29_canonical.fasta`) plus ver6 annotations were merged to create `all_human_protein_database_with_IDR-CCinformation_ver9.csv` (83,607 entries).
