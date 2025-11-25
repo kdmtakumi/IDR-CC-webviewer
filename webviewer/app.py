@@ -300,14 +300,26 @@ def build_ppi_filter_conditions(
         clauses.append("(e.source != 'string' OR COALESCE(e.combined_score, 0) >= %s)")
         params.append(min_score)
 
-    if min_idr_pct is not None:
-        clauses.append("COALESCE(p1.idr_percentage, 0) >= %s")
-        clauses.append("COALESCE(p2.idr_percentage, 0) >= %s")
+    if min_idr_pct is not None and min_cc_pct is not None:
+        clauses.append(
+            """
+            (
+                (COALESCE(p1.idr_percentage, 0) >= %s AND COALESCE(p2.cc_percentage, 0) >= %s)
+                OR
+                (COALESCE(p2.idr_percentage, 0) >= %s AND COALESCE(p1.cc_percentage, 0) >= %s)
+            )
+            """
+        )
+        params.extend([min_idr_pct, min_cc_pct, min_idr_pct, min_cc_pct])
+    elif min_idr_pct is not None:
+        clauses.append(
+            "(COALESCE(p1.idr_percentage, 0) >= %s OR COALESCE(p2.idr_percentage, 0) >= %s)"
+        )
         params.extend([min_idr_pct, min_idr_pct])
-
-    if min_cc_pct is not None:
-        clauses.append("COALESCE(p1.cc_percentage, 0) >= %s")
-        clauses.append("COALESCE(p2.cc_percentage, 0) >= %s")
+    elif min_cc_pct is not None:
+        clauses.append(
+            "(COALESCE(p1.cc_percentage, 0) >= %s OR COALESCE(p2.cc_percentage, 0) >= %s)"
+        )
         params.extend([min_cc_pct, min_cc_pct])
 
     where_sql = "WHERE " + " AND ".join(clauses) if clauses else ""

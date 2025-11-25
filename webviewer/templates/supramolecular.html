@@ -5,7 +5,7 @@
 {% block content %}
 <section class="panel">
   <h1>Supramolecular interactions</h1>
-  <p>Filter PPI pairs from BioGRID (multi-validated) and STRING (combined_score &gt; 700). IDR/CC thresholds apply to両方のパートナー。</p>
+  <p>Filter PPI pairs from BioGRID (multi-validated) and STRING (combined_score &gt; 700). IDR/CC thresholds apply to a pair where one partner has IDR ≥ threshold and the other has CC ≥ threshold (順不同)。</p>
   <form method="get" class="filters">
     <div class="form-row">
       <label for="source">Source</label>
@@ -37,6 +37,7 @@
 
       <button type="submit">Filter</button>
     </div>
+    <p class="meta">IDR/CC 条件: 片方が IDR ≥ 指定値、もう片方が CC ≥ 指定値で合格。</p>
   </form>
 
   <p class="meta">Found {{ total_items }} pairs. Showing {{ start_item }}–{{ end_item }}.</p>
