@@ -48,6 +48,7 @@ Open `http://127.0.0.1:5000/` and authenticate with the shared password (default
 - Purpose: external uptime monitoring without authentication; `/health` returns plain `ok` and is exempt from the login gate.
 - UptimeRobot example: HTTP(s) monitor → URL `https://idr-cc-webviewer.onrender.com/health` → interval 5 minutes → Custom HTTP Header `User-Agent: Mozilla/5.0` (任意の一般的な UA) → 通知先のみ選択。
 - Access log負荷を抑えるため、監視間隔は5分程度を推奨（現状のログ量は微小）。
+- Renderログで確認する場合: ダッシュボードの Logs を開き、`/health` でフィルタ。5分刻みで 200 応答が並んでいれば正常。
 
 ## Data Notes
 - Both “Browse” (ver6) and Canonical (ver9) tables originate from UniProt proteome UP000005640.
