@@ -50,6 +50,9 @@ Open `http://127.0.0.1:5000/` and authenticate with the shared password (default
 - Access log負荷を抑えるため、監視間隔は5分程度を推奨（現状のログ量は微小）。
 - Renderログで確認する場合: ダッシュボードの Logs を開き、`/health` でフィルタ。5分刻みで 200 応答が並んでいれば正常。
 
+### Housekeeping
+- 開発途中の `webviewer_next/` フォルダは削除済み。Render では `webviewer/` のみをデプロイしているため、削除しても影響なし。
+
 ## Data Notes
 - Both “Browse” (ver6) and Canonical (ver9) tables originate from UniProt proteome UP000005640.
 - The canonical FASTA (`uniprotkb_proteome_UP000005640_2025_10_29_canonical.fasta`) plus ver6 annotations were merged to create `all_human_protein_database_with_IDR-CCinformation_ver9.csv` (83,607 entries).
