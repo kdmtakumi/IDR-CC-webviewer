@@ -57,6 +57,7 @@ Open `http://127.0.0.1:5000/` and authenticate with the shared password (default
 - BioGRID multi-validated set: `interaction_database/Biogrid_physical_multivalidated_pmids_dedup.csv`（ヒト 9606、物理的相互作用、複数 PMID で裏付けがあるものを残し、無向ペア重複を除去）。
 - STRING high-score set: `interaction_database/9606.protein.links.detailed.v12.0.uniprot.score_gt700.csv`（ヒト 9606、UniProt整形版、combined_score > 700 をフィルタし、無向ペア重複を除去）。
 - Deduplication method: `uniprot1/uniprot2` をソートした無向ペアをキーにし、同一ペアの2行目以降を削除して一意化。
+- ver10 (local CSV): `IDR+CC_DB_ver5-/all_human_protein_database_with_IDR-CCinformation_ver10.csv` = ver9 に PPI 集約カラムを追加。BioGRID/STRING のそれぞれからパートナー一覧（最大50件）、パートナー数、STRING の max/mean score を付与。
 
 ## Data Notes
 - Both “Browse” (ver6) and Canonical (ver9) tables originate from UniProt proteome UP000005640.
