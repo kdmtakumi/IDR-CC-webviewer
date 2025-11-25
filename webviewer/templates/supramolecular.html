@@ -111,7 +111,7 @@
           <td class="col-narrow">{{ r.b_gene }}</td>
           <td class="col-small">{{ "%.2f"|format(r.b_idr_pct) if r.b_idr_pct is not none else "" }}</td>
           <td class="col-small">{{ "%.2f"|format(r.b_cc_pct) if r.b_cc_pct is not none else "" }}</td>
-          <td class="col-small">{{ r.combined_score if r.combined_score is not none else "" }}</td>
+          <td class="col-small">{{ r.combined_score if r.combined_score is not none else "—" }}</td>
         </tr>
         {% endfor %}
       {% else %}
