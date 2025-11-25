@@ -293,6 +293,7 @@ def build_ppi_filter_conditions(
     search: Optional[str],
     search_mode: str,
     hide_missing_protein: bool,
+    require_both_sources: bool,
 ) -> Tuple[str, List[Any]]:
     clauses: List[str] = []
     params: List[Any] = []
@@ -320,6 +321,9 @@ def build_ppi_filter_conditions(
     if min_score is not None:
         clauses.append("(e.source != 'string' OR COALESCE(e.combined_score, 0) >= %s)")
         params.append(min_score)
+
+    if require_both_sources:
+        clauses.append("EXISTS (SELECT 1 FROM ppi_edges e2 WHERE e2.uniprot_a = e.uniprot_a AND e2.uniprot_b = e.uniprot_b AND e2.source != e.source)")
 
     # Protein length filters apply to both partners
     if min_protein_len is not None:
@@ -918,6 +922,7 @@ def supramolecular():
     min_protein_len = parse_int_param("protein_len_min")
     max_protein_len = parse_int_param("protein_len_max")
     hide_missing_protein = request.args.get("hide_missing_protein", "").lower() in {"1", "true", "on"}
+    require_both_sources = request.args.get("require_both_sources", "").lower() in {"1", "true", "on"}
 
     where_sql, params = build_ppi_filter_conditions(
         source,
@@ -934,6 +939,7 @@ def supramolecular():
         search,
         search_mode,
         hide_missing_protein,
+        require_both_sources,
     )
 
     conn = get_db_connection()
@@ -1031,6 +1037,7 @@ def supramolecular():
         search=search,
         search_mode=search_mode,
         hide_missing_protein=hide_missing_protein,
+        require_both_sources=require_both_sources,
         page_url=page_url,
     )
 
