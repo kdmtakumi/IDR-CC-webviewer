@@ -218,12 +218,12 @@
           <td class="col-small">{{ r.source }}</td>
           <td class="col-small"><a href="{{ url_for('protein_detail', uniprot_id=r.a_id, return_to=request.full_path) }}">{{ r.a_id }}</a></td>
           <td class="col-narrow">{{ r.a_gene }}</td>
-          <td class="col-wide">{{ r.a_loc }}</td>
+          <td class="col-wide"><span class="location-text">{{ r.a_loc }}</span></td>
           <td class="col-small">{{ "%.2f"|format(r.a_idr_pct) if r.a_idr_pct is not none else "" }}</td>
           <td class="col-small">{{ "%.2f"|format(r.a_cc_pct) if r.a_cc_pct is not none else "" }}</td>
           <td class="col-small"><a href="{{ url_for('protein_detail', uniprot_id=r.b_id, return_to=request.full_path) }}">{{ r.b_id }}</a></td>
           <td class="col-narrow">{{ r.b_gene }}</td>
-          <td class="col-wide">{{ r.b_loc }}</td>
+          <td class="col-wide"><span class="location-text">{{ r.b_loc }}</span></td>
           <td class="col-small">{{ "%.2f"|format(r.b_idr_pct) if r.b_idr_pct is not none else "" }}</td>
           <td class="col-small">{{ "%.2f"|format(r.b_cc_pct) if r.b_cc_pct is not none else "" }}</td>
           <td class="col-small">{{ r.combined_score if r.combined_score is not none else "—" }}</td>
