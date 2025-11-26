@@ -63,6 +63,10 @@ h1 {
   gap: 12px;
 }
 
+.filter-card .filter-row + .filter-row {
+  margin-top: 8px;
+}
+
 .filter-row {
   display: flex;
   flex-wrap: nowrap;
