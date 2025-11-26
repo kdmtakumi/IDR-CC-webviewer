@@ -32,6 +32,11 @@ Open `http://127.0.0.1:5000/` and authenticate with the shared password (default
 - Canonical view (ver9) covering all 83,607 canonical entries
 - Supramolecular PPI view powered by BioGRID multi-validated + STRING (>700) with source/IDR/CC/score filters
 
+### Supramolecular PPI view
+- データソース: `ppi_edges`（BioGRID multi-validated + STRING combined_score>700、無向ペア重複なし）。
+- フィルタ: 検索/フィールド/件数、IDR/CC 長・%、タンパク質長、ドメイン/ロケーションキーワード、20分類のサブセルロケーションクラス（両者必須の切替可）、STRING最小スコア、ソース選択、UniProt指定、両ソース必須切替。
+- 表示: 相互作用ペア（A/B）の UniProt/Gene、サブセルロケーション、IDR/CC 長、STRINGスコア。
+
 ## Deploying on Render + Supabase
 1. **Supabase**
    - Create the `proteins_ver6`, `proteins_ver9`, `proteins_ver10`, `idr_segments_ver9`, and `ppi_edges` tables (see `app.py` for column lists).
