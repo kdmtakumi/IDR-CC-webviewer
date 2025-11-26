@@ -155,13 +155,13 @@ h1 {
 }
 
 .results-table .col-loc {
-  width: 24%;
+  width: 20%;
   word-break: break-word;
   white-space: normal;
 }
 
 .results-table .col-small {
-  width: 7%;
+  width: 6%;
   white-space: nowrap;
 }
 
