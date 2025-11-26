@@ -201,13 +201,13 @@
         <th class="col-small">UniProt A</th>
         <th class="col-narrow">Gene A</th>
         <th class="col-loc">Subcellular Location A</th>
-        <th class="col-small">IDR % A</th>
-        <th class="col-small">CC % A</th>
+        <th class="col-small">IDR len A</th>
+        <th class="col-small">CC len A</th>
         <th class="col-small">UniProt B</th>
         <th class="col-narrow">Gene B</th>
         <th class="col-loc">Subcellular Location B</th>
-        <th class="col-small">IDR % B</th>
-        <th class="col-small">CC % B</th>
+        <th class="col-small">IDR len B</th>
+        <th class="col-small">CC len B</th>
         <th class="col-small">Score</th>
       </tr>
     </thead>
@@ -219,13 +219,13 @@
           <td class="col-small"><a href="{{ url_for('protein_detail', uniprot_id=r.a_id, return_to=request.full_path) }}">{{ r.a_id }}</a></td>
           <td class="col-narrow">{{ r.a_gene }}</td>
           <td class="col-loc"><span class="location-text">{{ r.a_loc }}</span></td>
-          <td class="col-small">{{ "%.2f"|format(r.a_idr_pct) if r.a_idr_pct is not none else "" }}</td>
-          <td class="col-small">{{ "%.2f"|format(r.a_cc_pct) if r.a_cc_pct is not none else "" }}</td>
+          <td class="col-small">{{ r.a_idr_len if r.a_idr_len is not none else "" }}</td>
+          <td class="col-small">{{ r.a_cc_len if r.a_cc_len is not none else "" }}</td>
           <td class="col-small"><a href="{{ url_for('protein_detail', uniprot_id=r.b_id, return_to=request.full_path) }}">{{ r.b_id }}</a></td>
           <td class="col-narrow">{{ r.b_gene }}</td>
           <td class="col-loc"><span class="location-text">{{ r.b_loc }}</span></td>
-          <td class="col-small">{{ "%.2f"|format(r.b_idr_pct) if r.b_idr_pct is not none else "" }}</td>
-          <td class="col-small">{{ "%.2f"|format(r.b_cc_pct) if r.b_cc_pct is not none else "" }}</td>
+          <td class="col-small">{{ r.b_idr_len if r.b_idr_len is not none else "" }}</td>
+          <td class="col-small">{{ r.b_cc_len if r.b_cc_len is not none else "" }}</td>
           <td class="col-small">{{ r.combined_score if r.combined_score is not none else "—" }}</td>
         </tr>
         {% endfor %}
