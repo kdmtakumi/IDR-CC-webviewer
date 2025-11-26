@@ -148,6 +148,10 @@
               <option value="{{ cid }}" {% if location_class == cid %}selected{% endif %}>{{ label }}</option>
             {% endfor %}
           </select>
+          <label class="checkbox-inline" for="require_both_locations">
+            <input type="checkbox" id="require_both_locations" name="require_both_locations" value="1" {% if require_both_locations %}checked{% endif %} />
+            Both partners in class
+          </label>
         </div>
         <div class="filter-row filter-row-actions">
           <label class="checkbox-inline" for="hide_missing_protein">

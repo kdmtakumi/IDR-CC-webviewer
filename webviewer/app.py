@@ -363,6 +363,7 @@ def build_ppi_filter_conditions(
     hide_missing_protein: bool,
     require_both_sources: bool,
     location_class: Optional[int] = None,
+    require_both_locations: bool = False,
     location_tokens: Optional[Dict[int, List[str]]] = None,
 ) -> Tuple[str, List[Any]]:
     clauses: List[str] = []
@@ -460,12 +461,19 @@ def build_ppi_filter_conditions(
     if location_class is not None and location_tokens:
         tokens = location_tokens.get(location_class, [])
         if tokens:
-            loc_clauses = [
-                "(" + " OR ".join([f"LOWER(COALESCE({alias}.subcellular_location, '')) LIKE %s" for _ in tokens]) + ")"
-                for alias in ("p1", "p2")
-            ]
-            clauses.append("(" + " AND ".join(loc_clauses) + ")")
-            params.extend([f"%{tok.lower()}%" for tok in tokens] * 2)
+            token_patterns = [f"%{tok.lower()}%" for tok in tokens]
+            if require_both_locations:
+                loc_clauses = [
+                    "(" + " OR ".join([f"LOWER(COALESCE({alias}.subcellular_location, '')) LIKE %s" for _ in tokens]) + ")"
+                    for alias in ("p1", "p2")
+                ]
+                clauses.append("(" + " AND ".join(loc_clauses) + ")")
+                params.extend(token_patterns * 2)
+            else:
+                loc_clause = "(" + " OR ".join([f"LOWER(COALESCE(p1.subcellular_location, '')) LIKE %s" for _ in tokens]) + \
+                             " OR " + " OR ".join([f"LOWER(COALESCE(p2.subcellular_location, '')) LIKE %s" for _ in tokens]) + ")"
+                clauses.append(loc_clause)
+                params.extend(token_patterns * 2)
 
     if hide_missing_protein:
         clauses.append("NULLIF(TRIM(COALESCE(p1.protein_name, '')), '') IS NOT NULL")
@@ -1019,6 +1027,7 @@ def supramolecular():
     max_protein_len = parse_int_param("protein_len_max")
     hide_missing_protein = request.args.get("hide_missing_protein", "").lower() in {"1", "true", "on"}
     require_both_sources = request.args.get("require_both_sources", "").lower() in {"1", "true", "on"}
+    require_both_locations = request.args.get("require_both_locations", "").lower() in {"1", "true", "on"}
     location_class_raw = request.args.get("location_class", "").strip()
     try:
         location_class = int(location_class_raw) if location_class_raw else None
@@ -1041,6 +1050,7 @@ def supramolecular():
         search_mode,
         hide_missing_protein,
         require_both_sources,
+        require_both_locations,
         location_class,
         LOCATION_CLASS_TOKENS,
     )
