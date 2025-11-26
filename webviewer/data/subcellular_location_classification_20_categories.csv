@@ -1,21 +1,265 @@
-No.,英語分類名,日本語分類名,含まれる主な用語の例 (English)
-1,Nucleus & Chromosome,核・染色体,"Nucleus, Chromosome, Nucleoplasm, Nucleus lamina, Nucleolus, Telomere"
-2,Endoplasmic Reticulum,小胞体（ER）,"Endoplasmic reticulum, Rough endoplasmic reticulum, Smooth endoplasmic reticulum membrane"
-3,Golgi Apparatus,ゴルジ体,"Golgi apparatus, cis-Golgi network, trans-Golgi network, Golgi stack"
-4,ER-Golgi Interface,ER-ゴルジ中間区画,Endoplasmic reticulum-Golgi intermediate compartment
-5,Mitochondrion,ミトコンドリア,"Mitochondrion, Mitochondrion matrix, Mitochondrion inner membrane, Mitochondrion nucleoid"
-6,Peroxisome,ペルオキシソーム,"Peroxisome, Peroxisome matrix, Peroxisome membrane"
-7,Lysosome & Vacuole,リソソーム・液胞,"Lysosome, Vacuole, Autolysosome, Zymogen granule"
-8,Endocytic/Recycling System,エンドサイトーシス・リサイクリング系,"Early endosome, Late endosome, Recycling endosome, Phagosome, Autophagosome"
-9,Transport & Coated Vesicles,輸送・被覆小胞,"COPI-coated vesicle, COPII-coated vesicle, Clathrin-coated vesicle, Secretory vesicle, Extracellular vesicle"
-10,Membrane & Extracellular,細胞膜・細胞外空間,"Cell membrane, Extracellular space, Cell surface, Basement membrane, Sarcolemma"
-11,Membrane Topology & Lipid,膜トポロジー・脂質結合,"Multi-pass membrane protein, Single-pass membrane protein, GPI-anchor, Lipid-anchor, Membrane raft"
-12,Cytoplasm & Cytosol,細胞質・サイトゾル,"Cytoplasm, Cytosol, Perikaryon, Sarcoplasm, Perinuclear region"
-13,Cytoskeleton & Motility,細胞骨格・運動性,"Cytoskeleton, Stress fiber, Microtubule organizing center, Axoneme, Spindle, Kinetochore"
-14,Adhesion & Junctions,細胞接着・結合,"Cell junction, Tight junction, Desmosome, Focal adhesion, Gap junction, Hemidesmosome"
-15,Granules & Small Bodies,顆粒・非膜性構造,"Cytoplasmic granule, Stress granule, P-body, PML body, Cortical granule, Calyx"
-16,Specific Cell Structures,特定の細胞構造,"Cilium, Flagellum, Acrosome, Uropodium, Cornified envelope"
-17,Muscle Structures,筋細胞構造,"Sarcomere, A band, I band, Z line, M line, H zone, T-tubule"
-18,Synaptic & Neuronal,シナプス・神経構造,"Synapse, Presynapse, Postsynapse, Dendrite, Neuronal dense core vesicle"
-19,Viral & Host Interaction,ウイルス・宿主関連,"Virion, Host cell membrane, Host endomembrane system, Parasitophorous vacuole"
-20,Directional Regions,方向性領域,"Cytoplasmic side, Lumenal side, Extracellular side, Matrix side, Intermembrane side"
+大分類 (3カテゴリ),詳細分類 (20カテゴリ - No),詳細分類 (20カテゴリ - 日本語),用語 (English)
+III. 複合体・微細構造,17,筋細胞構造,A band
+II. 膜・表面,10,細胞膜・細胞外空間,Apical cell membrane
+II. 膜・表面,10,細胞膜・細胞外空間,Apicolateral cell membrane
+I. 細胞コンパートメント,7,リソソーム・液胞,Autolysosome
+I. 細胞コンパートメント,7,リソソーム・液胞,Autolysosome membrane
+II. 膜・表面,10,細胞膜・細胞外空間,Basal cell membrane
+II. 膜・表面,10,細胞膜・細胞外空間,Basolateral cell membrane
+III. 複合体・微細構造,9,輸送・被覆小胞,COPI-coated vesicle
+III. 複合体・微細構造,9,輸送・被覆小胞,COPI-coated vesicle membrane
+III. 複合体・微細構造,9,輸送・被覆小胞,COPII-coated vesicle
+III. 複合体・微細構造,9,輸送・被覆小胞,COPII-coated vesicle membrane
+III. 複合体・微細構造,15,顆粒・非膜性構造,Cajal body
+II. 膜・表面,11,膜トポロジー・脂質結合,Cell envelope
+III. 複合体・微細構造,14,細胞接着・結合,Cell junction
+II. 膜・表面,10,細胞膜・細胞外空間,Cell membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,Cell projection
+II. 膜・表面,10,細胞膜・細胞外空間,Cell surface
+III. 複合体・微細構造,12,細胞質・サイトゾル,Cell tip
+I. 細胞コンパートメント,1,核・染色体,Chromosome
+III. 複合体・微細構造,16,特定の細胞構造,Cleavage furrow
+II. 膜・表面,11,膜トポロジー・脂質結合,Cornified envelope
+III. 複合体・微細構造,15,顆粒・非膜性構造,Cortical granule
+III. 複合体・微細構造,15,顆粒・非膜性構造,Cytolytic granule
+III. 複合体・微細構造,15,顆粒・非膜性構造,Cytolytic granule membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,Cytoplasm
+III. 複合体・微細構造,15,顆粒・非膜性構造,Cytoplasmic granule
+III. 複合体・微細構造,15,顆粒・非膜性構造,Cytoplasmic granule lumen
+III. 複合体・微細構造,15,顆粒・非膜性構造,Cytoplasmic granule membrane
+III. 複合体・微細構造,15,顆粒・非膜性構造,Cytoplasmic ribonucleoprotein granule
+II. 膜・表面,20,方向性領域,Cytoplasmic side
+III. 複合体・微細構造,12,細胞質・サイトゾル,Cytoplasmic vesicle
+III. 複合体・微細構造,12,細胞質・サイトゾル,Cytoplasmic vesicle lumen
+III. 複合体・微細構造,12,細胞質・サイトゾル,Cytoplasmic vesicle membrane
+III. 複合体・微細構造,18,シナプス・神経構造,Dynein axonemal particle
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,Early endosome
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,Early endosome membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,Endomembrane system
+I. 細胞コンパートメント,2,小胞体（ER）,Endoplasmic reticulum
+I. 細胞コンパートメント,2,小胞体（ER）,Endoplasmic reticulum lumen
+I. 細胞コンパートメント,2,小胞体（ER）,Endoplasmic reticulum membrane
+I. 細胞コンパートメント,4,ER-ゴルジ中間区画,Endoplasmic reticulum-Golgi intermediate compartment
+I. 細胞コンパートメント,4,ER-ゴルジ中間区画,Endoplasmic reticulum-Golgi intermediate compartment lumen
+I. 細胞コンパートメント,4,ER-ゴルジ中間区画,Endoplasmic reticulum-Golgi intermediate compartment membrane
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,Endosome
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,Endosome lumen
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,Endosome membrane
+II. 膜・表面,20,方向性領域,Extracellular side
+III. 複合体・微細構造,12,細胞質・サイトゾル,Extracellular vesicle
+III. 複合体・微細構造,12,細胞質・サイトゾル,Extracellular vesicle membrane
+II. 膜・表面,11,膜トポロジー・脂質結合,GPI-anchor
+I. 細胞コンパートメント,3,ゴルジ体,Golgi apparatus
+I. 細胞コンパートメント,3,ゴルジ体,Golgi apparatus lumen
+I. 細胞コンパートメント,3,ゴルジ体,Golgi apparatus membrane
+I. 細胞コンパートメント,3,ゴルジ体,Golgi outpost
+I. 細胞コンパートメント,3,ゴルジ体,Golgi stack
+I. 細胞コンパートメント,3,ゴルジ体,Golgi stack membrane
+III. 複合体・微細構造,17,筋細胞構造,H zone
+III. 複合体・微細構造,19,ウイルス・宿主関連,Host cell membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,Host endomembrane system
+III. 複合体・微細構造,17,筋細胞構造,I band
+III. 複合体・微細構造,15,顆粒・非膜性構造,Inflammasome
+II. 膜・表面,20,方向性領域,Intermembrane side
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,Late endosome
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,Late endosome membrane
+II. 膜・表面,10,細胞膜・細胞外空間,Lateral cell membrane
+III. 複合体・微細構造,15,顆粒・非膜性構造,Lipid droplet
+II. 膜・表面,11,膜トポロジー・脂質結合,Lipid-anchor
+II. 膜・表面,20,方向性領域,Lumenal side
+I. 細胞コンパートメント,7,リソソーム・液胞,Lysosome
+I. 細胞コンパートメント,7,リソソーム・液胞,Lysosome lumen
+I. 細胞コンパートメント,7,リソソーム・液胞,Lysosome membrane
+III. 複合体・微細構造,17,筋細胞構造,M line
+II. 膜・表面,20,方向性領域,Matrix side
+III. 複合体・微細構造,12,細胞質・サイトゾル,Melanosome
+III. 複合体・微細構造,12,細胞質・サイトゾル,Melanosome membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,Membrane
+II. 膜・表面,11,膜トポロジー・脂質結合,Membrane raft
+III. 複合体・微細構造,15,顆粒・非膜性構造,Microsome
+III. 複合体・微細構造,15,顆粒・非膜性構造,Microsome membrane
+III. 複合体・微細構造,15,顆粒・非膜性構造,Midbody
+III. 複合体・微細構造,15,顆粒・非膜性構造,Midbody ring
+I. 細胞コンパートメント,5,ミトコンドリア,Mitochondrion
+I. 細胞コンパートメント,5,ミトコンドリア,Mitochondrion inner membrane
+I. 細胞コンパートメント,5,ミトコンドリア,Mitochondrion intermembrane space
+I. 細胞コンパートメント,5,ミトコンドリア,Mitochondrion matrix
+I. 細胞コンパートメント,5,ミトコンドリア,Mitochondrion membrane
+I. 細胞コンパートメント,5,ミトコンドリア,Mitochondrion outer membrane
+II. 膜・表面,11,膜トポロジー・脂質結合,Multi-pass membrane protein
+III. 複合体・微細構造,12,細胞質・サイトゾル,Myelin membrane
+I. 細胞コンパートメント,1,核・染色体,Nucleus
+II. 膜・表面,11,膜トポロジー・脂質結合,Nucleus envelope
+I. 細胞コンパートメント,1,核・染色体,Nucleus inner membrane
+I. 細胞コンパートメント,1,核・染色体,Nucleus intermembrane space
+I. 細胞コンパートメント,1,核・染色体,Nucleus lamina
+I. 細胞コンパートメント,1,核・染色体,Nucleus matrix
+I. 細胞コンパートメント,1,核・染色体,Nucleus membrane
+I. 細胞コンパートメント,1,核・染色体,Nucleus outer membrane
+I. 細胞コンパートメント,1,核・染色体,Nucleus speckle
+III. 複合体・微細構造,15,顆粒・非膜性構造,P-body
+III. 複合体・微細構造,15,顆粒・非膜性構造,PML body
+III. 複合体・微細構造,19,ウイルス・宿主関連,Parasitophorous vacuole
+III. 複合体・微細構造,12,細胞質・サイトゾル,Perikaryon
+II. 膜・表面,11,膜トポロジー・脂質結合,Peripheral membrane protein
+I. 細胞コンパートメント,6,ペルオキシソーム,Peroxisome
+I. 細胞コンパートメント,6,ペルオキシソーム,Peroxisome matrix
+I. 細胞コンパートメント,6,ペルオキシソーム,Peroxisome membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,Photoreceptor inner segment
+III. 複合体・微細構造,12,細胞質・サイトゾル,Photoreceptor inner segment membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,Photoreceptor outer segment membrane
+III. 複合体・微細構造,18,シナプス・神経構造,Postsynapse
+II. 膜・表面,10,細胞膜・細胞外空間,Postsynaptic cell membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,Postsynaptic density
+III. 複合体・微細構造,12,細胞質・サイトゾル,Postsynaptic density membrane
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,Postsynaptic recycling endosome membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,Preautophagosomal structure
+III. 複合体・微細構造,12,細胞質・サイトゾル,Preautophagosomal structure membrane
+III. 複合体・微細構造,18,シナプス・神経構造,Presynapse
+III. 複合体・微細構造,17,筋細胞構造,Presynaptic active zone
+II. 膜・表面,10,細胞膜・細胞外空間,Presynaptic cell membrane
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,Recycling endosome
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,Recycling endosome membrane
+I. 細胞コンパートメント,2,小胞体（ER）,Rough endoplasmic reticulum
+I. 細胞コンパートメント,2,小胞体（ER）,Rough endoplasmic reticulum lumen
+I. 細胞コンパートメント,2,小胞体（ER）,Rough endoplasmic reticulum membrane
+III. 複合体・微細構造,17,筋細胞構造,Sarcoplasmic reticulum
+III. 複合体・微細構造,17,筋細胞構造,Sarcoplasmic reticulum lumen
+III. 複合体・微細構造,17,筋細胞構造,Sarcoplasmic reticulum membrane
+II. 膜・表面,10,細胞膜・細胞外空間,Secreted
+II. 膜・表面,11,膜トポロジー・脂質結合,Single-pass membrane protein
+III. 複合体・微細構造,12,細胞質・サイトゾル,Single-pass type I membrane protein
+III. 複合体・微細構造,12,細胞質・サイトゾル,Single-pass type II membrane protein
+III. 複合体・微細構造,12,細胞質・サイトゾル,Single-pass type III membrane protein
+III. 複合体・微細構造,12,細胞質・サイトゾル,Single-pass type IV membrane protein
+I. 細胞コンパートメント,2,小胞体（ER）,Smooth endoplasmic reticulum membrane
+III. 複合体・微細構造,15,顆粒・非膜性構造,Stress granule
+III. 複合体・微細構造,18,シナプス・神経構造,Synapse
+II. 膜・表面,10,細胞膜・細胞外空間,Synaptic cell membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,Synaptic cleft
+III. 複合体・微細構造,17,筋細胞構造,T-tubule
+II. 膜・表面,10,細胞膜・細胞外空間,Target cell membrane
+I. 細胞コンパートメント,7,リソソーム・液胞,Vacuole
+I. 細胞コンパートメント,7,リソソーム・液胞,Vacuole membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,Vesicle
+III. 複合体・微細構造,19,ウイルス・宿主関連,Virion
+III. 複合体・微細構造,19,ウイルス・宿主関連,Virion membrane
+III. 複合体・微細構造,17,筋細胞構造,Z line
+III. 複合体・微細構造,16,特定の細胞構造,Zona pellucida
+I. 細胞コンパートメント,7,リソソーム・液胞,Zymogen granule
+I. 細胞コンパートメント,7,リソソーム・液胞,Zymogen granule lumen
+I. 細胞コンパートメント,7,リソソーム・液胞,Zymogen granule membrane
+III. 複合体・微細構造,16,特定の細胞構造,acrosome
+III. 複合体・微細構造,16,特定の細胞構造,acrosome inner membrane
+III. 複合体・微細構造,16,特定の細胞構造,acrosome lumen
+III. 複合体・微細構造,16,特定の細胞構造,acrosome membrane
+III. 複合体・微細構造,16,特定の細胞構造,acrosome outer membrane
+III. 複合体・微細構造,14,細胞接着・結合,adherens junction
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,autophagosome
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,autophagosome lumen
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,autophagosome membrane
+III. 複合体・微細構造,18,シナプス・神経構造,axon
+II. 膜・表面,10,細胞膜・細胞外空間,basement membrane
+III. 複合体・微細構造,13,細胞骨格・運動性,bleb
+III. 複合体・微細構造,16,特定の細胞構造,calyx
+III. 複合体・微細構造,16,特定の細胞構造,caveola
+III. 複合体・微細構造,13,細胞骨格・運動性,cell cortex
+III. 複合体・微細構造,12,細胞質・サイトゾル,centriolar satellite
+III. 複合体・微細構造,13,細胞骨格・運動性,centriole
+III. 複合体・微細構造,12,細胞質・サイトゾル,centromere
+III. 複合体・微細構造,13,細胞骨格・運動性,centrosome
+III. 複合体・微細構造,15,顆粒・非膜性構造,chromaffin granule
+III. 複合体・微細構造,15,顆粒・非膜性構造,chromaffin granule lumen
+III. 複合体・微細構造,15,顆粒・非膜性構造,chromaffin granule membrane
+III. 複合体・微細構造,16,特定の細胞構造,cilium
+III. 複合体・微細構造,18,シナプス・神経構造,cilium axoneme
+III. 複合体・微細構造,15,顆粒・非膜性構造,cilium basal body
+III. 複合体・微細構造,16,特定の細胞構造,cilium membrane
+I. 細胞コンパートメント,3,ゴルジ体,cis-Golgi network
+I. 細胞コンパートメント,3,ゴルジ体,cis-Golgi network membrane
+III. 複合体・微細構造,9,輸送・被覆小胞,clathrin-coated pit
+III. 複合体・微細構造,9,輸送・被覆小胞,clathrin-coated vesicle
+III. 複合体・微細構造,9,輸送・被覆小胞,clathrin-coated vesicle membrane
+III. 複合体・微細構造,9,輸送・被覆小胞,coated pit
+III. 複合体・微細構造,13,細胞骨格・運動性,cytoskeleton
+III. 複合体・微細構造,12,細胞質・サイトゾル,cytosol
+III. 複合体・微細構造,18,シナプス・神経構造,dendrite
+III. 複合体・微細構造,18,シナプス・神経構造,dendritic spine
+III. 複合体・微細構造,18,シナプス・神経構造,dendritic spine membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,desmosome
+III. 複合体・微細構造,12,細胞質・サイトゾル,extracellular exosome
+III. 複合体・微細構造,12,細胞質・サイトゾル,extracellular matrix
+II. 膜・表面,10,細胞膜・細胞外空間,extracellular space
+III. 複合体・微細構造,13,細胞骨格・運動性,filopodium
+III. 複合体・微細構造,13,細胞骨格・運動性,filopodium membrane
+III. 複合体・微細構造,13,細胞骨格・運動性,filopodium tip
+III. 複合体・微細構造,16,特定の細胞構造,flagellum
+III. 複合体・微細構造,18,シナプス・神経構造,flagellum axoneme
+III. 複合体・微細構造,15,顆粒・非膜性構造,flagellum basal body
+III. 複合体・微細構造,16,特定の細胞構造,flagellum membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,focal adhesion
+III. 複合体・微細構造,14,細胞接着・結合,gap junction
+III. 複合体・微細構造,15,顆粒・非膜性構造,gem
+III. 複合体・微細構造,12,細胞質・サイトゾル,growth cone
+III. 複合体・微細構造,12,細胞質・サイトゾル,growth cone membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,hemidesmosome
+III. 複合体・微細構造,16,特定の細胞構造,interphotoreceptor matrix
+III. 複合体・微細構造,13,細胞骨格・運動性,invadopodium
+III. 複合体・微細構造,13,細胞骨格・運動性,invadopodium membrane
+III. 複合体・微細構造,13,細胞骨格・運動性,kinetochore
+III. 複合体・微細構造,13,細胞骨格・運動性,kinocilium
+III. 複合体・微細構造,13,細胞骨格・運動性,lamellipodium
+III. 複合体・微細構造,13,細胞骨格・運動性,lamellipodium membrane
+II. 膜・表面,10,細胞膜・細胞外空間,microneme membrane
+III. 複合体・微細構造,13,細胞骨格・運動性,microtubule organizing center
+III. 複合体・微細構造,13,細胞骨格・運動性,microvillus
+III. 複合体・微細構造,13,細胞骨格・運動性,microvillus membrane
+I. 細胞コンパートメント,5,ミトコンドリア,mitochondrion nucleoid
+III. 複合体・微細構造,15,顆粒・非膜性構造,multivesicular body
+III. 複合体・微細構造,15,顆粒・非膜性構造,multivesicular body lumen
+III. 複合体・微細構造,15,顆粒・非膜性構造,multivesicular body membrane
+III. 複合体・微細構造,13,細胞骨格・運動性,myofibril
+III. 複合体・微細構造,18,シナプス・神経構造,neuron projection
+III. 複合体・微細構造,18,シナプス・神経構造,neuronal dense core vesicle
+III. 複合体・微細構造,18,シナプス・神経構造,neuronal dense core vesicle membrane
+III. 複合体・微細構造,15,顆粒・非膜性構造,nuclear body
+III. 複合体・微細構造,12,細胞質・サイトゾル,nuclear pore complex
+I. 細胞コンパートメント,1,核・染色体,nucleolus
+I. 細胞コンパートメント,1,核・染色体,nucleolus fibrillar center
+I. 細胞コンパートメント,1,核・染色体,nucleoplasm
+III. 複合体・微細構造,12,細胞質・サイトゾル,"or not known)""))"
+III. 複合体・微細構造,14,細胞接着・結合,paranodal septate junction
+III. 複合体・微細構造,16,特定の細胞構造,perinuclear region
+I. 細胞コンパートメント,1,核・染色体,perinuclear theca
+III. 複合体・微細構造,12,細胞質・サイトゾル,phagocytic cup
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,phagosome
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,phagosome lumen
+I. 細胞コンパートメント,8,エンドサイトーシス・リサイクリング系,phagosome membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,photoreceptor outer segment
+III. 複合体・微細構造,12,細胞質・サイトゾル,podosome
+III. 複合体・微細構造,12,細胞質・サイトゾル,podosome membrane
+III. 複合体・微細構造,13,細胞骨格・運動性,pseudopodium
+III. 複合体・微細構造,13,細胞骨格・運動性,pseudopodium membrane
+III. 複合体・微細構造,13,細胞骨格・運動性,ruffle
+III. 複合体・微細構造,13,細胞骨格・運動性,ruffle membrane
+II. 膜・表面,10,細胞膜・細胞外空間,sarcolemma
+III. 複合体・微細構造,17,筋細胞構造,sarcomere
+III. 複合体・微細構造,12,細胞質・サイトゾル,sarcoplasm
+III. 複合体・微細構造,9,輸送・被覆小胞,secretory vesicle
+III. 複合体・微細構造,9,輸送・被覆小胞,secretory vesicle lumen
+III. 複合体・微細構造,9,輸送・被覆小胞,secretory vesicle membrane
+III. 複合体・微細構造,13,細胞骨格・運動性,spindle
+III. 複合体・微細構造,13,細胞骨格・運動性,spindle pole
+III. 複合体・微細構造,13,細胞骨格・運動性,spindle pole body
+III. 複合体・微細構造,13,細胞骨格・運動性,stereocilium
+III. 複合体・微細構造,13,細胞骨格・運動性,stereocilium membrane
+III. 複合体・微細構造,12,細胞質・サイトゾル,stress fiber
+III. 複合体・微細構造,12,細胞質・サイトゾル,surface film
+III. 複合体・微細構造,12,細胞質・サイトゾル,synaptic vesicle
+III. 複合体・微細構造,12,細胞質・サイトゾル,synaptic vesicle membrane
+III. 複合体・微細構造,18,シナプス・神経構造,synaptosome
+I. 細胞コンパートメント,1,核・染色体,telomere
+III. 複合体・微細構造,14,細胞接着・結合,tight junction
+I. 細胞コンパートメント,3,ゴルジ体,trans-Golgi network
+I. 細胞コンパートメント,3,ゴルジ体,trans-Golgi network membrane
+III. 複合体・微細構造,16,特定の細胞構造,uropodium
