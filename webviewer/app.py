@@ -37,6 +37,7 @@ PROTEINS_VER9 = "proteins_ver9"
 PROTEINS_VER10 = "proteins_ver10"
 PPI_EDGES = "ppi_edges"
 IDR_SEGMENTS_VER9 = "idr_segments_ver9"
+LOCATION_CLASS_FILE = BASE_DIR.parent / "subcellular_location_classification_20_categories.csv"
 
 SEARCH_MODE_COLUMN_MAP: Dict[str, List[str]] = {
     "all": ["uniprot_id", "gene_name", "protein_name", "subcellular_location"],
@@ -52,6 +53,64 @@ SEARCH_MODE_OPTIONS: List[Tuple[str, str]] = [
     ("protein", "Protein Name"),
     ("location", "Subcellular Location"),
 ]
+
+LOCATION_CLASS_OPTIONS: List[Tuple[int, str]] = []
+LOCATION_CLASS_TOKENS: Dict[int, List[str]] = {}
+LOCATION_CLASS_LABELS: Dict[int, Tuple[str, str]] = {
+    1: ("Nucleus & Chromosome", "核・染色体"),
+    2: ("Endoplasmic Reticulum", "小胞体（ER）"),
+    3: ("Golgi Apparatus", "ゴルジ体"),
+    4: ("ER-Golgi Interface", "ER-ゴルジ中間区画"),
+    5: ("Mitochondrion", "ミトコンドリア"),
+    6: ("Peroxisome", "ペルオキシソーム"),
+    7: ("Lysosome & Vacuole", "リソソーム・液胞"),
+    8: ("Endocytic/Recycling System", "エンドサイトーシス・リサイクリング系"),
+    9: ("Transport & Coated Vesicles", "輸送・被覆小胞"),
+    10: ("Membrane & Extracellular", "細胞膜・細胞外空間"),
+    11: ("Membrane Topology & Lipid", "膜トポロジー・脂質結合"),
+    12: ("Cytoplasm & Cytosol", "細胞質・サイトゾル"),
+    13: ("Cytoskeleton & Motility", "細胞骨格・運動性"),
+    14: ("Adhesion & Junctions", "細胞接着・結合"),
+    15: ("Granules & Small Bodies", "顆粒・非膜性構造"),
+    16: ("Specific Cell Structures", "特定の細胞構造"),
+    17: ("Muscle Structures", "筋細胞構造"),
+    18: ("Synaptic & Neuronal", "シナプス・神経構造"),
+    19: ("Viral & Host Interaction", "ウイルス・宿主関連"),
+    20: ("Directional Regions", "方向性領域"),
+}
+
+
+def _load_location_classes():
+    if not LOCATION_CLASS_FILE.exists():
+        return
+    from csv import DictReader
+
+    tokens: Dict[int, List[str]] = {}
+    try:
+        with LOCATION_CLASS_FILE.open() as f:
+            reader = DictReader(f)
+            for row in reader:
+                try:
+                    class_id = int(row.get("詳細分類 (20カテゴリ - No)", "") or 0)
+                except ValueError:
+                    continue
+                token = (row.get("用語 (English)") or "").strip()
+                if not token:
+                    continue
+                tokens.setdefault(class_id, []).append(token)
+    except Exception:
+        return
+
+    global LOCATION_CLASS_TOKENS, LOCATION_CLASS_OPTIONS
+    LOCATION_CLASS_TOKENS = {cid: sorted(set(vals)) for cid, vals in tokens.items()}
+    LOCATION_CLASS_OPTIONS = []
+    for cid, names in LOCATION_CLASS_LABELS.items():
+        if cid in LOCATION_CLASS_TOKENS:
+            eng, jp = names
+            LOCATION_CLASS_OPTIONS.append((cid, f"{cid}. {eng} / {jp}"))
+
+
+_load_location_classes()
 
 app = Flask(__name__)
 app.secret_key = SESSION_KEY
@@ -188,6 +247,8 @@ def build_filter_conditions(
     domain_term: Optional[str],
     location_term: Optional[str],
     hide_missing_protein: bool,
+    location_class: Optional[int] = None,
+    location_tokens: Optional[Dict[int, List[str]]] = None,
     alias: str = "p",
 ) -> Tuple[str, List[Any]]:
     clauses: List[str] = []
@@ -238,6 +299,13 @@ def build_filter_conditions(
     if location_term:
         clauses.append(f"LOWER(COALESCE({alias}.subcellular_location, '')) LIKE %s")
         params.append(f"%{location_term.lower()}%")
+
+    if location_class is not None and location_tokens:
+        tokens = location_tokens.get(location_class, [])
+        if tokens:
+            token_clauses = [f"LOWER(COALESCE({alias}.subcellular_location, '')) LIKE %s" for _ in tokens]
+            clauses.append("(" + " OR ".join(token_clauses) + ")")
+            params.extend([f"%{tok.lower()}%" for tok in tokens])
 
     if hide_missing_protein:
         clauses.append(f"NULLIF(TRIM(COALESCE({alias}.protein_name, '')), '') IS NOT NULL")
@@ -294,6 +362,8 @@ def build_ppi_filter_conditions(
     search_mode: str,
     hide_missing_protein: bool,
     require_both_sources: bool,
+    location_class: Optional[int] = None,
+    location_tokens: Optional[Dict[int, List[str]]] = None,
 ) -> Tuple[str, List[Any]]:
     clauses: List[str] = []
     params: List[Any] = []
@@ -387,6 +457,16 @@ def build_ppi_filter_conditions(
         clauses.append("(" + " OR ".join(len_orientation_clauses) + ")")
         params.extend(len_orientation_params)
 
+    if location_class is not None and location_tokens:
+        tokens = location_tokens.get(location_class, [])
+        if tokens:
+            loc_clauses = [
+                "(" + " OR ".join([f"LOWER(COALESCE({alias}.subcellular_location, '')) LIKE %s" for _ in tokens]) + ")"
+                for alias in ("p1", "p2")
+            ]
+            clauses.append("(" + " AND ".join(loc_clauses) + ")")
+            params.extend([f"%{tok.lower()}%" for tok in tokens] * 2)
+
     if hide_missing_protein:
         clauses.append("NULLIF(TRIM(COALESCE(p1.protein_name, '')), '') IS NOT NULL")
         clauses.append("NULLIF(TRIM(COALESCE(p2.protein_name, '')), '') IS NOT NULL")
@@ -438,6 +518,7 @@ def fetch_protein_page(
         domain_term,
         location_term,
         hide_missing,
+        location_class,
     ) = filters
     where_sql, params = build_filter_conditions(
         search,
@@ -453,6 +534,8 @@ def fetch_protein_page(
         domain_term,
         location_term,
         hide_missing,
+        location_class,
+        LOCATION_CLASS_TOKENS,
         alias="p",
     )
     conn = get_db_connection()
@@ -590,6 +673,11 @@ def extract_filters() -> Tuple[Any, ...]:
     domain_term = request.args.get("domain_term", "").strip()
     location_term = request.args.get("location_term", "").strip()
     hide_missing_protein = request.args.get("hide_missing_protein", "").lower() in {"1", "true", "on"}
+    location_class = request.args.get("location_class", "").strip()
+    try:
+        location_class_val: Optional[int] = int(location_class) if location_class else None
+    except ValueError:
+        location_class_val = None
     return (
         search,
         search_mode,
@@ -604,6 +692,7 @@ def extract_filters() -> Tuple[Any, ...]:
         domain_term,
         location_term,
         hide_missing_protein,
+        location_class_val,
     )
 
 
@@ -612,6 +701,7 @@ def inject_globals():
     return {
         "SEARCH_MODE_OPTIONS": SEARCH_MODE_OPTIONS,
         "ACCESS_PASSWORD_ENABLED": bool(ACCESS_PASSWORD),
+        "LOCATION_CLASS_OPTIONS": LOCATION_CLASS_OPTIONS,
     }
 
 
@@ -685,6 +775,7 @@ def index():
         domain_term,
         location_term,
         hide_missing_protein,
+        location_class,
     ) = filters
     records, total_items, filter_clause = fetch_protein_page(PROTEINS_VER6, filters, page, per_page)
     page, start_item, end_item, page_numbers, show_first, show_last, total_pages = paginate(total_items, page, per_page)
@@ -708,6 +799,7 @@ def index():
             domain_term=domain_term or None,
             location_term=location_term or None,
             hide_missing_protein="1" if hide_missing_protein else None,
+            location_class=location_class if location_class is not None else None,
         )
 
     dataset_note = "Source: ver6 integrated dataset (Supabase)."
@@ -732,6 +824,7 @@ def index():
         domain_term=domain_term,
         location_term=location_term,
         hide_missing_protein=hide_missing_protein,
+        location_class=location_class,
         page_url=page_url,
         start_item=start_item,
         end_item=end_item,
@@ -768,6 +861,7 @@ def canonical_index():
         domain_term,
         location_term,
         hide_missing_protein,
+        location_class,
     ) = filters
     records, total_items, filter_clause = fetch_protein_page(PROTEINS_VER9, filters, page, per_page)
     page, start_item, end_item, page_numbers, show_first, show_last, total_pages = paginate(total_items, page, per_page)
@@ -791,6 +885,7 @@ def canonical_index():
             domain_term=domain_term or None,
             location_term=location_term or None,
             hide_missing_protein="1" if hide_missing_protein else None,
+            location_class=location_class if location_class is not None else None,
         )
 
     dataset_note = "Canonical subset (ver9) · UniProt UP000005640."
@@ -815,6 +910,7 @@ def canonical_index():
         domain_term=domain_term,
         location_term=location_term,
         hide_missing_protein=hide_missing_protein,
+        location_class=location_class,
         page_url=page_url,
         start_item=start_item,
         end_item=end_item,
@@ -884,7 +980,7 @@ def subcellular_distribution_api():
     dataset = request.args.get("dataset", "").strip().lower()
     table = PROTEINS_VER9 if dataset == "canonical" else PROTEINS_VER6
     filters = extract_filters()
-    where_sql, params = build_filter_conditions(*filters, alias="p")
+    where_sql, params = build_filter_conditions(*filters, alias="p", location_tokens=LOCATION_CLASS_TOKENS)
     counts, total_entries, unknown_count = compute_subcellular_counts(table, where_sql, params)
     labels = [label for label, _ in counts]
     values = [value for _, value in counts]
@@ -923,6 +1019,11 @@ def supramolecular():
     max_protein_len = parse_int_param("protein_len_max")
     hide_missing_protein = request.args.get("hide_missing_protein", "").lower() in {"1", "true", "on"}
     require_both_sources = request.args.get("require_both_sources", "").lower() in {"1", "true", "on"}
+    location_class_raw = request.args.get("location_class", "").strip()
+    try:
+        location_class = int(location_class_raw) if location_class_raw else None
+    except ValueError:
+        location_class = None
 
     where_sql, params = build_ppi_filter_conditions(
         source,
@@ -940,6 +1041,8 @@ def supramolecular():
         search_mode,
         hide_missing_protein,
         require_both_sources,
+        location_class,
+        LOCATION_CLASS_TOKENS,
     )
 
     conn = get_db_connection()
@@ -1009,6 +1112,7 @@ def supramolecular():
             score_min=min_score if min_score is not None else None,
             idr_pct_min=min_idr_pct if min_idr_pct is not None else None,
             cc_pct_min=min_cc_pct if min_cc_pct is not None else None,
+            location_class=location_class if location_class is not None else None,
         )
 
     return render_template(
@@ -1038,6 +1142,7 @@ def supramolecular():
         search_mode=search_mode,
         hide_missing_protein=hide_missing_protein,
         require_both_sources=require_both_sources,
+        location_class=location_class,
         page_url=page_url,
     )
 

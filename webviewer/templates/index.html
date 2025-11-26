@@ -137,6 +137,15 @@
           placeholder="Location keyword"
         />
       </div>
+      <div class="filter-row filter-row-keywords">
+        <label for="location_class">Subcellular class (20-cat)</label>
+        <select id="location_class" name="location_class">
+          <option value="" {% if not location_class %}selected{% endif %}>All</option>
+          {% for cid, label in LOCATION_CLASS_OPTIONS %}
+            <option value="{{ cid }}" {% if location_class == cid %}selected{% endif %}>{{ label }}</option>
+          {% endfor %}
+        </select>
+      </div>
       <div class="filter-row filter-row-actions">
         <label class="checkbox-inline" for="hide_missing_protein">
           <input
