@@ -37,7 +37,7 @@ PROTEINS_VER9 = "proteins_ver9"
 PROTEINS_VER10 = "proteins_ver10"
 PPI_EDGES = "ppi_edges"
 IDR_SEGMENTS_VER9 = "idr_segments_ver9"
-LOCATION_CLASS_FILE = BASE_DIR.parent / "subcellular_location_classification_20_categories.csv"
+LOCATION_CLASS_FILE = BASE_DIR / "data" / "subcellular_location_classification_20_categories.csv"
 
 SEARCH_MODE_COLUMN_MAP: Dict[str, List[str]] = {
     "all": ["uniprot_id", "gene_name", "protein_name", "subcellular_location"],
