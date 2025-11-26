@@ -96,6 +96,10 @@ h1 {
   width: 110px;
 }
 
+.filter-form select#location_class {
+  min-width: 240px;
+}
+
 .filter-form .range-separator {
   padding: 0 4px;
   color: #555;
