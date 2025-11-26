@@ -197,13 +197,15 @@
   <table class="results-table">
     <thead>
       <tr>
-        <th class="col-narrow">Source</th>
-        <th class="col-narrow">UniProt A</th>
+        <th class="col-small">Source</th>
+        <th class="col-small">UniProt A</th>
         <th class="col-narrow">Gene A</th>
+        <th class="col-wide">Subcellular Location A</th>
         <th class="col-small">IDR % A</th>
         <th class="col-small">CC % A</th>
-        <th class="col-narrow">UniProt B</th>
+        <th class="col-small">UniProt B</th>
         <th class="col-narrow">Gene B</th>
+        <th class="col-wide">Subcellular Location B</th>
         <th class="col-small">IDR % B</th>
         <th class="col-small">CC % B</th>
         <th class="col-small">Score</th>
@@ -213,13 +215,15 @@
       {% if records %}
         {% for r in records %}
         <tr>
-          <td class="col-narrow">{{ r.source }}</td>
-          <td class="col-narrow"><a href="{{ url_for('protein_detail', uniprot_id=r.a_id, return_to=request.full_path) }}">{{ r.a_id }}</a></td>
+          <td class="col-small">{{ r.source }}</td>
+          <td class="col-small"><a href="{{ url_for('protein_detail', uniprot_id=r.a_id, return_to=request.full_path) }}">{{ r.a_id }}</a></td>
           <td class="col-narrow">{{ r.a_gene }}</td>
+          <td class="col-wide">{{ r.a_loc }}</td>
           <td class="col-small">{{ "%.2f"|format(r.a_idr_pct) if r.a_idr_pct is not none else "" }}</td>
           <td class="col-small">{{ "%.2f"|format(r.a_cc_pct) if r.a_cc_pct is not none else "" }}</td>
-          <td class="col-narrow"><a href="{{ url_for('protein_detail', uniprot_id=r.b_id, return_to=request.full_path) }}">{{ r.b_id }}</a></td>
+          <td class="col-small"><a href="{{ url_for('protein_detail', uniprot_id=r.b_id, return_to=request.full_path) }}">{{ r.b_id }}</a></td>
           <td class="col-narrow">{{ r.b_gene }}</td>
+          <td class="col-wide">{{ r.b_loc }}</td>
           <td class="col-small">{{ "%.2f"|format(r.b_idr_pct) if r.b_idr_pct is not none else "" }}</td>
           <td class="col-small">{{ "%.2f"|format(r.b_cc_pct) if r.b_cc_pct is not none else "" }}</td>
           <td class="col-small">{{ r.combined_score if r.combined_score is not none else "—" }}</td>

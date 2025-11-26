@@ -1070,10 +1070,12 @@ def supramolecular():
                 p1.gene_name AS a_gene,
                 p1.idr_percentage AS a_idr_pct,
                 p1.cc_percentage AS a_cc_pct,
+                p1.subcellular_location AS a_loc,
                 p2.uniprot_id AS b_id,
                 p2.gene_name AS b_gene,
                 p2.idr_percentage AS b_idr_pct,
-                p2.cc_percentage AS b_cc_pct
+                p2.cc_percentage AS b_cc_pct,
+                p2.subcellular_location AS b_loc
             FROM {PPI_EDGES} e
             JOIN {PROTEINS_VER10} p1 ON e.uniprot_a = p1.uniprot_id
             JOIN {PROTEINS_VER10} p2 ON e.uniprot_b = p2.uniprot_id
@@ -1093,10 +1095,12 @@ def supramolecular():
                         "a_gene": r.get("a_gene"),
                         "a_idr_pct": r.get("a_idr_pct"),
                         "a_cc_pct": r.get("a_cc_pct"),
+                        "a_loc": r.get("a_loc"),
                         "b_id": r.get("b_id"),
                         "b_gene": r.get("b_gene"),
                         "b_idr_pct": r.get("b_idr_pct"),
                         "b_cc_pct": r.get("b_cc_pct"),
+                        "b_loc": r.get("b_loc"),
                     }
                 )
 
