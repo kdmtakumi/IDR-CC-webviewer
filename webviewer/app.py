@@ -1107,12 +1107,22 @@ def supramolecular():
             "supramolecular",
             page=target_page,
             per_page=per_page,
+            search=search or None,
+            search_mode=search_mode if search_mode != "all" else None,
             source=source or None,
             uniprot=uniprot_id or None,
             score_min=min_score if min_score is not None else None,
+            idr_len_min=min_idr_len if min_idr_len is not None else None,
+            cc_len_min=min_cc_len if min_cc_len is not None else None,
             idr_pct_min=min_idr_pct if min_idr_pct is not None else None,
+            idr_pct_max=max_idr_pct if max_idr_pct is not None else None,
             cc_pct_min=min_cc_pct if min_cc_pct is not None else None,
+            cc_pct_max=max_cc_pct if max_cc_pct is not None else None,
+            protein_len_min=min_protein_len if min_protein_len is not None else None,
+            protein_len_max=max_protein_len if max_protein_len is not None else None,
             location_class=location_class if location_class is not None else None,
+            hide_missing_protein="1" if hide_missing_protein else None,
+            require_both_sources="1" if require_both_sources else None,
         )
 
     return render_template(
