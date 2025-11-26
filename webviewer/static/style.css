@@ -97,7 +97,7 @@ h1 {
 }
 
 .filter-form select#location_class {
-  min-width: 240px;
+  min-width: 320px;
 }
 
 .filter-form .range-separator {
