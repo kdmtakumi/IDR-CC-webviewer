@@ -154,6 +154,12 @@ h1 {
   width: 24%;
 }
 
+.results-table .col-loc {
+  width: 24%;
+  word-break: break-word;
+  white-space: normal;
+}
+
 .results-table .col-small {
   width: 7%;
   white-space: nowrap;
