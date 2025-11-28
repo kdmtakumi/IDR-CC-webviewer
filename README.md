@@ -78,12 +78,26 @@ Open `http://127.0.0.1:5000/` and authenticate with the shared password (default
 - Some of the 3,070 additional entries still lack gene/protein/location/domain annotations because the information is not yet released on UniProt. Fetch the latest metadata through the UniProt API when needed.
 
 ## Deployment (Render)
-1. Push your code to GitHub (`kdmtakumi/IDR-CC-webviewer`).
-2. On Render, create a new **Web Service** with Runtime = Native.
-3. Build command: `pip install --upgrade pip && pip install -r requirements.txt`
-4. Start command: `gunicorn app:app --chdir webviewer --bind 0.0.0.0:$PORT`
-5. Environment variables:
-   - `SUPABASE_DB_URL` = `postgresql://postgres.stjtqqlqpoxcpzywrxrz:ShimoLAB0501@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres?sslmode=require&client_encoding=utf8`
-   - `IDRCC_PASSWORD` = `ShimoLAB0501`
-   - `IDRCC_SECRET_KEY` = (任意の長い文字列)
-6. Deploy and access https://idr-cc-webviewer.onrender.com
+1. **Push手順（常に /tmp/idr-cc-webviewer で実施）**
+   ```bash
+   cd /tmp/idr-cc-webviewer
+   git status        # 差分確認
+   git push origin main
+   ```
+   ※ Render では GitHub `kdmtakumi/IDR-CC-webviewer` を参照するため、この push が完了していること。
+2. **Render**
+   - Runtime = Native / Build command: `pip install --upgrade pip && pip install -r requirements.txt`
+   - Start command: `gunicorn app:app --chdir webviewer --bind 0.0.0.0:$PORT`
+   - Environment variables:
+     - `SUPABASE_DB_URL` = `postgresql://postgres.stjtqqlqpoxcpzywrxrz:ShimoLAB0501@aws-1-ap-southeast-1.pooler.supabase.com:6543/postgres?sslmode=require&client_encoding=utf8`
+     - `IDRCC_PASSWORD` = `ShimoLAB0501`
+     - `IDRCC_SECRET_KEY` = (任意の長い文字列)
+   - デプロイ: GitHub push 後に Render ダッシュボードから「Manual Deploy」または自動デプロイを実行。
+3. **Supabase**（事前に投入済みであること）
+   - `proteins_ver6`, `proteins_ver9`, `proteins_ver10`, `idr_segments_ver9`, `ppi_edges`
+   - CSV:
+     - `IDR+CC_DB_ver5-/all_human_protein_database_with_IDR-CCinformation_ver10.csv` → `proteins_ver10`
+     - `interaction_database/biogrid_edges.csv` → `ppi_edges` (`uniprot_a,uniprot_b,source`)
+     - `interaction_database/string_edges.csv` → `ppi_edges` (`uniprot_a,uniprot_b,source,combined_score`)
+4. アプリに同梱されている 20分類マッピング: `webviewer/data/subcellular_location_classification_20_categories.csv`（ドロップダウンで利用）。
+5. アクセス: https://idr-cc-webviewer.onrender.com
