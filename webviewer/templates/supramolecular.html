@@ -15,7 +15,8 @@
   </div>
 
   <div class="filters">
-    <form method="get" action="{{ url_for('supramolecular') }}" class="filter-form">
+    <form method="get" action="{{ form_action or url_for('supramolecular') }}" class="filter-form">
+      <input type="hidden" name="source" value="{{ source or '' }}" />
       <!-- IDR/CC filter (canonical layout) -->
       <div class="filter-card">
         <h3>IDR / CC filter (canonical style)</h3>
@@ -181,12 +182,6 @@
       <div class="filter-card">
         <h3>PPI filter</h3>
         <div class="filter-row filter-row-primary">
-          <label for="source">Source</label>
-          <select name="source" id="source">
-            <option value="" {% if not source %}selected{% endif %}>All</option>
-            <option value="biogrid" {% if source == "biogrid" %}selected{% endif %}>BioGRID (multi-validated)</option>
-            <option value="string" {% if source == "string" %}selected{% endif %}>STRING (&gt;700)</option>
-          </select>
           <label for="uniprot">UniProt ID</label>
           <input type="text" id="uniprot" name="uniprot" value="{{ uniprot_id or '' }}" placeholder="e.g. O15083" />
           <label for="score_min">Min STRING score</label>

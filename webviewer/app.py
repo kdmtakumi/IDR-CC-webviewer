@@ -524,11 +524,15 @@ def _orient_pair(
         _swap_pair(row)
         return row
 
-    # When no target involvement, sort by gene (fallback to UniProt)
+    # When no target involvement, sort by Gene head-letter (fallback to UniProt)
     if not a_matches and not b_matches:
         key_a = a_gene or a_id
         key_b = b_gene or b_id
-        if key_b and key_a and key_b < key_a:
+        head_a = key_a[:1]
+        head_b = key_b[:1]
+        if head_b and (not head_a or head_b < head_a):
+            _swap_pair(row)
+        elif head_a == head_b and key_b and key_a and key_b < key_a:
             _swap_pair(row)
     return row
 
@@ -561,6 +565,8 @@ def fetch_protein_page(
     filters: Tuple[Any, ...],
     page: int,
     per_page: int,
+    base_clause: Optional[str] = None,
+    base_params: Optional[Sequence[Any]] = None,
 ) -> Tuple[List[ProteinRecord], int, Tuple[str, List[Any]]]:
     (
         search,
@@ -596,6 +602,16 @@ def fetch_protein_page(
         LOCATION_CLASS_TOKENS,
         alias="p",
     )
+    if base_clause:
+        clause = base_clause.strip()
+        if clause.lower().startswith("where "):
+            clause = clause[6:].strip()
+        if where_sql:
+            where_sql = f"{where_sql} AND {clause}"
+        else:
+            where_sql = f"WHERE {clause}"
+        if base_params:
+            params.extend(base_params)
     conn = get_db_connection()
     total_items = 0
     with conn.cursor() as cur:
@@ -986,6 +1002,98 @@ def canonical_index():
     )
 
 
+@app.route("/reviewed/")
+def reviewed_index():
+    page = parse_page()
+    per_page = get_page_size()
+    filters = extract_filters()
+    (
+        search,
+        search_mode,
+        idr_min,
+        cc_min,
+        protein_len_min,
+        protein_len_max,
+        idr_pct_min,
+        idr_pct_max,
+        cc_pct_min,
+        cc_pct_max,
+        domain_term,
+        location_term,
+        hide_missing_protein,
+        location_class,
+    ) = filters
+    reviewed_clause = "LOWER(p.status) LIKE 'reviewed%'"
+    records, total_items, filter_clause = fetch_protein_page(
+        PROTEINS_VER9,
+        filters,
+        page,
+        per_page,
+        base_clause=reviewed_clause,
+    )
+    page, start_item, end_item, page_numbers, show_first, show_last, total_pages = paginate(total_items, page, per_page)
+    location_counts, location_total, unknown_count = compute_subcellular_counts(PROTEINS_VER9, *filter_clause)
+
+    def page_url(target_page: int) -> str:
+        return url_for(
+            "reviewed_index",
+            page=target_page,
+            per_page=per_page,
+            search=search or None,
+            search_mode=search_mode if search_mode != "all" else None,
+            idr_min=idr_min if idr_min is not None else None,
+            cc_min=cc_min if cc_min is not None else None,
+            protein_len_min=protein_len_min if protein_len_min is not None else None,
+            protein_len_max=protein_len_max if protein_len_max is not None else None,
+            idr_pct_min=idr_pct_min if idr_pct_min is not None else None,
+            idr_pct_max=idr_pct_max if idr_pct_max is not None else None,
+            cc_pct_min=cc_pct_min if cc_pct_min is not None else None,
+            cc_pct_max=cc_pct_max if cc_pct_max is not None else None,
+            domain_term=domain_term or None,
+            location_term=location_term or None,
+            location_class=location_class if location_class is not None else None,
+            hide_missing_protein="1" if hide_missing_protein else None,
+        )
+
+    dataset_note = "Reviewed subset (ver9) · Swiss-Prot only."
+    current_path = request.full_path.rstrip("?") or request.path
+    return render_template(
+        "index.html",
+        records=records,
+        page=page,
+        per_page=per_page,
+        total_pages=total_pages,
+        total_items=total_items,
+        search=search,
+        search_mode=search_mode,
+        idr_min=idr_min,
+        cc_min=cc_min,
+        protein_len_min=protein_len_min,
+        protein_len_max=protein_len_max,
+        idr_pct_min=idr_pct_min,
+        idr_pct_max=idr_pct_max,
+        cc_pct_min=cc_pct_min,
+        cc_pct_max=cc_pct_max,
+        domain_term=domain_term,
+        location_term=location_term,
+        hide_missing_protein=hide_missing_protein,
+        page_url=page_url,
+        start_item=start_item,
+        end_item=end_item,
+        page_numbers=page_numbers,
+        show_first=show_first,
+        show_last=show_last,
+        location_counts=location_counts,
+        location_chart_url=url_for("subcellular_distribution_api", dataset="reviewed"),
+        dataset_note=dataset_note,
+        page_title="Reviewed Entries",
+        form_action=url_for("reviewed_index"),
+        location_chart_total=location_total,
+        location_chart_unknown=unknown_count,
+        current_path=current_path,
+    )
+
+
 def get_threshold_plot(uniprot_id: str) -> Optional[str]:
     candidates = {uniprot_id.upper()}
     raw = uniprot_id
@@ -1036,9 +1144,19 @@ def health():
 @app.route("/api/subcellular_distribution")
 def subcellular_distribution_api():
     dataset = request.args.get("dataset", "").strip().lower()
-    table = PROTEINS_VER9 if dataset == "canonical" else PROTEINS_VER6
+    table = PROTEINS_VER6
+    base_clause = None
+    if dataset == "canonical":
+        table = PROTEINS_VER9
+    elif dataset == "reviewed":
+        table = PROTEINS_VER9
+        base_clause = "LOWER(p.status) LIKE 'reviewed%'"
+    else:
+        table = PROTEINS_VER6
     filters = extract_filters()
     where_sql, params = build_filter_conditions(*filters, alias="p", location_tokens=LOCATION_CLASS_TOKENS)
+    if base_clause:
+        where_sql = _append_condition(where_sql, base_clause)
     counts, total_entries, unknown_count = compute_subcellular_counts(table, where_sql, params)
     labels = [label for label, _ in counts]
     values = [value for _, value in counts]
@@ -1171,6 +1289,14 @@ def supramolecular():
                     }
                 )
 
+    if source == "biogrid" and records:
+        records.sort(
+            key=lambda r: (
+                (r.get("a_gene") or r.get("a_id") or "").upper(),
+                (r.get("b_gene") or r.get("b_id") or "").upper(),
+            )
+        )
+
     page, start_item, end_item, page_numbers, show_first, show_last, total_pages = paginate(total_items, page, per_page)
 
     def page_url(target_page: int) -> str:
@@ -1250,8 +1376,217 @@ def supramolecular():
         location_class=location_class,
         page_url=page_url,
         source_tab_url=source_tab_url,
+        form_action=url_for("supramolecular"),
     )
 
+
+@app.route("/supramolecular_reviewed")
+def supramolecular_reviewed():
+    page = parse_page()
+    per_page = get_page_size()
+    search = request.args.get("search", "").strip()
+    search_mode = request.args.get("search_mode", "all").strip().lower() or "all"
+    if search_mode not in SEARCH_MODE_COLUMN_MAP:
+        search_mode = "all"
+    source = request.args.get("source", "").strip().lower()
+    source = source if source in {"biogrid", "string"} else None
+    uniprot_id = request.args.get("uniprot", "").strip().upper() or None
+    min_score = parse_int_param("score_min")
+    min_idr_len = parse_int_param("idr_len_min")
+    min_cc_len = parse_int_param("cc_len_min")
+    min_idr_pct = parse_float_param("idr_pct_min")
+    max_idr_pct = parse_float_param("idr_pct_max")
+    min_cc_pct = parse_float_param("cc_pct_min")
+    max_cc_pct = parse_float_param("cc_pct_max")
+    min_protein_len = parse_int_param("protein_len_min")
+    max_protein_len = parse_int_param("protein_len_max")
+    hide_missing_protein = request.args.get("hide_missing_protein", "").lower() in {"1", "true", "on"}
+    require_both_sources = request.args.get("require_both_sources", "").lower() in {"1", "true", "on"}
+    require_both_locations = request.args.get("require_both_locations", "").lower() in {"1", "true", "on"}
+    location_class_raw = request.args.get("location_class", "").strip()
+    try:
+        location_class = int(location_class_raw) if location_class_raw else None
+    except ValueError:
+        location_class = None
+
+    target_ids: Set[str] = set()
+    if uniprot_id:
+        target_ids.add(uniprot_id.upper())
+    if search:
+        target_ids.add(search.upper())
+
+    where_sql, params = build_ppi_filter_conditions(
+        source,
+        uniprot_id,
+        min_score,
+        min_idr_pct,
+        max_idr_pct,
+        min_cc_pct,
+        max_cc_pct,
+        min_idr_len,
+        min_cc_len,
+        min_protein_len,
+        max_protein_len,
+        search,
+        search_mode,
+        hide_missing_protein,
+        require_both_sources,
+        location_class,
+        require_both_locations,
+        LOCATION_CLASS_TOKENS,
+    )
+    reviewed_clause = "LOWER(p1.status) LIKE 'reviewed%' AND LOWER(p2.status) LIKE 'reviewed%'"
+    where_sql = _append_condition(where_sql, reviewed_clause)
+
+    conn = get_db_connection()
+    with conn.cursor() as cur:
+        cur.execute(
+            f"""
+            SELECT COUNT(*)
+            FROM {PPI_EDGES} e
+            JOIN {PROTEINS_VER10} p1 ON e.uniprot_a = p1.uniprot_id
+            JOIN {PROTEINS_VER10} p2 ON e.uniprot_b = p2.uniprot_id
+            {where_sql}
+            """,
+            params,
+        )
+        total_items = cur.fetchone()[0]
+
+    records: List[Dict[str, Any]] = []
+    if total_items:
+        offset = (page - 1) * per_page
+        query = f"""
+            SELECT
+                e.source,
+                e.combined_score,
+                p1.uniprot_id AS a_id,
+                p1.gene_name AS a_gene,
+                p1.idr_residues AS a_idr_len,
+                p1.total_cc_length AS a_cc_len,
+                p1.subcellular_location AS a_loc,
+                p2.uniprot_id AS b_id,
+                p2.gene_name AS b_gene,
+                p2.idr_residues AS b_idr_len,
+                p2.total_cc_length AS b_cc_len,
+                p2.subcellular_location AS b_loc
+            FROM {PPI_EDGES} e
+            JOIN {PROTEINS_VER10} p1 ON e.uniprot_a = p1.uniprot_id
+            JOIN {PROTEINS_VER10} p2 ON e.uniprot_b = p2.uniprot_id
+            {where_sql}
+            ORDER BY e.source, e.combined_score DESC NULLS LAST, p1.uniprot_id, p2.uniprot_id
+            LIMIT %s OFFSET %s
+        """
+        with conn.cursor(cursor_factory=RealDictCursor) as cur:
+            cur.execute(query, params + [per_page, offset])
+            rows = cur.fetchall()
+            for r in rows:
+                r = _orient_pair(r, target_ids)
+                records.append(
+                    {
+                        "source": r.get("source"),
+                        "combined_score": r.get("combined_score"),
+                        "a_id": r.get("a_id"),
+                        "a_gene": r.get("a_gene"),
+                        "a_idr_len": r.get("a_idr_len"),
+                        "a_cc_len": r.get("a_cc_len"),
+                        "a_loc": r.get("a_loc"),
+                        "b_id": r.get("b_id"),
+                        "b_gene": r.get("b_gene"),
+                        "b_idr_len": r.get("b_idr_len"),
+                        "b_cc_len": r.get("b_cc_len"),
+                        "b_loc": r.get("b_loc"),
+                    }
+                )
+
+    if source == "biogrid" and records:
+        records.sort(
+            key=lambda r: (
+                (r.get("a_gene") or r.get("a_id") or "").upper(),
+                (r.get("b_gene") or r.get("b_id") or "").upper(),
+            )
+        )
+
+    page, start_item, end_item, page_numbers, show_first, show_last, total_pages = paginate(total_items, page, per_page)
+
+    def page_url(target_page: int) -> str:
+        return url_for(
+            "supramolecular_reviewed",
+            page=target_page,
+            per_page=per_page,
+            search=search or None,
+            search_mode=search_mode if search_mode != "all" else None,
+            source=source or None,
+            uniprot=uniprot_id or None,
+            score_min=min_score if min_score is not None else None,
+            idr_len_min=min_idr_len if min_idr_len is not None else None,
+            cc_len_min=min_cc_len if min_cc_len is not None else None,
+            idr_pct_min=min_idr_pct if min_idr_pct is not None else None,
+            idr_pct_max=max_idr_pct if max_idr_pct is not None else None,
+            cc_pct_min=min_cc_pct if min_cc_pct is not None else None,
+            cc_pct_max=max_cc_pct if max_cc_pct is not None else None,
+            protein_len_min=min_protein_len if min_protein_len is not None else None,
+            protein_len_max=max_protein_len if max_protein_len is not None else None,
+            location_class=location_class if location_class is not None else None,
+            hide_missing_protein="1" if hide_missing_protein else None,
+            require_both_sources="1" if require_both_sources else None,
+        )
+
+    def source_tab_url(target_source: Optional[str]) -> str:
+        return url_for(
+            "supramolecular_reviewed",
+            page=1,
+            per_page=per_page,
+            search=search or None,
+            search_mode=search_mode if search_mode != "all" else None,
+            source=target_source or None,
+            uniprot=uniprot_id or None,
+            score_min=min_score if min_score is not None else None,
+            idr_len_min=min_idr_len if min_idr_len is not None else None,
+            cc_len_min=min_cc_len if min_cc_len is not None else None,
+            idr_pct_min=min_idr_pct if min_idr_pct is not None else None,
+            idr_pct_max=max_idr_pct if max_idr_pct is not None else None,
+            cc_pct_min=min_cc_pct if min_cc_pct is not None else None,
+            cc_pct_max=max_cc_pct if max_cc_pct is not None else None,
+            protein_len_min=min_protein_len if min_protein_len is not None else None,
+            protein_len_max=max_protein_len if max_protein_len is not None else None,
+            location_class=location_class if location_class is not None else None,
+            hide_missing_protein="1" if hide_missing_protein else None,
+            require_both_sources="1" if require_both_sources else None,
+            require_both_locations="1" if require_both_locations else None,
+        )
+
+    return render_template(
+        "supramolecular.html",
+        records=records,
+        total_items=total_items,
+        page=page,
+        start_item=start_item,
+        end_item=end_item,
+        page_numbers=page_numbers,
+        show_first=show_first,
+        show_last=show_last,
+        total_pages=total_pages,
+        per_page=per_page,
+        source=source,
+        uniprot_id=uniprot_id,
+        min_score=min_score,
+        min_idr_len=min_idr_len,
+        min_cc_len=min_cc_len,
+        min_idr_pct=min_idr_pct,
+        max_idr_pct=max_idr_pct,
+        min_cc_pct=min_cc_pct,
+        max_cc_pct=max_cc_pct,
+        min_protein_len=min_protein_len,
+        max_protein_len=max_protein_len,
+        search=search,
+        search_mode=search_mode,
+        hide_missing_protein=hide_missing_protein,
+        require_both_sources=require_both_sources,
+        location_class=location_class,
+        page_url=page_url,
+        source_tab_url=source_tab_url,
+        form_action=url_for("supramolecular_reviewed"),
+    )
 
 @app.route("/idr/")
 def idr_index():
