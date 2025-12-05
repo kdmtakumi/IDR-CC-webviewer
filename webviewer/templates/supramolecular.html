@@ -8,6 +8,12 @@
     BioGRID (multi-validated) + STRING (&gt;700). IDR/CC rule: one partner meets the IDR threshold, the other meets the CC threshold (order-agnostic).
   </p>
 
+  <div class="tab-bar">
+    <a href="{{ source_tab_url(None) }}" class="tab {% if not source %}active{% endif %}">All sources</a>
+    <a href="{{ source_tab_url('biogrid') }}" class="tab {% if source == 'biogrid' %}active{% endif %}">BioGRID</a>
+    <a href="{{ source_tab_url('string') }}" class="tab {% if source == 'string' %}active{% endif %}">STRING (&gt;700)</a>
+  </div>
+
   <div class="filters">
     <form method="get" action="{{ url_for('supramolecular') }}" class="filter-form">
       <!-- IDR/CC filter (canonical layout) -->

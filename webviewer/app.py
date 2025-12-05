@@ -5,6 +5,7 @@ import os
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple
+from typing import Set
 from urllib.parse import urljoin, urlparse
 
 import psycopg2
@@ -481,6 +482,55 @@ def build_ppi_filter_conditions(
 
     where_sql = "WHERE " + " AND ".join(clauses) if clauses else ""
     return where_sql, params
+
+
+def _swap_pair(row: Dict[str, Any]) -> None:
+    swap_fields = [
+        ("a_id", "b_id"),
+        ("a_gene", "b_gene"),
+        ("a_idr_len", "b_idr_len"),
+        ("a_cc_len", "b_cc_len"),
+        ("a_loc", "b_loc"),
+    ]
+    for left, right in swap_fields:
+        row[left], row[right] = row.get(right), row.get(left)
+
+
+def _matches_target(value: Optional[str], targets: Set[str]) -> bool:
+    if not value or not targets:
+        return False
+    up = value.upper()
+    return any(t in up for t in targets)
+
+
+def _orient_pair(
+    row: Dict[str, Any],
+    target_terms: Set[str],
+) -> Dict[str, Any]:
+    """
+    Ensure searched protein (UniProt/Gene) is on the left.
+    If no target match, order by Gene A/B alphabetically.
+    """
+    a_id = (row.get("a_id") or "").upper()
+    b_id = (row.get("b_id") or "").upper()
+    a_gene = (row.get("a_gene") or "").upper()
+    b_gene = (row.get("b_gene") or "").upper()
+
+    a_matches = _matches_target(a_id, target_terms) or _matches_target(a_gene, target_terms)
+    b_matches = _matches_target(b_id, target_terms) or _matches_target(b_gene, target_terms)
+
+    # Place target on the left when only B matches
+    if b_matches and not a_matches:
+        _swap_pair(row)
+        return row
+
+    # When no target involvement, sort by gene (fallback to UniProt)
+    if not a_matches and not b_matches:
+        key_a = a_gene or a_id
+        key_b = b_gene or b_id
+        if key_b and key_a and key_b < key_a:
+            _swap_pair(row)
+    return row
 
 
 def paginate(total_items: int, page: int, per_page: int) -> Tuple[int, int, List[int], bool, bool, int]:
@@ -1034,6 +1084,12 @@ def supramolecular():
     except ValueError:
         location_class = None
 
+    target_ids: Set[str] = set()
+    if uniprot_id:
+        target_ids.add(uniprot_id.upper())
+    if search:
+        target_ids.add(search.upper())
+
     where_sql, params = build_ppi_filter_conditions(
         source,
         uniprot_id,
@@ -1097,6 +1153,7 @@ def supramolecular():
             cur.execute(query, params + [per_page, offset])
             rows = cur.fetchall()
             for r in rows:
+                r = _orient_pair(r, target_ids)
                 records.append(
                     {
                         "source": r.get("source"),
@@ -1139,6 +1196,30 @@ def supramolecular():
             require_both_sources="1" if require_both_sources else None,
         )
 
+    def source_tab_url(target_source: Optional[str]) -> str:
+        return url_for(
+            "supramolecular",
+            page=1,
+            per_page=per_page,
+            search=search or None,
+            search_mode=search_mode if search_mode != "all" else None,
+            source=target_source or None,
+            uniprot=uniprot_id or None,
+            score_min=min_score if min_score is not None else None,
+            idr_len_min=min_idr_len if min_idr_len is not None else None,
+            cc_len_min=min_cc_len if min_cc_len is not None else None,
+            idr_pct_min=min_idr_pct if min_idr_pct is not None else None,
+            idr_pct_max=max_idr_pct if max_idr_pct is not None else None,
+            cc_pct_min=min_cc_pct if min_cc_pct is not None else None,
+            cc_pct_max=max_cc_pct if max_cc_pct is not None else None,
+            protein_len_min=min_protein_len if min_protein_len is not None else None,
+            protein_len_max=max_protein_len if max_protein_len is not None else None,
+            location_class=location_class if location_class is not None else None,
+            hide_missing_protein="1" if hide_missing_protein else None,
+            require_both_sources="1" if require_both_sources else None,
+            require_both_locations="1" if require_both_locations else None,
+        )
+
     return render_template(
         "supramolecular.html",
         records=records,
@@ -1168,6 +1249,7 @@ def supramolecular():
         require_both_sources=require_both_sources,
         location_class=location_class,
         page_url=page_url,
+        source_tab_url=source_tab_url,
     )
 
 
