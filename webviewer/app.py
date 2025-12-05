@@ -614,8 +614,12 @@ def fetch_protein_page(
             params.extend(base_params)
     conn = get_db_connection()
     total_items = 0
+    exec_params = list(params) if params else []
     with conn.cursor() as cur:
-        cur.execute(f"SELECT COUNT(*) FROM {table} p {where_sql}", params)
+        if exec_params:
+            cur.execute(f"SELECT COUNT(*) FROM {table} p {where_sql}", exec_params)
+        else:
+            cur.execute(f"SELECT COUNT(*) FROM {table} p {where_sql}")
         total_items = cur.fetchone()[0]
 
     records: List[ProteinRecord] = []
@@ -632,7 +636,9 @@ def fetch_protein_page(
         ]
         select_sql = f"SELECT {', '.join(columns)} FROM {table} p {where_sql} ORDER BY p.ctid LIMIT %s OFFSET %s"
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
-            cur.execute(select_sql, params + [per_page, offset])
+            cur_params = list(exec_params)
+            cur_params += [per_page, offset]
+            cur.execute(select_sql, cur_params)
             for row in cur.fetchall():
                 records.append(
                     ProteinRecord(
@@ -1239,7 +1245,7 @@ def supramolecular():
             JOIN {PROTEINS_VER10} p2 ON e.uniprot_b = p2.uniprot_id
             {where_sql}
             """,
-            params,
+            params if params else None,
         )
         total_items = cur.fetchone()[0]
 
@@ -1268,7 +1274,9 @@ def supramolecular():
             LIMIT %s OFFSET %s
         """
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
-            cur.execute(query, params + [per_page, offset])
+            cur_params = list(params) if params else []
+            cur_params += [per_page, offset]
+            cur.execute(query, cur_params)
             rows = cur.fetchall()
             for r in rows:
                 r = _orient_pair(r, target_ids)
