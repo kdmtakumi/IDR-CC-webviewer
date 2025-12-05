@@ -1029,7 +1029,7 @@ def reviewed_index():
         hide_missing_protein,
         location_class,
     ) = filters
-    reviewed_clause = "LOWER(p.status) LIKE 'reviewed%'"
+    reviewed_clause = "LOWER(p.status) LIKE 'reviewed%%'"
     records, total_items, filter_clause = fetch_protein_page(
         PROTEINS_VER9,
         filters,
@@ -1156,7 +1156,7 @@ def subcellular_distribution_api():
         table = PROTEINS_VER9
     elif dataset == "reviewed":
         table = PROTEINS_VER9
-        base_clause = "LOWER(p.status) LIKE 'reviewed%'"
+        base_clause = "LOWER(p.status) LIKE 'reviewed%%'"
     else:
         table = PROTEINS_VER6
     filters = extract_filters()
@@ -1443,7 +1443,7 @@ def supramolecular_reviewed():
         require_both_locations,
         LOCATION_CLASS_TOKENS,
     )
-    reviewed_clause = "LOWER(p1.status) LIKE 'reviewed%' AND LOWER(p2.status) LIKE 'reviewed%'"
+    reviewed_clause = "LOWER(p1.status) LIKE 'reviewed%%' AND LOWER(p2.status) LIKE 'reviewed%%'"
     where_sql = _append_condition(where_sql, reviewed_clause)
 
     conn = get_db_connection()
