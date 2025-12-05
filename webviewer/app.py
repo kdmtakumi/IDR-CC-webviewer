@@ -36,7 +36,11 @@ if not SUPABASE_DB_URL:
 PROTEINS_VER6 = "proteins_ver6"
 PROTEINS_VER9 = "proteins_ver9"
 PROTEINS_VER10 = "proteins_ver10"
+PROTEINS_VER9_REVIEWED = "proteins_ver9_reviewed"
+PROTEINS_VER10_REVIEWED = "proteins_ver10_reviewed"
 PPI_EDGES = "ppi_edges"
+PPI_EDGES_BIOGRID_REVIEWED = "ppi_edges_biogrid_reviewed"
+PPI_EDGES_STRING_REVIEWED = "ppi_edges_string_reviewed"
 IDR_SEGMENTS_VER9 = "idr_segments_ver9"
 LOCATION_CLASS_FILE = BASE_DIR / "data" / "subcellular_location_classification_20_categories.csv"
 
@@ -1029,16 +1033,14 @@ def reviewed_index():
         hide_missing_protein,
         location_class,
     ) = filters
-    reviewed_clause = "LOWER(p.status) LIKE 'reviewed%%'"
     records, total_items, filter_clause = fetch_protein_page(
-        PROTEINS_VER9,
+        PROTEINS_VER9_REVIEWED,
         filters,
         page,
         per_page,
-        base_clause=reviewed_clause,
     )
     page, start_item, end_item, page_numbers, show_first, show_last, total_pages = paginate(total_items, page, per_page)
-    location_counts, location_total, unknown_count = compute_subcellular_counts(PROTEINS_VER9, *filter_clause)
+    location_counts, location_total, unknown_count = compute_subcellular_counts(PROTEINS_VER9_REVIEWED, *filter_clause)
 
     def page_url(target_page: int) -> str:
         return url_for(
@@ -1155,10 +1157,7 @@ def subcellular_distribution_api():
     if dataset == "canonical":
         table = PROTEINS_VER9
     elif dataset == "reviewed":
-        table = PROTEINS_VER9
-        base_clause = "LOWER(p.status) LIKE 'reviewed%%'"
-    else:
-        table = PROTEINS_VER6
+        table = PROTEINS_VER9_REVIEWED
     filters = extract_filters()
     where_sql, params = build_filter_conditions(*filters, alias="p", location_tokens=LOCATION_CLASS_TOKENS)
     if base_clause:
@@ -1443,7 +1442,7 @@ def supramolecular_reviewed():
         require_both_locations,
         LOCATION_CLASS_TOKENS,
     )
-    reviewed_clause = "LOWER(p1.status) LIKE 'reviewed%%' AND LOWER(p2.status) LIKE 'reviewed%%'"
+    reviewed_clause = "1=1"  # data already reviewed-only when using reviewed tables
     where_sql = _append_condition(where_sql, reviewed_clause)
 
     conn = get_db_connection()
@@ -1451,12 +1450,16 @@ def supramolecular_reviewed():
         cur.execute(
             f"""
             SELECT COUNT(*)
-            FROM {PPI_EDGES} e
-            JOIN {PROTEINS_VER10} p1 ON e.uniprot_a = p1.uniprot_id
-            JOIN {PROTEINS_VER10} p2 ON e.uniprot_b = p2.uniprot_id
+            FROM (
+                SELECT uniprot_a, uniprot_b, source, NULL::int AS combined_score FROM {PPI_EDGES_BIOGRID_REVIEWED}
+                UNION ALL
+                SELECT uniprot_a, uniprot_b, source, combined_score FROM {PPI_EDGES_STRING_REVIEWED}
+            ) e
+            JOIN {PROTEINS_VER10_REVIEWED} p1 ON e.uniprot_a = p1.uniprot_id
+            JOIN {PROTEINS_VER10_REVIEWED} p2 ON e.uniprot_b = p2.uniprot_id
             {where_sql}
             """,
-            params,
+            params if params else None,
         )
         total_items = cur.fetchone()[0]
 
@@ -1477,15 +1480,21 @@ def supramolecular_reviewed():
                 p2.idr_residues AS b_idr_len,
                 p2.total_cc_length AS b_cc_len,
                 p2.subcellular_location AS b_loc
-            FROM {PPI_EDGES} e
-            JOIN {PROTEINS_VER10} p1 ON e.uniprot_a = p1.uniprot_id
-            JOIN {PROTEINS_VER10} p2 ON e.uniprot_b = p2.uniprot_id
+            FROM (
+                SELECT uniprot_a, uniprot_b, source, NULL::int AS combined_score FROM {PPI_EDGES_BIOGRID_REVIEWED}
+                UNION ALL
+                SELECT uniprot_a, uniprot_b, source, combined_score FROM {PPI_EDGES_STRING_REVIEWED}
+            ) e
+            JOIN {PROTEINS_VER10_REVIEWED} p1 ON e.uniprot_a = p1.uniprot_id
+            JOIN {PROTEINS_VER10_REVIEWED} p2 ON e.uniprot_b = p2.uniprot_id
             {where_sql}
             ORDER BY e.source, e.combined_score DESC NULLS LAST, p1.uniprot_id, p2.uniprot_id
             LIMIT %s OFFSET %s
         """
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
-            cur.execute(query, params + [per_page, offset])
+            cur_params = list(params) if params else []
+            cur_params += [per_page, offset]
+            cur.execute(query, cur_params)
             rows = cur.fetchall()
             for r in rows:
                 r = _orient_pair(r, target_ids)
