@@ -572,6 +572,7 @@ def fetch_protein_page(
     base_clause: Optional[str] = None,
     base_params: Optional[Sequence[Any]] = None,
 ) -> Tuple[List[ProteinRecord], int, Tuple[str, List[Any]]]:
+    alias = "p"
     (
         search,
         search_mode,
@@ -604,7 +605,7 @@ def fetch_protein_page(
         hide_missing,
         location_class,
         LOCATION_CLASS_TOKENS,
-        alias="p",
+        alias=alias,
     )
     if base_clause:
         clause = base_clause.strip()
@@ -616,6 +617,20 @@ def fetch_protein_page(
             where_sql = f"WHERE {clause}"
         if base_params:
             params.extend(base_params)
+
+    # Order: exact matches first (case-insensitive), then fallback to UniProt ID
+    order_params: List[Any] = []
+    order_clause = f"ORDER BY {alias}.ctid"
+    if search:
+        mode = search_mode if search_mode in SEARCH_MODE_COLUMN_MAP else "all"
+        order_columns = SEARCH_MODE_COLUMN_MAP.get(mode, SEARCH_MODE_COLUMN_MAP["all"])
+        exact_checks = [f"LOWER({alias}.{col}) = %s" for col in order_columns]
+        order_clause = (
+            "ORDER BY CASE WHEN (" + " OR ".join(exact_checks) + ") THEN 0 ELSE 1 END, "
+            f"{alias}.uniprot_id"
+        )
+        order_params.extend([search.lower()] * len(exact_checks))
+
     conn = get_db_connection()
     total_items = 0
     exec_params = list(params) if params else []
@@ -638,9 +653,10 @@ def fetch_protein_page(
             "idr_percentage",
             "cc_percentage",
         ]
-        select_sql = f"SELECT {', '.join(columns)} FROM {table} p {where_sql} ORDER BY p.ctid LIMIT %s OFFSET %s"
+        select_sql = f"SELECT {', '.join(columns)} FROM {table} {alias} {where_sql} {order_clause} LIMIT %s OFFSET %s"
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
             cur_params = list(exec_params)
+            cur_params.extend(order_params)
             cur_params += [per_page, offset]
             cur.execute(select_sql, cur_params)
             for row in cur.fetchall():
