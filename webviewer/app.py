@@ -1267,6 +1267,18 @@ def supramolecular():
     records: List[Dict[str, Any]] = []
     if total_items:
         offset = (page - 1) * per_page
+        order_clause = "ORDER BY e.source, e.combined_score DESC NULLS LAST, p1.uniprot_id, p2.uniprot_id"
+        exact_order = []
+        if search:
+            mode = search_mode if search_mode in SEARCH_MODE_COLUMN_MAP else "all"
+            columns = SEARCH_MODE_COLUMN_MAP.get(mode, SEARCH_MODE_COLUMN_MAP["all"])
+            for col in columns:
+                exact_order.append(f"LOWER(p1.{col}) = %s")
+                exact_order.append(f"LOWER(p2.{col}) = %s")
+            order_clause = (
+                "ORDER BY CASE WHEN (" + " OR ".join(exact_order) + ") THEN 0 ELSE 1 END, "
+                "e.source, e.combined_score DESC NULLS LAST, p1.uniprot_id, p2.uniprot_id"
+            )
         query = f"""
             SELECT
                 e.source,
@@ -1285,11 +1297,13 @@ def supramolecular():
             JOIN {PROTEINS_VER10} p1 ON e.uniprot_a = p1.uniprot_id
             JOIN {PROTEINS_VER10} p2 ON e.uniprot_b = p2.uniprot_id
             {where_sql}
-            ORDER BY e.source, e.combined_score DESC NULLS LAST, p1.uniprot_id, p2.uniprot_id
+            {order_clause}
             LIMIT %s OFFSET %s
         """
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
             cur_params = list(params) if params else []
+            if search:
+                cur_params.extend([search.lower()] * len(exact_order))
             cur_params += [per_page, offset]
             cur.execute(query, cur_params)
             rows = cur.fetchall()
@@ -1482,6 +1496,18 @@ def supramolecular_reviewed():
     records: List[Dict[str, Any]] = []
     if total_items:
         offset = (page - 1) * per_page
+        order_clause = "ORDER BY e.source, e.combined_score DESC NULLS LAST, p1.uniprot_id, p2.uniprot_id"
+        exact_order = []
+        if search:
+            mode = search_mode if search_mode in SEARCH_MODE_COLUMN_MAP else "all"
+            columns = SEARCH_MODE_COLUMN_MAP.get(mode, SEARCH_MODE_COLUMN_MAP["all"])
+            for col in columns:
+                exact_order.append(f"LOWER(p1.{col}) = %s")
+                exact_order.append(f"LOWER(p2.{col}) = %s")
+            order_clause = (
+                "ORDER BY CASE WHEN (" + " OR ".join(exact_order) + ") THEN 0 ELSE 1 END, "
+                "e.source, e.combined_score DESC NULLS LAST, p1.uniprot_id, p2.uniprot_id"
+            )
         query = f"""
             SELECT
                 e.source,
@@ -1504,11 +1530,13 @@ def supramolecular_reviewed():
             JOIN {PROTEINS_VER10_REVIEWED} p1 ON e.uniprot_a = p1.uniprot_id
             JOIN {PROTEINS_VER10_REVIEWED} p2 ON e.uniprot_b = p2.uniprot_id
             {where_sql}
-            ORDER BY e.source, e.combined_score DESC NULLS LAST, p1.uniprot_id, p2.uniprot_id
+            {order_clause}
             LIMIT %s OFFSET %s
         """
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
             cur_params = list(params) if params else []
+            if search:
+                cur_params.extend([search.lower()] * len(exact_order))
             cur_params += [per_page, offset]
             cur.execute(query, cur_params)
             rows = cur.fetchall()
@@ -1638,15 +1666,29 @@ def idr_index():
     records: List[Dict[str, Any]] = []
     if total_items:
         offset = (page - 1) * per_page
+        order_clause = "ORDER BY idr.uniprot_id, idr.idr_number"
+        exact_order = []
+        if search:
+            exact_order.append("LOWER(idr.uniprot_id) = %s")
+            exact_order.append("LOWER(idr.gene_name) = %s")
+            exact_order.append("LOWER(idr.protein_name) = %s")
+            order_clause = (
+                "ORDER BY CASE WHEN (" + " OR ".join(exact_order) + ") THEN 0 ELSE 1 END, "
+                "idr.uniprot_id, idr.idr_number"
+            )
         query = f"""
             SELECT *
             FROM {IDR_SEGMENTS_VER9} idr
             {where_sql}
-            ORDER BY idr.ctid
+            {order_clause}
             LIMIT %s OFFSET %s
         """
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
-            cur.execute(query, params + [per_page, offset])
+            cur_params = list(params)
+            if search:
+                cur_params.extend([search.lower()] * len(exact_order))
+            cur_params += [per_page, offset]
+            cur.execute(query, cur_params)
             rows = cur.fetchall()
             records = [normalise_row(row, IDR_DISPLAY_COLUMNS) for row in rows]
 
