@@ -6,5 +6,4 @@ matplotlib>=3.8
 numpy>=1.26
 Pillow>=10.0
 # Optional for DeepTMHMM overlay (downloads model on first run)
-# Pin to the latest PyPI release (0.1.9) to keep Python 3.11 compatibility
-biolib==0.1.9
+biolib>=3.10
