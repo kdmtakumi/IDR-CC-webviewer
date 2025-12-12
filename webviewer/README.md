@@ -48,7 +48,7 @@ Open `http://127.0.0.1:5000/` and authenticate with the shared password (default
 2. **Render**
    - Connect the GitHub repository and create a “Web Service”.
    - Build command: `pip install --upgrade pip && pip install -r requirements.txt`
-   - Start command: `gunicorn app:app --chdir webviewer --bind 0.0.0.0:$PORT`
+   - Start command: `gunicorn app:app --chdir webviewer --bind 0.0.0.0:$PORT --timeout 300`
    - Environment variables:
      - `SUPABASE_DB_URL` (connection string, preferably using the pooling host)
      - `IDRCC_PASSWORD` (shared password) and `IDRCC_SECRET_KEY`
