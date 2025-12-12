@@ -1,7 +1,13 @@
 
 from __future__ import annotations
 
+import json
 import os
+import re
+import shutil
+import subprocess
+import sys
+import uuid
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Dict, List, Optional, Sequence, Tuple
@@ -18,6 +24,7 @@ from flask import (
     redirect,
     render_template,
     request,
+    send_file,
     send_from_directory,
     session,
     url_for,
@@ -25,6 +32,9 @@ from flask import (
 
 BASE_DIR = Path(__file__).resolve().parent
 ANALYSIS_DIR = (BASE_DIR.parent / "ver6_all_analysis" / "png").resolve()
+BUNDLE_DIR = (BASE_DIR.parent / "bundle_pipeline").resolve()
+MARCOIL_DIR = BUNDLE_DIR / "CC_analysis_MARCOIL" / "MARCOIL"
+PREDICTION_ROOT = BASE_DIR / "prediction_runs"
 DEFAULT_PAGE_SIZE = 25
 MAX_PAGE_SIZE = 100
 ACCESS_PASSWORD = os.environ.get("IDRCC_PASSWORD", "ShimoLAB0501")
@@ -119,6 +129,7 @@ _load_location_classes()
 
 app = Flask(__name__)
 app.secret_key = SESSION_KEY
+app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD_BYTES
 
 PROTEIN_DISPLAY_COLUMNS: List[Tuple[str, str]] = [
     ("uniprot_id", "UniProt_ID"),
@@ -167,6 +178,200 @@ IDR_DISPLAY_COLUMNS: List[Tuple[str, str]] = PROTEIN_DISPLAY_COLUMNS + [
     ("cluster_k30", "cluster_k30"),
     ("d_min", "d_min"),
 ]
+
+PREDICTION_ROOT.mkdir(exist_ok=True)
+MAX_UPLOAD_BYTES = 5 * 1024 * 1024  # 5 MB default guard
+
+
+def _bundle_env() -> Dict[str, str]:
+    env = os.environ.copy()
+    existing = env.get("PYTHONPATH", "")
+    paths = [str(BUNDLE_DIR)]
+    if existing:
+        paths.append(existing)
+    env["PYTHONPATH"] = os.pathsep.join(paths)
+    env.setdefault("XDG_CACHE_HOME", str(PREDICTION_ROOT / ".cache"))
+    env.setdefault("MPLCONFIGDIR", str(PREDICTION_ROOT / ".matplotlib_cache"))
+    return env
+
+
+def _safe_seq_name(raw: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9_.-]+", "_", raw.strip()) or "sample"
+    return cleaned[:64]
+
+
+def _job_dir(job_id: str) -> Optional[Path]:
+    if not re.fullmatch(r"[a-fA-F0-9]{32}", job_id):
+        return None
+    path = PREDICTION_ROOT / job_id
+    return path if path.exists() else None
+
+
+def _write_manifest(job_dir: Path, payload: Dict[str, Any]) -> None:
+    (job_dir / "manifest.json").write_text(json.dumps(payload, indent=2))
+
+
+def _read_manifest(job_id: str) -> Optional[Dict[str, Any]]:
+    job = _job_dir(job_id)
+    if not job:
+        return None
+    manifest = job / "manifest.json"
+    if not manifest.exists():
+        return None
+    try:
+        return json.loads(manifest.read_text())
+    except Exception:
+        return None
+
+
+def _collect_outputs(run_dir: Path) -> List[str]:
+    outputs: List[str] = []
+    for path in sorted(run_dir.glob("*")):
+        if path.is_file():
+            outputs.append(path.name)
+    return outputs
+
+
+def _zip_run(run_dir: Path, zip_path: Path) -> Path:
+    if zip_path.exists():
+        return zip_path
+    shutil.make_archive(str(zip_path.with_suffix("")), "zip", run_dir)
+    return zip_path
+
+
+def _run_deeptmhmm(fasta_path: Path, out_dir: Path) -> Tuple[Optional[Path], Optional[str]]:
+    try:
+        import biolib  # type: ignore
+    except Exception as exc:  # pragma: no cover - optional dependency
+        return None, f"DeepTMHMM unavailable: {exc}"
+    try:
+        out_dir.mkdir(parents=True, exist_ok=True)
+        deeptmhmm = biolib.load("DTU/DeepTMHMM")  # noqa: F841
+        job = deeptmhmm.cli(args=f"--fasta {fasta_path}")
+        job.save_files(str(out_dir))
+        for candidate in ["prediction.gff3", "TMRs.gff3"]:
+            gff = out_dir / candidate
+            if gff.exists():
+                return gff, None
+        return None, "DeepTMHMM finished but no GFF3 output was found."
+    except Exception as exc:  # pragma: no cover - optional dependency
+        return None, f"DeepTMHMM failed: {exc}"
+
+
+def run_prediction_job(
+    name: str,
+    fasta_bytes: bytes,
+    include_tm: bool,
+    threshold: float = 50.0,
+    xtick_step: int = 200,
+) -> Dict[str, Any]:
+    seq_name = _safe_seq_name(name)
+    job_id = uuid.uuid4().hex
+    job_dir = PREDICTION_ROOT / job_id
+    job_dir.mkdir(parents=True, exist_ok=True)
+    errors: List[str] = []
+
+    fasta_path = job_dir / f"{seq_name}.fasta"
+    fasta_path.write_bytes(fasta_bytes)
+
+    env = _bundle_env()
+    analyze_script = BUNDLE_DIR / "analyze_single_sequence.py"
+    run_dir = job_dir / seq_name
+    marcoil_dir = MARCOIL_DIR
+    if not analyze_script.exists():
+        errors.append("analyze_single_sequence.py not found in bundle_pipeline.")
+    if not marcoil_dir.exists():
+        errors.append("MARCOIL directory not found; coiled-coil step will fail.")
+
+    if not errors:
+        cmd = [
+            sys.executable,
+            str(analyze_script),
+            "--name",
+            seq_name,
+            "--fasta",
+            str(fasta_path),
+            "--output-root",
+            str(job_dir),
+            "--marcoil-dir",
+            str(marcoil_dir),
+            "--mode",
+            "H",
+        ]
+        try:
+            subprocess.run(cmd, check=True, env=env, cwd=BUNDLE_DIR, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        except subprocess.CalledProcessError as exc:
+            errors.append(f"Pipeline failed: {exc.stderr.decode('utf-8', errors='ignore') or exc}")
+
+    plot_data_csv = run_dir / f"{seq_name}_plot_data.csv"
+    gff_path: Optional[Path] = None
+    overlay_type = "basic"
+    if include_tm and plot_data_csv.exists():
+        gff_out_dir = run_dir / "deeptmhmm"
+        gff_path, tm_error = _run_deeptmhmm(fasta_path, gff_out_dir)
+        if tm_error:
+            errors.append(tm_error)
+        if gff_path and gff_path.exists():
+            overlay_type = "tm"
+            deeptmhmm_script = BUNDLE_DIR / "plot_deeptmhmm_overlay_threshold.py"
+            cmd = [
+                sys.executable,
+                str(deeptmhmm_script),
+                "--name",
+                seq_name,
+                "--plot-csv",
+                str(plot_data_csv),
+                "--gff",
+                str(gff_path),
+                "--out-prefix",
+                str(run_dir / f"{seq_name}_deeptmhmm_overlay_threshold"),
+                "--xtick-step",
+                str(int(xtick_step)),
+                "--threshold",
+                str(float(threshold)),
+            ]
+            try:
+                subprocess.run(cmd, check=True, env=env, cwd=BUNDLE_DIR, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            except subprocess.CalledProcessError as exc:
+                errors.append(f"DeepTMHMM overlay failed: {exc.stderr.decode('utf-8', errors='ignore') or exc}")
+                overlay_type = "basic"
+
+    if plot_data_csv.exists() and overlay_type == "basic":
+        basic_script = BUNDLE_DIR / "plot_overlay_threshold_basic.py"
+        cmd = [
+            sys.executable,
+            str(basic_script),
+            "--name",
+            seq_name,
+            "--plot-csv",
+            str(plot_data_csv),
+            "--out-prefix",
+            str(run_dir / f"{seq_name}_overlay_threshold"),
+            "--xtick-step",
+            str(int(xtick_step)),
+            "--threshold",
+            str(float(threshold)),
+        ]
+        try:
+            subprocess.run(cmd, check=True, env=env, cwd=BUNDLE_DIR, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        except subprocess.CalledProcessError as exc:
+            errors.append(f"Threshold plot failed: {exc.stderr.decode('utf-8', errors='ignore') or exc}")
+
+    outputs = _collect_outputs(run_dir) if run_dir.exists() else []
+    zip_path = _zip_run(run_dir, job_dir / f"{seq_name}_results.zip") if run_dir.exists() else None
+
+    manifest = {
+        "job_id": job_id,
+        "name": seq_name,
+        "include_tm": include_tm,
+        "overlay_type": overlay_type,
+        "outputs": outputs,
+        "zip_file": zip_path.name if zip_path else None,
+        "run_dir": run_dir.name if run_dir.exists() else "",
+        "errors": errors,
+    }
+    _write_manifest(job_dir, manifest)
+    return manifest
 
 @dataclass
 class ProteinRecord:
@@ -1739,6 +1944,136 @@ def idr_detail(uid: str, number: int):
         tsne_marker=None,
         return_to=_safe_return_path(request.args.get("return_to"), url_for("idr_index")),
     )
+
+
+def _get_prediction_context(job_id: Optional[str]) -> Tuple[Optional[Dict[str, Any]], Optional[Path]]:
+    if not job_id:
+        return None, None
+    manifest = _read_manifest(job_id)
+    if not manifest:
+        return None, None
+    job_dir = _job_dir(job_id)
+    if not job_dir:
+        return None, None
+    run_dir = job_dir / manifest.get("run_dir", "")
+    if not run_dir.exists():
+        return manifest, None
+    return manifest, run_dir
+
+
+@app.route("/prediction", methods=["GET", "POST"])
+def prediction():
+    job_id = request.args.get("job", "").strip() or None
+    error = None
+    manifest = None
+    run_dir = None
+
+    if request.method == "POST":
+        name = request.form.get("name", "").strip() or "sample"
+        include_tm = request.form.get("include_tm", "").lower() in {"1", "true", "on"}
+        threshold_raw = request.form.get("threshold", "").strip()
+        xtick_raw = request.form.get("xtick_step", "").strip()
+        fasta_text = request.form.get("fasta_text", "").strip()
+        fasta_file = request.files.get("fasta_file")
+        threshold = 50.0
+        xtick_step = 200
+        try:
+            if threshold_raw:
+                threshold = float(threshold_raw)
+        except ValueError:
+            threshold = 50.0
+        try:
+            if xtick_raw:
+                xtick_step = max(10, int(xtick_raw))
+        except ValueError:
+            xtick_step = 200
+
+        content: Optional[bytes] = None
+        if fasta_file and fasta_file.filename:
+            data = fasta_file.read()
+            if len(data) > MAX_UPLOAD_BYTES:
+                error = f"File is too large (>{MAX_UPLOAD_BYTES} bytes)."
+            else:
+                content = data
+        elif fasta_text:
+            content = fasta_text.encode("utf-8")
+        else:
+            error = "Please provide FASTA text or upload a file."
+
+        if content and not error:
+            manifest = run_prediction_job(name, content, include_tm, threshold=threshold, xtick_step=xtick_step)
+            return redirect(url_for("prediction", job=manifest["job_id"]))
+
+    manifest, run_dir = _get_prediction_context(job_id)
+
+    def file_url(filename: str) -> Optional[str]:
+        if not manifest:
+            return None
+        return url_for("prediction_file", job_id=manifest["job_id"], filename=filename)
+
+    zip_url = None
+    if manifest and manifest.get("zip_file"):
+        zip_url = url_for("prediction_zip", job_id=manifest["job_id"])
+
+    light_images: List[Dict[str, Any]] = []
+    dark_images: List[Dict[str, Any]] = []
+    other_files: List[Dict[str, Any]] = []
+    if manifest and run_dir and run_dir.exists():
+        for fname in manifest.get("outputs", []):
+            lower = fname.lower()
+            entry = {
+                "name": fname,
+                "url": file_url(fname),
+                "is_image": lower.endswith(".png"),
+                "is_csv": lower.endswith(".csv") or lower.endswith(".txt"),
+            }
+            if entry["is_image"]:
+                if "dark" in lower:
+                    dark_images.append(entry)
+                else:
+                    light_images.append(entry)
+            else:
+                other_files.append(entry)
+
+    return render_template(
+        "prediction.html",
+        job_id=job_id,
+        manifest=manifest,
+        light_images=light_images,
+        dark_images=dark_images,
+        other_files=other_files,
+        zip_url=zip_url,
+        error=error,
+    )
+
+
+@app.route("/prediction/job/<job_id>/file/<path:filename>")
+def prediction_file(job_id: str, filename: str):
+    manifest = _read_manifest(job_id)
+    job_dir = _job_dir(job_id)
+    if not manifest or not job_dir:
+        abort(404)
+    run_dir = job_dir / manifest.get("run_dir", "")
+    target = (run_dir / filename).resolve()
+    if not target.exists() or job_dir not in target.parents:
+        abort(404)
+    as_attachment = request.args.get("download", "").lower() in {"1", "true", "on"}
+    return send_file(target, as_attachment=as_attachment)
+
+
+@app.route("/prediction/job/<job_id>/download_zip")
+def prediction_zip(job_id: str):
+    manifest = _read_manifest(job_id)
+    job_dir = _job_dir(job_id)
+    if not manifest or not job_dir:
+        abort(404)
+    zip_name = manifest.get("zip_file")
+    if not zip_name:
+        abort(404)
+    zip_path = job_dir / zip_name
+    if not zip_path.exists():
+        abort(404)
+    return send_file(zip_path, as_attachment=True, download_name=zip_name)
 
 
 threshold_images: Dict[str, str] = {}

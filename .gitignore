@@ -10,3 +10,4 @@ __pycache__/
 # Large generated analysis artifacts
 ver6_all_analysis/csv/
 ver6_all_analysis/png/
+webviewer/prediction_runs/

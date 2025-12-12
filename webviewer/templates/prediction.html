@@ -1,0 +1,143 @@
+{% extends "layout.html" %}
+
+{% block title %}Prediction{% endblock %}
+
+{% block content %}
+  <h1>Prediction (IDR + CC + optional DeepTMHMM)</h1>
+  <p class="dataset-note">
+    Provide a FASTA sequence to generate disorder/coiled-coil plots with threshold styling (light/dark).
+    DeepTMHMM is optional; enable it if you want TM overlays and region tables.
+  </p>
+
+  {% if error %}
+    <div class="alert error">{{ error }}</div>
+  {% endif %}
+  {% if manifest and manifest.errors %}
+    <div class="alert warning">
+      <strong>Warnings:</strong>
+      <ul>
+        {% for msg in manifest.errors %}
+          <li>{{ msg }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endif %}
+
+  <div class="filters">
+    <form method="post" action="{{ url_for('prediction') }}" enctype="multipart/form-data" class="filter-form">
+      <div class="filter-row filter-row-primary">
+        <label for="name">Sequence name</label>
+        <input type="text" id="name" name="name" placeholder="e.g. SAMPLE1" required />
+        <label class="checkbox-inline" for="include_tm">
+          <input type="checkbox" id="include_tm" name="include_tm" value="1" />
+          Run DeepTMHMM (TM overlay)
+        </label>
+      </div>
+
+      <div class="filter-card">
+        <h3>Input</h3>
+        <div class="filter-row">
+          <label for="fasta_file">Upload FASTA</label>
+          <input type="file" id="fasta_file" name="fasta_file" accept=".fa,.fasta,text/plain" />
+        </div>
+        <div class="filter-row">
+          <label for="fasta_text">or Paste FASTA</label>
+          <textarea id="fasta_text" name="fasta_text" rows="6" placeholder=">ID\nMAAAP..."></textarea>
+        </div>
+      </div>
+
+      <div class="filter-card">
+        <h3>Plot options</h3>
+        <div class="filter-row">
+          <label for="threshold">Threshold (%)</label>
+          <input type="number" id="threshold" name="threshold" step="0.1" value="50" />
+          <label for="xtick_step">X tick step</label>
+          <input type="number" id="xtick_step" name="xtick_step" min="10" step="10" value="200" />
+        </div>
+      </div>
+
+      <div class="filter-row filter-row-actions">
+        <button type="submit">Run prediction</button>
+      </div>
+    </form>
+  </div>
+
+  {% if manifest %}
+    <h2>Job: {{ manifest.job_id }}</h2>
+    <p class="meta">
+      Name: <strong>{{ manifest.name }}</strong> · TM overlay: {{ "Yes" if manifest.include_tm else "No" }} · Overlay mode: {{ manifest.overlay_type }}
+    </p>
+    {% if zip_url %}
+      <p><a class="btn" href="{{ zip_url }}">Download all as ZIP</a></p>
+    {% endif %}
+
+    {% if light_images or dark_images or other_files %}
+      <div class="tab-bar">
+        <button class="tab {% if True %}active{% endif %}" data-tab="light">Light</button>
+        <button class="tab" data-tab="dark">Dark</button>
+        <button class="tab" data-tab="files">Other files</button>
+      </div>
+
+      <div class="tab-content" data-tab-panel="light">
+        {% if light_images %}
+          <div class="prediction-grid">
+            {% for f in light_images %}
+              <div class="prediction-card">
+                <div class="prediction-title">{{ f.name }}</div>
+                <img src="{{ f.url }}" alt="{{ f.name }}" loading="lazy" />
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p>No light-theme images.</p>
+        {% endif %}
+      </div>
+
+      <div class="tab-content" data-tab-panel="dark" style="display:none;">
+        {% if dark_images %}
+          <div class="prediction-grid">
+            {% for f in dark_images %}
+              <div class="prediction-card">
+                <div class="prediction-title">{{ f.name }}</div>
+                <img src="{{ f.url }}" alt="{{ f.name }}" loading="lazy" />
+              </div>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p>No dark-theme images.</p>
+        {% endif %}
+      </div>
+
+      <div class="tab-content" data-tab-panel="files" style="display:none;">
+        {% if other_files %}
+          <ul>
+            {% for f in other_files %}
+              <li><a href="{{ f.url }}" download>{{ f.name }}</a></li>
+            {% endfor %}
+          </ul>
+        {% else %}
+          <p>No additional files.</p>
+        {% endif %}
+      </div>
+    {% else %}
+      <p>No outputs found for this job.</p>
+    {% endif %}
+  {% endif %}
+{% endblock %}
+
+{% block scripts %}
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const panels = document.querySelectorAll('[data-tab-panel]');
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.dataset.tab;
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        panels.forEach(p => {
+          p.style.display = (p.dataset.tabPanel === target) ? 'block' : 'none';
+        });
+      });
+    });
+  </script>
+{% endblock %}

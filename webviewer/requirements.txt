@@ -1,4 +1,9 @@
 Flask>=2.3
 psycopg2-binary>=2.9
 gunicorn>=21.2
-gunicorn>=21.2
+metapredict>=3.0.0
+matplotlib>=3.8
+numpy>=1.26
+Pillow>=10.0
+# Optional for DeepTMHMM overlay (downloads model on first run)
+biolib>=3.10
