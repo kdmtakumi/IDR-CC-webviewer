@@ -37,6 +37,7 @@ MARCOIL_DIR = BUNDLE_DIR / "CC_analysis_MARCOIL" / "MARCOIL"
 PREDICTION_ROOT = BASE_DIR / "prediction_runs"
 DEFAULT_PAGE_SIZE = 25
 MAX_PAGE_SIZE = 100
+MAX_UPLOAD_BYTES = 5 * 1024 * 1024  # 5 MB default guard
 ACCESS_PASSWORD = os.environ.get("IDRCC_PASSWORD", "ShimoLAB0501")
 SESSION_KEY = os.environ.get("IDRCC_SECRET_KEY", "replace-this-secret")
 SUPABASE_DB_URL = os.environ.get("SUPABASE_DB_URL")
@@ -180,7 +181,6 @@ IDR_DISPLAY_COLUMNS: List[Tuple[str, str]] = PROTEIN_DISPLAY_COLUMNS + [
 ]
 
 PREDICTION_ROOT.mkdir(exist_ok=True)
-MAX_UPLOAD_BYTES = 5 * 1024 * 1024  # 5 MB default guard
 
 
 def _bundle_env() -> Dict[str, str]:
