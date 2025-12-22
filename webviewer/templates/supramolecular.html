@@ -172,7 +172,7 @@
             Hide entries with missing protein names
           </label>
           <button type="submit">Apply</button>
-          {% if search or (search_mode and search_mode != 'all') or hide_missing_protein or min_idr_len is not none or min_cc_len is not none or min_protein_len is not none or max_protein_len is not none or min_idr_pct is not none or max_idr_pct is not none or min_cc_pct is not none or max_cc_pct is not none or min_score is not none or source or uniprot_id or per_page != 25 or domain_term or location_term %}
+          {% if search or (search_mode and search_mode != 'all') or hide_missing_protein or require_both_sources or require_both_locations or location_class or min_idr_len is not none or min_cc_len is not none or min_protein_len is not none or max_protein_len is not none or min_idr_pct is not none or max_idr_pct is not none or min_cc_pct is not none or max_cc_pct is not none or min_score is not none or source or uniprot_id or per_page != 25 or domain_term or location_term %}
             <a class="clear-filter" href="{{ url_for('supramolecular') }}">Clear</a>
           {% endif %}
         </div>

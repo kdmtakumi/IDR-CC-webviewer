@@ -158,7 +158,7 @@
           Hide entries with missing protein names
         </label>
         <button type="submit">Apply</button>
-        {% if search or (search_mode and search_mode != 'all') or hide_missing_protein or idr_min is not none or cc_min is not none or protein_len_min is not none or protein_len_max is not none or idr_pct_min is not none or idr_pct_max is not none or cc_pct_min is not none or cc_pct_max is not none or (domain_term or location_term) or per_page != 25 %}
+        {% if search or (search_mode and search_mode != 'all') or hide_missing_protein or idr_min is not none or cc_min is not none or protein_len_min is not none or protein_len_max is not none or idr_pct_min is not none or idr_pct_max is not none or cc_pct_min is not none or cc_pct_max is not none or (domain_term or location_term) or location_class or per_page != 25 %}
           <a class="clear-filter" href="{{ form_action or url_for('index') }}">Clear</a>
         {% endif %}
       </div>

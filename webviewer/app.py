@@ -1,11 +1,16 @@
 
 from __future__ import annotations
 
+import json
 import os
+import re
+import shutil
+import subprocess
+import sys
+import uuid
 from dataclasses import dataclass
 from pathlib import Path
-from typing import Any, Dict, List, Optional, Sequence, Tuple
-from typing import Set
+from typing import Any, Dict, List, Optional, Sequence, Set, Tuple
 from urllib.parse import urljoin, urlparse
 
 import psycopg2
@@ -18,6 +23,7 @@ from flask import (
     redirect,
     render_template,
     request,
+    send_file,
     send_from_directory,
     session,
     url_for,
@@ -25,6 +31,9 @@ from flask import (
 
 BASE_DIR = Path(__file__).resolve().parent
 ANALYSIS_DIR = (BASE_DIR.parent / "ver6_all_analysis" / "png").resolve()
+BUNDLE_DIR = (BASE_DIR.parent / "bundle_pipeline").resolve()
+MARCOIL_DIR = BUNDLE_DIR / "CC_analysis_MARCOIL" / "MARCOIL"
+PREDICTION_ROOT = BASE_DIR / "prediction_runs"
 DEFAULT_PAGE_SIZE = 25
 MAX_PAGE_SIZE = 100
 ACCESS_PASSWORD = os.environ.get("IDRCC_PASSWORD", "ShimoLAB0501")
@@ -85,15 +94,15 @@ LOCATION_CLASS_LABELS: Dict[int, Tuple[str, str]] = {
 }
 
 
-def _load_location_classes():
+def _load_location_classes() -> None:
     if not LOCATION_CLASS_FILE.exists():
         return
     from csv import DictReader
 
     tokens: Dict[int, List[str]] = {}
     try:
-        with LOCATION_CLASS_FILE.open() as f:
-            reader = DictReader(f)
+        with LOCATION_CLASS_FILE.open() as handle:
+            reader = DictReader(handle)
             for row in reader:
                 try:
                     class_id = int(row.get("詳細分類 (20カテゴリ - No)", "") or 0)
@@ -107,7 +116,7 @@ def _load_location_classes():
         return
 
     global LOCATION_CLASS_TOKENS, LOCATION_CLASS_OPTIONS
-    LOCATION_CLASS_TOKENS = {cid: sorted(set(vals)) for cid, vals in tokens.items()}
+    LOCATION_CLASS_TOKENS = {cid: sorted(set(values)) for cid, values in tokens.items()}
     LOCATION_CLASS_OPTIONS = []
     for cid, names in LOCATION_CLASS_LABELS.items():
         if cid in LOCATION_CLASS_TOKENS:
@@ -119,6 +128,7 @@ _load_location_classes()
 
 app = Flask(__name__)
 app.secret_key = SESSION_KEY
+app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD_BYTES
 
 PROTEIN_DISPLAY_COLUMNS: List[Tuple[str, str]] = [
     ("uniprot_id", "UniProt_ID"),
@@ -167,6 +177,200 @@ IDR_DISPLAY_COLUMNS: List[Tuple[str, str]] = PROTEIN_DISPLAY_COLUMNS + [
     ("cluster_k30", "cluster_k30"),
     ("d_min", "d_min"),
 ]
+
+PREDICTION_ROOT.mkdir(exist_ok=True)
+MAX_UPLOAD_BYTES = 5 * 1024 * 1024  # 5 MB default guard
+
+
+def _bundle_env() -> Dict[str, str]:
+    env = os.environ.copy()
+    existing = env.get("PYTHONPATH", "")
+    paths = [str(BUNDLE_DIR)]
+    if existing:
+        paths.append(existing)
+    env["PYTHONPATH"] = os.pathsep.join(paths)
+    env.setdefault("XDG_CACHE_HOME", str(PREDICTION_ROOT / ".cache"))
+    env.setdefault("MPLCONFIGDIR", str(PREDICTION_ROOT / ".matplotlib_cache"))
+    return env
+
+
+def _safe_seq_name(raw: str) -> str:
+    cleaned = re.sub(r"[^A-Za-z0-9_.-]+", "_", raw.strip()) or "sample"
+    return cleaned[:64]
+
+
+def _job_dir(job_id: str) -> Optional[Path]:
+    if not re.fullmatch(r"[a-fA-F0-9]{32}", job_id):
+        return None
+    path = PREDICTION_ROOT / job_id
+    return path if path.exists() else None
+
+
+def _write_manifest(job_dir: Path, payload: Dict[str, Any]) -> None:
+    (job_dir / "manifest.json").write_text(json.dumps(payload, indent=2))
+
+
+def _read_manifest(job_id: str) -> Optional[Dict[str, Any]]:
+    job = _job_dir(job_id)
+    if not job:
+        return None
+    manifest = job / "manifest.json"
+    if not manifest.exists():
+        return None
+    try:
+        return json.loads(manifest.read_text())
+    except Exception:
+        return None
+
+
+def _collect_outputs(run_dir: Path) -> List[str]:
+    outputs: List[str] = []
+    for path in sorted(run_dir.glob("*")):
+        if path.is_file():
+            outputs.append(path.name)
+    return outputs
+
+
+def _zip_run(run_dir: Path, zip_path: Path) -> Path:
+    if zip_path.exists():
+        return zip_path
+    shutil.make_archive(str(zip_path.with_suffix("")), "zip", run_dir)
+    return zip_path
+
+
+def _run_deeptmhmm(fasta_path: Path, out_dir: Path) -> Tuple[Optional[Path], Optional[str]]:
+    try:
+        import biolib  # type: ignore
+    except Exception as exc:  # pragma: no cover - optional dependency
+        return None, f"DeepTMHMM unavailable: {exc}"
+    try:
+        out_dir.mkdir(parents=True, exist_ok=True)
+        deeptmhmm = biolib.load("DTU/DeepTMHMM")  # noqa: F841
+        job = deeptmhmm.cli(args=f"--fasta {fasta_path}")
+        job.save_files(str(out_dir))
+        for candidate in ["prediction.gff3", "TMRs.gff3"]:
+            gff = out_dir / candidate
+            if gff.exists():
+                return gff, None
+        return None, "DeepTMHMM finished but no GFF3 output was found."
+    except Exception as exc:  # pragma: no cover - optional dependency
+        return None, f"DeepTMHMM failed: {exc}"
+
+
+def run_prediction_job(
+    name: str,
+    fasta_bytes: bytes,
+    include_tm: bool,
+    threshold: float = 50.0,
+    xtick_step: int = 200,
+) -> Dict[str, Any]:
+    seq_name = _safe_seq_name(name)
+    job_id = uuid.uuid4().hex
+    job_dir = PREDICTION_ROOT / job_id
+    job_dir.mkdir(parents=True, exist_ok=True)
+    errors: List[str] = []
+
+    fasta_path = job_dir / f"{seq_name}.fasta"
+    fasta_path.write_bytes(fasta_bytes)
+
+    env = _bundle_env()
+    analyze_script = BUNDLE_DIR / "analyze_single_sequence.py"
+    run_dir = job_dir / seq_name
+    marcoil_dir = MARCOIL_DIR
+    if not analyze_script.exists():
+        errors.append("analyze_single_sequence.py not found in bundle_pipeline.")
+    if not marcoil_dir.exists():
+        errors.append("MARCOIL directory not found; coiled-coil step will fail.")
+
+    if not errors:
+        cmd = [
+            sys.executable,
+            str(analyze_script),
+            "--name",
+            seq_name,
+            "--fasta",
+            str(fasta_path),
+            "--output-root",
+            str(job_dir),
+            "--marcoil-dir",
+            str(marcoil_dir),
+            "--mode",
+            "H",
+        ]
+        try:
+            subprocess.run(cmd, check=True, env=env, cwd=BUNDLE_DIR, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        except subprocess.CalledProcessError as exc:
+            errors.append(f"Pipeline failed: {exc.stderr.decode('utf-8', errors='ignore') or exc}")
+
+    plot_data_csv = run_dir / f"{seq_name}_plot_data.csv"
+    gff_path: Optional[Path] = None
+    overlay_type = "basic"
+    if include_tm and plot_data_csv.exists():
+        gff_out_dir = run_dir / "deeptmhmm"
+        gff_path, tm_error = _run_deeptmhmm(fasta_path, gff_out_dir)
+        if tm_error:
+            errors.append(tm_error)
+        if gff_path and gff_path.exists():
+            overlay_type = "tm"
+            deeptmhmm_script = BUNDLE_DIR / "plot_deeptmhmm_overlay_threshold.py"
+            cmd = [
+                sys.executable,
+                str(deeptmhmm_script),
+                "--name",
+                seq_name,
+                "--plot-csv",
+                str(plot_data_csv),
+                "--gff",
+                str(gff_path),
+                "--out-prefix",
+                str(run_dir / f"{seq_name}_deeptmhmm_overlay_threshold"),
+                "--xtick-step",
+                str(int(xtick_step)),
+                "--threshold",
+                str(float(threshold)),
+            ]
+            try:
+                subprocess.run(cmd, check=True, env=env, cwd=BUNDLE_DIR, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+            except subprocess.CalledProcessError as exc:
+                errors.append(f"DeepTMHMM overlay failed: {exc.stderr.decode('utf-8', errors='ignore') or exc}")
+                overlay_type = "basic"
+
+    if plot_data_csv.exists() and overlay_type == "basic":
+        basic_script = BUNDLE_DIR / "plot_overlay_threshold_basic.py"
+        cmd = [
+            sys.executable,
+            str(basic_script),
+            "--name",
+            seq_name,
+            "--plot-csv",
+            str(plot_data_csv),
+            "--out-prefix",
+            str(run_dir / f"{seq_name}_overlay_threshold"),
+            "--xtick-step",
+            str(int(xtick_step)),
+            "--threshold",
+            str(float(threshold)),
+        ]
+        try:
+            subprocess.run(cmd, check=True, env=env, cwd=BUNDLE_DIR, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        except subprocess.CalledProcessError as exc:
+            errors.append(f"Threshold plot failed: {exc.stderr.decode('utf-8', errors='ignore') or exc}")
+
+    outputs = _collect_outputs(run_dir) if run_dir.exists() else []
+    zip_path = _zip_run(run_dir, job_dir / f"{seq_name}_results.zip") if run_dir.exists() else None
+
+    manifest = {
+        "job_id": job_id,
+        "name": seq_name,
+        "include_tm": include_tm,
+        "overlay_type": overlay_type,
+        "outputs": outputs,
+        "zip_file": zip_path.name if zip_path else None,
+        "run_dir": run_dir.name if run_dir.exists() else "",
+        "errors": errors,
+    }
+    _write_manifest(job_dir, manifest)
+    return manifest
 
 @dataclass
 class ProteinRecord:
@@ -236,6 +440,11 @@ def parse_float_param(name: str, default: Optional[float] = None) -> Optional[fl
         return float(raw)
     except ValueError:
         return default
+
+
+def parse_flag_param(name: str) -> bool:
+    values = request.args.getlist(name)
+    return any(value.lower() in {"1", "true", "on", "yes"} for value in values)
 
 
 def build_filter_conditions(
@@ -365,6 +574,8 @@ def build_ppi_filter_conditions(
     max_protein_len: Optional[int],
     search: Optional[str],
     search_mode: str,
+    domain_term: Optional[str],
+    location_term: Optional[str],
     hide_missing_protein: bool,
     require_both_sources: bool,
     location_class: Optional[int] = None,
@@ -374,7 +585,6 @@ def build_ppi_filter_conditions(
     clauses: List[str] = []
     params: List[Any] = []
 
-    # Search across both partners
     if search:
         term = f"%{search.lower()}%"
         mode = search_mode if search_mode in SEARCH_MODE_COLUMN_MAP else "all"
@@ -399,9 +609,11 @@ def build_ppi_filter_conditions(
         params.append(min_score)
 
     if require_both_sources:
-        clauses.append("EXISTS (SELECT 1 FROM ppi_edges e2 WHERE e2.uniprot_a = e.uniprot_a AND e2.uniprot_b = e.uniprot_b AND e2.source != e.source)")
+        clauses.append(
+            "EXISTS (SELECT 1 FROM ppi_edges e2 WHERE e2.uniprot_a = e.uniprot_a AND e2.uniprot_b = e.uniprot_b "
+            "AND e2.source != e.source)"
+        )
 
-    # Protein length filters apply to both partners
     if min_protein_len is not None:
         clauses.append("COALESCE(p1.sequence_length, 0) >= %s")
         clauses.append("COALESCE(p2.sequence_length, 0) >= %s")
@@ -411,19 +623,17 @@ def build_ppi_filter_conditions(
         clauses.append("COALESCE(p2.sequence_length, 0) <= %s")
         params.extend([max_protein_len, max_protein_len])
 
-    # Helper to build threshold parts
     def threshold_parts(alias: str, column: str, min_val: Optional[float], max_val: Optional[float]) -> Tuple[List[str], List[Any]]:
         parts: List[str] = []
-        p: List[Any] = []
+        part_params: List[Any] = []
         if min_val is not None:
             parts.append(f"COALESCE({alias}.{column}, 0) >= %s")
-            p.append(min_val)
+            part_params.append(min_val)
         if max_val is not None:
             parts.append(f"COALESCE({alias}.{column}, 0) <= %s")
-            p.append(max_val)
-        return parts, p
+            part_params.append(max_val)
+        return parts, part_params
 
-    # IDR/CC percentage: one partner satisfies IDR range, the other CC range (either orientation)
     idr_pct_parts_p1, idr_pct_params_p1 = threshold_parts("p1", "idr_percentage", min_idr_pct, max_idr_pct)
     idr_pct_parts_p2, idr_pct_params_p2 = threshold_parts("p2", "idr_percentage", min_idr_pct, max_idr_pct)
     cc_pct_parts_p1, cc_pct_params_p1 = threshold_parts("p1", "cc_percentage", min_cc_pct, max_cc_pct)
@@ -443,7 +653,6 @@ def build_ppi_filter_conditions(
         clauses.append("(" + " OR ".join(pct_orientation_clauses) + ")")
         params.extend(pct_orientation_params)
 
-    # IDR/CC length (aa): same orientation logic using idr_residues and total_cc_length
     idr_len_parts_p1, idr_len_params_p1 = threshold_parts("p1", "idr_residues", min_idr_len, None)
     idr_len_parts_p2, idr_len_params_p2 = threshold_parts("p2", "idr_residues", min_idr_len, None)
     cc_len_parts_p1, cc_len_params_p1 = threshold_parts("p1", "total_cc_length", min_cc_len, None)
@@ -463,20 +672,55 @@ def build_ppi_filter_conditions(
         clauses.append("(" + " OR ".join(len_orientation_clauses) + ")")
         params.extend(len_orientation_params)
 
+    if domain_term:
+        clauses.append(
+            "("
+            + " OR ".join(
+                [
+                    "LOWER(COALESCE(p1.domain_information, '')) LIKE %s",
+                    "LOWER(COALESCE(p2.domain_information, '')) LIKE %s",
+                ]
+            )
+            + ")"
+        )
+        params.extend([f"%{domain_term.lower()}%"] * 2)
+
+    if location_term:
+        clauses.append(
+            "("
+            + " OR ".join(
+                [
+                    "LOWER(COALESCE(p1.subcellular_location, '')) LIKE %s",
+                    "LOWER(COALESCE(p2.subcellular_location, '')) LIKE %s",
+                ]
+            )
+            + ")"
+        )
+        params.extend([f"%{location_term.lower()}%"] * 2)
+
     if location_class is not None and location_tokens:
         tokens = location_tokens.get(location_class, [])
         if tokens:
             token_patterns = [f"%{tok.lower()}%" for tok in tokens]
             if require_both_locations:
                 loc_clauses = [
-                    "(" + " OR ".join([f"LOWER(COALESCE({alias}.subcellular_location, '')) LIKE %s" for _ in tokens]) + ")"
+                    "("
+                    + " OR ".join(
+                        [f"LOWER(COALESCE({alias}.subcellular_location, '')) LIKE %s" for _ in tokens]
+                    )
+                    + ")"
                     for alias in ("p1", "p2")
                 ]
                 clauses.append("(" + " AND ".join(loc_clauses) + ")")
                 params.extend(token_patterns * 2)
             else:
-                loc_clause = "(" + " OR ".join([f"LOWER(COALESCE(p1.subcellular_location, '')) LIKE %s" for _ in tokens]) + \
-                             " OR " + " OR ".join([f"LOWER(COALESCE(p2.subcellular_location, '')) LIKE %s" for _ in tokens]) + ")"
+                loc_clause = (
+                    "("
+                    + " OR ".join([f"LOWER(COALESCE(p1.subcellular_location, '')) LIKE %s" for _ in tokens])
+                    + " OR "
+                    + " OR ".join([f"LOWER(COALESCE(p2.subcellular_location, '')) LIKE %s" for _ in tokens])
+                    + ")"
+                )
                 clauses.append(loc_clause)
                 params.extend(token_patterns * 2)
 
@@ -504,17 +748,10 @@ def _matches_target(value: Optional[str], targets: Set[str]) -> bool:
     if not value or not targets:
         return False
     up = value.upper()
-    return any(t in up for t in targets)
+    return any(term in up for term in targets)
 
 
-def _orient_pair(
-    row: Dict[str, Any],
-    target_terms: Set[str],
-) -> Dict[str, Any]:
-    """
-    Ensure searched protein (UniProt/Gene) is on the left.
-    If no target match, order by Gene A/B alphabetically.
-    """
+def _orient_pair(row: Dict[str, Any], target_terms: Set[str]) -> Dict[str, Any]:
     a_id = (row.get("a_id") or "").upper()
     b_id = (row.get("b_id") or "").upper()
     a_gene = (row.get("a_gene") or "").upper()
@@ -523,12 +760,10 @@ def _orient_pair(
     a_matches = _matches_target(a_id, target_terms) or _matches_target(a_gene, target_terms)
     b_matches = _matches_target(b_id, target_terms) or _matches_target(b_gene, target_terms)
 
-    # Place target on the left when only B matches
     if b_matches and not a_matches:
         _swap_pair(row)
         return row
 
-    # When no target involvement, sort by Gene head-letter (fallback to UniProt)
     if not a_matches and not b_matches:
         key_a = a_gene or a_id
         key_b = b_gene or b_id
@@ -569,10 +804,7 @@ def fetch_protein_page(
     filters: Tuple[Any, ...],
     page: int,
     per_page: int,
-    base_clause: Optional[str] = None,
-    base_params: Optional[Sequence[Any]] = None,
 ) -> Tuple[List[ProteinRecord], int, Tuple[str, List[Any]]]:
-    alias = "p"
     (
         search,
         search_mode,
@@ -605,40 +837,12 @@ def fetch_protein_page(
         hide_missing,
         location_class,
         LOCATION_CLASS_TOKENS,
-        alias=alias,
+        alias="p",
     )
-    if base_clause:
-        clause = base_clause.strip()
-        if clause.lower().startswith("where "):
-            clause = clause[6:].strip()
-        if where_sql:
-            where_sql = f"{where_sql} AND {clause}"
-        else:
-            where_sql = f"WHERE {clause}"
-        if base_params:
-            params.extend(base_params)
-
-    # Order: exact matches first (case-insensitive), then fallback to UniProt ID
-    order_params: List[Any] = []
-    order_clause = f"ORDER BY {alias}.ctid"
-    if search:
-        mode = search_mode if search_mode in SEARCH_MODE_COLUMN_MAP else "all"
-        order_columns = SEARCH_MODE_COLUMN_MAP.get(mode, SEARCH_MODE_COLUMN_MAP["all"])
-        exact_checks = [f"LOWER({alias}.{col}) = %s" for col in order_columns]
-        order_clause = (
-            "ORDER BY CASE WHEN (" + " OR ".join(exact_checks) + ") THEN 0 ELSE 1 END, "
-            f"{alias}.uniprot_id"
-        )
-        order_params.extend([search.lower()] * len(exact_checks))
-
     conn = get_db_connection()
     total_items = 0
-    exec_params = list(params) if params else []
     with conn.cursor() as cur:
-        if exec_params:
-            cur.execute(f"SELECT COUNT(*) FROM {table} p {where_sql}", exec_params)
-        else:
-            cur.execute(f"SELECT COUNT(*) FROM {table} p {where_sql}")
+        cur.execute(f"SELECT COUNT(*) FROM {table} p {where_sql}", params)
         total_items = cur.fetchone()[0]
 
     records: List[ProteinRecord] = []
@@ -653,12 +857,9 @@ def fetch_protein_page(
             "idr_percentage",
             "cc_percentage",
         ]
-        select_sql = f"SELECT {', '.join(columns)} FROM {table} {alias} {where_sql} {order_clause} LIMIT %s OFFSET %s"
+        select_sql = f"SELECT {', '.join(columns)} FROM {table} p {where_sql} ORDER BY p.ctid LIMIT %s OFFSET %s"
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
-            cur_params = list(exec_params)
-            cur_params.extend(order_params)
-            cur_params += [per_page, offset]
-            cur.execute(select_sql, cur_params)
+            cur.execute(select_sql, params + [per_page, offset])
             for row in cur.fetchall():
                 records.append(
                     ProteinRecord(
@@ -898,8 +1099,8 @@ def index():
             cc_pct_max=cc_pct_max if cc_pct_max is not None else None,
             domain_term=domain_term or None,
             location_term=location_term or None,
-            hide_missing_protein="1" if hide_missing_protein else None,
             location_class=location_class if location_class is not None else None,
+            hide_missing_protein="1" if hide_missing_protein else None,
         )
 
     dataset_note = "Source: ver6 integrated dataset (Supabase)."
@@ -984,8 +1185,8 @@ def canonical_index():
             cc_pct_max=cc_pct_max if cc_pct_max is not None else None,
             domain_term=domain_term or None,
             location_term=location_term or None,
-            hide_missing_protein="1" if hide_missing_protein else None,
             location_class=location_class if location_class is not None else None,
+            hide_missing_protein="1" if hide_missing_protein else None,
         )
 
     dataset_note = "Canonical subset (ver9) · UniProt UP000005640."
@@ -1049,12 +1250,7 @@ def reviewed_index():
         hide_missing_protein,
         location_class,
     ) = filters
-    records, total_items, filter_clause = fetch_protein_page(
-        PROTEINS_VER9_REVIEWED,
-        filters,
-        page,
-        per_page,
-    )
+    records, total_items, filter_clause = fetch_protein_page(PROTEINS_VER9_REVIEWED, filters, page, per_page)
     page, start_item, end_item, page_numbers, show_first, show_last, total_pages = paginate(total_items, page, per_page)
     location_counts, location_total, unknown_count = compute_subcellular_counts(PROTEINS_VER9_REVIEWED, *filter_clause)
 
@@ -1101,6 +1297,7 @@ def reviewed_index():
         domain_term=domain_term,
         location_term=location_term,
         hide_missing_protein=hide_missing_protein,
+        location_class=location_class,
         page_url=page_url,
         start_item=start_item,
         end_item=end_item,
@@ -1169,15 +1366,12 @@ def health():
 def subcellular_distribution_api():
     dataset = request.args.get("dataset", "").strip().lower()
     table = PROTEINS_VER6
-    base_clause = None
     if dataset == "canonical":
         table = PROTEINS_VER9
     elif dataset == "reviewed":
         table = PROTEINS_VER9_REVIEWED
     filters = extract_filters()
     where_sql, params = build_filter_conditions(*filters, alias="p", location_tokens=LOCATION_CLASS_TOKENS)
-    if base_clause:
-        where_sql = _append_condition(where_sql, base_clause)
     counts, total_entries, unknown_count = compute_subcellular_counts(table, where_sql, params)
     labels = [label for label, _ in counts]
     values = [value for _, value in counts]
@@ -1214,9 +1408,11 @@ def supramolecular():
     max_cc_pct = parse_float_param("cc_pct_max")
     min_protein_len = parse_int_param("protein_len_min")
     max_protein_len = parse_int_param("protein_len_max")
-    hide_missing_protein = request.args.get("hide_missing_protein", "").lower() in {"1", "true", "on"}
-    require_both_sources = request.args.get("require_both_sources", "").lower() in {"1", "true", "on"}
-    require_both_locations = request.args.get("require_both_locations", "").lower() in {"1", "true", "on"}
+    domain_term = request.args.get("domain_term", "").strip()
+    location_term = request.args.get("location_term", "").strip()
+    hide_missing_protein = parse_flag_param("hide_missing_protein")
+    require_both_sources = parse_flag_param("require_both_sources")
+    require_both_locations = parse_flag_param("require_both_locations")
     location_class_raw = request.args.get("location_class", "").strip()
     try:
         location_class = int(location_class_raw) if location_class_raw else None
@@ -1243,10 +1439,12 @@ def supramolecular():
         max_protein_len,
         search,
         search_mode,
+        domain_term or None,
+        location_term or None,
         hide_missing_protein,
         require_both_sources,
-        require_both_locations,
         location_class,
+        require_both_locations,
         LOCATION_CLASS_TOKENS,
     )
 
@@ -1307,30 +1505,30 @@ def supramolecular():
             cur_params += [per_page, offset]
             cur.execute(query, cur_params)
             rows = cur.fetchall()
-            for r in rows:
-                r = _orient_pair(r, target_ids)
+            for row in rows:
+                row = _orient_pair(row, target_ids)
                 records.append(
                     {
-                        "source": r.get("source"),
-                        "combined_score": r.get("combined_score"),
-                        "a_id": r.get("a_id"),
-                        "a_gene": r.get("a_gene"),
-                        "a_idr_len": r.get("a_idr_len"),
-                        "a_cc_len": r.get("a_cc_len"),
-                        "a_loc": r.get("a_loc"),
-                        "b_id": r.get("b_id"),
-                        "b_gene": r.get("b_gene"),
-                        "b_idr_len": r.get("b_idr_len"),
-                        "b_cc_len": r.get("b_cc_len"),
-                        "b_loc": r.get("b_loc"),
+                        "source": row.get("source"),
+                        "combined_score": row.get("combined_score"),
+                        "a_id": row.get("a_id"),
+                        "a_gene": row.get("a_gene"),
+                        "a_idr_len": row.get("a_idr_len"),
+                        "a_cc_len": row.get("a_cc_len"),
+                        "a_loc": row.get("a_loc"),
+                        "b_id": row.get("b_id"),
+                        "b_gene": row.get("b_gene"),
+                        "b_idr_len": row.get("b_idr_len"),
+                        "b_cc_len": row.get("b_cc_len"),
+                        "b_loc": row.get("b_loc"),
                     }
                 )
 
     if source == "biogrid" and records:
         records.sort(
-            key=lambda r: (
-                (r.get("a_gene") or r.get("a_id") or "").upper(),
-                (r.get("b_gene") or r.get("b_id") or "").upper(),
+            key=lambda record: (
+                (record.get("a_gene") or record.get("a_id") or "").upper(),
+                (record.get("b_gene") or record.get("b_id") or "").upper(),
             )
         )
 
@@ -1354,9 +1552,12 @@ def supramolecular():
             cc_pct_max=max_cc_pct if max_cc_pct is not None else None,
             protein_len_min=min_protein_len if min_protein_len is not None else None,
             protein_len_max=max_protein_len if max_protein_len is not None else None,
+            domain_term=domain_term or None,
+            location_term=location_term or None,
             location_class=location_class if location_class is not None else None,
             hide_missing_protein="1" if hide_missing_protein else None,
             require_both_sources="1" if require_both_sources else None,
+            require_both_locations="1" if require_both_locations else None,
         )
 
     def source_tab_url(target_source: Optional[str]) -> str:
@@ -1377,6 +1578,8 @@ def supramolecular():
             cc_pct_max=max_cc_pct if max_cc_pct is not None else None,
             protein_len_min=min_protein_len if min_protein_len is not None else None,
             protein_len_max=max_protein_len if max_protein_len is not None else None,
+            domain_term=domain_term or None,
+            location_term=location_term or None,
             location_class=location_class if location_class is not None else None,
             hide_missing_protein="1" if hide_missing_protein else None,
             require_both_sources="1" if require_both_sources else None,
@@ -1406,10 +1609,13 @@ def supramolecular():
         max_cc_pct=max_cc_pct,
         min_protein_len=min_protein_len,
         max_protein_len=max_protein_len,
+        domain_term=domain_term,
+        location_term=location_term,
         search=search,
         search_mode=search_mode,
         hide_missing_protein=hide_missing_protein,
         require_both_sources=require_both_sources,
+        require_both_locations=require_both_locations,
         location_class=location_class,
         page_url=page_url,
         source_tab_url=source_tab_url,
@@ -1437,9 +1643,11 @@ def supramolecular_reviewed():
     max_cc_pct = parse_float_param("cc_pct_max")
     min_protein_len = parse_int_param("protein_len_min")
     max_protein_len = parse_int_param("protein_len_max")
-    hide_missing_protein = request.args.get("hide_missing_protein", "").lower() in {"1", "true", "on"}
-    require_both_sources = request.args.get("require_both_sources", "").lower() in {"1", "true", "on"}
-    require_both_locations = request.args.get("require_both_locations", "").lower() in {"1", "true", "on"}
+    domain_term = request.args.get("domain_term", "").strip()
+    location_term = request.args.get("location_term", "").strip()
+    hide_missing_protein = parse_flag_param("hide_missing_protein")
+    require_both_sources = parse_flag_param("require_both_sources")
+    require_both_locations = parse_flag_param("require_both_locations")
     location_class_raw = request.args.get("location_class", "").strip()
     try:
         location_class = int(location_class_raw) if location_class_raw else None
@@ -1466,13 +1674,15 @@ def supramolecular_reviewed():
         max_protein_len,
         search,
         search_mode,
+        domain_term or None,
+        location_term or None,
         hide_missing_protein,
         require_both_sources,
         location_class,
         require_both_locations,
         LOCATION_CLASS_TOKENS,
     )
-    reviewed_clause = "1=1"  # data already reviewed-only when using reviewed tables
+    reviewed_clause = "1=1"
     where_sql = _append_condition(where_sql, reviewed_clause)
 
     conn = get_db_connection()
@@ -1540,30 +1750,30 @@ def supramolecular_reviewed():
             cur_params += [per_page, offset]
             cur.execute(query, cur_params)
             rows = cur.fetchall()
-            for r in rows:
-                r = _orient_pair(r, target_ids)
+            for row in rows:
+                row = _orient_pair(row, target_ids)
                 records.append(
                     {
-                        "source": r.get("source"),
-                        "combined_score": r.get("combined_score"),
-                        "a_id": r.get("a_id"),
-                        "a_gene": r.get("a_gene"),
-                        "a_idr_len": r.get("a_idr_len"),
-                        "a_cc_len": r.get("a_cc_len"),
-                        "a_loc": r.get("a_loc"),
-                        "b_id": r.get("b_id"),
-                        "b_gene": r.get("b_gene"),
-                        "b_idr_len": r.get("b_idr_len"),
-                        "b_cc_len": r.get("b_cc_len"),
-                        "b_loc": r.get("b_loc"),
+                        "source": row.get("source"),
+                        "combined_score": row.get("combined_score"),
+                        "a_id": row.get("a_id"),
+                        "a_gene": row.get("a_gene"),
+                        "a_idr_len": row.get("a_idr_len"),
+                        "a_cc_len": row.get("a_cc_len"),
+                        "a_loc": row.get("a_loc"),
+                        "b_id": row.get("b_id"),
+                        "b_gene": row.get("b_gene"),
+                        "b_idr_len": row.get("b_idr_len"),
+                        "b_cc_len": row.get("b_cc_len"),
+                        "b_loc": row.get("b_loc"),
                     }
                 )
 
     if source == "biogrid" and records:
         records.sort(
-            key=lambda r: (
-                (r.get("a_gene") or r.get("a_id") or "").upper(),
-                (r.get("b_gene") or r.get("b_id") or "").upper(),
+            key=lambda record: (
+                (record.get("a_gene") or record.get("a_id") or "").upper(),
+                (record.get("b_gene") or record.get("b_id") or "").upper(),
             )
         )
 
@@ -1587,9 +1797,12 @@ def supramolecular_reviewed():
             cc_pct_max=max_cc_pct if max_cc_pct is not None else None,
             protein_len_min=min_protein_len if min_protein_len is not None else None,
             protein_len_max=max_protein_len if max_protein_len is not None else None,
+            domain_term=domain_term or None,
+            location_term=location_term or None,
             location_class=location_class if location_class is not None else None,
             hide_missing_protein="1" if hide_missing_protein else None,
             require_both_sources="1" if require_both_sources else None,
+            require_both_locations="1" if require_both_locations else None,
         )
 
     def source_tab_url(target_source: Optional[str]) -> str:
@@ -1610,6 +1823,8 @@ def supramolecular_reviewed():
             cc_pct_max=max_cc_pct if max_cc_pct is not None else None,
             protein_len_min=min_protein_len if min_protein_len is not None else None,
             protein_len_max=max_protein_len if max_protein_len is not None else None,
+            domain_term=domain_term or None,
+            location_term=location_term or None,
             location_class=location_class if location_class is not None else None,
             hide_missing_protein="1" if hide_missing_protein else None,
             require_both_sources="1" if require_both_sources else None,
@@ -1639,15 +1854,19 @@ def supramolecular_reviewed():
         max_cc_pct=max_cc_pct,
         min_protein_len=min_protein_len,
         max_protein_len=max_protein_len,
+        domain_term=domain_term,
+        location_term=location_term,
         search=search,
         search_mode=search_mode,
         hide_missing_protein=hide_missing_protein,
         require_both_sources=require_both_sources,
+        require_both_locations=require_both_locations,
         location_class=location_class,
         page_url=page_url,
         source_tab_url=source_tab_url,
         form_action=url_for("supramolecular_reviewed"),
     )
+
 
 @app.route("/idr/")
 def idr_index():
@@ -1666,29 +1885,15 @@ def idr_index():
     records: List[Dict[str, Any]] = []
     if total_items:
         offset = (page - 1) * per_page
-        order_clause = "ORDER BY idr.uniprot_id, idr.idr_number"
-        exact_order = []
-        if search:
-            exact_order.append("LOWER(idr.uniprot_id) = %s")
-            exact_order.append("LOWER(idr.gene_name) = %s")
-            exact_order.append("LOWER(idr.protein_name) = %s")
-            order_clause = (
-                "ORDER BY CASE WHEN (" + " OR ".join(exact_order) + ") THEN 0 ELSE 1 END, "
-                "idr.uniprot_id, idr.idr_number"
-            )
         query = f"""
             SELECT *
             FROM {IDR_SEGMENTS_VER9} idr
             {where_sql}
-            {order_clause}
+            ORDER BY idr.ctid
             LIMIT %s OFFSET %s
         """
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
-            cur_params = list(params)
-            if search:
-                cur_params.extend([search.lower()] * len(exact_order))
-            cur_params += [per_page, offset]
-            cur.execute(query, cur_params)
+            cur.execute(query, params + [per_page, offset])
             rows = cur.fetchall()
             records = [normalise_row(row, IDR_DISPLAY_COLUMNS) for row in rows]
 
@@ -1739,6 +1944,136 @@ def idr_detail(uid: str, number: int):
         tsne_marker=None,
         return_to=_safe_return_path(request.args.get("return_to"), url_for("idr_index")),
     )
+
+
+def _get_prediction_context(job_id: Optional[str]) -> Tuple[Optional[Dict[str, Any]], Optional[Path]]:
+    if not job_id:
+        return None, None
+    manifest = _read_manifest(job_id)
+    if not manifest:
+        return None, None
+    job_dir = _job_dir(job_id)
+    if not job_dir:
+        return None, None
+    run_dir = job_dir / manifest.get("run_dir", "")
+    if not run_dir.exists():
+        return manifest, None
+    return manifest, run_dir
+
+
+@app.route("/prediction", methods=["GET", "POST"])
+def prediction():
+    job_id = request.args.get("job", "").strip() or None
+    error = None
+    manifest = None
+    run_dir = None
+
+    if request.method == "POST":
+        name = request.form.get("name", "").strip() or "sample"
+        include_tm = request.form.get("include_tm", "").lower() in {"1", "true", "on"}
+        threshold_raw = request.form.get("threshold", "").strip()
+        xtick_raw = request.form.get("xtick_step", "").strip()
+        fasta_text = request.form.get("fasta_text", "").strip()
+        fasta_file = request.files.get("fasta_file")
+        threshold = 50.0
+        xtick_step = 200
+        try:
+            if threshold_raw:
+                threshold = float(threshold_raw)
+        except ValueError:
+            threshold = 50.0
+        try:
+            if xtick_raw:
+                xtick_step = max(10, int(xtick_raw))
+        except ValueError:
+            xtick_step = 200
+
+        content: Optional[bytes] = None
+        if fasta_file and fasta_file.filename:
+            data = fasta_file.read()
+            if len(data) > MAX_UPLOAD_BYTES:
+                error = f"File is too large (>{MAX_UPLOAD_BYTES} bytes)."
+            else:
+                content = data
+        elif fasta_text:
+            content = fasta_text.encode("utf-8")
+        else:
+            error = "Please provide FASTA text or upload a file."
+
+        if content and not error:
+            manifest = run_prediction_job(name, content, include_tm, threshold=threshold, xtick_step=xtick_step)
+            return redirect(url_for("prediction", job=manifest["job_id"]))
+
+    manifest, run_dir = _get_prediction_context(job_id)
+
+    def file_url(filename: str) -> Optional[str]:
+        if not manifest:
+            return None
+        return url_for("prediction_file", job_id=manifest["job_id"], filename=filename)
+
+    zip_url = None
+    if manifest and manifest.get("zip_file"):
+        zip_url = url_for("prediction_zip", job_id=manifest["job_id"])
+
+    light_images: List[Dict[str, Any]] = []
+    dark_images: List[Dict[str, Any]] = []
+    other_files: List[Dict[str, Any]] = []
+    if manifest and run_dir and run_dir.exists():
+        for fname in manifest.get("outputs", []):
+            lower = fname.lower()
+            entry = {
+                "name": fname,
+                "url": file_url(fname),
+                "is_image": lower.endswith(".png"),
+                "is_csv": lower.endswith(".csv") or lower.endswith(".txt"),
+            }
+            if entry["is_image"]:
+                if "dark" in lower:
+                    dark_images.append(entry)
+                else:
+                    light_images.append(entry)
+            else:
+                other_files.append(entry)
+
+    return render_template(
+        "prediction.html",
+        job_id=job_id,
+        manifest=manifest,
+        light_images=light_images,
+        dark_images=dark_images,
+        other_files=other_files,
+        zip_url=zip_url,
+        error=error,
+    )
+
+
+@app.route("/prediction/job/<job_id>/file/<path:filename>")
+def prediction_file(job_id: str, filename: str):
+    manifest = _read_manifest(job_id)
+    job_dir = _job_dir(job_id)
+    if not manifest or not job_dir:
+        abort(404)
+    run_dir = job_dir / manifest.get("run_dir", "")
+    target = (run_dir / filename).resolve()
+    if not target.exists() or job_dir not in target.parents:
+        abort(404)
+    as_attachment = request.args.get("download", "").lower() in {"1", "true", "on"}
+    return send_file(target, as_attachment=as_attachment)
+
+
+@app.route("/prediction/job/<job_id>/download_zip")
+def prediction_zip(job_id: str):
+    manifest = _read_manifest(job_id)
+    job_dir = _job_dir(job_id)
+    if not manifest or not job_dir:
+        abort(404)
+    zip_name = manifest.get("zip_file")
+    if not zip_name:
+        abort(404)
+    zip_path = job_dir / zip_name
+    if not zip_path.exists():
+        abort(404)
+    return send_file(zip_path, as_attachment=True, download_name=zip_name)
 
 
 threshold_images: Dict[str, str] = {}
