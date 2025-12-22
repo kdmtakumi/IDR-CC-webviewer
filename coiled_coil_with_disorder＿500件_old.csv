@@ -1,0 +1,374 @@
+ID,Protein,Gene,Status,Organism,Amino acids,Protein existence,Annotation score,Disordered positions
+A0JNW5 · BLT3B_HUMAN,Bridge-like lipid transfer protein family member 3B,BLTP3B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1464,1: Evidence at protein level,5.0,"267-297, 409-436, 1066-1089, 1164-1183, 1392-1413"
+A0JP26 · POTB3_HUMAN,POTE ankyrin domain family member B3,POTEB3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,581,1: Evidence at protein level,5.0,369-494
+A2RUB6 · CCD66_HUMAN,Coiled-coil domain-containing protein 66,CCDC66,UniProtKB reviewed (Swiss-Prot),Homo sapiens,948,1: Evidence at protein level,5.0,"458-499, 690-713, 788-808"
+A5D8V7 · ODAD3_HUMAN,Outer dynein arm-docking complex subunit 3,ODAD3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,595,1: Evidence at protein level,5.0,1-69
+A6H8Y1 · BDP1_HUMAN,Transcription factor TFIIIB component B'' homolog,BDP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2624,1: Evidence at protein level,5.0,"1-142, 193-241, 379-449, 544-567, 606-663, 729-759, 930-1222, 1306-1348, 1365-1440, 1519-1543, 1684-1722, 1819-1863, 2130-2164, 2181-2200, 2207-2241, 2444-2501, 2519-2566"
+A7MCY6 · TBKB1_HUMAN,TANK-binding kinase 1-binding protein 1,TBKBP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,615,1: Evidence at protein level,5.0,326-458
+B1AK53 · ESPN_HUMAN,Espin,ESPN,UniProtKB reviewed (Swiss-Prot),Homo sapiens,854,1: Evidence at protein level,5.0,"338-400, 415-474, 487-713, 765-788, 800-832"
+B3KU38 · IQIP1_HUMAN,IQCJ-SCHIP1 readthrough transcript protein,IQCJ-SCHIP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,563,1: Evidence at protein level,5.0,"63-150, 164-295, 312-336, 384-430"
+O00291 · HIP1_HUMAN,Huntingtin-interacting protein 1,HIP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1037,1: Evidence at protein level,5.0,1017-1037
+O15078 · CE290_HUMAN,Centrosomal protein of 290 kDa,CEP290,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2479,1: Evidence at protein level,5.0,"149-168, 2458-2479"
+O15230 · LAMA5_HUMAN,Laminin subunit alpha-5,LAMA5,UniProtKB reviewed (Swiss-Prot),Homo sapiens,3695,1: Evidence at protein level,5.0,"1251-1271, 3224-3244"
+O15232 · MATN3_HUMAN,Matrilin-3,MATN3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,486,1: Evidence at protein level,5.0,32-75
+O15259 · NPHP1_HUMAN,Nephrocystin-1,NPHP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,732,1: Evidence at protein level,5.0,"103-153, 205-244"
+O15400 · STX7_HUMAN,Syntaxin-7,STX7,UniProtKB reviewed (Swiss-Prot),Homo sapiens,261,1: Evidence at protein level,5.0,129-148
+O43166 · SI1L1_HUMAN,Signal-induced proliferation-associated 1-like protein 1,SIPA1L1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1804,1: Evidence at protein level,5.0,"1-157, 277-297, 380-401, 1067-1128, 1144-1207, 1268-1306, 1327-1366, 1379-1475, 1505-1536"
+O43439 · MTG8R_HUMAN,Protein CBFA2T2,CBFA2T2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,604,1: Evidence at protein level,5.0,"25-105, 229-265, 397-427, 547-604"
+O60281 · ZN292_HUMAN,Zinc finger protein 292,ZNF292,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2723,1: Evidence at protein level,5.0,"608-633, 825-860, 1331-1364, 1588-1634, 1986-2023, 2074-2103, 2285-2345, 2441-2480, 2530-2564, 2606-2631"
+O60284 · ST18_HUMAN,Suppression of tumorigenicity 18 protein,ST18,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1047,1: Evidence at protein level,5.0,"41-92, 168-221, 251-286, 523-563, 672-710"
+O60879 · DIAP2_HUMAN,Protein diaphanous homolog 2,DIAPH2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1101,1: Evidence at protein level,5.0,"1-44, 536-594, 1010-1048, 1070-1101"
+O60941 · DTNB_HUMAN,Dystrobrevin beta,DTNB,UniProtKB reviewed (Swiss-Prot),Homo sapiens,627,1: Evidence at protein level,5.0,"520-565, 604-627"
+O75334 · LIPA2_HUMAN,Liprin-alpha-2,PPFIA2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1257,1: Evidence at protein level,5.0,"1-29, 231-265, 438-463, 709-738, 790-834"
+O75376 · NCOR1_HUMAN,Nuclear receptor corepressor 1,NCOR1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2440,1: Evidence at protein level,5.0,"1-177, 206-231, 497-632, 677-915, 1022-1046, 1184-1204, 1440-1459, 1488-1554, 1690-1759, 1884-1922, 1943-1969, 2006-2041, 2067-2155, 2287-2440"
+O75475 · PSIP1_HUMAN,PC4 and SFRS1-interacting protein,PSIP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,530,1: Evidence at protein level,5.0,"88-349, 446-530"
+O75781 · PALM_HUMAN,Paralemmin-1,PALM,UniProtKB reviewed (Swiss-Prot),Homo sapiens,387,1: Evidence at protein level,5.0,"31-160, 247-296, 335-378"
+O94876 · TMCC1_HUMAN,Transmembrane and coiled-coil domains protein 1,TMCC1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,653,1: Evidence at protein level,5.0,"1-35, 58-78, 112-165, 204-227, 415-437"
+O94964 · MTCL2_HUMAN,Microtubule cross-linking factor 2,MTCL2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1661,1: Evidence at protein level,5.0,"1-187, 353-373, 1196-1221, 1432-1456, 1538-1563, 1636-1661"
+O95361 · TRI16_HUMAN,Tripartite motif-containing protein 16,TRIM16,UniProtKB reviewed (Swiss-Prot),Homo sapiens,564,1: Evidence at protein level,5.0,1-69
+O95447 · LCA5L_HUMAN,Lebercilin-like protein,LCA5L,UniProtKB reviewed (Swiss-Prot),Homo sapiens,670,1: Evidence at protein level,5.0,"30-51, 374-393, 495-516, 557-580, 609-670"
+O95714 · HERC2_HUMAN,E3 ubiquitin-protein ligase HERC2,HERC2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,4834,1: Evidence at protein level,5.0,"50-88, 1555-1575, 1933-1958, 3602-3629, 4804-4834"
+O95990 · F107A_HUMAN,Actin-associated protein FAM107A,FAM107A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,144,1: Evidence at protein level,5.0,105-124
+O95996 · APCL_HUMAN,Adenomatous polyposis coli protein 2,APC2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2303,1: Evidence at protein level,5.0,"94-120, 247-270, 744-764, 816-835, 867-908, 953-986, 1069-1152, 1173-1228, 1307-1335, 1382-1497, 1510-1684, 1724-2031, 2046-2232"
+P07910 · HNRPC_HUMAN,Heterogeneous nuclear ribonucleoproteins C1/C2,HNRNPC,UniProtKB reviewed (Swiss-Prot),Homo sapiens,306,1: Evidence at protein level,5.0,"139-190, 221-306"
+P08670 · VIME_HUMAN,Vimentin,VIM,UniProtKB reviewed (Swiss-Prot),Homo sapiens,466,1: Evidence at protein level,5.0,1-32
+P09493 · TPM1_HUMAN,Tropomyosin alpha-1 chain,TPM1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,284,1: Evidence at protein level,5.0,"1-38, 116-136"
+P0CAP2 · GRL1A_HUMAN,DNA-directed RNA polymerase II subunit GRINL1A,POLR2M,UniProtKB reviewed (Swiss-Prot),Homo sapiens,368,1: Evidence at protein level,5.0,"116-186, 203-227, 255-282, 339-368"
+P13994 · YJU2B_HUMAN,Probable splicing factor YJU2B,YJU2B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,396,1: Evidence at protein level,5.0,"1-26, 295-396"
+P16383 · GCFC2_HUMAN,Intron Large complex component GCFC2,GCFC2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,781,1: Evidence at protein level,5.0,1-228
+P18848 · ATF4_HUMAN,Cyclic AMP-dependent transcription factor ATF-4,ATF4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,351,1: Evidence at protein level,5.0,210-268
+P21757 · MSRE_HUMAN,Macrophage scavenger receptor types I and II,MSR1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,451,1: Evidence at protein level,5.0,267-346
+P30533 · AMRP_HUMAN,Alpha-2-macroglobulin receptor-associated protein,LRPAP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,357,1: Evidence at protein level,5.0,32-52
+P35712 · SOX6_HUMAN,Transcription factor SOX-6,SOX6,UniProtKB reviewed (Swiss-Prot),Homo sapiens,828,1: Evidence at protein level,5.0,"1-51, 380-470, 753-828"
+P37198 · NUP62_HUMAN,Nuclear pore glycoprotein p62,NUP62,UniProtKB reviewed (Swiss-Prot),Homo sapiens,522,1: Evidence at protein level,5.0,"169-215, 260-288"
+P40222 · TXLNA_HUMAN,Alpha-taxilin,TXLNA,UniProtKB reviewed (Swiss-Prot),Homo sapiens,546,1: Evidence at protein level,5.0,"1-170, 482-546"
+P42331 · RHG25_HUMAN,Rho GTPase-activating protein 25,ARHGAP25,UniProtKB reviewed (Swiss-Prot),Homo sapiens,645,1: Evidence at protein level,5.0,"355-444, 469-550"
+P50552 · VASP_HUMAN,Vasodilator-stimulated phosphoprotein,VASP,UniProtKB reviewed (Swiss-Prot),Homo sapiens,380,1: Evidence at protein level,5.0,111-343
+P55196 · AFAD_HUMAN,Afadin,AFDN,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1824,1: Evidence at protein level,5.0,"128-194, 349-378, 534-595, 1107-1223, 1235-1473, 1501-1528, 1569-1824"
+P55327 · TPD52_HUMAN,Tumor protein D52,TPD52,UniProtKB reviewed (Swiss-Prot),Homo sapiens,224,1: Evidence at protein level,5.0,187-224
+P61266 · STX1B_HUMAN,Syntaxin-1B,STX1B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,288,1: Evidence at protein level,5.0,1-20
+P67936 · TPM4_HUMAN,Tropomyosin alpha-4 chain,TPM4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,248,1: Evidence at protein level,5.0,15-47
+P82094 · TMF1_HUMAN,TATA element modulatory factor,TMF1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1093,1: Evidence at protein level,5.0,"38-80, 108-189, 229-260, 266-285, 919-939"
+P82673 · RT35_HUMAN,Small ribosomal subunit protein mS35,MRPS35,UniProtKB reviewed (Swiss-Prot),Homo sapiens,323,1: Evidence at protein level,5.0,31-59
+Q07065 · CKAP4_HUMAN,Cytoskeleton-associated protein 4,CKAP4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,602,1: Evidence at protein level,5.0,1-83
+Q09161 · NCBP1_HUMAN,Nuclear cap-binding protein subunit 1,NCBP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,790,1: Evidence at protein level,5.0,1-26
+Q0VAK6 · LMOD3_HUMAN,Leiomodin-3,LMOD3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,560,1: Evidence at protein level,5.0,"45-68, 127-217, 437-480, 494-530"
+Q12830 · BPTF_HUMAN,Nucleosome-remodeling factor subunit BPTF,BPTF,UniProtKB reviewed (Swiss-Prot),Homo sapiens,3046,1: Evidence at protein level,5.0,"1-232, 567-774, 1057-1157, 1215-1339, 1371-1448, 1465-1537, 1605-1706, 1973-2003, 2041-2070, 2160-2180, 2232-2270, 2346-2549, 2714-2733, 2795-2858"
+Q12899 · TRI26_HUMAN,Tripartite motif-containing protein 26,TRIM26,UniProtKB reviewed (Swiss-Prot),Homo sapiens,539,1: Evidence at protein level,5.0,376-437
+Q13043 · STK4_HUMAN,Serine/threonine-protein kinase 4,STK4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,487,1: Evidence at protein level,5.0,303-332
+Q13435 · SF3B2_HUMAN,Splicing factor 3B subunit 2,SF3B2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,895,1: Evidence at protein level,5.0,"1-24, 65-136, 197-373, 400-453, 691-757, 844-895"
+Q13439 · GOGA4_HUMAN,Golgin subfamily A member 4,GOLGA4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2230,1: Evidence at protein level,5.0,"1-64, 87-127"
+Q13459 · MYO9B_HUMAN,Unconventional myosin-IXb,MYO9B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2157,1: Evidence at protein level,5.0,"709-734, 1046-1298, 1320-1410, 1455-1484, 1980-2157"
+Q13586 · STIM1_HUMAN,Stromal interaction molecule 1,STIM1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,685,1: Evidence at protein level,5.0,"490-542, 596-685"
+Q13769 · THOC5_HUMAN,THO complex subunit 5,THOC5,UniProtKB reviewed (Swiss-Prot),Homo sapiens,683,1: Evidence at protein level,5.0,"1-42, 301-336"
+Q13976 · KGP1_HUMAN,cGMP-dependent protein kinase 1,PRKG1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,671,1: Evidence at protein level,5.0,635-671
+Q14152 · EIF3A_HUMAN,Eukaryotic translation initiation factor 3 subunit A,EIF3A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1382,1: Evidence at protein level,5.0,"810-844, 866-1382"
+Q14667 · BLTP2_HUMAN,Bridge-like lipid transfer protein family member 2,BLTP2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2235,1: Evidence at protein level,5.0,"1495-1529, 2074-2099"
+Q15020 · SART3_HUMAN,"Spliceosome associated factor 3, U4/U6 recycling protein",SART3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,963,1: Evidence at protein level,5.0,"1-36, 50-90, 590-694, 878-898, 920-948"
+Q15276 · RABE1_HUMAN,Rab GTPase-binding effector protein 1,RABEP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,862,1: Evidence at protein level,5.0,315-338
+Q155Q3 · DIXC1_HUMAN,Dixin,DIXDC1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,683,1: Evidence at protein level,5.0,"207-235, 482-509, 556-594"
+Q15643 · TRIPB_HUMAN,Thyroid receptor-interacting protein 11,TRIP11,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1979,1: Evidence at protein level,5.0,1873-1920
+Q15811 · ITSN1_HUMAN,Intersectin-1,ITSN1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1721,1: Evidence at protein level,5.0,"322-348, 650-701, 836-868"
+Q16181 · SEPT7_HUMAN,Septin-7,SEPTIN7,UniProtKB reviewed (Swiss-Prot),Homo sapiens,437,1: Evidence at protein level,5.0,378-437
+Q16281 · CNGA3_HUMAN,Cyclic nucleotide-gated channel alpha-3,CNGA3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,694,1: Evidence at protein level,5.0,"1-24, 109-152, 662-694"
+Q16363 · LAMA4_HUMAN,Laminin subunit alpha-4,LAMA4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1823,1: Evidence at protein level,5.0,1419-1440
+Q2M1P5 · KIF7_HUMAN,Kinesin-like protein KIF7,KIF7,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1343,1: Evidence at protein level,5.0,"356-382, 451-483, 611-639, 1219-1238, 1310-1343"
+Q2M389 · WASC4_HUMAN,WASH complex subunit 4,WASHC4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1173,1: Evidence at protein level,5.0,1142-1173
+Q2TAC2 · CCD57_HUMAN,Coiled-coil domain-containing protein 57,CCDC57,UniProtKB reviewed (Swiss-Prot),Homo sapiens,915,1: Evidence at protein level,5.0,"555-574, 606-653, 724-915"
+Q2TAC6 · KIF19_HUMAN,Kinesin-like protein KIF19,KIF19,UniProtKB reviewed (Swiss-Prot),Homo sapiens,998,1: Evidence at protein level,5.0,"482-503, 662-706, 746-765, 794-911, 948-998"
+Q49A88 · CCD14_HUMAN,Coiled-coil domain-containing protein 14,CCDC14,UniProtKB reviewed (Swiss-Prot),Homo sapiens,953,1: Evidence at protein level,5.0,"1-22, 52-72, 126-189, 268-287"
+Q5JRA6 · TGO1_HUMAN,Transport and Golgi organization protein 1 homolog,MIA3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1907,1: Evidence at protein level,5.0,"155-258, 314-378, 390-601, 659-918, 1093-1121, 1420-1443, 1642-1907"
+Q5JWF2 · GNAS1_HUMAN,Guanine nucleotide-binding protein G(s) subunit alpha isoforms XLas,GNAS,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1037,1: Evidence at protein level,5.0,"1-105, 185-224, 283-588, 640-666, 711-734"
+Q5SW79 · CE170_HUMAN,Centrosomal protein of 170 kDa,CEP170,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1584,1: Evidence at protein level,5.0,"368-441, 480-512, 562-890, 906-1176, 1238-1260, 1325-1345, 1369-1399, 1508-1556"
+Q5T0F9 · C2D1B_HUMAN,Coiled-coil and C2 domain-containing protein 1B,CC2D1B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,858,1: Evidence at protein level,5.0,"112-164, 180-199, 204-284, 329-352, 470-533"
+Q5T124 · UBX11_HUMAN,UBX domain-containing protein 11,UBXN11,UniProtKB reviewed (Swiss-Prot),Homo sapiens,520,1: Evidence at protein level,5.0,"1-26, 476-520"
+Q5T5P2 · SKT_HUMAN,Sickle tail protein homolog,KIAA1217,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1943,1: Evidence at protein level,5.0,"1-79, 112-177, 290-331, 456-476, 848-874, 1003-1230, 1305-1329, 1352-1377, 1481-1572, 1606-1660, 1677-1943"
+Q5T7N3 · KANK4_HUMAN,KN motif and ankyrin repeat domain-containing protein 4,KANK4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,995,1: Evidence at protein level,5.0,"1-29, 68-127, 443-467, 503-558, 617-642, 663-705, 721-740"
+Q5TCS8 · KAD9_HUMAN,Adenylate kinase 9,AK9,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1911,1: Evidence at protein level,5.0,"185-210, 728-796, 892-926"
+Q5VT06 · CE350_HUMAN,Centrosome-associated protein 350,CEP350,UniProtKB reviewed (Swiss-Prot),Homo sapiens,3117,1: Evidence at protein level,5.0,"1-24, 249-275, 436-514, 548-625, 671-722, 981-1002, 1081-1298, 1494-1674, 1794-1854, 1903-2020, 2107-2221, 2329-2356, 2407-2432, 2465-2485"
+Q5VU43 · MYOME_HUMAN,Myomegalin,PDE4DIP,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2346,1: Evidence at protein level,5.0,"698-732, 1193-1214, 1591-1614, 1633-1690, 2081-2103, 2127-2156"
+Q66GS9 · CP135_HUMAN,Centrosomal protein of 135 kDa,CEP135,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1140,1: Evidence at protein level,5.0,1114-1140
+Q6DN90 · IQEC1_HUMAN,IQ motif and SEC7 domain-containing protein 1,IQSEC1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,963,1: Evidence at protein level,5.0,"21-88, 312-332, 349-513, 922-947"
+Q6GYQ0 · RGPA1_HUMAN,Ral GTPase-activating protein subunit alpha-1,RALGAPA1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2036,1: Evidence at protein level,5.0,"343-384, 476-497, 715-753, 849-910, 982-1009"
+Q6IQ23 · PKHA7_HUMAN,Pleckstrin homology domain-containing family A member 7,PLEKHA7,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1121,1: Evidence at protein level,5.0,"105-137, 299-514, 547-632, 841-876, 888-971, 1003-1028, 1082-1121"
+Q6NZI2 · CAVN1_HUMAN,Caveolae-associated protein 1,CAVIN1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,390,1: Evidence at protein level,5.0,"1-40, 172-201, 344-366"
+Q6P2D8 · XRRA1_HUMAN,X-ray radiation resistance-associated protein 1,XRRA1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,792,1: Evidence at protein level,5.0,"490-517, 537-562, 577-601"
+Q6PGN9 · PSRC1_HUMAN,Proline/serine-rich coiled-coil protein 1,PSRC1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,363,1: Evidence at protein level,5.0,"39-67, 95-363"
+Q6Q759 · SPG17_HUMAN,Sperm-associated antigen 17,SPAG17,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2223,1: Evidence at protein level,5.0,"144-214, 387-416, 680-710, 731-762, 950-1015, 1179-1212, 1345-1378, 1938-1957, 1962-2008"
+Q6UWE0 · LRSM1_HUMAN,E3 ubiquitin-protein ligase LRSAM1,LRSAM1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,723,1: Evidence at protein level,5.0,"282-314, 642-665"
+Q6XUX3 · DUSTY_HUMAN,Dual serine/threonine and tyrosine protein kinase,DSTYK,UniProtKB reviewed (Swiss-Prot),Homo sapiens,929,1: Evidence at protein level,5.0,1-21
+Q6ZMJ2 · SCAR5_HUMAN,Scavenger receptor class A member 5,SCARA5,UniProtKB reviewed (Swiss-Prot),Homo sapiens,495,1: Evidence at protein level,5.0,301-386
+Q6ZMS7 · ZN783_HUMAN,Zinc finger protein 783,ZNF783,UniProtKB reviewed (Swiss-Prot),Homo sapiens,546,1: Evidence at protein level,5.0,"1-30, 218-270, 291-344, 372-391, 527-546"
+Q6ZNE9 · RUFY4_HUMAN,RUN and FYVE domain-containing protein 4,RUFY4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,571,1: Evidence at protein level,5.0,174-207
+Q6ZRF8 · RN207_HUMAN,RING finger protein 207,RNF207,UniProtKB reviewed (Swiss-Prot),Homo sapiens,634,1: Evidence at protein level,5.0,552-634
+Q6ZUJ8 · BCAP_HUMAN,Phosphoinositide 3-kinase adapter protein 1,PIK3AP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,805,1: Evidence at protein level,5.0,"145-165, 527-547, 571-590, 654-679, 697-805"
+Q70YC5 · ZN365_HUMAN,Protein ZNF365,ZNF365,UniProtKB reviewed (Swiss-Prot),Homo sapiens,407,1: Evidence at protein level,5.0,347-392
+Q76FK4 · NOL8_HUMAN,Nucleolar protein 8,NOL8,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1167,1: Evidence at protein level,5.0,"223-304, 435-470, 499-533, 590-908, 932-982, 1006-1026, 1071-1105, 1145-1167"
+Q76M96 · CCD80_HUMAN,Coiled-coil domain-containing protein 80,CCDC80,UniProtKB reviewed (Swiss-Prot),Homo sapiens,950,1: Evidence at protein level,5.0,"28-64, 88-119, 289-609"
+Q7L3B6 · CD37L_HUMAN,Hsp90 co-chaperone Cdc37-like 1,CDC37L1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,337,1: Evidence at protein level,5.0,1-40
+Q7L8J4 · 3BP5L_HUMAN,SH3 domain-binding protein 5-like,SH3BP5L,UniProtKB reviewed (Swiss-Prot),Homo sapiens,393,1: Evidence at protein level,5.0,"1-58, 273-332, 362-393"
+Q7RTU3 · OLIG3_HUMAN,Oligodendrocyte transcription factor 3,OLIG3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,272,1: Evidence at protein level,5.0,1-71
+Q7Z3E5 · ARMC9_HUMAN,LisH domain-containing protein ARMC9,ARMC9,UniProtKB reviewed (Swiss-Prot),Homo sapiens,818,1: Evidence at protein level,5.0,"642-755, 790-818"
+Q7Z4K8 · TRI46_HUMAN,Tripartite motif-containing protein 46,TRIM46,UniProtKB reviewed (Swiss-Prot),Homo sapiens,759,1: Evidence at protein level,5.0,"67-98, 623-643"
+Q86UC2 · RSPH3_HUMAN,Radial spoke head protein 3 homolog,RSPH3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,560,1: Evidence at protein level,5.0,"134-186, 225-249, 354-375, 473-498, 526-560"
+Q86UP2 · KTN1_HUMAN,Kinectin,KTN1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1357,1: Evidence at protein level,5.0,"48-81, 103-218"
+Q86UT8 · CATAC_HUMAN,Centrosomal AT-AC splicing factor,CENATAC,UniProtKB reviewed (Swiss-Prot),Homo sapiens,332,1: Evidence at protein level,5.0,169-213
+Q86VH2 · KIF27_HUMAN,Kinesin-like protein KIF27,KIF27,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1401,1: Evidence at protein level,5.0,"643-662, 1259-1332"
+Q86VP1 · TAXB1_HUMAN,Tax1-binding protein 1,TAX1BP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,789,1: Evidence at protein level,5.0,"481-508, 639-660, 678-712"
+Q86W92 · LIPB1_HUMAN,Liprin-beta-1,PPFIBP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1011,1: Evidence at protein level,5.0,"420-439, 463-634"
+Q86YP4 · P66A_HUMAN,Transcriptional repressor p66-alpha,GATAD2A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,633,1: Evidence at protein level,5.0,"1-59, 73-119, 172-238, 561-585"
+Q8IUM7 · NPAS4_HUMAN,Neuronal PAS domain-containing protein 4,NPAS4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,802,1: Evidence at protein level,5.0,"466-485, 506-555, 717-749"
+Q8IVL1 · NAV2_HUMAN,Neuron navigator 2,NAV2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2488,1: Evidence at protein level,5.0,"194-675, 706-727, 804-824, 939-1151, 1177-1200, 1213-1283, 1295-1338, 1355-1412, 1440-1460, 1473-1560, 1591-1629, 1790-1887, 1951-1985, 2423-2488"
+Q8IW19 · APLF_HUMAN,Aprataxin and PNK-like factor,APLF,UniProtKB reviewed (Swiss-Prot),Homo sapiens,511,1: Evidence at protein level,5.0,"223-370, 449-497"
+Q8IWI9 · MGAP_HUMAN,MAX gene-associated protein,MGA,UniProtKB reviewed (Swiss-Prot),Homo sapiens,3065,1: Evidence at protein level,5.0,"259-322, 604-653, 881-911, 971-990, 1246-1332, 1380-1429, 1488-1517, 1905-1927, 1967-2029, 2258-2316, 2576-2595, 2668-2709, 2944-2968"
+Q8IWZ3 · ANKH1_HUMAN,Ankyrin repeat and KH domain-containing protein 1,ANKHD1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2542,1: Evidence at protein level,5.0,"1-44, 50-69, 1441-1517, 1534-1614, 1632-1664, 1886-1923, 1987-2106, 2260-2367"
+Q8IY63 · AMOL1_HUMAN,Angiomotin-like protein 1,AMOTL1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,956,1: Evidence at protein level,5.0,"197-246, 274-322, 382-405, 411-430, 773-823, 841-880, 894-944"
+Q8IY81 · SPB1_HUMAN,pre-rRNA 2'-O-ribose RNA methyltransferase FTSJ3,FTSJ3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,847,1: Evidence at protein level,5.0,"332-370, 457-510, 558-653, 811-847"
+Q8IY82 · DRC7_HUMAN,Dynein regulatory complex subunit 7,DRC7,UniProtKB reviewed (Swiss-Prot),Homo sapiens,874,1: Evidence at protein level,5.0,386-410
+Q8IYJ2 · CJ067_HUMAN,"Uncharacterized protein C10orf67, mitochondrial",C10orf67,UniProtKB reviewed (Swiss-Prot),Homo sapiens,551,1: Evidence at protein level,5.0,"354-389, 519-551"
+Q8IZC4 · RTKN2_HUMAN,Rhotekin-2,RTKN2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,609,1: Evidence at protein level,5.0,"495-520, 554-609"
+Q8N556 · AFAP1_HUMAN,Actin filament-associated protein 1,AFAP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,730,1: Evidence at protein level,5.0,"47-91, 119-140, 252-292, 512-537"
+Q8N6L0 · KASH5_HUMAN,Protein KASH5,KASH5,UniProtKB reviewed (Swiss-Prot),Homo sapiens,562,1: Evidence at protein level,5.0,"125-153, 407-481"
+Q8N6Y0 · USBP1_HUMAN,Harmonin-binding protein USHBP1,USHBP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,703,1: Evidence at protein level,5.0,"1-113, 138-172, 228-256, 396-416, 540-583"
+Q8N7H5 · PAF1_HUMAN,RNA polymerase II-associated factor 1 homolog,PAF1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,531,1: Evidence at protein level,5.0,"1-23, 361-531"
+Q8N9B5 · JMY_HUMAN,Junction-mediating and -regulatory protein,JMY,UniProtKB reviewed (Swiss-Prot),Homo sapiens,988,1: Evidence at protein level,5.0,"51-178, 731-755, 800-865, 967-988"
+Q8NA61 · CBY2_HUMAN,Protein chibby homolog 2,CBY2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,448,1: Evidence at protein level,5.0,270-323
+Q8NBZ0 · IN80E_HUMAN,INO80 complex subunit E,INO80E,UniProtKB reviewed (Swiss-Prot),Homo sapiens,244,1: Evidence at protein level,5.0,63-236
+Q8NE09 · RGS22_HUMAN,Regulator of G-protein signaling 22,RGS22,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1264,1: Evidence at protein level,5.0,565-587
+Q8NEZ4 · KMT2C_HUMAN,Histone-lysine N-methyltransferase 2C,KMT2C,UniProtKB reviewed (Swiss-Prot),Homo sapiens,4911,1: Evidence at protein level,5.0,"1-101, 164-203, 721-742, 763-798, 828-864, 885-912, 1215-1324, 1406-1431, 1458-1485, 1604-1630, 1709-2448, 2589-2694, 2793-2887, 2925-2954, 2989-3029, 3205-3241, 3353-3409, 3527-3583, 3596-3919, 4024-4053"
+Q8NFZ5 · TNIP2_HUMAN,TNFAIP3-interacting protein 2,TNIP2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,429,1: Evidence at protein level,5.0,"177-199, 372-400"
+Q8NHH9 · ATLA2_HUMAN,Atlastin-2,ATL2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,583,1: Evidence at protein level,5.0,1-44
+Q8NHZ8 · CDC26_HUMAN,Anaphase-promoting complex subunit CDC26,CDC26,UniProtKB reviewed (Swiss-Prot),Homo sapiens,85,1: Evidence at protein level,5.0,30-85
+Q8TAQ2 · SMRC2_HUMAN,SWI/SNF complex subunit SMARCC2,SMARCC2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1214,1: Evidence at protein level,5.0,"257-413, 724-852, 947-983, 997-1092, 1182-1214"
+Q8TAX9 · GSDMB_HUMAN,Gasdermin-B,GSDMB,UniProtKB reviewed (Swiss-Prot),Homo sapiens,416,1: Evidence at protein level,5.0,229-250
+Q8TC36 · SUN5_HUMAN,SUN domain-containing protein 5,SUN5,UniProtKB reviewed (Swiss-Prot),Homo sapiens,379,1: Evidence at protein level,5.0,1-45
+Q8TDR0 · MIPT3_HUMAN,TRAF3-interacting protein 1,TRAF3IP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,691,1: Evidence at protein level,5.0,136-508
+Q8TDR4 · TCP1L_HUMAN,T-complex protein 10A homolog 1,TCP10L,UniProtKB reviewed (Swiss-Prot),Homo sapiens,215,1: Evidence at protein level,5.0,"1-25, 150-215"
+Q8TF30 · WHAMM_HUMAN,"WASP homolog-associated protein with actin, membranes and microtubules",WHAMM,UniProtKB reviewed (Swiss-Prot),Homo sapiens,809,1: Evidence at protein level,5.0,"506-528, 546-571, 586-612, 627-707, 754-809"
+Q8WUQ7 · CATIN_HUMAN,Splicing factor Cactin,CACTIN,UniProtKB reviewed (Swiss-Prot),Homo sapiens,758,1: Evidence at protein level,5.0,"1-140, 155-181, 477-536"
+Q8WW24 · TEKT4_HUMAN,Tektin-4,TEKT4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,435,1: Evidence at protein level,5.0,60-96
+Q8WXF1 · PSPC1_HUMAN,Paraspeckle component 1,PSPC1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,523,1: Evidence at protein level,5.0,460-523
+Q8WXX0 · DYH7_HUMAN,Dynein axonemal heavy chain 7,DNAH7,UniProtKB reviewed (Swiss-Prot),Homo sapiens,4024,1: Evidence at protein level,5.0,"1-25, 49-121"
+Q8WZ74 · CTTB2_HUMAN,Cortactin-binding protein 2,CTTNBP2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1663,1: Evidence at protein level,5.0,"1-23, 203-222, 367-440, 454-478, 498-616, 1449-1482, 1581-1663"
+Q92541 · RTF1_HUMAN,RNA polymerase-associated protein RTF1 homolog,RTF1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,710,1: Evidence at protein level,5.0,"20-214, 228-357, 627-650, 674-710"
+Q92805 · GOGA1_HUMAN,Golgin subfamily A member 1,GOLGA1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,767,1: Evidence at protein level,5.0,"13-58, 748-767"
+Q92888 · ARHG1_HUMAN,Rho guanine nucleotide exchange factor 1,ARHGEF1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,912,1: Evidence at protein level,5.0,"248-413, 763-802, 841-865"
+Q96BD8 · SKA1_HUMAN,SKA complex subunit 1,SKA1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,255,1: Evidence at protein level,5.0,106-131
+Q96BZ8 · LENG1_HUMAN,Leukocyte receptor cluster member 1,LENG1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,264,1: Evidence at protein level,5.0,"1-37, 49-76, 118-264"
+Q96CV9 · OPTN_HUMAN,Optineurin,OPTN,UniProtKB reviewed (Swiss-Prot),Homo sapiens,577,1: Evidence at protein level,5.0,"1-32, 101-143, 186-209, 261-297"
+Q96D96 · HVCN1_HUMAN,Voltage-gated hydrogen channel 1,HVCN1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,273,1: Evidence at protein level,5.0,46-80
+Q96DX7 · TRI44_HUMAN,Tripartite motif-containing protein 44,TRIM44,UniProtKB reviewed (Swiss-Prot),Homo sapiens,344,1: Evidence at protein level,5.0,"1-25, 66-165, 309-344"
+Q96EK4 · THA11_HUMAN,THAP domain-containing protein 11,THAP11,UniProtKB reviewed (Swiss-Prot),Homo sapiens,314,1: Evidence at protein level,5.0,85-111
+Q96GA3 · LTV1_HUMAN,Protein LTV1 homolog,LTV1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,475,1: Evidence at protein level,5.0,"23-54, 74-99, 169-213, 405-447"
+Q96K21 · ANCHR_HUMAN,Abscission/NoCut checkpoint regulator,ZFYVE19,UniProtKB reviewed (Swiss-Prot),Homo sapiens,471,1: Evidence at protein level,5.0,"39-64, 271-299, 386-412"
+Q96K80 · ZC3HA_HUMAN,Zinc finger CCCH domain-containing protein 10,ZC3H10,UniProtKB reviewed (Swiss-Prot),Homo sapiens,434,1: Evidence at protein level,5.0,"1-37, 196-217, 314-362"
+Q96KG9 · SCYL1_HUMAN,N-terminal kinase-like protein,SCYL1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,808,1: Evidence at protein level,5.0,"540-566, 587-646, 658-808"
+Q96KN7 · RPGR1_HUMAN,X-linked retinitis pigmentosa GTPase regulator-interacting protein 1,RPGRIP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1286,1: Evidence at protein level,5.0,"144-193, 934-1008, 1058-1108"
+Q96L93 · KI16B_HUMAN,Kinesin-like protein KIF16B,KIF16B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1317,1: Evidence at protein level,5.0,1036-1057
+Q96LD4 · TRI47_HUMAN,E3 ubiquitin-protein ligase TRIM47,TRIM47,UniProtKB reviewed (Swiss-Prot),Homo sapiens,638,1: Evidence at protein level,5.0,"79-119, 300-322, 384-411"
+Q96LW4 · PRIPO_HUMAN,DNA-directed primase/polymerase protein,PRIMPOL,UniProtKB reviewed (Swiss-Prot),Homo sapiens,560,1: Evidence at protein level,5.0,"203-223, 480-507"
+Q96LX7 · CCD17_HUMAN,Coiled-coil domain-containing protein 17,CCDC17,UniProtKB reviewed (Swiss-Prot),Homo sapiens,622,1: Evidence at protein level,5.0,"334-356, 584-622"
+Q96Q89 · KI20B_HUMAN,Kinesin-like protein KIF20B,KIF20B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1820,1: Evidence at protein level,5.0,"829-866, 1247-1275, 1760-1781"
+Q96QF0 · RAB3I_HUMAN,Rab-3A-interacting protein,RAB3IP,UniProtKB reviewed (Swiss-Prot),Homo sapiens,476,1: Evidence at protein level,5.0,262-297
+Q96R06 · SPAG5_HUMAN,Sperm-associated antigen 5,SPAG5,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1193,1: Evidence at protein level,5.0,"1-48, 96-117, 390-416"
+Q96SB3 · NEB2_HUMAN,Neurabin-2,PPP1R9B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,817,1: Evidence at protein level,5.0,"1-165, 216-447"
+Q96T17 · MA7D2_HUMAN,MAP7 domain-containing protein 2,MAP7D2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,732,1: Evidence at protein level,5.0,"1-64, 95-123, 157-186, 210-244, 279-509"
+Q99459 · CDC5L_HUMAN,Cell division cycle 5-like protein,CDC5L,UniProtKB reviewed (Swiss-Prot),Homo sapiens,802,1: Evidence at protein level,5.0,"108-143, 247-278, 408-443"
+Q99689 · FEZ1_HUMAN,Fasciculation and elongation protein zeta-1,FEZ1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,392,1: Evidence at protein level,5.0,"1-37, 175-198"
+Q9BSH4 · TACO1_HUMAN,Translational activator of cytochrome c oxidase 1,TACO1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,297,1: Evidence at protein level,5.0,20-45
+Q9BTV5 · FSD1_HUMAN,Fibronectin type III and SPRY domain-containing protein 1,FSD1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,496,1: Evidence at protein level,5.0,301-336
+Q9BWP8 · COL11_HUMAN,Collectin-11,COLEC11,UniProtKB reviewed (Swiss-Prot),Homo sapiens,271,1: Evidence at protein level,5.0,44-113
+Q9BWU0 · NADAP_HUMAN,Kanadaptin,SLC4A1AP,UniProtKB reviewed (Swiss-Prot),Homo sapiens,742,1: Evidence at protein level,5.0,"1-112, 254-282, 565-742"
+Q9BXS6 · NUSAP_HUMAN,Nucleolar and spindle-associated protein 1,NUSAP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,441,1: Evidence at protein level,5.0,"47-186, 216-267, 286-319, 401-427"
+Q9BXX0 · EMIL2_HUMAN,EMILIN-2,EMILIN2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1053,1: Evidence at protein level,5.0,"120-179, 212-256, 783-901"
+Q9BYB0 · SHAN3_HUMAN,SH3 and multiple ankyrin repeat domains protein 3,SHANK3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1806,1: Evidence at protein level,5.0,"407-467, 665-689, 760-853, 871-1021, 1115-1460, 1475-1525, 1546-1584, 1627-1664"
+Q9BZF9 · UACA_HUMAN,Uveal autoantigen with coiled-coil domains and ankyrin repeats,UACA,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1416,1: Evidence at protein level,5.0,1-24
+Q9BZL4 · PP12C_HUMAN,Protein phosphatase 1 regulatory subunit 12C,PPP1R12C,UniProtKB reviewed (Swiss-Prot),Homo sapiens,782,1: Evidence at protein level,5.0,"1-43, 316-686"
+Q9BZQ2 · SHP1L_HUMAN,Testicular spindle-associated protein SHCBP1L,SHCBP1L,UniProtKB reviewed (Swiss-Prot),Homo sapiens,653,1: Evidence at protein level,5.0,1-65
+Q9C093 · SPEF2_HUMAN,Sperm flagellar protein 2,SPEF2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1822,1: Evidence at protein level,5.0,"896-1004, 1278-1327, 1664-1718, 1803-1822"
+Q9C0B0 · UNK_HUMAN,RING finger protein unkempt homolog,UNK,UniProtKB reviewed (Swiss-Prot),Homo sapiens,810,1: Evidence at protein level,5.0,"1-24, 239-265, 324-343"
+Q9C0C6 · CIPC_HUMAN,CLOCK-interacting pacemaker,CIPC,UniProtKB reviewed (Swiss-Prot),Homo sapiens,399,1: Evidence at protein level,5.0,"1-85, 162-224, 378-399"
+Q9C0H9 · SRCN1_HUMAN,SRC kinase signaling inhibitor 1,SRCIN1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1183,1: Evidence at protein level,5.0,"1-44, 284-379, 466-643, 861-907, 949-1032, 1058-1081, 1105-1183"
+Q9H0H5 · RGAP1_HUMAN,Rac GTPase-activating protein 1,RACGAP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,632,1: Evidence at protein level,5.0,"183-211, 249-283, 582-632"
+Q9H204 · MED28_HUMAN,Mediator of RNA polymerase II transcription subunit 28,MED28,UniProtKB reviewed (Swiss-Prot),Homo sapiens,178,1: Evidence at protein level,5.0,1-44
+Q9H2K8 · TAOK3_HUMAN,Serine/threonine-protein kinase TAO3,TAOK3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,898,1: Evidence at protein level,5.0,"316-362, 405-425, 565-596"
+Q9H5N1 · RABE2_HUMAN,Rab GTPase-binding effector protein 2,RABEP2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,569,1: Evidence at protein level,5.0,"1-41, 180-265, 388-411"
+Q9H6R4 · NOL6_HUMAN,Nucleolar protein 6,NOL6,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1146,1: Evidence at protein level,5.0,1-48
+Q9H9A5 · CNO10_HUMAN,CCR4-NOT transcription complex subunit 10,CNOT10,UniProtKB reviewed (Swiss-Prot),Homo sapiens,744,1: Evidence at protein level,5.0,"1-25, 183-204, 477-521, 602-634"
+Q9HAW4 · CLSPN_HUMAN,Claspin,CLSPN,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1339,1: Evidence at protein level,5.0,"1-96, 136-204, 243-285, 336-490, 618-707, 730-774, 946-973, 985-1075, 1294-1327"
+Q9HC35 · EMAL4_HUMAN,Echinoderm microtubule-associated protein-like 4,EML4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,981,1: Evidence at protein level,5.0,"1-20, 57-205, 881-981"
+Q9NQR1 · KMT5A_HUMAN,N-lysine methyltransferase KMT5A,KMT5A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,393,1: Evidence at protein level,5.0,"68-88, 135-241"
+Q9NQW6 · ANLN_HUMAN,Anillin,ANLN,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1124,1: Evidence at protein level,5.0,"1-113, 136-196, 294-328, 380-399, 579-600, 625-664"
+Q9NQY0 · BIN3_HUMAN,Bridging integrator 3,BIN3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,253,1: Evidence at protein level,5.0,220-240
+Q9NS87 · KIF15_HUMAN,Kinesin-like protein KIF15,KIF15,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1388,1: Evidence at protein level,5.0,"1-25, 1228-1250"
+Q9NUV9 · GIMA4_HUMAN,GTPase IMAP family member 4,GIMAP4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,329,1: Evidence at protein level,5.0,1-26
+Q9NVA2 · SEP11_HUMAN,Septin-11,SEPTIN11,UniProtKB reviewed (Swiss-Prot),Homo sapiens,429,1: Evidence at protein level,5.0,398-429
+Q9NVI7 · ATD3A_HUMAN,ATPase family AAA domain-containing protein 3A,ATAD3A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,586,1: Evidence at protein level,5.0,"1-55, 111-134"
+Q9NVN8 · GNL3L_HUMAN,Guanine nucleotide-binding protein-like 3-like protein,GNL3L,UniProtKB reviewed (Swiss-Prot),Homo sapiens,582,1: Evidence at protein level,5.0,1-58
+Q9NWB6 · ARGL1_HUMAN,Arginine and glutamate-rich protein 1,ARGLU1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,273,1: Evidence at protein level,5.0,"1-113, 238-273"
+Q9NWF9 · RN216_HUMAN,E3 ubiquitin-protein ligase RNF216,RNF216,UniProtKB reviewed (Swiss-Prot),Homo sapiens,866,1: Evidence at protein level,5.0,"46-117, 131-161, 211-240"
+Q9NX55 · HYPK_HUMAN,Huntingtin-interacting protein K,HYPK,UniProtKB reviewed (Swiss-Prot),Homo sapiens,121,1: Evidence at protein level,5.0,1-75
+Q9NX95 · SYBU_HUMAN,Syntabulin,SYBU,UniProtKB reviewed (Swiss-Prot),Homo sapiens,663,1: Evidence at protein level,5.0,"1-202, 216-267"
+Q9NZ56 · FMN2_HUMAN,Formin-2,FMN2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1722,1: Evidence at protein level,5.0,"1-104, 126-189, 207-475, 612-663, 797-1252"
+Q9NZ72 · STMN3_HUMAN,Stathmin-3,STMN3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,180,1: Evidence at protein level,5.0,59-82
+Q9P0K7 · RAI14_HUMAN,Ankycorbin,RAI14,UniProtKB reviewed (Swiss-Prot),Homo sapiens,980,1: Evidence at protein level,5.0,"247-301, 387-423"
+Q9P1Y5 · CAMP3_HUMAN,Calmodulin-regulated spectrin-associated protein 3,CAMSAP3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1249,1: Evidence at protein level,5.0,"183-205, 328-385, 430-457, 473-609, 632-696, 714-1029, 1061-1111"
+Q9P2A4 · ABI3_HUMAN,ABI gene family member 3,ABI3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,366,1: Evidence at protein level,5.0,"161-195, 215-302"
+Q9P2M7 · CING_HUMAN,Cingulin,CGN,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1203,1: Evidence at protein level,5.0,"25-48, 89-127, 186-266, 1034-1053, 1154-1181"
+Q9UBW8 · CSN7A_HUMAN,COP9 signalosome complex subunit 7a,COPS7A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,275,1: Evidence at protein level,5.0,227-275
+Q9UDT6 · CLIP2_HUMAN,CAP-Gly domain-containing linker protein 2,CLIP2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1046,1: Evidence at protein level,5.0,"1-71, 143-162, 195-215, 313-339, 1018-1046"
+Q9UFD9 · RIM3A_HUMAN,RIMS-binding protein 3A,RIMBP3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1639,1: Evidence at protein level,5.0,"1-22, 215-240, 295-364, 697-811, 1251-1273, 1292-1330"
+Q9UIF8 · BAZ2B_HUMAN,Bromodomain adjacent to zinc finger domain protein 2B,BAZ2B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2168,1: Evidence at protein level,5.0,"1-29, 140-348, 409-428, 459-479, 528-698, 719-740, 841-872, 1021-1043, 1265-1341, 1503-1542, 1582-1607, 1670-1694, 1998-2040"
+Q9UIF9 · BAZ2A_HUMAN,Bromodomain adjacent to zinc finger domain protein 2A,BAZ2A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1905,1: Evidence at protein level,5.0,"1-59, 362-434, 648-792, 1178-1220, 1283-1318, 1330-1412, 1734-1755, 1769-1789"
+Q9UKX2 · MYH2_HUMAN,Myosin-2,MYH2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1941,1: Evidence at protein level,5.0,"1128-1149, 1155-1174"
+Q9ULI4 · KI26A_HUMAN,Kinesin-like protein KIF26A,KIF26A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1882,1: Evidence at protein level,5.0,"1-66, 149-201, 316-337, 729-785, 851-915, 940-993, 1121-1237, 1335-1728"
+Q9ULJ8 · NEB1_HUMAN,Neurabin-1,PPP1R9A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1098,1: Evidence at protein level,5.0,"1-66, 87-117, 147-213, 251-395, 627-647, 839-865, 888-952, 1051-1098"
+Q9ULL8 · SHRM4_HUMAN,Protein Shroom4,SHROOM4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1493,1: Evidence at protein level,5.0,"202-282, 430-695, 740-759, 781-813, 1117-1170, 1187-1206, 1214-1236, 1246-1265"
+Q9ULQ1 · TPC1_HUMAN,Two pore channel protein 1,TPCN1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,816,1: Evidence at protein level,5.0,"17-64, 782-816"
+Q9UMZ2 · SYNRG_HUMAN,Synergin gamma,SYNRG,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1314,1: Evidence at protein level,5.0,"178-199, 460-498, 972-1026, 1073-1102"
+Q9UNL4 · ING4_HUMAN,Inhibitor of growth protein 4,ING4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,249,1: Evidence at protein level,5.0,115-164
+Q9UPA5 · BSN_HUMAN,Protein bassoon,BSN,UniProtKB reviewed (Swiss-Prot),Homo sapiens,3926,1: Evidence at protein level,5.0,"1-161, 231-343, 366-459, 524-927, 940-1248, 1298-1547, 1570-1620, 1924-1978, 2287-2309, 2324-2370, 2532-2568, 2601-2655, 2845-2865, 3039-3375, 3424-3551, 3572-3897"
+Q9UPR3 · SMG5_HUMAN,Nonsense-mediated mRNA decay factor SMG5,SMG5,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1016,1: Evidence at protein level,5.0,"408-561, 594-637"
+Q9UPS8 · ANR26_HUMAN,Ankyrin repeat domain-containing protein 26,ANKRD26,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1710,1: Evidence at protein level,5.0,"1-41, 222-274, 504-630, 650-698, 892-912"
+Q9UPW8 · UN13A_HUMAN,Protein unc-13 homolog A,UNC13A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1703,1: Evidence at protein level,5.0,186-445
+Q9UQB8 · BAIP2_HUMAN,BAR/IMD domain-containing adapter protein 2,BAIAP2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,552,1: Evidence at protein level,5.0,"295-369, 447-466, 525-552"
+Q9Y216 · MTMR7_HUMAN,Phosphatidylinositol-3-phosphate phosphatase MTMR7,MTMR7,UniProtKB reviewed (Swiss-Prot),Homo sapiens,660,1: Evidence at protein level,5.0,554-660
+Q9Y266 · NUDC_HUMAN,Nuclear migration protein nudC,NUDC,UniProtKB reviewed (Swiss-Prot),Homo sapiens,331,1: Evidence at protein level,5.0,"62-108, 129-170"
+Q9Y2G4 · ANKR6_HUMAN,Ankyrin repeat domain-containing protein 6,ANKRD6,UniProtKB reviewed (Swiss-Prot),Homo sapiens,727,1: Evidence at protein level,5.0,"277-386, 548-586, 601-657"
+Q9Y2M0 · FAN1_HUMAN,Fanconi-associated nuclease 1,FAN1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1017,1: Evidence at protein level,5.0,"1-23, 95-121, 170-189"
+Q9Y2W2 · WBP11_HUMAN,WW domain-binding protein 11,WBP11,UniProtKB reviewed (Swiss-Prot),Homo sapiens,641,1: Evidence at protein level,5.0,"1-37, 186-213, 236-552, 587-623"
+Q9Y2X7 · GIT1_HUMAN,ARF GTPase-activating protein GIT1,GIT1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,761,1: Evidence at protein level,5.0,"354-416, 471-501, 572-606"
+Q9Y496 · KIF3A_HUMAN,Kinesin-like protein KIF3A,KIF3A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,699,1: Evidence at protein level,5.0,"372-421, 663-699"
+Q9Y4I1 · MYO5A_HUMAN,Unconventional myosin-Va,MYO5A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1855,1: Evidence at protein level,5.0,598-631
+Q9Y4J8 · DTNA_HUMAN,Dystrobrevin alpha,DTNA,UniProtKB reviewed (Swiss-Prot),Homo sapiens,743,1: Evidence at protein level,5.0,556-575
+Q9Y520 · PRC2C_HUMAN,Protein PRRC2C,PRRC2C,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2896,1: Evidence at protein level,5.0,"28-212, 264-729, 750-788, 804-1118, 1143-1647, 1670-1785, 1905-1991, 2005-2164, 2218-2238, 2257-2290, 2317-2341, 2668-2701, 2824-2896"
+Q9Y592 · CEP83_HUMAN,Centrosomal protein of 83 kDa,CEP83,UniProtKB reviewed (Swiss-Prot),Homo sapiens,701,1: Evidence at protein level,5.0,1-23
+Q9Y692 · GMEB1_HUMAN,Glucocorticoid modulatory element-binding protein 1,GMEB1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,573,1: Evidence at protein level,5.0,370-398
+Q9Y6C2 · EMIL1_HUMAN,EMILIN-1,EMILIN1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1016,1: Evidence at protein level,5.0,"135-182, 257-288, 383-402, 416-435, 811-863, 942-961"
+Q9Y6K9 · NEMO_HUMAN,NF-kappa-B essential modulator,IKBKG,UniProtKB reviewed (Swiss-Prot),Homo sapiens,419,1: Evidence at protein level,5.0,358-395
+A1XBS5 · CBAR1_HUMAN,CBY1-interacting BAR domain-containing protein 1,CIBAR1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,289,1: Evidence at protein level,5.0,265-289
+A2IDD5 · CCD78_HUMAN,Coiled-coil domain-containing protein 78,CCDC78,UniProtKB reviewed (Swiss-Prot),Homo sapiens,438,1: Evidence at protein level,5.0,345-381
+O00192 · ARVC_HUMAN,Splicing regulator ARVCF,ARVCF,UniProtKB reviewed (Swiss-Prot),Homo sapiens,962,1: Evidence at protein level,5.0,"95-122, 186-253, 266-290, 590-614, 854-962"
+O14578 · CTRO_HUMAN,Citron Rho-interacting kinase,CIT,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2027,1: Evidence at protein level,5.0,"1290-1310, 1322-1351, 1905-2012"
+O14617 · AP3D1_HUMAN,AP-3 complex subunit delta-1,AP3D1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1153,1: Evidence at protein level,5.0,"629-696, 726-920"
+O14645 · IDLC_HUMAN,Axonemal dynein light intermediate polypeptide 1,DNALI1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,258,1: Evidence at protein level,5.0,"1-60, 207-231"
+O14776 · TCRG1_HUMAN,Transcription elongation regulator 1,TCERG1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1098,1: Evidence at protein level,5.0,"1-105, 259-348, 469-526, 615-640, 870-895, 1076-1098"
+O14795 · UN13B_HUMAN,Protein unc-13 homolog B,UNC13B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1591,1: Evidence at protein level,5.0,"155-210, 230-350"
+O14827 · RGRF2_HUMAN,Ras-specific guanine nucleotide-releasing factor 2,RASGRF2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1237,1: Evidence at protein level,5.0,"710-809, 829-873"
+O15013 · ARHGA_HUMAN,Rho guanine nucleotide exchange factor 10,ARHGEF10,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1369,1: Evidence at protein level,5.0,"1-106, 184-254, 1226-1260, 1277-1297"
+O15066 · KIF3B_HUMAN,Kinesin-like protein KIF3B,KIF3B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,747,1: Evidence at protein level,5.0,"374-412, 699-747"
+O15117 · FYB1_HUMAN,FYN-binding protein 1,FYB1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,783,1: Evidence at protein level,5.0,"1-502, 598-678"
+O15234 · CASC3_HUMAN,Protein CASC3,CASC3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,703,1: Evidence at protein level,5.0,"1-462, 492-538, 633-703"
+O43295 · SRGP3_HUMAN,SLIT-ROBO Rho GTPase-activating protein 3,SRGAP3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1099,1: Evidence at protein level,5.0,"205-225, 471-493, 809-847, 861-911, 926-950, 995-1099"
+O43815 · STRN_HUMAN,Striatin,STRN,UniProtKB reviewed (Swiss-Prot),Homo sapiens,780,1: Evidence at protein level,5.0,"124-150, 289-310, 365-387"
+O43896 · KIF1C_HUMAN,Kinesin-like protein KIF1C,KIF1C,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1103,1: Evidence at protein level,5.0,"400-438, 808-828, 874-924, 950-1103"
+O60239 · 3BP5_HUMAN,SH3 domain-binding protein 5,SH3BP5,UniProtKB reviewed (Swiss-Prot),Homo sapiens,455,1: Evidence at protein level,5.0,"1-63, 259-293, 306-345, 369-435"
+O60271 · JIP4_HUMAN,C-Jun-amino-terminal kinase-interacting protein 4,SPAG9,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1321,1: Evidence at protein level,5.0,"203-292, 473-500, 563-600, 854-906, 1239-1266"
+O60826 · CCD22_HUMAN,Coiled-coil domain-containing protein 22,CCDC22,UniProtKB reviewed (Swiss-Prot),Homo sapiens,627,1: Evidence at protein level,5.0,218-243
+O60861 · GAS7_HUMAN,Growth arrest-specific protein 7,GAS7,UniProtKB reviewed (Swiss-Prot),Homo sapiens,476,1: Evidence at protein level,5.0,100-171
+O75052 · CAPON_HUMAN,Carboxyl-terminal PDZ ligand of neuronal nitric oxide synthase protein,NOS1AP,UniProtKB reviewed (Swiss-Prot),Homo sapiens,506,1: Evidence at protein level,5.0,"175-224, 241-260"
+O75410 · TACC1_HUMAN,Transforming acidic coiled-coil-containing protein 1,TACC1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,805,1: Evidence at protein level,5.0,"23-140, 215-457, 493-526"
+O75665 · OFD1_HUMAN,Centriole and centriolar satellite protein OFD1,OFD1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1012,1: Evidence at protein level,5.0,"719-744, 757-794, 824-904, 963-1012"
+O75822 · EIF3J_HUMAN,Eukaryotic translation initiation factor 3 subunit J,EIF3J,UniProtKB reviewed (Swiss-Prot),Homo sapiens,258,1: Evidence at protein level,5.0,"1-108, 217-238"
+O75899 · GABR2_HUMAN,Gamma-aminobutyric acid type B receptor subunit 2,GABBR2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,941,1: Evidence at protein level,5.0,763-790
+O94804 · STK10_HUMAN,Serine/threonine-protein kinase 10,STK10,UniProtKB reviewed (Swiss-Prot),Homo sapiens,968,1: Evidence at protein level,5.0,"337-411, 425-490, 668-690, 827-865, 910-929, 944-968"
+O94913 · PCF11_HUMAN,Pre-mRNA cleavage complex 2 protein Pcf11,PCF11,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1555,1: Evidence at protein level,5.0,"167-186, 266-648, 707-732, 749-781, 1056-1081, 1127-1147, 1159-1187, 1289-1315, 1516-1555"
+O95202 · LETM1_HUMAN,Mitochondrial proton/calcium exchanger protein,LETM1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,739,1: Evidence at protein level,5.0,718-739
+O95235 · KI20A_HUMAN,Kinesin-like protein KIF20A,KIF20A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,890,1: Evidence at protein level,5.0,832-865
+O95239 · KIF4A_HUMAN,Chromosome-associated kinesin KIF4A,KIF4A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1232,1: Evidence at protein level,5.0,"496-515, 1122-1142"
+O95249 · GOSR1_HUMAN,Golgi SNAP receptor complex member 1,GOSR1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,250,1: Evidence at protein level,5.0,38-59
+O95628 · CNOT4_HUMAN,CCR4-NOT transcription complex subunit 4,CNOT4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,575,1: Evidence at protein level,5.0,"256-372, 424-458, 553-575"
+P02671 · FIBA_HUMAN,Fibrinogen alpha chain,FGA,UniProtKB reviewed (Swiss-Prot),Homo sapiens,866,1: Evidence at protein level,5.0,"262-460, 543-638"
+P07332 · FES_HUMAN,Tyrosine-protein kinase Fes/Fps,FES,UniProtKB reviewed (Swiss-Prot),Homo sapiens,822,1: Evidence at protein level,5.0,394-421
+P11274 · BCR_HUMAN,Breakpoint cluster region protein,BCR,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1271,1: Evidence at protein level,5.0,"67-173, 185-247, 286-392, 416-476"
+P12270 · TPR_HUMAN,Nucleoprotein TPR,TPR,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2363,1: Evidence at protein level,5.0,"912-935, 1454-1474, 1619-1674, 1803-2134, 2227-2363"
+P18615 · NELFE_HUMAN,Negative elongation factor E,NELFE,UniProtKB reviewed (Swiss-Prot),Homo sapiens,380,1: Evidence at protein level,5.0,"30-67, 79-258"
+P35247 · SFTPD_HUMAN,Pulmonary surfactant-associated protein D,SFTPD,UniProtKB reviewed (Swiss-Prot),Homo sapiens,375,1: Evidence at protein level,5.0,45-221
+P35606 · COPB2_HUMAN,Coatomer subunit beta',COPB2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,906,1: Evidence at protein level,5.0,837-870
+P39880 · CUX1_HUMAN,Homeobox protein cut-like 1,CUX1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1505,1: Evidence at protein level,5.0,"396-455, 512-552, 646-669, 682-704, 768-802, 815-930, 1036-1110, 1210-1247, 1312-1480"
+P42695 · CNDD3_HUMAN,Condensin-2 complex subunit D3,NCAPD3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1498,1: Evidence at protein level,5.0,"155-188, 514-533, 889-911, 1306-1339, 1429-1498"
+P46937 · YAP1_HUMAN,Transcriptional coactivator YAP1,YAP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,504,1: Evidence at protein level,5.0,"1-59, 91-114, 133-158, 275-309, 355-407"
+P49321 · NASP_HUMAN,Nuclear autoantigenic sperm protein,NASP,UniProtKB reviewed (Swiss-Prot),Homo sapiens,788,1: Evidence at protein level,5.0,"114-139, 151-507, 678-788"
+P50851 · LRBA_HUMAN,Lipopolysaccharide-responsive and beige-like anchor protein,LRBA,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2863,1: Evidence at protein level,5.0,"1-35, 969-1005, 1018-1039, 1161-1193, 1586-1668, 1759-1789"
+P55268 · LAMB2_HUMAN,Laminin subunit beta-2,LAMB2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1798,1: Evidence at protein level,5.0,1338-1364
+P56696 · KCNQ4_HUMAN,Potassium voltage-gated channel subfamily KQT member 4,KCNQ4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,695,1: Evidence at protein level,5.0,"1-21, 400-480, 496-515, 587-606"
+P78380 · OLR1_HUMAN,Oxidized low-density lipoprotein receptor 1,OLR1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,273,1: Evidence at protein level,5.0,1-22
+P98161 · PKD1_HUMAN,Polycystin-1,PKD1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,4303,1: Evidence at protein level,5.0,"616-635, 4160-4196, 4243-4303"
+P98171 · RHG04_HUMAN,Rho GTPase-activating protein 4,ARHGAP4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,946,1: Evidence at protein level,5.0,"187-220, 402-435, 885-946"
+Q00722 · PLCB2_HUMAN,"1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-2",PLCB2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1185,1: Evidence at protein level,5.0,"460-533, 859-888, 943-979"
+Q01850 · CDR2_HUMAN,Cerebellar degeneration-related protein 2,CDR2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,454,1: Evidence at protein level,5.0,134-153
+Q0D2I5 · IFFO1_HUMAN,Non-homologous end joining factor IFFO1,IFFO1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,559,1: Evidence at protein level,5.0,"21-57, 158-187, 360-394, 520-559"
+Q0VDD8 · DYH14_HUMAN,Dynein axonemal heavy chain 14,DNAH14,UniProtKB reviewed (Swiss-Prot),Homo sapiens,3507,1: Evidence at protein level,5.0,91-126
+Q12840 · KIF5A_HUMAN,Kinesin heavy chain isoform 5A,KIF5A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1032,1: Evidence at protein level,5.0,"906-939, 978-1010"
+Q13137 · CACO2_HUMAN,Calcium-binding and coiled-coil domain-containing protein 2,CALCOCO2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,446,1: Evidence at protein level,5.0,362-390
+Q13188 · STK3_HUMAN,Serine/threonine-protein kinase 3,STK3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,491,1: Evidence at protein level,5.0,"301-327, 370-392"
+Q13201 · MMRN1_HUMAN,Multimerin-1,MMRN1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1228,1: Evidence at protein level,5.0,"68-98, 157-200"
+Q13287 · NMI_HUMAN,N-myc-interactor,NMI,UniProtKB reviewed (Swiss-Prot),Homo sapiens,307,1: Evidence at protein level,5.0,1-24
+Q13426 · XRCC4_HUMAN,DNA repair protein XRCC4,XRCC4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,336,1: Evidence at protein level,5.0,"212-249, 264-336"
+Q13433 · S39A6_HUMAN,Zinc transporter ZIP6,SLC39A6,UniProtKB reviewed (Swiss-Prot),Homo sapiens,755,1: Evidence at protein level,5.0,"95-186, 202-246"
+Q13515 · BFSP2_HUMAN,Phakinin,BFSP2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,415,1: Evidence at protein level,5.0,1-46
+Q13561 · DCTN2_HUMAN,Dynactin subunit 2,DCTN2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,401,1: Evidence at protein level,5.0,1-25
+Q14134 · TRI29_HUMAN,Tripartite motif-containing protein 29,TRIM29,UniProtKB reviewed (Swiss-Prot),Homo sapiens,588,1: Evidence at protein level,5.0,1-66
+Q14204 · DYHC1_HUMAN,Cytoplasmic dynein 1 heavy chain 1,DYNC1H1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,4646,1: Evidence at protein level,5.0,2390-2411
+Q14678 · KANK1_HUMAN,KN motif and ankyrin repeat domain-containing protein 1,KANK1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1352,1: Evidence at protein level,5.0,"1-31, 63-103, 914-951, 979-1026, 1331-1352"
+Q14789 · GOGB1_HUMAN,Golgin subfamily B member 1,GOLGB1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,3259,1: Evidence at protein level,5.0,"119-142, 624-652, 944-963, 1747-1829, 2856-2876, 2998-3021, 3107-3140"
+Q15047 · SETB1_HUMAN,Histone-lysine N-methyltransferase SETDB1,SETDB1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1291,1: Evidence at protein level,5.0,"108-147, 404-545, 868-1160"
+Q15111 · PLCL1_HUMAN,Inactive phospholipase C-like protein 1,PLCL1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1095,1: Evidence at protein level,5.0,"1-61, 1066-1095"
+Q15398 · DLGP5_HUMAN,Disks large-associated protein 5,DLGAP5,UniProtKB reviewed (Swiss-Prot),Homo sapiens,846,1: Evidence at protein level,5.0,"153-284, 628-674"
+Q15545 · TAF7_HUMAN,Transcription initiation factor TFIID subunit 7,TAF7,UniProtKB reviewed (Swiss-Prot),Homo sapiens,349,1: Evidence at protein level,5.0,"105-126, 186-212, 227-247, 328-349"
+Q16280 · CNGA2_HUMAN,Cyclic nucleotide-gated channel alpha-2,CNGA2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,664,2: Evidence at transcript level,5.0,"1-49, 641-664"
+Q2Q1W2 · LIN41_HUMAN,E3 ubiquitin-protein ligase TRIM71,TRIM71,UniProtKB reviewed (Swiss-Prot),Homo sapiens,868,1: Evidence at protein level,5.0,"26-49, 127-189"
+Q2VIQ3 · KIF4B_HUMAN,Chromosome-associated kinesin KIF4B,KIF4B,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1234,1: Evidence at protein level,5.0,"494-513, 712-737, 1007-1030, 1052-1076, 1122-1143, 1183-1234"
+Q2YD98 · UVSSA_HUMAN,UV-stimulated scaffold protein A,UVSSA,UniProtKB reviewed (Swiss-Prot),Homo sapiens,709,1: Evidence at protein level,5.0,"1-20, 230-289, 386-406, 469-495, 588-655"
+Q32MZ4 · LRRF1_HUMAN,Leucine-rich repeat flightless-interacting protein 1,LRRFIP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,808,1: Evidence at protein level,5.0,"41-126, 393-415, 461-808"
+Q494R4 · DRC12_HUMAN,Dynein regulatory complex protein 12,DRC12,UniProtKB reviewed (Swiss-Prot),Homo sapiens,210,1: Evidence at protein level,5.0,"1-23, 188-210"
+Q4G0P3 · HYDIN_HUMAN,Hydrocephalus-inducing protein homolog,HYDIN,UniProtKB reviewed (Swiss-Prot),Homo sapiens,5121,1: Evidence at protein level,5.0,"956-987, 1925-1951, 2155-2186, 2333-2459, 2482-2534, 2664-2684, 3852-3874"
+Q4L180 · FIL1L_HUMAN,Filamin A-interacting protein 1-like,FILIP1L,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1135,1: Evidence at protein level,5.0,1-65
+Q4VCS5 · AMOT_HUMAN,Angiomotin,AMOT,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1084,1: Evidence at protein level,5.0,"24-86, 185-205, 224-268, 300-424, 837-876, 995-1041"
+Q52LW3 · RHG29_HUMAN,Rho GTPase-activating protein 29,ARHGAP29,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1261,1: Evidence at protein level,5.0,"481-501, 541-600, 981-1011, 1117-1153, 1178-1238"
+Q53EV4 · LRC23_HUMAN,Leucine-rich repeat-containing protein 23,LRRC23,UniProtKB reviewed (Swiss-Prot),Homo sapiens,343,1: Evidence at protein level,5.0,"1-47, 318-343"
+Q53FD0 · ZC21C_HUMAN,Zinc finger C2HC domain-containing protein 1C,ZC2HC1C,UniProtKB reviewed (Swiss-Prot),Homo sapiens,456,1: Evidence at protein level,5.0,"16-46, 85-113, 336-388"
+Q58A45 · PAN3_HUMAN,PAN2-PAN3 deadenylation complex subunit PAN3,PAN3,UniProtKB reviewed (Swiss-Prot),Homo sapiens,887,1: Evidence at protein level,5.0,"102-147, 284-307, 325-392"
+Q5BKX8 · CAVN4_HUMAN,Caveolae-associated protein 4,CAVIN4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,364,1: Evidence at protein level,5.0,"1-24, 231-283, 311-339"
+Q5SW24 · DACT2_HUMAN,Dapper homolog 2,DACT2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,774,1: Evidence at protein level,5.0,"188-225, 295-319, 345-500, 624-710"
+Q5SZL2 · CE85L_HUMAN,Centrosomal protein of 85 kDa-like,CEP85L,UniProtKB reviewed (Swiss-Prot),Homo sapiens,805,1: Evidence at protein level,5.0,"1-27, 50-89"
+Q5TCY1 · TTBK1_HUMAN,Tau-tubulin kinase 1,TTBK1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1321,1: Evidence at protein level,5.0,"363-397, 416-677, 714-908, 997-1092, 1104-1321"
+Q5TCZ1 · SPD2A_HUMAN,SH3 and PX domain-containing protein 2A,SH3PXD2A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1133,1: Evidence at protein level,5.0,"415-446, 505-840, 899-924, 941-964, 1029-1059"
+Q5VIR6 · VPS53_HUMAN,Vacuolar protein sorting-associated protein 53 homolog,VPS53,UniProtKB reviewed (Swiss-Prot),Homo sapiens,832,1: Evidence at protein level,5.0,"373-412, 794-822"
+Q5VSY0 · GKAP1_HUMAN,G kinase-anchoring protein 1,GKAP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,366,1: Evidence at protein level,5.0,"20-110, 147-177"
+Q5VT25 · MRCKA_HUMAN,Serine/threonine-protein kinase MRCK alpha,CDC42BPA,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1732,1: Evidence at protein level,5.0,"968-1003, 1591-1732"
+Q5W0B1 · OBI1_HUMAN,ORC ubiquitin ligase 1,OBI1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,726,1: Evidence at protein level,5.0,"276-334, 436-460, 570-602, 687-726"
+Q63HN8 · RN213_HUMAN,E3 ubiquitin-protein ligase RNF213,RNF213,UniProtKB reviewed (Swiss-Prot),Homo sapiens,5207,1: Evidence at protein level,5.0,"1-20, 27-365"
+Q63HQ0 · AP1AR_HUMAN,AP-1 complex-associated regulatory protein,AP1AR,UniProtKB reviewed (Swiss-Prot),Homo sapiens,302,1: Evidence at protein level,5.0,188-258
+Q68CZ1 · FTM_HUMAN,Protein fantom,RPGRIP1L,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1315,1: Evidence at protein level,5.0,1021-1083
+Q6BDS2 · BLT3A_HUMAN,Bridge-like lipid transfer protein family member 3A,BLTP3A,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1440,1: Evidence at protein level,5.0,"267-307, 430-456, 751-780, 891-1008, 1106-1180"
+Q6P2E9 · EDC4_HUMAN,Enhancer of mRNA-decapping protein 4,EDC4,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1401,1: Evidence at protein level,5.0,"23-42, 545-565, 603-628, 662-702, 717-741, 778-808, 868-946"
+Q6P3W7 · SCYL2_HUMAN,SCY1-like protein 2,SCYL2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,929,1: Evidence at protein level,5.0,"684-709, 906-929"
+Q6P6C2 · ALKB5_HUMAN,RNA demethylase ALKBH5,ALKBH5,UniProtKB reviewed (Swiss-Prot),Homo sapiens,394,1: Evidence at protein level,5.0,"1-26, 48-83, 299-394"
+Q6QNY1 · BL1S2_HUMAN,Biogenesis of lysosome-related organelles complex 1 subunit 2,BLOC1S2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,142,1: Evidence at protein level,5.0,1-33
+Q6S8J3 · POTEE_HUMAN,POTE ankyrin domain family member E,POTEE,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1075,1: Evidence at protein level,5.0,"369-530, 544-599"
+Q6VMQ6 · MCAF1_HUMAN,Activating transcription factor 7-interacting protein 1,ATF7IP,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1270,1: Evidence at protein level,5.0,"104-223, 235-402, 455-570, 658-685, 822-862, 886-906, 918-1026, 1115-1160"
+Q6ZP82 · CC141_HUMAN,Coiled-coil domain-containing protein 141,CCDC141,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1530,1: Evidence at protein level,5.0,1210-1241
+Q6ZS17 · RIPR1_HUMAN,Rho family-interacting cell polarization regulator 1,RIPOR1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1223,1: Evidence at protein level,5.0,"375-411, 475-769, 856-889"
+Q6ZU52 · K0408_HUMAN,Uncharacterized protein KIAA0408,KIAA0408,UniProtKB reviewed (Swiss-Prot),Homo sapiens,694,1: Evidence at protein level,5.0,"259-286, 461-490, 643-680"
+Q70EL1 · UBP54_HUMAN,Ubiquitin carboxyl-terminal hydrolase 54,USP54,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1684,1: Evidence at protein level,5.0,"374-416, 430-578, 607-703, 720-742, 859-894, 928-950, 967-1060, 1139-1227, 1334-1391, 1425-1455, 1620-1652"
+Q70UQ0 · IKIP_HUMAN,Inhibitor of nuclear factor kappa-B kinase-interacting protein,IKBIP,UniProtKB reviewed (Swiss-Prot),Homo sapiens,350,1: Evidence at protein level,5.0,1-39
+Q71F23 · CENPU_HUMAN,Centromere protein U,CENPU,UniProtKB reviewed (Swiss-Prot),Homo sapiens,418,1: Evidence at protein level,5.0,"1-76, 88-227"
+Q765P7 · MTSS2_HUMAN,Protein MTSS 2,MTSS2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,747,1: Evidence at protein level,5.0,"256-302, 318-441, 457-522, 543-599, 638-664, 691-720"
+Q7Z2Y5 · NRK_HUMAN,Nik-related protein kinase,NRK,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1582,1: Evidence at protein level,5.0,"492-579, 783-859, 926-1156"
+Q7Z333 · SETX_HUMAN,Probable helicase senataxin,SETX,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2677,1: Evidence at protein level,5.0,"1158-1219, 1237-1258, 1351-1385, 1579-1604, 2474-2496, 2556-2577, 2597-2677"
+Q7Z3B3 · KANL1_HUMAN,KAT8 regulatory NSL complex subunit 1,KANSL1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1105,1: Evidence at protein level,5.0,"145-211, 225-263, 399-426, 733-857, 938-1034, 1058-1105"
+Q7Z478 · DHX29_HUMAN,ATP-dependent RNA helicase DHX29,DHX29,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1369,1: Evidence at protein level,5.0,"27-75, 176-226, 502-526"
+Q86SG2 · ANR23_HUMAN,Ankyrin repeat domain-containing protein 23,ANKRD23,UniProtKB reviewed (Swiss-Prot),Homo sapiens,305,1: Evidence at protein level,5.0,83-104
+Q86SQ0 · PHLB2_HUMAN,Pleckstrin homology-like domain family B member 2,PHLDB2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1253,1: Evidence at protein level,5.0,"1-43, 60-159, 187-212, 265-286, 525-567"
+Q86UD0 · SAPC2_HUMAN,Suppressor APC domain-containing protein 2,SAPCD2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,394,1: Evidence at protein level,5.0,"1-23, 95-125, 150-188"
+Q86VF2 · IGFN1_HUMAN,Immunoglobulin-like and fibronectin type III domain-containing protein 1,IGFN1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1251,1: Evidence at protein level,5.0,"61-81, 403-454"
+Q86VM9 · ZCH18_HUMAN,Zinc finger CCCH domain-containing protein 18,ZC3H18,UniProtKB reviewed (Swiss-Prot),Homo sapiens,953,1: Evidence at protein level,5.0,"1-222, 391-928"
+Q86VQ0 · LCA5_HUMAN,Lebercilin,LCA5,UniProtKB reviewed (Swiss-Prot),Homo sapiens,697,1: Evidence at protein level,5.0,"1-90, 412-432, 522-548, 606-697"
+Q8IU81 · I2BP1_HUMAN,Interferon regulatory factor 2-binding protein 1,IRF2BP1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,584,1: Evidence at protein level,5.0,"60-127, 346-420, 433-495"
+Q8IUD2 · RB6I2_HUMAN,ELKS/Rab6-interacting/CAST family member 1,ERC1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1116,1: Evidence at protein level,5.0,"1-54, 590-609, 814-836"
+Q8IVF5 · TIAM2_HUMAN,Rho guanine nucleotide exchange factor TIAM2,TIAM2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1701,1: Evidence at protein level,5.0,"1-21, 201-250, 265-293, 389-417, 1070-1092, 1500-1556, 1568-1628"
+Q8IVT2 · MISP_HUMAN,Mitotic interactor and substrate of PLK1,MISP,UniProtKB reviewed (Swiss-Prot),Homo sapiens,679,1: Evidence at protein level,5.0,"151-182, 206-245, 360-419, 447-494, 557-598, 622-643"
+Q8IWJ2 · GCC2_HUMAN,GRIP and coiled-coil domain-containing protein 2,GCC2,UniProtKB reviewed (Swiss-Prot),Homo sapiens,1684,1: Evidence at protein level,5.0,"1-22, 1475-1502"
+Q8IWN7 · RP1L1_HUMAN,Retinitis pigmentosa 1-like 1 protein,RP1L1,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2400,1: Evidence at protein level,5.0,"104-152, 230-310, 444-1064, 1188-1251, 1275-1501, 1697-2400"
+Q8IWT3 · CUL9_HUMAN,Cullin-9,CUL9,UniProtKB reviewed (Swiss-Prot),Homo sapiens,2517,1: Evidence at protein level,5.0,"276-296, 576-639, 1432-1466, 1664-1685, 2442-2517"

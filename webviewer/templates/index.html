@@ -137,14 +137,37 @@
           placeholder="Location keyword"
         />
       </div>
-      <div class="filter-row filter-row-keywords">
-        <label for="location_class">Subcellular class (20-cat)</label>
-        <select id="location_class" name="location_class">
-          <option value="" {% if not location_class %}selected{% endif %}>All</option>
+      <div class="filter-row filter-row-keywords location-class-row">
+        <label class="location-class-label">Subcellular class (20-cat)</label>
+        <div class="location-class-tabs" role="tablist" aria-label="Subcellular class 20 categories">
+          <div class="location-class-tab {% if not location_class %}active{% endif %}" data-value="">
+            <button type="button" class="location-class-tab-button" role="tab">
+              All
+              <span class="location-class-arrow">‹</span>
+            </button>
+            <div class="location-class-panel" role="tabpanel">
+              <div class="location-class-panel-title">All classes</div>
+              <div class="location-class-panel-body">Select a category to filter.</div>
+            </div>
+          </div>
           {% for cid, label in LOCATION_CLASS_OPTIONS %}
-            <option value="{{ cid }}" {% if location_class == cid %}selected{% endif %}>{{ label }}</option>
+            <div class="location-class-tab {% if location_class == cid %}active{% endif %}" data-value="{{ cid }}">
+              <button type="button" class="location-class-tab-button" role="tab">
+                {{ label }}
+                <span class="location-class-arrow">‹</span>
+              </button>
+              <div class="location-class-panel" role="tabpanel">
+                <div class="location-class-panel-title">{{ label }}</div>
+                <ul class="location-class-list">
+                  {% for term in LOCATION_CLASS_TOKENS.get(cid, []) %}
+                    <li>{{ term }}</li>
+                  {% endfor %}
+                </ul>
+              </div>
+            </div>
           {% endfor %}
-        </select>
+        </div>
+        <input type="hidden" class="location-class-input" name="location_class" value="{{ location_class if location_class is not none else '' }}" />
       </div>
       <div class="filter-row filter-row-actions">
         <label class="checkbox-inline" for="hide_missing_protein">

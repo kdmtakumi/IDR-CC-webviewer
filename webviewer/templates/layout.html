@@ -28,6 +28,22 @@
       <p>IDR+CC Browser · Supabase-backed dataset viewer</p>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      document.querySelectorAll('.location-class-tabs').forEach((tabs) => {
+        const input = tabs.parentElement.querySelector('.location-class-input');
+        if (!input) return;
+        const items = tabs.querySelectorAll('.location-class-tab');
+        items.forEach((item) => {
+          const button = item.querySelector('.location-class-tab-button');
+          if (!button) return;
+          button.addEventListener('click', () => {
+            items.forEach((el) => el.classList.remove('active'));
+            item.classList.add('active');
+            input.value = item.dataset.value || '';
+          });
+        });
+      });
+    </script>
     {% block scripts %}{% endblock %}
   </body>
 </html>

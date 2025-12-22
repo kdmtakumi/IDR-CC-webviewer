@@ -1,0 +1,1526 @@
+ID,Protein,Gene,Organism,Amino acids,Disordered positions
+Q3U492 · KCP_MOUSE,Kielin/chordin-like protein,Kcp,Mus musculus,1550,31-53
+Q3UG20 · KMT2E_MOUSE,Inactive histone-lysine N-methyltransferase 2E,Kmt2e,Mus musculus,1868,"178-197, 217-268, 308-329, 472-504, 646-682, 884-924, 1038-1068, 1165-1222, 1236-1315, 1334-1565, 1585-1842"
+Q3UHC7 · DAB2P_MOUSE,Disabled homolog 2-interacting protein,Dab2ip,Mus musculus,1189,"1-75, 653-679, 715-738, 804-823, 843-865, 895-998, 1015-1034, 1163-1189"
+Q3UHZ5 · LMOD2_MOUSE,Leiomodin-2,Lmod2,Mus musculus,550,"84-202, 359-527"
+Q3UMB9 · WASC4_MOUSE,WASH complex subunit 4,Washc4,Mus musculus,1173,1141-1173
+Q3UMY5 · EMAL4_MOUSE,Echinoderm microtubule-associated protein-like 4,Eml4,Mus musculus,988,"106-194, 887-988"
+Q3USS3 · DRC1_MOUSE,Dynein regulatory complex protein 1,Drc1,Mus musculus,753,"1-33, 55-76, 587-628"
+Q3V0F0 · RIMB3_MOUSE,RIMS-binding protein 3,Rimbp3,Mus musculus,1606,"1-27, 41-70, 217-249, 295-352, 677-731, 744-781, 1234-1255, 1364-1392"
+Q4QRL3 · CC88B_MOUSE,Coiled-coil domain-containing protein 88B,Ccdc88b,Mus musculus,1481,"430-458, 494-731, 1331-1481"
+Q505B8 · SYCE2_MOUSE,Synaptonemal complex central element protein 2,Syce2,Mus musculus,171,1-52
+Q54GV7 · SIR2D_DICDI,NAD-dependent deacetylase sir2D,sir2D,Dictyostelium discoideum,542,"1-37, 136-160"
+Q54HC6 · ARKA_DICDI,Ankyrin repeat-containing protein kinase A,arkA,Dictyostelium discoideum,1460,"1-32, 57-181, 216-259, 272-311, 329-354, 374-510, 551-608, 1434-1460"
+Q54L53 · GRLD_DICDI,Metabotropic glutamate receptor-like protein D,grlD,Dictyostelium discoideum,791,"664-715, 746-791"
+Q54QV3 · YAKA_DICDI,Probable serine/threonine-protein kinase yakA,yakA,Dictyostelium discoideum,1458,"32-83, 441-462, 545-571, 659-714, 791-874, 930-1095, 1128-1161, 1233-1347, 1375-1399, 1435-1458"
+Q54SP2 · FORB_DICDI,Formin-B,forB,Dictyostelium discoideum,1126,"1-21, 427-462, 518-619, 1004-1078"
+Q54YU6 · CRTF_DICDI,CAR1 transcription factor,CRTF,Dictyostelium discoideum,876,"76-120, 199-336, 360-395, 409-478, 530-552, 565-643"
+Q557E7 · CBLA_DICDI,E3 ubiquitin-protein ligase cblA,cblA-1,Dictyostelium discoideum,665,"30-50, 437-456, 467-609"
+Q558Z2 · SUN1_DICDI,Sun domain-containing protein 1,sun1,Dictyostelium discoideum,905,"1-21, 41-166, 207-242"
+Q55GJ2 · IREA_DICDI,Probable serine/threonine-protein kinase ireA,ireA,Dictyostelium discoideum,984,"70-91, 137-157, 352-427, 472-518, 667-692"
+Q569C1 · CHM4C_RAT,Charged multivesicular body protein 4c,Chmp4c,Rattus norvegicus,232,"1-23, 172-232"
+Q56A27 · NCBP1_RAT,Nuclear cap-binding protein subunit 1,Ncbp1,Rattus norvegicus,790,1-26
+Q56A40 · CCD40_DANRE,Coiled-coil domain-containing protein 40,ccdc40,Danio rerio,941,1-31
+Q56Y74 · MORC6_ARATH,Protein MICRORCHIDIA 6,MORC6,Arabidopsis thaliana,663,1-77
+Q58CS7 · CHMP3_BOVIN,Charged multivesicular body protein 3,CHMP3,Bos taurus,222,180-222
+Q59E36 · RCOR_DROME,REST corepressor,CoRest,Drosophila melanogaster,590,"1-90, 244-266, 364-432, 503-590"
+Q5E9L6 · STK4_BOVIN,Serine/threonine-protein kinase 4,STK4,Bos taurus,487,305-332
+Q5HZI1 · MTUS1_MOUSE,Microtubule-associated tumor suppressor 1 homolog,Mtus1,Mus musculus,1210,"1-21, 370-404, 446-482, 513-545, 585-618, 683-771, 1177-1210"
+Q5NCC3 · TRI41_MOUSE,E3 ubiquitin-protein ligase TRIM41,Trim41,Mus musculus,630,"51-97, 148-176, 503-535"
+Q5RI56 · OPTN_DANRE,Optineurin,optn,Danio rerio,517,"216-237, 454-488"
+Q5SNZ0 · GRDN_MOUSE,Girdin,Ccdc88a,Mus musculus,1873,"816-841, 1013-1034, 1407-1459, 1560-1602, 1616-1643, 1738-1873"
+Q5TJ65 · VASP_DICDI,Protein VASP homolog,vasp,Dictyostelium discoideum,380,94-346
+Q5TZ18 · NAV3_DANRE,Neuron navigator 3,nav3,Danio rerio,2269,"186-358, 388-532, 692-737, 756-776, 836-1036, 1050-1079, 1097-1412, 1461-1487, 1602-1672, 1756-1792, 2207-2269"
+Q5U303 · TAB2_RAT,TGF-beta-activated kinase 1 and MAP3K7-binding protein 2,Tab2,Rattus norvegicus,693,"90-117, 224-310, 330-361, 564-583, 640-663"
+Q5U312 · RAI14_RAT,Ankycorbin,Rai14,Rattus norvegicus,978,"248-299, 388-424"
+Q5U3A7 · OPA1_DANRE,"Dynamin-like GTPase OPA1, mitochondrial",opa1,Danio rerio,966,189-217
+Q5XIN3 · MIPT3_RAT,TRAF3-interacting protein 1,Traf3ip1,Rattus norvegicus,653,134-467
+Q60848 · HELLS_MOUSE,Lymphocyte-specific helicase,Hells,Mus musculus,821,78-120
+Q60974 · NCOR1_MOUSE,Nuclear receptor corepressor 1,Ncor1,Mus musculus,2453,"1-116, 147-177, 206-231, 497-631, 677-908, 1034-1058, 1450-1544, 1697-1780, 1902-1939, 1959-2060, 2088-2174, 2303-2396"
+Q61315 · APC_MOUSE,Adenomatous polyposis coli protein,Apc,Mus musculus,2845,"238-304, 828-873, 921-942, 956-986, 1058-1079, 1092-1168, 1189-1247, 1307-1375, 1400-1474, 1525-1568, 1587-1606, 1746-2010, 2042-2069, 2146-2190, 2202-2652, 2664-2845"
+Q61409 · PDE3B_MOUSE,"cGMP-inhibited 3',5'-cyclic phosphodiesterase 3B",Pde3b,Mus musculus,1100,"1-29, 400-423, 570-590, 993-1033"
+Q61768 · KINH_MOUSE,Kinesin-1 heavy chain,Kif5b,Mus musculus,963,908-963
+Q62393 · TPD52_MOUSE,Tumor protein D52,Tpd52,Mus musculus,224,"29-53, 186-224"
+Q62420 · SH3G2_MOUSE,Endophilin-A1,Sh3gl2,Mus musculus,352,"1-27, 264-289"
+Q63406 · MCF2L_RAT,Guanine nucleotide exchange factor DBS,Mcf2l,Rattus norvegicus,1149,"555-627, 956-1033"
+Q66HD3 · NASP_RAT,Nuclear autoantigenic sperm protein,Nasp,Rattus norvegicus,776,"115-241, 256-289, 345-497, 685-776"
+Q66I42 · MOESA_DANRE,Moesin a,msna,Danio rerio,579,"308-341, 376-418, 464-519"
+Q66JT0 · WEE2_MOUSE,Wee1-like protein kinase 2,Wee2,Mus musculus,555,1-112
+Q689Z5 · SBNO1_MOUSE,Protein strawberry notch homolog 1,Sbno1,Mus musculus,1390,"21-43, 685-846, 872-891"
+Q68G30 · KLC3_RAT,Kinesin light chain 3,Klc3,Rattus norvegicus,505,"1-20, 154-197, 409-439, 486-505"
+Q69ZS0 · PZRN3_MOUSE,E3 ubiquitin-protein ligase PDZRN3,Pdzrn3,Mus musculus,1063,"545-602, 746-798, 834-853"
+Q69ZT1 · FAN1_MOUSE,Fanconi-associated nuclease 1,Fan1,Mus musculus,1020,"1-24, 173-208, 224-252, 269-288"
+Q69ZU6 · THS7A_MOUSE,Thrombospondin type-1 domain-containing protein 7A,Thsd7a,Mus musculus,1645,255-300
+Q6A028 · SWP70_MOUSE,Switch-associated protein 70,Swap70,Mus musculus,585,347-373
+Q6A078 · CE290_MOUSE,Centrosomal protein of 290 kDa,Cep290,Mus musculus,2472,"128-164, 1691-1713, 2451-2472"
+Q6AYL6 · MIEAP_RAT,Mitochondria-eating protein,Spata18,Rattus norvegicus,556,"110-150, 171-214, 234-313"
+Q6B9X6 · VWKA_DICDI,Alpha-protein kinase vwkA,vwkA,Dictyostelium discoideum,625,"1-64, 602-625"
+Q6DRB1 · GLE1_DANRE,mRNA export factor GLE1,gle1,Danio rerio,695,"203-226, 354-400"
+Q6E2N3 · TRI33_DANRE,E3 ubiquitin-protein ligase TRIM33,trim33,Danio rerio,1163,"1-119, 524-555, 575-599, 656-706, 753-848, 867-918, 1128-1147"
+Q6I6D4 · CLUA1_CAEEL,Clusterin-associated protein 1 homolog,dyf-3,Caenorhabditis elegans,404,328-382
+Q6IMF3 · K2C1_RAT,"Keratin, type II cytoskeletal 1",Krt1,Rattus norvegicus,625,"1-27, 496-525, 560-625"
+Q6IVV8 · PKD2_DANRE,Polycystin-2,pkd2,Danio rerio,904,"1-102, 708-770, 854-904"
+Q6IWA9 · CLE45_ARATH,CLAVATA3/ESR (CLE)-related protein 45,CLE45,Arabidopsis thaliana,124,87-124
+Q6NS45 · CCD66_MOUSE,Coiled-coil domain-containing protein 66,Ccdc66,Mus musculus,935,"76-103, 470-491, 577-602, 738-794"
+Q6NVE8 · WDR44_MOUSE,WD repeat-containing protein 44,Wdr44,Mus musculus,915,"1-24, 79-102, 117-174, 208-282, 399-425, 461-481, 559-593"
+Q6NYV9 · LEO1_DANRE,RNA polymerase-associated protein LEO1,leo1,Danio rerio,696,"1-336, 526-560, 584-696"
+Q6PAJ1 · BCR_MOUSE,Breakpoint cluster region protein,Bcr,Mus musculus,1270,"67-173, 201-249, 295-396, 412-481"
+Q6PBN2 · AIDA_DANRE,"Axin interactor, dorsalization-associated protein",aida,Danio rerio,303,133-156
+Q6PCQ0 · IQCE_MOUSE,IQ domain-containing protein E,Iqce,Mus musculus,778,"1-71, 83-108, 348-392, 443-462, 474-529, 573-612, 651-778"
+Q6PDK2 · KMT2D_MOUSE,Histone-lysine N-methyltransferase 2D,Kmt2d,Mus musculus,5588,"1-61, 438-908, 922-1315, 1566-1721, 1751-1846, 1886-1962, 2095-2641, 2655-2806, 3069-3104, 3129-3193, 3271-3326, 3460-3496, 3593-3617, 3633-3661, 3678-3704, 3760-3780, 3808-3827, 4053-4249, 4290-4452, 4553-4596, 4664-4716, 4729-4778, 4877-4908, 4956-5031"
+Q6PDM1 · MSL1_MOUSE,Male-specific lethal 1 homolog,Msl1,Mus musculus,616,"1-116, 152-218, 306-422"
+Q6PDM4 · IHO1_MOUSE,Interactor of HORMAD1 protein 1,Iho1,Mus musculus,574,"113-133, 267-324, 372-393, 426-457"
+Q6PDY0 · CC85B_MOUSE,Coiled-coil domain-containing protein 85B,Ccdc85b,Mus musculus,202,152-202
+Q6PGG6 · GNL3L_MOUSE,Guanine nucleotide-binding protein-like 3-like protein,Gnl3l,Mus musculus,577,1-75
+Q6PGZ3 · MIPT3_DANRE,TRAF3-interacting protein 1,traf3ip1,Danio rerio,629,130-511
+Q6PST4 · ATLA1_RAT,Atlastin-1,Atl1,Rattus norvegicus,558,1-29
+Q6Q4D0 · TONS_ARATH,Protein TONSOKU,TSK,Arabidopsis thaliana,1311,492-533
+Q6S000 · KIF12_DICDI,Kinesin-related protein 12,kif12,Dictyostelium discoideum,1499,"1-27, 68-92, 252-273, 497-521, 1021-1049, 1088-1107, 1161-1295, 1318-1383, 1395-1451"
+Q6S002 · KIF10_DICDI,Kinesin-related protein 10,kif10,Dictyostelium discoideum,1238,"417-503, 726-802, 891-971, 1134-1156, 1191-1238"
+Q6TMG5 · NEMO_RAT,NF-kappa-B essential modulator,Ikbkg,Rattus norvegicus,412,1-48
+Q6XUX1 · DUSTY_MOUSE,Dual serine/threonine and tyrosine protein kinase,Dstyk,Mus musculus,927,1-21
+Q6YUL8 · KN4A_ORYSJ,Kinesin-like protein KIN-4A,KIN4A,Oryza sativa subsp. japonica,1035,"697-720, 766-787, 882-928, 1014-1035"
+Q6ZPZ3 · ZC3H4_MOUSE,Zinc finger CCCH domain-containing protein 4,Zc3h4,Mus musculus,1304,"1-387, 485-567, 601-691, 719-970, 994-1304"
+Q6ZWR6 · SYNE1_MOUSE,Nesprin-1,Syne1,Mus musculus,8799,"1288-1310, 5868-5894, 8237-8287, 8673-8735"
+Q76JQ2 · FLCN_RAT,Folliculin,Flcn,Rattus norvegicus,579,"32-82, 294-320"
+Q78TU8 · F107A_MOUSE,Actin-associated protein FAM107A,Fam107a,Mus musculus,144,104-123
+Q7JUX9 · MRRP1_DROME,Mitochondrial ribonuclease P protein 1 homolog,rswl,Drosophila melanogaster,446,41-67
+Q7K3D8 · DMAP1_DROME,DNA methyltransferase 1-associated protein 1,DMAP1,Drosophila melanogaster,433,252-305
+Q7K5N4 · CALYP_DROME,Ubiquitin carboxyl-terminal hydrolase calypso,caly,Drosophila melanogaster,471,"307-326, 412-471"
+Q7KRY7 · SCRIB_DROME,Protein lap4,scrib,Drosophila melanogaster,1851,"427-474, 584-641, 656-719, 1067-1150, 1448-1485, 1647-1751, 1772-1851"
+Q7M6Y5 · DEUP1_MOUSE,Deuterosome assembly protein 1,Deup1,Mus musculus,601,305-329
+Q7SIG6 · ASAP2_MOUSE,"Arf-GAP with SH3 domain, ANK repeat and PH domain-containing protein 2",Asap2,Mus musculus,958,"283-316, 703-724, 767-900"
+Q7TQ95 · LNP_MOUSE,Endoplasmic reticulum junction formation protein lunapark,Lnpk,Mus musculus,425,"144-242, 320-425"
+Q7TT49 · MRCKB_RAT,Serine/threonine-protein kinase MRCK beta,Cdc42bpb,Rattus norvegicus,1713,"461-485, 971-1014, 1615-1713"
+Q7X9I0 · AGL65_ARATH,Agamous-like MADS-box protein AGL65,AGL65,Arabidopsis thaliana,389,310-343
+Q7XA66 · ZOP1_ARATH,Zinc finger protein ZOP1,ZOP1,Arabidopsis thaliana,242,154-242
+Q7YSI9 · UNC53_CAEEL,Adapter protein unc-53,unc-53,Caenorhabditis elegans,1654,"128-261, 274-364, 381-440, 480-501, 595-626, 650-680, 698-729, 747-799, 1059-1083"
+Q7YU24 · MARF_DROME,Transmembrane GTPase Marf,Marf,Drosophila melanogaster,810,"13-40, 609-630"
+Q7ZTU9 · TBX2_DANRE,T-box transcription factor TBX2b,tbx2b,Danio rerio,687,"303-452, 611-687"
+Q80TM9 · NISCH_MOUSE,Nischarin,Nisch,Mus musculus,1593,"466-499, 629-687, 1016-1185"
+Q80U16 · RIPR2_MOUSE,Rho family-interacting cell polarization regulator 2,Ripor2,Mus musculus,1078,488-534
+Q80UY2 · KCMF1_MOUSE,E3 ubiquitin-protein ligase KCMF1,Kcmf1,Mus musculus,381,154-194
+Q80YA9 · CNKR2_MOUSE,Connector enhancer of kinase suppressor of ras 2,Cnksr2,Mus musculus,1032,"324-349, 480-509, 538-558, 682-766, 864-900"
+Q80YR7 · CLSPN_MOUSE,Claspin,Clspn,Mus musculus,1315,"22-276, 345-474, 625-691, 713-750, 924-1002, 1032-1052, 1264-1315"
+Q812D1 · PSIP1_RAT,PC4 and SFRS1-interacting protein,Psip1,Rattus norvegicus,528,"86-347, 444-528"
+Q84TH9 · NLP7_ARATH,Protein NLP7,NLP7,Arabidopsis thaliana,959,"1-22, 673-760"
+Q86C56 · GCY31_CAEEL,Soluble guanylate cyclase gcy-31,gcy-31,Caenorhabditis elegans,702,614-702
+Q86H13 · PDE4_DICDI,"3',5'-cyclic-AMP phosphodiesterase 4",Pde4,Dictyostelium discoideum,1039,"40-63, 116-181, 738-835, 978-1033"
+Q8BMD2 · DZIP1_MOUSE,Cilium assembly protein DZIP1,Dzip1,Mus musculus,852,"434-463, 489-524, 597-623, 648-672, 685-726, 772-837"
+Q8BP27 · SFR1_MOUSE,Swi5-dependent recombination DNA repair protein 1 homolog,Sfr1,Mus musculus,319,1-215
+Q8BPM6 · RIC3_MOUSE,Protein RIC-3,Ric3,Mus musculus,367,"30-67, 262-301, 322-367"
+Q8BPN8 · DMXL2_MOUSE,DmX-like protein 2,Dmxl2,Mus musculus,3032,"418-486, 577-598, 937-958, 1443-1464, 1922-1953, 2722-2744"
+Q8BRH4 · KMT2C_MOUSE,Histone-lysine N-methyltransferase 2C,Kmt2c,Mus musculus,4903,"1-116, 159-202, 671-703, 824-857, 882-904, 1208-1318, 1397-1419, 1447-1473, 1594-1617, 1698-1757, 1791-2375, 2561-2668, 2702-2736, 2786-2844, 2920-2953, 3198-3223, 3329-3407, 3444-3910, 4159-4184"
+Q8BVL9 · JKIP1_MOUSE,Janus kinase and microtubule-interacting protein 1,Jakmip1,Mus musculus,626,"1-25, 452-481"
+Q8BX02 · KANK2_MOUSE,KN motif and ankyrin repeat domain-containing protein 2,Kank2,Mus musculus,843,"1-31, 161-182, 410-577"
+Q8BX17 · GEMI5_MOUSE,Gem-associated protein 5,Gemin5,Mus musculus,1502,"740-797, 819-838, 1309-1338, 1378-1427"
+Q8BX46 · SKOR1_MOUSE,SKI family transcriptional corepressor 1,Skor1,Mus musculus,964,"45-72, 278-365, 414-461, 525-587, 610-768, 794-842"
+Q8BZB3 · TM266_MOUSE,Transmembrane protein 266,Tmem266,Mus musculus,538,"380-435, 453-483"
+Q8C0Q4 · NEK11_MOUSE,Serine/threonine-protein kinase Nek11,Nek11,Mus musculus,628,452-475
+Q8C0T5 · SI1L1_MOUSE,Signal-induced proliferation-associated 1-like protein 1,Sipa1l1,Mus musculus,1782,"1-28, 47-125, 140-171, 277-297, 1069-1128, 1144-1213, 1247-1285, 1307-1342, 1358-1454, 1625-1647"
+Q8C145 · S39A6_MOUSE,Zinc transporter ZIP6,Slc39a6,Mus musculus,765,"96-196, 209-257, 458-519"
+Q8C4V1 · RHG24_MOUSE,Rho GTPase-activating protein 24,Arhgap24,Mus musculus,747,"1-20, 327-475, 581-639"
+Q8C963 · CC159_MOUSE,Coiled-coil domain-containing protein 159,Ccdc159,Mus musculus,411,"84-113, 372-411"
+Q8CAQ8 · MIC60_MOUSE,MICOS complex subunit Mic60,Immt,Mus musculus,757,164-199
+Q8CFC7 · CLASR_MOUSE,CLK4-associating serine/arginine rich protein,Clasrp,Mus musculus,668,"173-232, 252-668"
+Q8CG46 · SMC5_MOUSE,Structural maintenance of chromosomes protein 5,Smc5,Mus musculus,1101,1-44
+Q8CGB3 · UACA_MOUSE,Uveal autoantigen with coiled-coil domains and ankyrin repeats,Uaca,Mus musculus,1411,"1-30, 263-301, 1006-1031"
+Q8CGV9 · TSH3_MOUSE,Teashirt homolog 3,Tshz3,Mus musculus,1081,"25-104, 141-161, 238-257, 325-346, 474-499, 626-699, 792-824, 855-897"
+Q8CH72 · TRI32_MOUSE,E3 ubiquitin-protein ligase TRIM32,Trim32,Mus musculus,655,327-347
+Q8CHH9 · SEPT8_MOUSE,Septin-8,Septin8,Mus musculus,429,"1-23, 409-429"
+Q8CHY6 · P66A_MOUSE,Transcriptional repressor p66 alpha,Gatad2a,Mus musculus,629,"1-115, 169-216, 560-581"
+Q8CIS0 · CAR11_MOUSE,Caspase recruitment domain-containing protein 11,Card11,Mus musculus,1159,"441-496, 532-578, 610-631"
+Q8CJ19 · MICA3_MOUSE,[F-actin]-monooxygenase MICAL3,Mical3,Mus musculus,1993,"658-704, 854-886, 905-1023, 1039-1309, 1332-1546, 1559-1837"
+Q8CJ53 · CIP4_MOUSE,Cdc42-interacting protein 4,Trip10,Mus musculus,603,"295-358, 477-541"
+Q8GSA7 · CMTA3_ARATH,Calmodulin-binding transcription activator 3,CAMTA3,Arabidopsis thaliana,1032,146-197
+Q8GYY1 · HSFA3_ARATH,Heat stress transcription factor A-3,HSFA3,Arabidopsis thaliana,412,144-170
+Q8H0U8 · RH42_ARATH,DEAD-box ATP-dependent RNA helicase 42,RH42,Arabidopsis thaliana,1166,1-460
+Q8H110 · XCT_ARATH,Protein XAP5 CIRCADIAN TIMEKEEPER,XCT,Arabidopsis thaliana,337,"23-47, 125-174"
+Q8IG69 · CEBP2_CAEEL,CCAAT/enhancer-binding protein homolog 2,cebp-2,Caenorhabditis elegans,100,"1-60, 79-100"
+Q8JHI3 · AR13B_DANRE,ADP-ribosylation factor-like protein 13B,arl13b,Danio rerio,407,202-407
+Q8JZX3 · POC1A_MOUSE,POC1 centriolar protein homolog A,Poc1a,Mus musculus,405,313-352
+Q8K1G2 · LBN_MOUSE,Limbin,Evc2,Mus musculus,1220,38-59
+Q8MNV0 · SPAST_CAEEL,Spastin homolog,spas-1,Caenorhabditis elegans,512,110-182
+Q8MSS1 · LVA_DROME,Protein lava lamp,lva,Drosophila melanogaster,2779,"31-62, 79-98, 110-135, 337-366, 622-662, 711-730, 1716-1753, 2348-2367, 2484-2507, 2552-2578, 2633-2665"
+Q8R1N0 · ZN830_MOUSE,Zinc finger protein 830,Znf830,Mus musculus,363,81-213
+Q8R1S4 · MTSS1_MOUSE,Protein MTSS 1,Mtss1,Mus musculus,759,"259-309, 331-354, 431-472, 569-759"
+Q8R2H7 · TRAK2_RAT,Trafficking kinesin-binding protein 2,Trak2,Rattus norvegicus,913,"11-31, 442-478, 688-707, 769-790"
+Q8R4A3 · DACT1_MOUSE,Dapper homolog 1,Dact1,Mus musculus,778,"1-40, 305-324, 359-386, 397-416, 428-468, 544-616, 694-721"
+Q8RXD6 · BRE1A_ARATH,E3 ubiquitin-protein ligase BRE1-like 1,HUB1,Arabidopsis thaliana,878,1-21
+Q8RY18 · TRF1A_ARATH,TNF receptor-associated factor homolog 1a,TRAF1A,Arabidopsis thaliana,1055,"1-56, 352-380, 431-590, 603-772, 820-845"
+Q8STF6 · DYC1_CAEEL,Dystrophin-like protein 1,dyc-1,Caenorhabditis elegans,887,"176-254, 506-606, 641-753, 804-839, 853-887"
+Q8VBU8 · BANP_MOUSE,Protein BANP,Banp,Mus musculus,548,"174-206, 335-368"
+Q8VCQ3 · NRBF2_MOUSE,Nuclear receptor-binding factor 2,Nrbf2,Mus musculus,287,81-122
+Q8VHE0 · SEC63_MOUSE,Translocation protein SEC63 homolog,Sec63,Mus musculus,760,"492-617, 720-760"
+Q8VHQ3 · PP16B_MOUSE,Protein phosphatase 1 regulatory inhibitor subunit 16B,Ppp1r16b,Mus musculus,568,"373-403, 505-527"
+Q8VWG3 · TT1_ARATH,Protein TRANSPARENT TESTA 1,TT1,Arabidopsis thaliana,303,"1-21, 61-82"
+Q8VY05 · SWI3D_ARATH,SWI/SNF complex subunit SWI3D,SWI3D,Arabidopsis thaliana,985,"1-55, 428-502, 591-814, 944-985"
+Q8VZI9 · ENAP1_ARATH,Trihelix transcription factor ENAP1,ENAP1,Arabidopsis thaliana,249,121-157
+Q8W234 · SEUSS_ARATH,Transcriptional corepressor SEUSS,SEU,Arabidopsis thaliana,877,"1-42, 272-295, 560-599, 612-633, 666-753"
+Q8W5R2 · SHGR2_ARATH,Phospholipase SGR2,SGR2,Arabidopsis thaliana,933,"1-22, 475-517, 553-598, 871-903"
+Q91VW5 · GOGA4_MOUSE,Golgin subfamily A member 4,Golga4,Mus musculus,2238,"1-90, 132-154, 1695-1744, 1770-1789"
+Q91WZ8 · DTBP1_MOUSE,Dysbindin,Dtnbp1,Mus musculus,352,267-352
+Q91XQ0 · DYH8_MOUSE,Dynein axonemal heavy chain 8,Dnah8,Mus musculus,4731,"1-145, 1177-1201"
+Q91XS1 · MTMR4_MOUSE,"Phosphatidylinositol-3,5-bisphosphate 3-phosphatase MTMR4",Mtmr4,Mus musculus,1190,"616-694, 724-749, 773-848"
+Q922S8 · KIF2C_MOUSE,Kinesin-like protein KIF2C,Kif2c,Mus musculus,721,164-188
+Q93YN8 · RMR41_ARATH,Remorin 4.1,REM4.1,Arabidopsis thaliana,296,"1-78, 121-142, 242-266"
+Q93YU5 · SEC8_ARATH,Exocyst complex component SEC8,SEC8,Arabidopsis thaliana,1053,255-308
+Q94C37 · HDG2_ARATH,Homeobox-leucine zipper protein HDG2,HDG2,Arabidopsis thaliana,721,17-70
+Q94K07 · NAP1C_ARATH,Nucleosome assembly protein 1;3,NAP1;3,Arabidopsis thaliana,374,299-374
+Q95N27 · PP16B_BOVIN,Protein phosphatase 1 regulatory inhibitor subunit 16B,PPP1R16B,Bos taurus,568,"327-346, 373-404, 504-525"
+Q95Y84 · CND_CAEEL,Condensin-2 complex subunit hcp-6,hcp-6,Caenorhabditis elegans,1758,"428-501, 969-1008, 1379-1460, 1500-1656"
+Q95ZS2 · TDC1_CAEEL,Tyrosine decarboxylase,tdc-1,Caenorhabditis elegans,705,"22-81, 667-687"
+Q99323 · MYSN_DROME,"Myosin heavy chain, non-muscle",zip,Drosophila melanogaster,2057,"1124-1144, 1782-1802, 2008-2057"
+Q99JG7 · TNIP2_MOUSE,TNFAIP3-interacting protein 2,Tnip2,Mus musculus,430,"183-202, 373-394"
+Q99MD9 · NASP_MOUSE,Nuclear autoantigenic sperm protein,Nasp,Mus musculus,773,"115-244, 258-284, 301-321, 349-493, 683-773"
+Q99MP8 · BRAP_MOUSE,BRCA1-associated protein,Brap,Mus musculus,591,"82-124, 563-591"
+Q99PP2 · ZN318_MOUSE,Zinc finger protein 318,Znf318,Mus musculus,2237,"1-221, 263-350, 551-612, 645-732, 945-966, 1013-1072, 1245-1289, 1302-1342, 1366-1395, 1449-1497, 1614-1651, 1727-1770, 1790-1867, 2039-2064, 2178-2237"
+Q9AV71 · CESA7_ORYSJ,Cellulose synthase A catalytic subunit 7 [UDP-forming],CESA7,Oryza sativa subsp. japonica,1063,116-154
+Q9BMK9 · CLH3_CAEEL,Chloride channel protein clh-3,clh-3,Caenorhabditis elegans,1001,634-662
+Q9C895 · BRE1B_ARATH,E3 ubiquitin-protein ligase BRE1-like 2,HUB2,Arabidopsis thaliana,900,1-31
+Q9CQ82 · CENPR_MOUSE,Centromere protein R,Itgb3bp,Mus musculus,176,34-78
+Q9CQD4 · CH1B2_MOUSE,Charged multivesicular body protein 1B2,Chmp1b2,Mus musculus,199,167-199
+Q9CQI9 · MED30_MOUSE,Mediator of RNA polymerase II transcription subunit 30,Med30,Mus musculus,178,1-22
+Q9CW03 · SMC3_MOUSE,Structural maintenance of chromosomes protein 3,Smc3,Mus musculus,1217,"242-268, 1059-1090"
+Q9CWG9 · BL1S2_MOUSE,Biogenesis of lysosome-related organelles complex 1 subunit 2,Bloc1s2,Mus musculus,143,1-36
+Q9D067 · MDM1_MOUSE,Nuclear protein MDM1,Mdm1,Mus musculus,708,"79-166, 394-590"
+Q9D3A8 · CAPON_MOUSE,Carboxyl-terminal PDZ ligand of neuronal nitric oxide synthase protein,Nos1ap,Mus musculus,503,170-212
+Q9D4H9 · PHF14_MOUSE,PHD finger protein 14,Phf14,Mus musculus,941,"22-295, 804-855, 912-941"
+Q9D9Z1 · SKAP_MOUSE,Small kinetochore-associated protein,Knstrn,Mus musculus,312,1-171
+Q9ERC5 · OTOF_RAT,Otoferlin,Otof,Rattus norvegicus,1993,"127-212, 654-708, 1294-1318, 1339-1398"
+Q9ESN9 · JIP3_MOUSE,C-Jun-amino-terminal kinase-interacting protein 3,Mapk8ip3,Mus musculus,1337,"183-211, 245-285, 633-655, 719-772, 859-966"
+Q9FGN0 · COG7_ARATH,Conserved oligomeric Golgi complex subunit 7,COG7,Arabidopsis thaliana,836,246-265
+Q9FGW9 · GTE10_ARATH,Transcription factor GTE10,GTE10,Arabidopsis thaliana,1061,"32-56, 106-152, 443-518, 538-558, 606-645, 710-1033"
+Q9FH40 · TA14B_ARATH,Transcription initiation factor TFIID subunit 14b,TAF14B,Arabidopsis thaliana,268,1-36
+Q9FHK4 · EDR4_ARATH,Protein ENHANCED DISEASE RESISTANCE 4,EDR4,Arabidopsis thaliana,615,"46-271, 292-336, 549-592"
+Q9FJW5 · TRB2_ARATH,Telomere repeat-binding factor 2,TRB2,Arabidopsis thaliana,299,93-116
+Q9FKA7 · ORTH1_ARATH,E3 ubiquitin-protein ligase ORTHRUS 1,ORTH1,Arabidopsis thaliana,617,575-617
+Q9FLP0 · MA651_ARATH,65-kDa microtubule-associated protein 1,MAP65-1,Arabidopsis thaliana,587,474-587
+Q9FQ03 · XRN3_ARATH,5'-3' exoribonuclease 3,XRN3,Arabidopsis thaliana,1020,"113-144, 411-440, 452-483, 831-859, 875-897, 911-1020"
+Q9FRH4 · IDD16_ARATH,Protein indeterminate-domain 16,IDD16,Arabidopsis thaliana,362,"1-22, 247-278"
+Q9FT73 · RECQ2_ARATH,ATP-dependent DNA helicase Q-like 2,RECQL2,Arabidopsis thaliana,705,668-705
+Q9FY89 · VP202_ARATH,Vacuolar protein sorting-associated protein 20 homolog 2,VPS20.2,Arabidopsis thaliana,216,173-216
+Q9FYL3 · ALB4_ARATH,"ALBINO3-like protein 1, chloroplastic",ALB4,Arabidopsis thaliana,499,378-499
+Q9GQF1 · JIP3_DROME,JNK-interacting protein 3,syd,Drosophila melanogaster,1227,"1-22, 281-323, 517-572, 804-851, 863-889"
+Q9JHU4 · DYHC1_MOUSE,Cytoplasmic dynein 1 heavy chain 1,Dync1h1,Mus musculus,4644,2388-2408
+Q9JHZ4 · GRAP1_RAT,GRIP1-associated protein 1,Gripap1,Rattus norvegicus,837,"161-180, 555-577, 647-666, 677-702"
+Q9JI10 · STK3_MOUSE,Serine/threonine-protein kinase 3,Stk3,Mus musculus,497,"1-20, 301-343, 368-394"
+Q9JI44 · DMAP1_MOUSE,DNA methyltransferase 1-associated protein 1,Dmap1,Mus musculus,468,"1-48, 258-305, 411-468"
+Q9JJD0 · THA11_MOUSE,THAP domain-containing protein 11,Thap11,Mus musculus,305,85-135
+Q9JM13 · RABX5_MOUSE,Rab5 GDP/GTP exchange factor,Rabgef1,Mus musculus,491,"66-85, 462-491"
+Q9JMB0 · GKAP1_MOUSE,G kinase-anchoring protein 1,Gkap1,Mus musculus,366,"20-115, 146-175, 228-250"
+Q9JMH9 · MY18A_MOUSE,Unconventional myosin-XVIIIa,Myo18a,Mus musculus,2050,"1-34, 140-167, 1051-1071, 1448-1477, 1848-1897, 1955-2050"
+Q9LDN0 · KN12A_ARATH,Kinesin-like protein KIN-12A,KIN12A,Arabidopsis thaliana,1292,"1-86, 677-724"
+Q9LDX1 · SGS3_ARATH,Protein SUPPRESSOR OF GENE SILENCING 3,SGS3,Arabidopsis thaliana,625,"1-20, 30-148, 161-195"
+Q9LEZ4 · MBP2C_ARATH,Protein MICROTUBULE BINDING PROTEIN 2C,MBP2C,Arabidopsis thaliana,326,"1-46, 71-132"
+Q9LHE9 · MYO1_ARATH,Myosin-1,VIII-1,Arabidopsis thaliana,1166,"1-71, 1030-1065"
+Q9LIQ9 · BLI_ARATH,Protein BLISTER,BLI,Arabidopsis thaliana,714,"1-113, 219-261, 288-325, 519-576"
+Q9LM46 · AG104_ARATH,Agamous-like MADS-box protein AGL104,AGL104,Arabidopsis thaliana,335,302-335
+Q9LTT8 · VCS_ARATH,Enhancer of mRNA-decapping protein 4,VCS,Arabidopsis thaliana,1344,"1-88, 616-649, 711-735, 762-815, 845-896"
+Q9LUB7 · OBE2_ARATH,Protein OBERON 2,OBE2,Arabidopsis thaliana,574,1-76
+Q9M2E8 · HDG1_ARATH,Homeobox-leucine zipper protein HDG1,HDG1,Arabidopsis thaliana,808,57-121
+Q9M2K0 · MYO16_ARATH,Myosin-16,XI-J,Arabidopsis thaliana,1242,"869-893, 908-1042, 1175-1242"
+Q9M658 · MOM1_ARATH,Helicase protein MOM1,MOM1,Arabidopsis thaliana,2001,"19-126, 169-207, 243-311, 441-468, 841-893, 1466-1517, 1528-1547, 1624-1644, 1915-2001"
+Q9M7Q2 · AI5L7_ARATH,ABSCISIC ACID-INSENSITIVE 5-like protein 7,ABF4,Arabidopsis thaliana,431,"1-29, 133-153, 319-338"
+Q9N5R9 · SPT16_CAEEL,FACT complex subunit spt-16,spt-16,Caenorhabditis elegans,1030,"435-477, 491-514, 927-1030"
+Q9NA13 · IPLA_DICDI,"Inositol 1,4,5-trisphosphate receptor-like protein A",iplA,Dictyostelium discoideum,3177,"62-125, 329-405, 570-609, 947-983, 1009-1049, 1063-1121, 1443-1490, 1715-1751, 2050-2069, 2125-2188"
+Q9NDC9 · LIS1_CAEEL,Lissencephaly-1 homolog,lis-1,Caenorhabditis elegans,404,69-90
+Q9NEZ5 · UNC95_CAEEL,LIM domain-containing protein unc-95,unc-95,Caenorhabditis elegans,350,"1-65, 177-198, 206-225, 235-262"
+Q9QWV9 · CCNT1_MOUSE,Cyclin-T1,Ccnt1,Mus musculus,724,"483-586, 691-724"
+Q9QX27 · ST18_RAT,Suppression of tumorigenicity 18 protein,St18,Rattus norvegicus,1032,"29-76, 162-213, 325-354"
+Q9QXM1 · JMY_MOUSE,Junction-mediating and -regulatory protein,Jmy,Mus musculus,983,"50-167, 723-855, 962-983"
+Q9QYK5 · H6ST1_MOUSE,Heparan-sulfate 6-O-sulfotransferase 1,Hs6st1,Mus musculus,411,380-401
+Q9QYM8 · CENPH_MOUSE,Centromere protein H,Cenph,Mus musculus,241,1-24
+Q9QZ05 · E2AK4_MOUSE,eIF-2-alpha kinase GCN2,Eif2ak4,Mus musculus,1648,"1-26, 661-784"
+Q9QZQ1 · AFAD_MOUSE,Afadin,Afdn,Mus musculus,1820,"129-196, 356-377, 538-569, 1107-1194, 1203-1222, 1235-1278, 1308-1527, 1567-1716, 1734-1820"
+Q9R0C0 · BL1S6_MOUSE,Biogenesis of lysosome-related organelles complex 1 subunit 6,Bloc1s6,Mus musculus,172,"1-37, 141-172"
+Q9R1J4 · MYOC_RAT,Myocilin,Myoc,Rattus norvegicus,502,166-198
+Q9R1K8 · GRP1_RAT,RAS guanyl-releasing protein 1,Rasgrp1,Rattus norvegicus,795,1-37
+Q9R1R2 · TRIM3_MOUSE,Tripartite motif-containing protein 3,Trim3,Mus musculus,744,419-464
+Q9SE43 · REV_ARATH,Homeobox-leucine zipper protein REVOLUTA,REV,Arabidopsis thaliana,842,1-20
+Q9SE83 · DRP2A_ARATH,Dynamin-2A,DRP2A,Arabidopsis thaliana,914,"507-570, 629-648, 821-914"
+Q9SHG6 · STIP1_ARATH,Septin and tuftelin-interacting protein 1 homolog 1,STIPL1,Arabidopsis thaliana,849,"1-118, 167-193"
+Q9SIV5 · C3H19_ARATH,Zinc finger CCCH domain-containing protein 19,NERD,Arabidopsis thaliana,1773,"145-166, 270-290, 361-409, 434-591, 741-797, 903-935, 1139-1274, 1409-1469, 1485-1605, 1649-1746"
+Q9T041 · TOR1_ARATH,Microtubule-associated protein TORTIFOLIA1,TOR1,Arabidopsis thaliana,864,"1-26, 329-353, 426-504, 615-670"
+Q9TW28 · MYOM_DICDI,Myosin-M heavy chain,myoM,Dictyostelium discoideum,1737,"640-727, 947-1099, 1117-1199, 1266-1290, 1304-1364"
+Q9U1M8 · MYOI_DICDI,Myosin-I heavy chain,myoI,Dictyostelium discoideum,2357,"797-852, 974-1112, 1686-1849"
+Q9U389 · ALLO1_CAEEL,Allophagy receptor allo-1,allo-1,Caenorhabditis elegans,402,"1-79, 356-381"
+Q9VCE1 · BECN1_DROME,Beclin-1-like protein,Atg6,Drosophila melanogaster,422,182-201
+Q9VCR6 · SAV_DROME,Scaffold protein salvador,sav,Drosophila melanogaster,608,"17-37, 64-145, 157-202, 220-243, 264-293, 345-425"
+Q9VFG8 · KIBRA_DROME,Protein kibra,kibra,Drosophila melanogaster,1288,"1-60, 541-560, 841-869, 890-912, 942-975, 1224-1269"
+Q9VK07 · UVRAG_DROME,UV radiation resistance-associated gene protein,Uvrag,Drosophila melanogaster,696,666-696
+Q9VLC0 · VPS54_DROME,Vacuolar protein sorting-associated protein 54,scat,Drosophila melanogaster,940,192-218
+Q9VPU8 · KRR1_DROME,KRR1 small subunit processome component homolog,dbe,Drosophila melanogaster,345,"232-260, 273-345"
+Q9VT70 · NDE1_DROME,Nuclear distribution protein nudE homolog,nudE,Drosophila melanogaster,317,186-205
+Q9W0M1 · CE290_DROME,Centrosomal protein Cep290,Cep290,Drosophila melanogaster,1978,"271-296, 663-688, 1313-1397, 1684-1714, 1859-1884"
+Q9W1R5 · VIR_DROME,Protein virilizer,vir,Drosophila melanogaster,1854,"202-361, 777-821, 1570-1589, 1720-1788, 1804-1854"
+Q9W2H9 · PANX_DROME,Protein panoramix,Panx,Drosophila melanogaster,541,"52-75, 198-281"
+Q9W3N6 · USO1_DROME,General vesicular transport factor p115,p115,Drosophila melanogaster,836,"1-22, 803-836"
+Q9WTN5 · TPC1_RAT,Two pore calcium channel protein 1,Tpcn1,Rattus norvegicus,817,"22-66, 785-817"
+Q9WTR2 · M3K6_MOUSE,Mitogen-activated protein kinase kinase kinase 6,Map3k6,Mus musculus,1291,"901-997, 1125-1160"
+Q9WUU8 · TNIP1_MOUSE,TNFAIP3-interacting protein 1,Tnip1,Mus musculus,647,"61-168, 613-647"
+Q9WV31 · ARC_MOUSE,Activity-regulated cytoskeleton-associated protein,Arc,Mus musculus,396,"177-207, 356-396"
+Q9WV55 · VAPA_MOUSE,Vesicle-associated membrane protein-associated protein A,Vapa,Mus musculus,249,135-166
+Q9Y0E4 · KLAR_DROME,Klarsicht protein,klar,Drosophila melanogaster,2262,"1-140, 345-410, 442-475, 514-561, 800-832, 859-898, 1000-1031, 1115-1157, 1246-1316, 1533-1670, 2092-2205"
+Q9Y1J3 · PDPK1_CAEEL,3-phosphoinositide-dependent protein kinase 1,pdk-1,Caenorhabditis elegans,636,"1-45, 233-264, 593-636"
+Q9Z0R4 · ITSN1_MOUSE,Intersectin-1,Itsn1,Mus musculus,1714,"310-356, 614-706, 827-863"
+Q9Z0U4 · GABR1_RAT,Gamma-aminobutyric acid type B receptor subunit 1,Gabbr1,Rattus norvegicus,960,"866-891, 908-960"
+Q9Z1K7 · APCL_MOUSE,Adenomatous polyposis coli protein 2,Apc2,Mus musculus,2274,"97-120, 248-269, 859-901, 1061-1143, 1165-1216, 1290-1323, 1368-1480, 1493-1631, 1699-2003, 2022-2122, 2135-2274"
+Q9Z1M7 · LARG1_MOUSE,Xylosyl- and glucuronyltransferase LARGE1,Large1,Mus musculus,756,"43-64, 82-108"
+Q9Z1M9 · SMC1A_RAT,Structural maintenance of chromosomes protein 1A,Smc1a,Rattus norvegicus,1233,"284-307, 350-369, 946-969"
+Q9Z1N3 · MYO9A_RAT,Unconventional myosin-IXa,Myo9a,Rattus norvegicus,2626,"1221-1276, 1360-1397, 1562-1602, 1618-1673, 1689-1726, 1765-1784, 1872-1907, 2365-2385, 2449-2527, 2552-2614"
+Q9Z1P8 · ANGL4_MOUSE,Angiopoietin-related protein 4,Angptl4,Mus musculus,410,79-101
+Q9Z270 · VAPA_RAT,Vesicle-associated membrane protein-associated protein A,Vapa,Rattus norvegicus,249,135-166
+Q9Z2I0 · LETM1_MOUSE,Mitochondrial proton/calcium exchanger protein,Letm1,Mus musculus,738,719-738
+Q9ZSZ8 · FIP37_ARATH,FKBP12-interacting protein of 37 kDa,FIP37,Arabidopsis thaliana,330,1-43
+Q9ZT92 · AK10B_ARATH,RNA demethylase ALKBH10B,ALKBH10B,Arabidopsis thaliana,569,"164-190, 531-569"
+Q9ZTZ7 · KEA1_ARATH,"K(+) efflux antiporter 1, chloroplastic",KEA1,Arabidopsis thaliana,1193,"103-135, 351-372, 421-474, 1165-1184"
+A0A088MLT8 · IQIP1_MOUSE,IQCJ-SCHIP1 readthrough transcript protein,Iqcj-Schip1,Mus musculus,559,"64-141, 161-295, 312-332, 380-426"
+A0A0K3AV08 · MLK1_CAEEL,Mitogen-activated protein kinase kinase kinase mlk-1,mlk-1,Caenorhabditis elegans,1059,"1-66, 617-699, 714-808"
+A2A259 · PK2L1_MOUSE,Polycystin-2-like protein 1,Pkd2l1,Mus musculus,760,1-30
+A2AIV8 · CARD9_MOUSE,Caspase recruitment domain-containing protein 9,Card9,Mus musculus,536,"425-451, 476-536"
+A2AJI0 · MA7D1_MOUSE,MAP7 domain-containing protein 1,Map7d1,Mus musculus,846,"1-153, 186-210, 318-816"
+A2AM05 · CNTLN_MOUSE,Centlein,Cntln,Mus musculus,1397,"1-43, 56-76, 422-449, 485-521"
+A2VD12 · PBIP1_RAT,Pre-B-cell leukemia transcription factor-interacting protein 1,Pbxip1,Rattus norvegicus,722,"1-180, 442-562, 691-722"
+A3KNL5 · ATF1A_DANRE,"ATPase inhibitor A, mitochondrial",atp5if1a,Danio rerio,105,17-52
+A5D7H5 · CASC3_BOVIN,Protein CASC3,CASC3,Bos taurus,703,"1-451, 633-703"
+A8MRD9 · PDS5D_ARATH,Sister chromatid cohesion protein PDS5 homolog D,PDS5D,Arabidopsis thaliana,826,"261-551, 640-826"
+A8WFU8 · KIF22_DANRE,Kinesin-like protein KIF22,kif22,Danio rerio,634,357-406
+B0G126 · FYV1_DICDI,1-phosphatidylinositol 3-phosphate 5-kinase,pip5k3,Dictyostelium discoideum,2656,"24-159, 304-383, 465-495, 517-570, 618-657, 670-823, 1115-1150, 1633-1659, 1710-1844, 2031-2127, 2179-2208, 2246-2304, 2617-2656"
+B0S6J3 · SRGP2_DANRE,SLIT-ROBO Rho GTPase-activating protein 2,srgap2,Danio rerio,1100,"181-210, 800-835, 852-938, 986-1100"
+B1H278 · TRI11_RAT,E3 ubiquitin-protein ligase TRIM11,Trim11,Rattus norvegicus,467,304-325
+B1PRL5 · CAVN4_RAT,Caveolae-associated protein 4,Cavin4,Rattus norvegicus,362,"1-24, 227-261"
+B8A5S6 · AML2B_DANRE,Angiomotin-like 2b,amotl2b,Danio rerio,681,"68-106, 589-618"
+B9FMJ3 · KN13A_ORYSJ,Kinesin-like protein KIN-13A,KIN13A,Oryza sativa subsp. japonica,819,"150-178, 534-729"
+C6KRL6 · ZHP3_CAEEL,Zip homologous protein 3,zhp-3,Caenorhabditis elegans,389,366-389
+D3YXK2 · SAFB1_MOUSE,Scaffold attachment factor B1,Safb,Mus musculus,937,"1-35, 64-117, 222-429, 499-661, 684-738, 771-937"
+D3Z2X2 · DNHD1_MOUSE,Dynein heavy chain domain-containing protein 1,Dnhd1,Mus musculus,4749,"1-27, 275-308, 2690-2785, 3568-3667"
+D3ZER2 · BFSP2_RAT,Phakinin,Bfsp2,Rattus norvegicus,416,1-48
+D4A4L4 · MA7D2_RAT,MAP7 domain-containing protein 2,Map7d2,Rattus norvegicus,763,"1-72, 102-127, 140-531"
+E1BJS7 · LIN41_BOVIN,E3 ubiquitin-protein ligase TRIM71,TRIM71,Bos taurus,868,"26-50, 121-186"
+E2JF22 · PIEZ1_MOUSE,Piezo-type mechanosensitive ion channel component 1,Piezo1,Mus musculus,2547,"347-387, 1354-1396, 1456-1480, 1567-1610, 1816-1931"
+E7F7X0 · LMOD3_DANRE,Leiomodin-3,lmod3,Danio rerio,670,"34-72, 94-120, 139-165, 202-274, 517-556"
+E7FAM5 · LIN41_DANRE,E3 ubiquitin-protein ligase TRIM71,trim71,Danio rerio,824,37-56
+E9PSL7 · CTRO_RAT,Citron rho-interacting kinase,Cit,Rattus norvegicus,2055,"375-398, 1349-1376, 1932-2040"
+E9Q394 · AKP13_MOUSE,A-kinase anchor protein 13,Akap13,Mus musculus,2776,"371-401, 452-518, 547-584, 618-641, 653-689, 760-871, 910-951, 995-1029, 1431-1508, 1527-1546, 1565-1603, 1711-1756, 2436-2471, 2549-2605, 2626-2776"
+E9Q555 · RN213_MOUSE,E3 ubiquitin-protein ligase RNF213,Rnf213,Mus musculus,5148,38-341
+E9Q557 · DESP_MOUSE,Desmoplakin,Dsp,Mus musculus,2883,"1-21, 2822-2883"
+E9Q5M6 · CFA44_MOUSE,Cilia- and flagella-associated protein 44,Cfap44,Mus musculus,1843,"1-86, 701-726, 1040-1086, 1266-1291, 1488-1524"
+E9Q6B2 · CC85C_MOUSE,Coiled-coil domain-containing protein 85C,Ccdc85c,Mus musculus,420,165-271
+E9Q784 · ZC3HD_MOUSE,Zinc finger CCCH domain-containing protein 13,Zc3h13,Mus musculus,1729,"1-40, 57-156, 182-528, 581-1527"
+E9Q8T7 · DYH1_MOUSE,Dynein axonemal heavy chain 1,Dnah1,Mus musculus,4250,1-73
+F1LMV6 · DESP_RAT,Desmoplakin,Dsp,Rattus norvegicus,2877,"1-20, 2817-2877"
+F1LNJ2 · U520_RAT,U5 small nuclear ribonucleoprotein 200 kDa helicase,Snrnp200,Rattus norvegicus,2139,39-80
+F1LXF1 · BCR_RAT,Breakpoint cluster region protein,Bcr,Rattus norvegicus,1270,"67-173, 201-249, 295-396, 412-484"
+F1M775 · DIAP1_RAT,Protein diaphanous homolog 1,Diaph1,Rattus norvegicus,1265,"1-42, 54-83, 573-742"
+F1MA98 · TPR_RAT,Nucleoprotein TPR,Tpr,Rattus norvegicus,2360,"915-939, 1479-1520, 1618-1673, 1801-2122, 2224-2360"
+F4HRT5 · CRWN1_ARATH,Protein CROWDED NUCLEI 1,CRWN1,Arabidopsis thaliana,1132,"1-31, 849-871, 883-909, 924-1039, 1061-1132"
+F4I1T7 · NP214_ARATH,Nuclear pore complex protein NUP214,NUP214,Arabidopsis thaliana,1819,"494-515, 594-646, 693-724, 974-999, 1073-1154, 1319-1472, 1494-1577, 1612-1643, 1795-1819"
+F4I9A2 · TNO1_ARATH,Trans-Golgi network-localized SYP41-interacting protein 1,TNO1,Arabidopsis thaliana,1767,"1-72, 1177-1198"
+F4IAG2 · SSY3_ARATH,"Starch synthase 3, chloroplastic/amyloplastic",SS3,Arabidopsis thaliana,1042,1-63
+F4IAT2 · THOC2_ARATH,THO complex subunit 2,THO2,Arabidopsis thaliana,1823,"1244-1382, 1394-1823"
+F4IS91 · RSA1_ARATH,Protein SHORT ROOT IN SALT MEDIUM 1,RSA1,Arabidopsis thaliana,1340,"1-73, 161-185, 357-473, 723-750, 784-990, 1063-1269"
+F4IUX6 · RENT2_ARATH,Regulator of nonsense transcripts UPF2,UPF2,Arabidopsis thaliana,1181,"309-348, 375-459, 893-991, 1129-1181"
+F4IVL6 · GRV2_ARATH,DnaJ homolog subfamily C GRV2,GRV2,Arabidopsis thaliana,2554,"746-766, 810-833, 1960-1994, 2339-2366"
+F4J3T8 · MYTM1_ARATH,Phosphatidylinositol-3-phosphatase myotubularin-1,MTM1,Arabidopsis thaliana,840,"1-28, 506-535, 745-771"
+F4JT76 · VPS54_ARATH,"Vacuolar protein sorting-associated protein 54, chloroplastic",VPS54,Arabidopsis thaliana,1034,"1-42, 529-548, 694-758"
+F4K0A6 · MYO2_ARATH,Myosin-2,VIII-2,Arabidopsis thaliana,1220,"1-54, 68-95, 968-1007, 1075-1118"
+F6TQD1 · RN212_MOUSE,Probable E3 SUMO-protein ligase RNF212,Rnf212,Mus musculus,307,164-291
+F7BJB9 · MORC3_MOUSE,MORC family CW-type zinc finger protein 3,Morc3,Mus musculus,942,623-654
+F7J0N2 · RGA5R_ORYSJ,Disease resistance protein RGA5,RGA5,Oryza sativa subsp. japonica,1116,935-971
+G3V735 · AMOL2_RAT,Angiomotin-like protein 2,Amotl2,Rattus norvegicus,773,"41-157, 169-238, 259-309, 589-611, 677-754"
+G5EC37 · SEPA1_CAEEL,Protein sepa-1,sepa-1,Caenorhabditis elegans,702,"450-471, 545-564, 675-702"
+G5ECG0 · TACC1_CAEEL,Transforming acid coiled-coil-containing protein 1,tac-1,Caenorhabditis elegans,260,1-43
+G5EGS3 · KLP12_CAEEL,Kinesin-like protein klp-12,klp-12,Caenorhabditis elegans,1605,"548-596, 1085-1152, 1198-1232"
+H2KZZ2 · HLH30_CAEEL,Helix-loop-helix protein 30,hlh-30,Caenorhabditis elegans,524,"1-150, 170-214, 240-265"
+O00899 · GAPA_DICDI,Ras GTPase-activating-like protein gapA,gapA,Dictyostelium discoideum,860,1-48
+O08808 · DIAP1_MOUSE,Protein diaphanous homolog 1,Diaph1,Mus musculus,1255,"1-73, 567-737"
+O08962 · KCNH2_RAT,Voltage-gated inwardly rectifying potassium channel KCNH2,Kcnh2,Rattus norvegicus,1163,"235-286, 873-992, 1015-1043, 1126-1163"
+O09044 · SNP23_MOUSE,Synaptosomal-associated protein 23,Snap23,Mus musculus,210,104-135
+O09130 · NF2IP_MOUSE,NFATC2-interacting protein,Nfatc2ip,Mus musculus,412,"1-38, 58-115, 136-206"
+O17972 · NPHP1_CAEEL,Nephrocystin-1-like protein,nphp-1,Caenorhabditis elegans,682,96-188
+O24606 · EIN3_ARATH,Protein ETHYLENE INSENSITIVE 3,EIN3,Arabidopsis thaliana,628,66-92
+O35099 · M3K5_MOUSE,Mitogen-activated protein kinase kinase kinase 5,Map3k5,Mus musculus,1380,"30-97, 1188-1215"
+O35125 · LRC23_MOUSE,Leucine-rich repeat-containing protein 23,Lrrc23,Mus musculus,340,"1-38, 317-340"
+O35142 · COPB2_RAT,Coatomer subunit beta',Copb2,Rattus norvegicus,905,837-905
+O35250 · EXOC7_MOUSE,Exocyst complex component 7,Exoc7,Mus musculus,697,238-270
+O35412 · SI1L1_RAT,Signal-induced proliferation-associated 1-like protein 1,Sipa1l1,Rattus norvegicus,1822,"1-30, 47-125, 277-297, 1134-1165, 1183-1252, 1286-1324, 1358-1382, 1395-1493, 1567-1595"
+O35550 · RABE1_RAT,Rab GTPase-binding effector protein 1,Rabep1,Rattus norvegicus,862,"315-340, 355-374"
+O35594 · IFT81_MOUSE,Intraflagellar transport protein 81 homolog,Ift81,Mus musculus,676,611-632
+O35613 · DAXX_MOUSE,Death domain-associated protein 6,Daxx,Mus musculus,739,"1-60, 155-191, 405-599, 611-688"
+O35668 · HAP1_MOUSE,Huntingtin-associated protein 1,Hap1,Mus musculus,628,"1-62, 212-264, 372-411, 451-529, 562-628"
+O35787 · KIF1C_RAT,Kinesin-like protein KIF1C,Kif1c,Rattus norvegicus,1097,"397-434, 897-921, 946-1097"
+O35867 · NEB1_RAT,Neurabin-1,Ppp1r9a,Rattus norvegicus,1095,"1-65, 85-111, 125-394, 874-953, 1050-1095"
+O35942 · NEK2_MOUSE,Serine/threonine-protein kinase Nek2,Nek2,Mus musculus,443,"282-303, 383-402"
+O48947 · CESA2_ARATH,Cellulose synthase A catalytic subunit 2 [UDP-forming],CESA2,Arabidopsis thaliana,1084,230-259
+O49139 · CMT1_ARATH,Putative DNA (cytosine-5)-methyltransferase CMT1,CMT1,Arabidopsis thaliana,791,37-59
+O54941 · SMCE1_MOUSE,SWI/SNF-related matrix-associated actin-dependent regulator of chromatin subfamily E member 1,Smarce1,Mus musculus,411,"1-23, 42-70, 153-175, 294-411"
+O64471 · MTX_ARATH,Mitochondrial outer membrane import complex protein METAXIN,MTX1,Arabidopsis thaliana,315,240-277
+O70624 · MYOC_MOUSE,Myocilin,Myoc,Mus musculus,490,153-184
+O76329 · ACTNB_DICDI,Interaptin,abpD,Dictyostelium discoideum,1738,"285-350, 1068-1090, 1589-1627"
+O80837 · REMO_ARATH,Remorin,DBP,Arabidopsis thaliana,190,"1-45, 50-69"
+O82171 · AGD10_ARATH,ADP-ribosylation factor GTPase-activating protein AGD10,AGD10,Arabidopsis thaliana,395,125-199
+O88522 · NEMO_MOUSE,NF-kappa-B essential modulator,Ikbkg,Mus musculus,412,1-48
+O88902 · PTN23_RAT,Tyrosine-protein phosphatase non-receptor type 23,Ptpn23,Rattus norvegicus,1499,"536-583, 718-1006, 1322-1351, 1381-1499"
+O88978 · DAA11_MOUSE,Dynein axonemal assembly factor 11,Dnaaf11,Mus musculus,473,"188-244, 273-292, 387-473"
+O89040 · PLCB2_RAT,"1-phosphatidylinositol 4,5-bisphosphate phosphodiesterase beta-2",Plcb2,Rattus norvegicus,1183,"462-537, 857-888, 1150-1183"
+O89053 · COR1A_MOUSE,Coronin-1A,Coro1a,Mus musculus,461,403-434
+O97593 · SMC1A_BOVIN,Structural maintenance of chromosomes protein 1A,SMC1A,Bos taurus,1233,"284-308, 348-369, 947-968"
+O97594 · SMC3_BOVIN,Structural maintenance of chromosomes protein 3,SMC3,Bos taurus,1218,"242-268, 1067-1089"
+P02676 · FIBB_BOVIN,Fibrinogen beta chain,FGB,Bos taurus,468,1-54
+P11978 · SIR4_YEAST,Regulatory protein SIR4,SIR4,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1358,"1-98, 252-277, 356-466, 498-544, 677-726, 752-787, 913-970"
+P12845 · MYO2_CAEEL,Myosin-2,myo-2,Caenorhabditis elegans,1947,"1047-1075, 1119-1161, 1231-1253, 1516-1537"
+P13668 · STMN1_RAT,Stathmin,Stmn1,Rattus norvegicus,149,104-149
+P15800 · LAMB2_RAT,Laminin subunit beta-2,Lamb2,Rattus norvegicus,1801,1684-1703
+P17065 · SEC2_YEAST,Rab guanine nucleotide exchange factor SEC2,SEC2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),759,538-759
+P17597 · ILVB_ARATH,"Acetolactate synthase, chloroplastic",ALS,Arabidopsis thaliana,670,1-94
+P21372 · PRP5_YEAST,Pre-mRNA-processing ATP-dependent RNA helicase PRP5,PRP5,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),849,"28-138, 689-730"
+P23116 · EIF3A_MOUSE,Eukaryotic translation initiation factor 3 subunit A,Eif3a,Mus musculus,1344,"807-844, 866-1240, 1252-1344"
+P25357 · SNT1_YEAST,Probable DNA-binding protein SNT1,SNT1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1226,"1-219, 264-331, 569-605, 732-796, 1172-1194"
+P25655 · NOT1_YEAST,General negative regulator of transcription subunit 1,CDC39,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),2108,1323-1352
+P27895 · CIN8_YEAST,Kinesin-like protein CIN8,CIN8,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1000,"1-28, 220-248, 260-312, 970-1000"
+P28742 · KIP1_YEAST,Kinesin-like protein KIP1,KIP1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1111,"1-34, 1007-1111"
+P30204 · MSRE_MOUSE,Macrophage scavenger receptor types I and II,Msr1,Mus musculus,458,272-357
+P31000 · VIME_RAT,Vimentin,Vim,Rattus norvegicus,466,1-33
+P32447 · ASF1_YEAST,Histone chaperone ASF1,ASF1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),279,156-279
+P32458 · CDC11_YEAST,Cell division control protein 11,CDC11,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),415,307-360
+P32850 · STX1A_BOVIN,Syntaxin-1A,STX1A,Bos taurus,288,1-20
+P34036 · DYHC_DICDI,"Dynein heavy chain, cytoplasmic",dhcA,Dictyostelium discoideum,4730,"1-23, 91-120, 964-1016, 2437-2486, 4432-4465"
+P34341 · KLE2_CAEEL,Condensin-2 complex subunit kle-2,kle-2,Caenorhabditis elegans,821,389-426
+P34540 · KINH_CAEEL,Kinesin heavy chain,unc-116,Caenorhabditis elegans,815,788-815
+P35248 · SFTPD_RAT,Pulmonary surfactant-associated protein D,Sftpd,Rattus norvegicus,374,40-221
+P36049 · EBP2_YEAST,rRNA-processing protein EBP2,EBP2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),427,"29-190, 361-427"
+P36130 · CAF4_YEAST,CCR4-associated factor 4,CAF4,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),643,243-262
+P37285 · KLC1_RAT,Kinesin light chain 1,Klc1,Rattus norvegicus,560,156-203
+P38249 · EIF3A_YEAST,Eukaryotic translation initiation factor 3 subunit A,RPG1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),964,"503-545, 839-964"
+P38297 · FZO1_YEAST,Mitofusin FZO1,FZO1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),855,"1-27, 413-447"
+P38339 · RGD1_YEAST,RHO GTPase-activating protein RGD1,RGD1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),666,"1-21, 325-439"
+P38822 · BZZ1_YEAST,Protein BZZ1,BZZ1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),633,429-495
+P39705 · NUP60_YEAST,Nucleoporin NUP60,NUP60,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),539,"44-80, 242-267, 305-329, 347-493"
+P40505 · SDS3_YEAST,Transcriptional regulatory protein SDS3,SDS3,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),327,"151-240, 268-299"
+P40806 · PKSJ_BACSU,Polyketide synthase PksJ,pksJ,Bacillus subtilis (strain 168),5043,3291-3314
+P41832 · BNI1_YEAST,Protein BNI1,BNI1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1953,"1-152, 230-258, 263-282, 287-306, 312-337, 990-1014, 1040-1094, 1149-1330, 1768-1797, 1809-1844, 1872-1899"
+P46062 · SIPA1_MOUSE,Signal-induced proliferation-associated protein 1,Sipa1,Mus musculus,1037,"1-85, 830-849, 855-898, 943-969"
+P46467 · VPS4B_MOUSE,Vacuolar protein sorting-associated protein 4B,Vps4b,Mus musculus,444,77-118
+P46675 · STU2_YEAST,Protein STU2,STU2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),888,756-780
+P47057 · SNX4_YEAST,Sorting nexin-4,SNX4,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),423,1-25
+P49025 · CTRO_MOUSE,Citron Rho-interacting kinase,Cit,Mus musculus,2055,"1316-1336, 1348-1377, 1932-2040"
+P53086 · KIP3_YEAST,Kinesin-like protein KIP3,KIP3,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),805,720-805
+P53267 · DAM1_YEAST,DASH complex subunit DAM1,DAM1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),343,"1-35, 150-219, 302-343"
+P54227 · STMN1_MOUSE,Stathmin,Stmn1,Mus musculus,149,"27-46, 104-149"
+P54703 · DYIN_DICDI,Cytoplasmic dynein 1 intermediate chain,dicA,Dictyostelium discoideum,654,"1-59, 71-95, 116-144, 175-205"
+P57769 · SNX16_RAT,Sorting nexin-16,Snx16,Rattus norvegicus,344,"1-49, 83-105"
+P58391 · KCNN3_MOUSE,Small conductance calcium-activated potassium channel protein 3,Kcnn3,Mus musculus,732,"1-82, 119-161, 241-260, 704-732"
+P58771 · TPM1_MOUSE,Tropomyosin alpha-1 chain,Tpm1,Mus musculus,284,"1-38, 116-136"
+P58774 · TPM2_MOUSE,Tropomyosin beta chain,Tpm2,Mus musculus,284,"1-78, 117-136"
+P59759 · MRTFB_MOUSE,Myocardin-related transcription factor B,Mrtfb,Mus musculus,1080,"170-222, 234-311, 352-384, 477-501, 588-646, 794-846, 969-988"
+P60853 · LZTS1_MOUSE,Leucine zipper putative tumor suppressor 1,Lzts1,Mus musculus,599,"135-190, 288-324"
+P61406 · EST1A_MOUSE,Telomerase-binding protein EST1A,Smg6,Mus musculus,1418,"23-86, 102-123, 178-402, 416-468, 820-840, 856-882"
+P70478 · APC_RAT,Adenomatous polyposis coli protein,Apc,Rattus norvegicus,2842,"238-304, 828-877, 921-942, 956-988, 1058-1078, 1092-1166, 1188-1249, 1306-1373, 1398-1474, 1525-1568, 1584-1609, 1661-1711, 1748-1950, 1963-2010, 2043-2067, 2148-2173, 2234-2641, 2664-2842"
+P70483 · STRN_RAT,Striatin,Strn,Rattus norvegicus,780,"124-145, 290-321, 334-353, 363-388"
+P70605 · KCNN3_RAT,Small conductance calcium-activated potassium channel protein 3,Kcnn3,Rattus norvegicus,732,"1-82, 103-162, 241-260, 704-732"
+P84086 · CPLX2_MOUSE,Complexin-2,Cplx2,Mus musculus,134,1-114
+P84087 · CPLX2_RAT,Complexin-2,Cplx2,Rattus norvegicus,134,1-114
+P85125 · CAVN1_RAT,Caveolae-associated protein 1,Cavin1,Rattus norvegicus,392,"1-45, 173-198, 347-367"
+P90895 · GCY33_CAEEL,Soluble guanylate cyclase gcy-33,gcy-33,Caenorhabditis elegans,945,"639-679, 706-930"
+P91119 · PDE5_CAEEL,"Probable 3',5'-cyclic phosphodiesterase pde-5",pde-5,Caenorhabditis elegans,728,708-728
+P91927 · LETM1_DROME,Mitochondrial proton/calcium exchanger protein,Letm1,Drosophila melanogaster,1013,877-1004
+P93042 · RHD3_ARATH,Protein ROOT HAIR DEFECTIVE 3,RHD3,Arabidopsis thaliana,802,757-802
+P93736 · SYVM1_ARATH,"Valine--tRNA ligase, mitochondrial 1",TWN2,Arabidopsis thaliana,1108,57-138
+P97927 · LAMA4_MOUSE,Laminin subunit alpha-4,Lama4,Mus musculus,1816,1409-1433
+Q02455 · MLP1_YEAST,Protein MLP1,MLP1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1875,"1641-1689, 1716-1875"
+Q02725 · VTC3_YEAST,Vacuolar transporter chaperone 3 complex subunit 3,VTC3,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),835,"564-610, 616-635"
+Q02792 · XRN2_YEAST,5'-3' exoribonuclease 2,RAT1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1006,"561-584, 939-1006"
+Q02819 · NUCB1_MOUSE,Nucleobindin-1,Nucb1,Mus musculus,459,"192-220, 368-459"
+Q03041 · CNGA2_BOVIN,Cyclic nucleotide-gated channel alpha-2,CNGA2,Bos taurus,663,"1-61, 640-663"
+Q03390 · VPS60_YEAST,Vacuolar protein-sorting-associated protein 60,VPS60,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),229,186-229
+Q04047 · NONA_DROME,Protein no-on-transient A,nonA,Drosophila melanogaster,700,"1-270, 568-591, 677-700"
+Q06623 · HDA3_YEAST,HDA1 complex subunit 3,HDA3,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),655,635-655
+Q08548 · ALE1_YEAST,Lysophospholipid acyltransferase,ALE1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),619,592-619
+Q08DU8 · BL1S6_BOVIN,Biogenesis of lysosome-related organelles complex 1 subunit 6,BLOC1S6,Bos taurus,172,"1-36, 135-172"
+Q09248 · DCTN2_CAEEL,Probable dynactin subunit 2,dnc-2,Caenorhabditis elegans,331,1-33
+Q0J995 · RLI1_ORYSJ,Myb family transcription factor RLI1,RLI1,Oryza sativa subsp. japonica,424,144-165
+Q0KL00 · PIEZ1_RAT,Piezo-type mechanosensitive ion channel component 1,Piezo1,Rattus norvegicus,2535,"346-377, 1345-1383, 1556-1597, 1801-1911"
+Q0PHV7 · DACT3_MOUSE,Dapper homolog 3,Dact3,Mus musculus,610,"50-76, 102-179, 200-579"
+Q0VCA3 · LETM1_BOVIN,Mitochondrial proton/calcium exchanger protein,LETM1,Bos taurus,732,711-732
+Q0VFX2 · CF157_MOUSE,Cilia- and flagella-associated protein 157,Cfap157,Mus musculus,523,"1-31, 419-440"
+Q0WUR5 · FAB1A_ARATH,1-phosphatidylinositol-3-phosphate 5-kinase FAB1A,FAB1A,Arabidopsis thaliana,1757,"125-193, 276-297, 313-346, 684-709, 1729-1757"
+Q0WV12 · ANL2_ARATH,Homeobox-leucine zipper protein ANTHOCYANINLESS 2,ANL2,Arabidopsis thaliana,802,71-143
+Q0WVX5 · SSY4_ARATH,"Probable starch synthase 4, chloroplastic/amyloplastic",SS4,Arabidopsis thaliana,1040,43-142
+Q12071 · VPS54_YEAST,Vacuolar protein sorting-associated protein 54,VPS54,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),889,"1-44, 729-748"
+Q12191 · BUG1_YEAST,Binder of USO1 and GRH1 protein 1,BUG1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),341,1-181
+Q12241 · VAM3_YEAST,Syntaxin VAM3,VAM3,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),283,"1-26, 116-146, 162-182"
+Q12267 · SMC4_YEAST,Structural maintenance of chromosomes protein 4,SMC4,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1418,1-122
+Q12532 · RQC2_YEAST,Ribosome quality control complex subunit 2,RQC2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1038,"459-499, 708-824, 877-898"
+Q19872 · ATZ1_CAEEL,Protein atz-1,atz-1,Caenorhabditis elegans,268,229-268
+Q1ECX4 · TLK2_DANRE,Serine/threonine-protein kinase tousled-like 2,tlk2,Danio rerio,697,"25-159, 288-316"
+Q1LU99 · RIPR2_DANRE,Rho family-interacting cell polarization regulator 2,ripor2,Danio rerio,1083,"21-48, 71-111, 471-508"
+Q1RMR5 · DAA11_BOVIN,Dynein axonemal assembly factor 11,DNAAF11,Bos taurus,472,"187-210, 265-291, 398-472"
+Q1ZXE2 · Y7875_DICDI,PH domain-containing protein DDB_G0287875,,Dictyostelium discoideum,1211,"103-133, 520-941, 973-1110"
+Q1ZXK2 · FORG_DICDI,Formin-G,forG,Dictyostelium discoideum,1074,"476-507, 549-639, 1053-1074"
+Q20060 · SMC4_CAEEL,Structural maintenance of chromosomes protein 4,smc-4,Caenorhabditis elegans,1549,"1-78, 396-444, 460-485, 1440-1549"
+Q21480 · ATG2_CAEEL,Autophagy-related protein 2,atg-2,Caenorhabditis elegans,2290,"1678-1727, 1805-1851, 1898-1919, 1967-2003"
+Q22866 · TPM1_CAEEL,Tropomyosin isoforms a/b/d/f,lev-11,Caenorhabditis elegans,284,40-78
+Q23064 · UNC83_CAEEL,Nuclear migration protein unc-83,unc-83,Caenorhabditis elegans,1041,"258-283, 453-498, 613-646"
+Q23424 · FZO1_CAEEL,Transmembrane GTPase fzo-1,fzo-1,Caenorhabditis elegans,774,1-29
+Q27IK7 · KN12C_ARATH,Kinesin-like protein KIN-12C,KIN12C,Arabidopsis thaliana,2066,"1-41, 59-116, 1803-1823, 2043-2066"
+Q28177 · BFSP2_BOVIN,Phakinin,BFSP2,Bos taurus,415,1-26
+Q2EJA0 · YAP1_RAT,Transcriptional coactivator YAP1,Yap1,Rattus norvegicus,469,"1-47, 76-99, 258-290, 345-405"
+Q2KJ51 · ANGL4_BOVIN,Angiopoietin-related protein 4,ANGPTL4,Bos taurus,410,81-106
+Q2PFD7 · PSD3_MOUSE,PH and SEC7 domain-containing protein 3,Psd3,Mus musculus,1037,"37-70, 169-189, 236-255, 262-284, 304-335, 353-375, 730-762, 984-1037"
+Q32KD2 · SETB1_DROME,Histone-lysine N-methyltransferase eggless,egg,Drosophila melanogaster,1262,"1-194, 743-764, 1086-1148"
+Q32WR5 · BL1S2_RAT,Biogenesis of lysosome-related organelles complex-1 subunit 2,Bloc1s2,Rattus norvegicus,142,1-33
+Q39162 · TGA4_ARATH,Transcription factor TGA4,TGA4,Arabidopsis thaliana,364,39-79
+Q39238 · TSL_ARATH,Serine/threonine-protein kinase TOUSLED,TOUSLED,Arabidopsis thaliana,688,"1-196, 326-348"
+Q3E772 · LSO2_YEAST,Protein LSO2,LSO2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),92,1-92
+Q3KNJ2 · NHEJ1_MOUSE,Non-homologous end-joining factor 1,Nhej1,Mus musculus,295,228-295
+Q3TES0 · IQEC3_MOUSE,IQ motif and SEC7 domain-containing protein 3,Iqsec3,Mus musculus,1195,"62-139, 229-272, 440-474, 516-615, 1004-1100, 1138-1175"
+Q3TN34 · MILK2_MOUSE,MICAL-like protein 2,Micall2,Mus musculus,1009,"114-180, 247-268, 348-447, 655-834"
+Q3TVW5 · TCHP_MOUSE,Trichoplein keratin filament-binding protein,Tchp,Mus musculus,497,"167-188, 441-497"
+Q3U2S8 · HVCN1_MOUSE,Voltage-gated hydrogen channel 1,Hvcn1,Mus musculus,269,46-79
+Q3UCV8 · OTUL_MOUSE,Ubiquitin thioesterase otulin,Otulin,Mus musculus,352,1-49
+Q3UR85 · MYRF_MOUSE,Myelin regulatory factor,Myrf,Mus musculus,1138,"56-150, 171-200, 246-267, 279-339, 721-753, 891-922, 951-999"
+Q3UZ45 · MCIN_MOUSE,Multicilin,Mcidas,Mus musculus,379,"26-71, 88-107, 291-312"
+Q3V0B4 · CFA65_MOUSE,Cilia- and flagella-associated protein 65,Cfap65,Mus musculus,1847,1668-1721
+Q499N6 · UBXN1_RAT,UBX domain-containing protein 1,Ubxn1,Rattus norvegicus,297,38-212
+Q4GZT3 · PKD2_BOVIN,Polycystin-2,PKD2,Bos taurus,970,"1-182, 766-833, 921-970"
+Q4H4B6 · SCRIB_DANRE,Protein scribble homolog,scrib,Danio rerio,1724,"451-484, 496-620, 646-683, 955-995, 1283-1407, 1414-1433, 1449-1468, 1488-1555, 1621-1684"
+Q4V887 · S39A6_RAT,Zinc transporter ZIP6,Slc39a6,Rattus norvegicus,741,"95-172, 189-213, 434-494"
+Q4V8F5 · TADA3_RAT,Transcriptional adapter 3,Tada3,Rattus norvegicus,432,"87-127, 272-319"
+Q53UA7 · TAOK3_RAT,Serine/threonine-protein kinase TAO3,Taok3,Rattus norvegicus,898,"316-372, 405-424, 565-596"
+Q54GD0 · MGP1_DICDI,GTPase activating protein homolog 1,mgp1,Dictyostelium discoideum,920,"65-91, 403-468, 490-518, 727-836"
+Q54T81 · DKC1_DICDI,Probable H/ACA ribonucleoprotein complex subunit 4,nola4,Dictyostelium discoideum,540,"1-24, 414-540"
+Q54UC9 · KIF3_DICDI,Kinesin-related protein 3,kif3,Dictyostelium discoideum,1193,"377-429, 573-600, 611-630, 638-665, 973-1016, 1032-1114, 1127-1193"
+Q54XG7 · DIMA_DICDI,Basic-leucine zipper transcription factor A,dimA,Dictyostelium discoideum,1230,"65-108, 180-233, 270-310, 422-578, 772-869, 1025-1230"
+Q55DD4 · PAKD_DICDI,Serine/threonine-protein kinase pakD,pakD,Dictyostelium discoideum,1678,"1-73, 180-224, 262-428, 442-489, 631-672, 693-722, 1267-1292, 1323-1346"
+Q56WK6 · PATL1_ARATH,Patellin-1,PATL1,Arabidopsis thaliana,573,"1-74, 111-202"
+Q56YN8 · SMC3_ARATH,Structural maintenance of chromosomes protein 3,SMC3,Arabidopsis thaliana,1204,455-474
+Q58D72 · ATLA1_BOVIN,Atlastin-1,ATL1,Bos taurus,558,1-28
+Q5DU05 · CE164_MOUSE,Centrosomal protein of 164 kDa,Cep164,Mus musculus,1446,"106-132, 159-185, 217-238, 250-408, 424-570, 830-849, 1261-1287"
+Q5FVM4 · NONO_RAT,Non-POU domain-containing octamer-binding protein,Nono,Rattus norvegicus,476,"1-56, 448-476"
+Q5M834 · DTBP1_RAT,Dysbindin,Dtnbp1,Rattus norvegicus,352,267-352
+Q5M9G3 · CAPR1_RAT,Caprin-1,Caprin1,Rattus norvegicus,707,"1-48, 325-347, 412-443, 523-558, 570-620, 641-707"
+Q5PNU3 · AMSH3_ARATH,AMSH-like ubiquitin thioesterase 3,AMSH3,Arabidopsis thaliana,507,"133-162, 214-242"
+Q5SPW0 · VPS54_MOUSE,Vacuolar protein sorting-associated protein 54,Vps54,Mus musculus,977,528-573
+Q5SX39 · MYH4_MOUSE,Myosin-4,Myh4,Mus musculus,1939,"1128-1147, 1153-1172, 1276-1299"
+Q5SXY1 · CYTSB_MOUSE,Cytospin-B,Specc1,Mus musculus,1067,"1-163, 192-223, 250-375, 831-922"
+Q5TJ57 · FORE_DICDI,Formin-E,forE,Dictyostelium discoideum,1561,"1-63, 77-187, 211-279, 305-365, 465-549, 1009-1092, 1466-1508, 1526-1561"
+Q5TYW4 · NBAS_DANRE,NBAS subunit of NRZ tethering complex,nbas,Danio rerio,2372,447-468
+Q60598 · SRC8_MOUSE,Src substrate cortactin,Cttn,Mus musculus,546,"1-28, 355-424"
+Q60902 · EP15R_MOUSE,Epidermal growth factor receptor substrate 15-like 1,Eps15l1,Mus musculus,907,"229-260, 611-860"
+Q61001 · LAMA5_MOUSE,Laminin subunit alpha-5,Lama5,Mus musculus,3718,1253-1284
+Q61087 · LAMB3_MOUSE,Laminin subunit beta-3,Lamb3,Mus musculus,1168,723-760
+Q61292 · LAMB2_MOUSE,Laminin subunit beta-2,Lamb2,Mus musculus,1799,"1339-1365, 1679-1701"
+Q62627 · PAWR_RAT,PRKC apoptosis WT1 regulator protein,Pawr,Rattus norvegicus,332,1-253
+Q62769 · UN13B_RAT,Protein unc-13 homolog B,Unc13b,Rattus norvegicus,1622,"189-280, 292-357"
+Q62921 · HOIL1_RAT,RanBP-type and C3HC4-type zinc finger-containing protein 1,Rbck1,Rattus norvegicus,508,161-191
+Q63525 · NUDC_RAT,Nuclear migration protein nudC,Nudc,Rattus norvegicus,332,"65-108, 121-172"
+Q63918 · CAVN2_MOUSE,Caveolae-associated protein 2,Cavin2,Mus musculus,418,"1-42, 200-238, 262-382, 396-418"
+Q64012 · RALY_MOUSE,RNA-binding protein Raly,Raly,Mus musculus,312,214-312
+Q64331 · MYO6_MOUSE,Unconventional myosin-VI,Myo6,Mus musculus,1262,933-955
+Q64359 · CNGA4_RAT,Cyclic nucleotide-gated channel alpha-4,Cnga4,Rattus norvegicus,575,537-575
+Q65CL1 · CTNA3_MOUSE,Catenin alpha-3,Ctnna3,Mus musculus,895,635-660
+Q66GP0 · SR1P1_ARATH,BTB/POZ domain-containing protein SR1IP1,SR1IP1,Arabidopsis thaliana,604,"478-499, 532-604"
+Q66HL2 · SRC8_RAT,Src substrate cortactin,Cttn,Rattus norvegicus,509,"1-28, 318-409"
+Q66JQ7 · KNL1_MOUSE,Outer kinetochore KNL1 complex subunit KNL1,Knl1,Mus musculus,2119,"1-59, 1557-1583"
+Q673G8 · DACT2_DANRE,Dapper homolog 2,dact2,Danio rerio,837,"189-265, 424-497, 512-564, 600-649, 738-782"
+Q69ZX6 · MOR2A_MOUSE,ATPase MORC2A,Morc2a,Mus musculus,1030,"530-791, 837-874, 882-901"
+Q6A068 · CDC5L_MOUSE,Cell division cycle 5-like protein,Cdc5l,Mus musculus,802,"108-143, 246-278, 408-460"
+Q6IRU2 · TPM4_MOUSE,Tropomyosin alpha-4 chain,Tpm4,Mus musculus,248,"18-49, 78-97"
+Q6IWL4 · TRAF6_DANRE,TNF receptor-associated factor 6,traf6,Danio rerio,542,32-54
+Q6NVD9 · BFSP2_MOUSE,Phakinin,Bfsp2,Mus musculus,416,1-48
+Q6NZM9 · HDAC4_MOUSE,Histone deacetylase 4,Hdac4,Mus musculus,1076,"132-166, 205-225, 239-323, 506-529, 541-580, 622-645"
+Q6P4T2 · U520_MOUSE,U5 small nuclear ribonucleoprotein 200 kDa helicase,Snrnp200,Mus musculus,2136,39-81
+Q6P7F1 · MPP4_MOUSE,MAGUK p55 subfamily member 4,Mpp4,Mus musculus,635,1-23
+Q6P9Q6 · FKB15_MOUSE,FK506-binding protein 15,Fkbp15,Mus musculus,1216,"41-68, 292-357, 927-1216"
+Q6PCP5 · MFF_MOUSE,Mitochondrial fission factor,Mff,Mus musculus,291,106-134
+Q6PCX9 · TRI37_MOUSE,E3 ubiquitin-protein ligase TRIM37,Trim37,Mus musculus,961,"447-514, 529-561, 645-665, 776-811, 874-961"
+Q6PDG5 · SMRC2_MOUSE,SWI/SNF complex subunit SMARCC2,Smarcc2,Mus musculus,1213,"256-413, 724-848, 947-1073, 1181-1213"
+Q6PDX6 · RN220_MOUSE,E3 ubiquitin-protein ligase Rnf220,Rnf220,Mus musculus,566,277-300
+Q6PFY1 · FCSD1_MOUSE,F-BAR and double SH3 domains protein 1,Fchsd1,Mus musculus,688,607-688
+Q6PH08 · ERC2_MOUSE,ERC protein 2,Erc2,Mus musculus,957,"1-44, 922-957"
+Q6Q760 · NALCN_RAT,Sodium leak channel NALCN,Nalcn,Rattus norvegicus,1738,"762-789, 1611-1679"
+Q6R891 · NEB2_MOUSE,Neurabin-2,Ppp1r9b,Mus musculus,817,"1-52, 64-163, 216-451"
+Q6S003 · KIF8_DICDI,Kinesin-related protein 8,kif8,Dictyostelium discoideum,1873,"231-302, 463-567, 778-797, 841-891, 930-1008, 1179-1207, 1244-1267, 1328-1360, 1403-1467, 1758-1780"
+Q6ZPF3 · TIAM2_MOUSE,Rho guanine nucleotide exchange factor TIAM2,Tiam2,Mus musculus,1715,"1-27, 174-249, 263-294, 385-418, 1092-1113, 1515-1582"
+Q6ZPJ3 · UBE2O_MOUSE,(E3-independent) E2 ubiquitin-conjugating enzyme UBE2O,Ube2o,Mus musculus,1288,"1-51, 80-109, 396-529, 711-743, 872-899, 1158-1247"
+Q6ZPK0 · PF21A_MOUSE,PHD finger protein 21A,Phf21a,Mus musculus,688,"78-127, 327-373, 449-471, 650-688"
+Q6ZQ29 · TAOK2_MOUSE,Serine/threonine-protein kinase TAO2,Taok2,Mus musculus,1240,"320-463, 899-946, 1212-1240"
+Q6ZQ88 · KDM1A_MOUSE,Lysine-specific histone demethylase 1A,Kdm1a,Mus musculus,853,1-177
+Q6ZQK0 · CNDD3_MOUSE,Condensin-2 complex subunit D3,Ncapd3,Mus musculus,1506,"154-194, 884-908, 1317-1353, 1385-1412, 1473-1506"
+Q6ZWQ0 · SYNE2_MOUSE,Nesprin-2,Syne2,Mus musculus,6874,"675-723, 2338-2397, 4062-4152, 4171-4193, 4326-4348, 4401-4429, 5435-5459, 6336-6473, 6790-6812"
+Q76M68 · IQEC3_RAT,IQ motif and SEC7 domain-containing protein 3,Iqsec3,Rattus norvegicus,1194,"62-149, 229-272, 439-471, 515-610, 1002-1099, 1137-1175"
+Q7T3I0 · ZC4H2_DANRE,Zinc finger C4H2 domain-containing protein,zc4h2,Danio rerio,224,"166-185, 204-224"
+Q7TMY4 · THOC7_MOUSE,THO complex subunit 7 homolog,Thoc7,Mus musculus,204,182-204
+Q7TNH6 · NPHP3_MOUSE,Nephrocystin-3,Nphp3,Mus musculus,1325,"1-20, 1293-1325"
+Q7TNM2 · TRI46_MOUSE,Tripartite motif-containing protein 46,Trim46,Mus musculus,759,67-98
+Q7TQF7 · AMPH_MOUSE,Amphiphysin,Amph,Mus musculus,686,"244-314, 421-441, 483-597"
+Q80TG1 · KANL1_MOUSE,KAT8 regulatory NSL complex subunit 1,Kansl1,Mus musculus,1036,"145-211, 226-257, 399-423, 739-787, 869-931, 989-1020"
+Q80U19 · DAAM2_MOUSE,Disheveled-associated activator of morphogenesis 2,Daam2,Mus musculus,1115,"510-605, 655-697"
+Q80U93 · NU214_MOUSE,Nuclear pore complex protein Nup214,Nup214,Mus musculus,2085,"423-469, 491-531, 553-574, 588-694, 1134-1154, 1174-1328, 1351-1384, 1453-1474, 1495-1575, 1615-1636, 1763-1814, 1880-1899"
+Q80UK7 · SAS6_MOUSE,Spindle assembly abnormal protein 6 homolog,Sass6,Mus musculus,654,"568-589, 634-654"
+Q80VC9 · CAMP3_MOUSE,Calmodulin-regulated spectrin-associated protein 3,Camsap3,Mus musculus,1252,"183-205, 331-385, 429-457, 479-604, 638-697, 712-935, 962-981, 996-1030, 1063-1114"
+Q810A7 · DDX42_MOUSE,ATP-dependent RNA helicase DDX42,Ddx42,Mus musculus,929,"25-119, 182-203, 662-682, 723-929"
+Q810H6 · DISC1_RAT,Disrupted in schizophrenia 1 homolog,Disc1,Rattus norvegicus,846,"1-53, 127-147, 231-257, 277-312, 409-436"
+Q811U3 · RB6I2_RAT,ELKS/Rab6-interacting/CAST family member 1,Erc1,Rattus norvegicus,948,"1-54, 773-801, 903-948"
+Q84M98 · EME1A_ARATH,Crossover junction endonuclease EME1A,EME1A,Arabidopsis thaliana,546,"1-55, 88-232"
+Q84WV6 · MORC1_ARATH,Protein MICRORCHIDIA 1,MORC1,Arabidopsis thaliana,635,491-511
+Q86G47 · GEFQ_DICDI,Ras guanine nucleotide exchange factor Q,gefQ,Dictyostelium discoideum,1298,"1-26, 46-88, 211-271, 314-384, 459-533, 781-864, 884-920, 1214-1267"
+Q8BHN1 · TXLNG_MOUSE,Gamma-taxilin,Txlng,Mus musculus,524,"1-37, 64-86, 106-130, 501-524"
+Q8BIE6 · FRM4A_MOUSE,FERM domain-containing protein 4A,Frmd4a,Mus musculus,1020,"351-371, 538-665, 698-741, 757-810, 862-949, 961-1020"
+Q8BJW6 · EIF2A_MOUSE,Eukaryotic translation initiation factor 2A,Eif2a,Mus musculus,581,432-533
+Q8BL48 · UNK_MOUSE,RING finger protein unkempt homolog,Unk,Mus musculus,810,"1-24, 239-265, 478-497"
+Q8BL66 · EEA1_MOUSE,Early endosome antigen 1,Eea1,Mus musculus,1411,"1-27, 476-501, 1189-1217"
+Q8BLY2 · SYTC2_MOUSE,"Threonine--tRNA ligase 2, cytoplasmic",Tars3,Mus musculus,790,80-117
+Q8BP22 · CBAR1_MOUSE,CBY1-interacting BAR domain-containing protein 1,Cibar1,Mus musculus,286,258-286
+Q8BYI9 · TENR_MOUSE,Tenascin-R,Tnr,Mus musculus,1358,37-58
+Q8BYZ1 · ABI3_MOUSE,ABI gene family member 3,Abi3,Mus musculus,367,163-273
+Q8C0D7 · ING4_MOUSE,Inhibitor of growth protein 4,Ing4,Mus musculus,249,115-163
+Q8C7G5 · APOA5_MOUSE,Apolipoprotein A-V,Apoa5,Mus musculus,368,305-333
+Q8CCP0 · NEMF_MOUSE,Ribosome quality control complex subunit NEMF,Nemf,Mus musculus,1064,"420-451, 694-718, 731-973"
+Q8CD54 · PIEZ2_MOUSE,Piezo-type mechanosensitive ion channel component 2,Piezo2,Mus musculus,2822,"450-481, 624-668, 875-919, 1505-1551, 1611-1653, 2120-2139, 2164-2205"
+Q8CG73 · FTM_MOUSE,Protein fantom,Rpgrip1l,Mus musculus,1264,"979-1018, 1047-1093"
+Q8CIW5 · PEO1_MOUSE,Twinkle mtDNA helicase,Twnk,Mus musculus,685,642-685
+Q8CJ27 · ASPM_MOUSE,Abnormal spindle-like microcephaly-associated protein homolog,Aspm,Mus musculus,3122,"1-26, 139-169, 579-600"
+Q8CJB9 · BRE1B_RAT,E3 ubiquitin-protein ligase BRE1B,Rnf40,Rattus norvegicus,1002,"1-32, 120-148, 520-562, 579-652"
+Q8CJI4 · H1FNT_MOUSE,Testis-specific H1 histone,H1-7,Mus musculus,398,115-398
+Q8H1F0 · BZP29_ARATH,bZIP transcription factor 29,BZIP29,Arabidopsis thaliana,547,"1-199, 244-312, 333-356, 517-547"
+Q8IQQ4 · GORAB_DROME,RAB6-interacting golgin,Gorab,Drosophila melanogaster,338,"1-109, 127-188"
+Q8IRG6 · SPT16_DROME,FACT complex subunit spt16,dre4,Drosophila melanogaster,1083,923-1083
+Q8K0E8 · FIBB_MOUSE,Fibrinogen beta chain,Fgb,Mus musculus,481,22-81
+Q8K1N2 · PHLB2_MOUSE,Pleckstrin homology-like domain family B member 2,Phldb2,Mus musculus,1249,"64-85, 128-154, 190-248, 264-289, 388-424, 866-934"
+Q8K245 · UVRAG_MOUSE,UV radiation resistance-associated protein,Uvrag,Mus musculus,698,"1-21, 477-551, 565-586"
+Q8K296 · MTMR3_MOUSE,"Phosphatidylinositol-3,5-bisphosphate 3-phosphatase MTMR3",Mtmr3,Mus musculus,1196,"587-612, 697-719, 855-900, 993-1019"
+Q8K482 · EMIL2_MOUSE,EMILIN-2,Emilin2,Mus musculus,1074,"121-184, 219-264, 627-661, 783-865, 893-917"
+Q8K4J6 · MRTFA_MOUSE,Myocardin-related transcription factor A,Mrtfa,Mus musculus,964,"145-292, 328-371, 484-508, 638-673, 706-779, 796-849"
+Q8K4T4 · FLIP1_RAT,Filamin-A-interacting protein 1,Filip1,Rattus norvegicus,1212,"1-73, 871-898, 948-975, 1102-1190"
+Q8L999 · BPC6_ARATH,Protein BASIC PENTACYSTEINE6,BPC6,Arabidopsis thaliana,342,143-199
+Q8LNZ2 · KN7B_ARATH,Kinesin-like protein KIN-7B,KIN7B,Arabidopsis thaliana,938,"450-481, 628-678"
+Q8LPK5 · CESA8_ARATH,Cellulose synthase A catalytic subunit 8 [UDP-forming],CESA8,Arabidopsis thaliana,985,"69-91, 121-165"
+Q8R0L9 · TADA3_MOUSE,Transcriptional adapter 3,Tada3,Mus musculus,432,"87-127, 272-319"
+Q8R151 · ZNFX1_MOUSE,NFX1-type zinc finger-containing protein 1,Znfx1,Mus musculus,1909,"1-133, 787-813"
+Q8R1R3 · STAR7_MOUSE,"StAR-related lipid transfer protein 7, mitochondrial",Stard7,Mus musculus,373,"118-141, 347-373"
+Q8R4U7 · LUZP1_MOUSE,Leucine zipper protein 1,Luzp1,Mus musculus,1068,"251-292, 375-402, 432-558, 677-700, 782-829, 924-945, 959-995, 1033-1068"
+Q8S7E1 · CAO_ORYSJ,"Chlorophyllide a oxygenase, chloroplastic",CAO,Oryza sativa subsp. japonica,541,178-208
+Q8S905 · KN7A_ARATH,Kinesin-like protein KIN-7A,KIN7A,Arabidopsis thaliana,974,"1-29, 605-649, 663-713"
+Q8VC34 · RPAP2_MOUSE,Putative RNA polymerase II subunit B1 CTD phosphatase Rpap2,Rpap2,Mus musculus,614,"1-38, 200-266"
+Q8VD04 · GRAP1_MOUSE,GRIP1-associated protein 1,Gripap1,Mus musculus,806,"616-635, 646-671"
+Q8VD75 · HIP1_MOUSE,Huntingtin-interacting protein 1,Hip1,Mus musculus,1029,1009-1029
+Q8VED2 · BL1S4_MOUSE,Biogenesis of lysosome-related organelles complex 1 subunit 4,Bloc1s4,Mus musculus,215,1-57
+Q8VEJ9 · VPS4A_MOUSE,Vacuolar protein sorting-associated protein 4A,Vps4a,Mus musculus,437,75-106
+Q8VEK3 · HNRPU_MOUSE,Heterogeneous nuclear ribonucleoprotein U,Hnrnpu,Mus musculus,800,"41-257, 647-729, 745-774"
+Q8VHE6 · DYH5_MOUSE,Dynein axonemal heavy chain 5,Dnah5,Mus musculus,4621,901-921
+Q8VIB2 · DAXX_RAT,Death domain-associated protein 6,Daxx,Rattus norvegicus,731,"1-56, 147-183, 381-639, 663-688"
+Q8VYU8 · ICR5_ARATH,Interactor of constitutive active ROPs 5,ICR5,Arabidopsis thaliana,396,"1-49, 99-122"
+Q8VYZ0 · ORTH2_ARATH,E3 ubiquitin-protein ligase ORTHRUS 2,ORTH2,Arabidopsis thaliana,645,"96-133, 599-645"
+Q8VZU2 · SY132_ARATH,Syntaxin-132,SYP132,Arabidopsis thaliana,304,1-30
+Q8W586 · QQT2_ARATH,GPN-loop GTPase QQT2,QQT2,Arabidopsis thaliana,379,303-379
+Q8WQ86 · EB1_DICDI,Microtubule-associated protein RP/EB family member 1,eb1,Dictyostelium discoideum,506,"127-268, 365-506"
+Q91V27 · MELPH_MOUSE,Melanophilin,Mlph,Mus musculus,590,"147-182, 215-276, 311-335, 361-472, 485-590"
+Q91W40 · KLC3_MOUSE,Kinesin light chain 3,Klc3,Mus musculus,508,"1-20, 154-197, 409-441, 486-508"
+Q91WD7 · KI18A_MOUSE,Kinesin-like protein KIF18A,Kif18a,Mus musculus,886,"774-804, 862-886"
+Q91Y80 · 3BP5_RAT,SH3 domain-binding protein 5,Sh3bp5,Rattus norvegicus,457,"1-68, 308-347, 371-427"
+Q920Q0 · PALM_RAT,Paralemmin-1,Palm,Rattus norvegicus,383,"51-164, 242-293, 333-374"
+Q921T2 · TOIP1_MOUSE,Torsin-1A-interacting protein 1,Tor1aip1,Mus musculus,595,"1-221, 250-286, 319-340"
+Q923D5 · WBP11_MOUSE,WW domain-binding protein 11,Wbp11,Mus musculus,641,"1-37, 188-213, 236-550, 588-620"
+Q923J1 · TRPM7_MOUSE,Transient receptor potential cation channel subfamily M member 7,Trpm7,Mus musculus,1863,"544-574, 1380-1418, 1498-1539, 1838-1863"
+Q924W5 · SMC6_MOUSE,Structural maintenance of chromosomes protein 6,Smc6,Mus musculus,1097,"1-32, 813-839, 1078-1097"
+Q924W6 · TRI66_MOUSE,Tripartite motif-containing protein 66,Trim66,Mus musculus,1344,"478-513, 541-600, 655-719, 861-888, 903-924, 1284-1344"
+Q925I1 · ATD3A_MOUSE,ATPase family AAA domain-containing protein 3A,Atad3a,Mus musculus,591,"1-52, 572-591"
+Q94071 · LIPB_CAEEL,Liprin-beta homolog,hlb-1,Caenorhabditis elegans,1004,"50-122, 135-161, 341-366, 432-497, 528-550, 648-686"
+Q944A7 · BSK1_ARATH,Serine/threonine-protein kinase BSK1,BSK1,Arabidopsis thaliana,512,8-48
+Q94BM7 · SPA4_ARATH,Protein SPA1-RELATED 4,SPA4,Arabidopsis thaliana,794,"126-165, 352-373, 428-447"
+Q94K75 · RHON1_ARATH,"Rho-N domain-containing protein 1, chloroplastic",RHON1,Arabidopsis thaliana,401,"73-129, 180-361"
+Q95YF0 · CLAP1_CAEEL,Protein CLASP-1,cls-1,Caenorhabditis elegans,1378,"231-254, 266-325, 590-725, 775-823"
+Q99JB8 · PACN3_MOUSE,Protein kinase C and casein kinase II substrate protein 3,Pacsin3,Mus musculus,424,"154-184, 312-362"
+Q99K90 · TAB2_MOUSE,TGF-beta-activated kinase 1 and MAP3K7-binding protein 2,Tab2,Mus musculus,693,"90-171, 223-310, 330-380, 640-663"
+Q99L90 · MCRS1_MOUSE,Microspherule protein 1,Mcrs1,Mus musculus,462,1-130
+Q99M15 · PPIP2_MOUSE,Proline-serine-threonine phosphatase-interacting protein 2,Pstpip2,Mus musculus,334,288-322
+Q99P99 · HDAC4_RAT,Histone deacetylase 4,Hdac4,Rattus norvegicus,1077,"132-167, 204-225, 239-327, 508-530, 542-582, 623-646, 1052-1077"
+Q99PT9 · KIF19_MOUSE,Kinesin-like protein KIF19,Kif19,Mus musculus,997,"477-509, 665-704, 718-759, 784-997"
+Q9ASS2 · FREE1_ARATH,Protein FREE1,FREE1,Arabidopsis thaliana,601,"1-240, 542-561"
+Q9C518 · TCP8_ARATH,Transcription factor TCP8,TCP8,Arabidopsis thaliana,401,"1-20, 34-70, 182-245, 362-401"
+Q9CU62 · SMC1A_MOUSE,Structural maintenance of chromosomes protein 1A,Smc1a,Mus musculus,1233,"284-308, 348-369, 947-969"
+Q9CXD6 · MCUR1_MOUSE,Mitochondrial calcium uniporter regulator 1,Mcur1,Mus musculus,340,1-44
+Q9CZA6 · NDE1_MOUSE,Nuclear distribution protein nudE homolog 1,Nde1,Mus musculus,344,"181-246, 279-337"
+Q9D4H4 · AMOL1_MOUSE,Angiomotin-like protein 1,Amotl1,Mus musculus,968,"152-258, 285-343, 721-742, 785-834, 853-956"
+Q9D5Y1 · CCD39_MOUSE,Coiled-coil domain-containing protein 39,Ccdc39,Mus musculus,937,866-937
+Q9D666 · SUN1_MOUSE,SUN domain-containing protein 1,Sun1,Mus musculus,913,"69-120, 456-485"
+Q9D9U9 · CFA45_MOUSE,Cilia- and flagella-associated protein 45,Cfap45,Mus musculus,551,"1-52, 232-256, 385-415"
+Q9EP71 · RAI14_MOUSE,Ankycorbin,Rai14,Mus musculus,979,"247-299, 392-429, 446-467"
+Q9EPQ2 · RPGR1_MOUSE,X-linked retinitis pigmentosa GTPase regulator-interacting protein 1,Rpgrip1,Mus musculus,1331,"1-165, 183-220, 351-374, 899-1057, 1088-1146"
+Q9EQG9 · CERT_MOUSE,Ceramide transfer protein,Cert1,Mus musculus,624,"1-24, 202-221"
+Q9ER33 · CNGA3_RAT,Cyclic nucleotide-gated channel alpha-3,Cnga3,Rattus norvegicus,670,"1-25, 111-138, 644-670"
+Q9ERH4 · NUSAP_MOUSE,Nucleolar and spindle-associated protein 1,Nusap1,Mus musculus,427,"41-190, 235-312, 354-427"
+Q9ESV1 · LUZP1_RAT,Leucine zipper protein 1,Luzp1,Rattus norvegicus,1051,"247-293, 374-401, 432-554, 569-601, 675-727, 789-837, 929-1000"
+Q9FFK6 · NUP88_ARATH,Nuclear pore complex protein NUP88,NUP88,Arabidopsis thaliana,810,1-23
+Q9FK13 · PDV1_ARATH,Plastid division protein PDV1,PDV1,Arabidopsis thaliana,272,40-61
+Q9FKP4 · KN14B_ARATH,Kinesin-like protein KIN-14B,KIN14B,Arabidopsis thaliana,1264,"1-52, 588-615, 652-684, 1117-1136"
+Q9FLH0 · CRWN4_ARATH,Protein CROWDED NUCLEI 4,CRWN4,Arabidopsis thaliana,1010,"787-813, 839-937, 966-994"
+Q9FNZ4 · NIMI3_ARATH,Protein NIM1-INTERACTING 3,NIMIN-3,Arabidopsis thaliana,112,"1-20, 77-112"
+Q9FV70 · E2FC_ARATH,Transcription factor E2FC,E2FC,Arabidopsis thaliana,396,34-57
+Q9I7K6 · NASP_DROME,Nuclear autoantigenic sperm protein homolog,Nasp,Drosophila melanogaster,492,"1-52, 123-254, 418-492"
+Q9JKS5 · HABP4_MOUSE,Intracellular hyaluronan-binding protein 4,Habp4,Mus musculus,411,"42-271, 296-318, 358-411"
+Q9JKY5 · HIP1R_MOUSE,Huntingtin-interacting protein 1-related protein,Hip1r,Mus musculus,1068,"582-610, 1011-1068"
+Q9JLT0 · MYH10_RAT,Myosin-10,Myh10,Rattus norvegicus,1976,"1125-1175, 1697-1718, 1874-1976"
+Q9LD43 · ACCA_ARATH,"Acetyl-coenzyme A carboxylase carboxyl transferase subunit alpha, chloroplastic",CAC3,Arabidopsis thaliana,769,718-769
+Q9LDU5 · TI11A_ARATH,Protein TIFY 11A,TIFY11A,Arabidopsis thaliana,274,"49-95, 139-176, 206-274"
+Q9LFU0 · DOT3_ARATH,BTB/POZ domain-containing protein DOT3,DOT3,Arabidopsis thaliana,607,"498-520, 573-607"
+Q9LFY0 · PTST2_ARATH,"Protein PTST homolog 2, chloroplastic",PTST2,Arabidopsis thaliana,532,"165-201, 256-292, 314-347, 367-388"
+Q9LJG8 · ASIL2_ARATH,Trihelix transcription factor ASIL2,ASIL2,Arabidopsis thaliana,443,"1-82, 238-350, 413-443"
+Q9LPC6 · KINUB_ARATH,Kinesin-like protein KIN-UB,KINUB,Arabidopsis thaliana,894,"1-53, 530-550, 598-623"
+Q9LQ55 · DRP2B_ARATH,Dynamin-2B,DRP2B,Arabidopsis thaliana,920,"507-577, 632-657, 828-920"
+Q9LQW3 · ZHD14_ARATH,Zinc-finger homeodomain protein 14,ZHD14,Arabidopsis thaliana,168,82-112
+Q9LV09 · BOB1_ARATH,Protein BOBBER 1,BOB1,Arabidopsis thaliana,304,111-141
+Q9LXN4 · HIRA_ARATH,Protein HIRA,HIRA,Arabidopsis thaliana,1024,"409-460, 983-1024"
+Q9M367 · BECN1_ARATH,Beclin-1-like protein,ATG6,Arabidopsis thaliana,517,76-106
+Q9N5K3 · SYP4_CAEEL,Synaptonemal complex protein 4,syp-4,Caenorhabditis elegans,605,"288-319, 357-430, 479-605"
+Q9NDJ2 · DOM_DROME,Helicase domino,dom,Drosophila melanogaster,3198,"1-27, 93-112, 119-148, 256-350, 391-474, 635-848, 1471-1492, 1828-1856, 2061-2100, 2318-2362"
+Q9QXN0 · SHRM3_MOUSE,Protein Shroom3,Shroom3,Mus musculus,1986,"1-21, 152-199, 211-239, 265-285, 342-463, 564-1055, 1083-1102, 1107-1223, 1304-1425, 1446-1654"
+Q9QXT5 · EGFL7_MOUSE,Epidermal growth factor-like protein 7,Egfl7,Mus musculus,275,173-193
+Q9QY17 · PACN2_RAT,Protein kinase C and casein kinase substrate in neurons 2 protein,Pacsin2,Rattus norvegicus,488,"163-183, 316-429"
+Q9QYB2 · DACH1_MOUSE,Dachshund homolog 1,Dach1,Mus musculus,751,"1-178, 273-295, 351-393, 467-525, 537-556"
+Q9QYK3 · NRBF2_RAT,Nuclear receptor-binding factor 2,Nrbf2,Rattus norvegicus,287,81-114
+Q9QYP6 · AZI2_MOUSE,5-azacytidine-induced protein 2,Azi2,Mus musculus,405,357-377
+Q9R0L6 · PCM1_MOUSE,Pericentriolar material 1 protein,Pcm1,Mus musculus,2025,"1-91, 111-140, 354-390, 528-553, 565-586, 620-654, 866-885, 913-940, 1081-1105, 1149-1213, 1230-1310, 1319-1338, 1720-1943"
+Q9R1A8 · COP1_MOUSE,E3 ubiquitin-protein ligase COP1,Cop1,Mus musculus,733,"1-43, 307-327"
+Q9R1J8 · P3H1_RAT,Prolyl 3-hydroxylase 1,P3h1,Rattus norvegicus,728,691-728
+Q9R269 · PEPL_MOUSE,Periplakin,Ppl,Mus musculus,1755,1-20
+Q9S736 · OBE1_ARATH,Protein OBERON 1,OBE1,Arabidopsis thaliana,566,"1-79, 545-566"
+Q9S7I0 · TADA_ARATH,"tRNA(adenine(34)) deaminase, chloroplastic",TADA,Arabidopsis thaliana,1307,"245-377, 439-458, 544-563, 576-618, 753-807, 837-957, 975-1073, 1268-1293"
+Q9S9P3 · FDM1_ARATH,Factor of DNA methylation 1,FDM1,Arabidopsis thaliana,634,349-375
+Q9SIS3 · MA656_ARATH,65-kDa microtubule-associated protein 6,MAP65-6,Arabidopsis thaliana,608,501-565
+Q9SS80 · OPS_ARATH,Protein OCTOPUS,OPS,Arabidopsis thaliana,685,"1-34, 152-202, 280-314, 419-471, 584-640"
+Q9SSM4 · CHM1B_ARATH,ESCRT-related protein CHMP1B,CHMP1B,Arabidopsis thaliana,203,172-203
+Q9TXH9 · UBXN1_CAEEL,UBX domain-containing protein 1,ubxn-1,Caenorhabditis elegans,299,"39-61, 127-176, 191-218"
+Q9U2I0 · CREBH_CAEEL,CREB homolog crh-1,crh-1,Caenorhabditis elegans,327,"27-114, 151-200"
+Q9V7H4 · TM131_DROME,Transmembrane protein 131 homolog,Tmem131,Drosophila melanogaster,1567,"1112-1337, 1364-1386, 1502-1567"
+Q9V9Y9 · SPNF_DROME,Protein spindle-F,spn-F,Drosophila melanogaster,364,"1-26, 56-75"
+Q9VBX1 · NEMF_DROME,Ribosome quality control complex subunit NEMF homolog,Clbn,Drosophila melanogaster,992,"214-245, 688-715, 771-895"
+Q9VC70 · DZIP1_DROME,Cilium assembly protein DZIP1L,DZIP1,Drosophila melanogaster,737,"167-187, 214-267, 415-548, 624-682, 698-737"
+Q9VCA8 · ANKHM_DROME,Ankyrin repeat and KH domain-containing protein mask,mask,Drosophila melanogaster,4001,"1-61, 91-174, 391-494, 1046-1067, 1306-1376, 1583-1612, 1646-1669, 1682-1779, 1852-1872, 2084-2108, 2225-2256, 2699-3033, 3156-3329, 3383-3457, 3520-3636, 3744-3786, 3876-3945"
+Q9VIF6 · DDX47_DROME,ATP-dependent RNA helicase DDX47,pths,Drosophila melanogaster,507,"1-58, 451-507"
+Q9VKJ9 · C2D1_DROME,Coiled-coil and C2 domain-containing protein 1-like,l(2)gd1,Drosophila melanogaster,816,"1-135, 157-176, 186-269, 418-492"
+Q9VU84 · DBNL_DROME,Drebrin-like protein,Abp1,Drosophila melanogaster,531,"191-220, 285-307, 319-340, 386-448"
+Q9VWN4 · FLACC_DROME,Fl(2)d-associated complex component,Flacc,Drosophila melanogaster,1150,"1-444, 477-710, 833-914, 1034-1053"
+Q9WU42 · NCOR2_MOUSE,Nuclear receptor corepressor 2,Ncor2,Mus musculus,2472,"1-20, 47-168, 190-220, 487-618, 665-1107, 1173-1197, 1254-1277, 1345-1378, 1410-1443, 1479-1578, 1734-1826, 1857-1878, 1898-1986, 2001-2078, 2132-2226, 2343-2459"
+Q9WU62 · INCE_MOUSE,Inner centromere protein,Incenp,Mus musculus,880,"52-104, 175-229, 303-322, 350-461, 513-541, 563-617, 629-713, 775-813"
+Q9WUM3 · COR1B_MOUSE,Coronin-1B,Coro1b,Mus musculus,484,404-446
+Q9WUU9 · GANP_MOUSE,Germinal-center associated nuclear protein,Mcm3ap,Mus musculus,1971,"1-50, 214-406, 1793-1840"
+Q9WV04 · KIF9_MOUSE,Kinesin-like protein KIF9,Kif9,Mus musculus,790,"482-521, 547-577"
+Q9WV18 · GABR1_MOUSE,Gamma-aminobutyric acid type B receptor subunit 1,Gabbr1,Mus musculus,960,"866-891, 908-960"
+Q9WVQ0 · PMFBP_MOUSE,Polyamine-modulated factor 1-binding protein 1,Pmfbp1,Mus musculus,1022,545-582
+Q9XX00 · SRBPH_CAEEL,Sterol regulatory element binding protein sbp-1,sbp-1,Caenorhabditis elegans,1113,"24-68, 101-132, 206-274, 290-345, 437-472"
+Q9Y048 · DTN1_CAEEL,Dystrobrevin-1,dyb-1,Caenorhabditis elegans,590,1-25
+Q9Z204 · HNRPC_MOUSE,Heterogeneous nuclear ribonucleoproteins C1/C2,Hnrnpc,Mus musculus,313,"139-191, 219-313"
+Q9Z214 · HOME1_RAT,Homer protein homolog 1,Homer1,Rattus norvegicus,366,114-189
+Q9Z272 · GIT1_RAT,ARF GTPase-activating protein GIT1,Git1,Rattus norvegicus,770,"363-425, 574-615"
+Q9Z277 · BAZ1B_MOUSE,Tyrosine-protein kinase BAZ1B,Baz1b,Mus musculus,1479,"146-212, 302-333, 376-433, 448-472, 789-813, 1231-1324, 1451-1479"
+Q9Z2Y3 · HOME1_MOUSE,Homer protein homolog 1,Homer1,Mus musculus,366,114-189
+Q9Z340 · PARD3_RAT,Partitioning defective 3 homolog,Pard3,Rattus norvegicus,1337,"81-109, 143-263, 397-441, 866-888, 932-1015, 1028-1055, 1110-1271, 1284-1337"
+Q9ZQ85 · EFM_ARATH,Myb family transcription factor EFM,EFM,Arabidopsis thaliana,432,"123-237, 354-412"
+Q9ZSM8 · EZA1_ARATH,Histone-lysine N-methyltransferase EZA1,EZA1,Arabidopsis thaliana,856,"1-34, 66-87, 366-473, 827-856"
+Q9ZT71 · STA1_ARATH,Protein STABILIZED1,STA1,Arabidopsis thaliana,1029,142-170
+Q9ZV65 · HDG3_ARATH,Homeobox-leucine zipper protein HDG3,HDG3,Arabidopsis thaliana,725,1-74
+S6F527 · EAT17_CAEEL,Rab GTPase-activating protein eat-17,eat-17,Caenorhabditis elegans,888,"41-87, 104-135, 631-654, 854-888"
+V6CJ04 · BICD_CAEEL,Protein bicaudal D homolog,bicd-1,Caenorhabditis elegans,737,"72-97, 686-737"
+W6RTA4 · CLA1_CAEEL,Protein clarinet,cla-1,Caenorhabditis elegans,8922,"11-35, 527-579, 622-673, 687-860, 880-955, 971-1049, 1062-1139, 1151-1331, 1347-1420, 1444-1520, 1538-1619, 1632-1710, 1726-1801, 1820-1898, 1939-1992, 2032-2084, 2126-2175, 2194-2213, 2220-2246, 2329-2403, 2423-2497, 2516-2594, 2610-2684, 2704-2845, 2892-2963, 2983-3155, 3171-3249, 3268-3337, 3619-3639, 3995-4079, 4117-4169, 4181-4271, 4557-4624, 4636-4656, 4666-4685, 4730-4801, 4855-4899, 5004-5036, 5360-5379, 5390-5413, 5484-5511, 5540-5572, 6194-6303, 6354-6437, 6487-6510, 6577-6609, 6668-6691, 6728-6768, 6998-7018, 7045-7098, 7137-7175, 7202-7263, 7313-7350, 7598-7623, 7760-7797, 7842-7881, 8510-8562"
+A0A0P0XCU3 · SSY3A_ORYSJ,"Soluble starch synthase 3a, chloroplastic/amyloplastic",SSIIIA,Oryza sativa subsp. japonica,1875,1014-1043
+A0A1D5NS60 · ZN16L_DANRE,Zinc finger protein 16-like,znf16l,Danio rerio,528,"1-28, 159-202, 232-293, 333-359, 502-528"
+A0A8M2BID5 · DESPA_DANRE,Desmoplakin-A,dspa,Danio rerio,2059,"1-25, 665-690, 2008-2059"
+A1Z9P3 · SHRM_DROME,Protein Shroom,Shrm,Drosophila melanogaster,1576,"1-31, 46-100, 112-142, 187-244, 267-434, 589-609, 621-660, 699-728, 743-823, 849-876, 910-939, 1036-1055, 1091-1116, 1210-1244"
+A2AG50 · MA7D2_MOUSE,MAP7 domain-containing protein 2,Map7d2,Mus musculus,781,"1-37, 50-87, 120-567, 597-628"
+A2AIR5 · NMD3A_MOUSE,"Glutamate receptor ionotropic, NMDA 3A",Grin3a,Mus musculus,1135,59-118
+A2AMM0 · CAVN4_MOUSE,Caveolae-associated protein 4,Cavin4,Mus musculus,362,"1-24, 230-289, 305-346"
+A2AQ19 · RTF1_MOUSE,RNA polymerase-associated protein RTF1 homolog,Rtf1,Mus musculus,715,"28-218, 233-362, 632-654, 679-715"
+A2AQ25 · SKT_MOUSE,Sickle tail protein,Skt,Mus musculus,1946,"1-83, 113-176, 305-324, 339-374, 455-512, 853-875, 891-947, 1008-1221, 1482-1567, 1622-1664, 1691-1946"
+A2AUM9 · CE152_MOUSE,Centrosomal protein of 152 kDa,Cep152,Mus musculus,1736,"1-127, 571-592, 1416-1479, 1543-1562, 1574-1614, 1677-1736"
+A4GSN8 · NUA_ARATH,Nuclear-pore anchor,NUA,Arabidopsis thaliana,2093,"1175-1198, 1453-1489, 1525-1555, 1627-2093"
+A6H6E2 · MMRN2_MOUSE,Multimerin-2,Mmrn2,Mus musculus,943,"128-150, 778-801"
+A7MBB4 · M3K13_BOVIN,Mitogen-activated protein kinase kinase kinase 13,MAP3K13,Bos taurus,966,"1-59, 561-663, 743-874, 937-966"
+B1AZI6 · THOC2_MOUSE,THO complex subunit 2,Thoc2,Mus musculus,1594,1183-1594
+B2RWS6 · EP300_MOUSE,Histone acetyltransferase p300,Ep300,Mus musculus,2412,"1-27, 130-156, 484-517, 719-762, 776-1049, 1519-1577, 1830-1925, 1991-2011, 2094-2133, 2192-2236, 2263-2348"
+B9EJ80 · PDZD8_MOUSE,PDZ domain-containing protein 8,Pdzd8,Mus musculus,1147,"504-673, 948-990, 1126-1147"
+C0LU16 · MED21_ARATH,Mediator of RNA polymerase II transcription subunit 21,MED21,Arabidopsis thaliana,139,28-58
+C8KI33 · SUV2_ARATH,Protein SENSITIVE TO UV 2,SUV2,Arabidopsis thaliana,646,42-70
+D3ZKD3 · ALKB5_RAT,RNA demethylase ALKBH5,Alkbh5,Rattus norvegicus,395,"1-28, 47-83, 294-395"
+D3ZN95 · HCFC1_RAT,Host cell factor 1,Hcfc1,Rattus norvegicus,2034,"407-434, 1221-1241, 1302-1374, 1444-1477, 1491-1525, 2005-2034"
+D3ZUQ0 · RIPL1_RAT,RILP-like protein 1,Rilpl1,Rattus norvegicus,406,"255-280, 330-354"
+D3ZYR1 · FCHO2_RAT,F-BAR domain only protein 2,Fcho2,Rattus norvegicus,809,"301-352, 390-422, 435-536"
+D4A208 · SRGP2_RAT,SLIT-ROBO Rho GTPase-activating protein 2,Srgap2,Rattus norvegicus,1071,"181-211, 703-726, 794-820, 835-936, 983-1012, 1029-1071"
+D4A7V9 · E2AK4_RAT,eIF-2-alpha kinase GCN2,Eif2ak4,Rattus norvegicus,1649,"1-26, 227-260, 662-785"
+D4AEC2 · CAMP2_RAT,Calmodulin-regulated spectrin-associated protein 2,Camsap2,Rattus norvegicus,1470,"374-397, 580-622, 648-712, 796-864, 930-1059, 1078-1099, 1167-1327"
+E9PVD1 · CCD62_MOUSE,Coiled-coil domain-containing protein 62,Ccdc62,Mus musculus,701,624-652
+E9Q5F9 · SETD2_MOUSE,Histone-lysine N-methyltransferase SETD2,Setd2,Mus musculus,2537,"1-31, 91-142, 156-483, 510-554, 607-629, 729-749, 829-894, 941-974, 1015-1078, 1135-1185, 1232-1254, 1280-1346, 1366-1396, 1806-1848, 1914-1981, 1993-2110, 2412-2438"
+E9Q8Q6 · CC141_MOUSE,Coiled-coil domain-containing protein 141,Ccdc141,Mus musculus,1531,"1170-1230, 1368-1401"
+E9Q9R9 · DLG5_MOUSE,Disks large homolog 5,Dlg5,Mus musculus,1921,"116-143, 857-898, 930-1121, 1204-1227, 1243-1266, 1280-1343, 1434-1501"
+E9QA62 · LMOD3_MOUSE,Leiomodin-3,Lmod3,Mus musculus,571,"1-29, 46-67, 91-228"
+F0JAI6 · KEBAB_DROME,Kinetochore and Eb1-associated basic protein,Kebab,Drosophila melanogaster,548,"1-51, 82-181"
+F1M5N7 · KI21B_RAT,Kinesin-like protein KIF21B,Kif21b,Rattus norvegicus,1634,"521-540, 553-624, 832-861, 1194-1248"
+F1MRK3 · AMOL2_BOVIN,Angiomotin-like protein 2,AMOTL2,Bos taurus,766,"64-103, 121-144, 171-213, 262-302, 516-537, 676-743"
+F4HRI2 · HEI10_ARATH,E3 ubiquitin-protein ligase CCNB1IP1 homolog,HEI10,Arabidopsis thaliana,304,218-279
+F4HVW5 · VAD1_ARATH,"Protein VASCULAR ASSOCIATED DEATH 1, chloroplastic",VAD1,Arabidopsis thaliana,598,1-64
+F4HW51 · CHR20_ARATH,Protein CHROMATIN REMODELING 20,ATRX,Arabidopsis thaliana,1479,"40-109, 594-615, 1400-1423"
+F4HXZ1 · BRO1_ARATH,Vacuolar-sorting protein BRO1,BRO1,Arabidopsis thaliana,846,726-846
+F4I171 · MD15A_ARATH,Mediator of RNA polymerase II transcription subunit 15a,MED15A,Arabidopsis thaliana,1335,"1-27, 109-172, 190-225, 241-389, 401-448, 496-525, 567-591, 683-815, 947-986, 1146-1165"
+F4I316 · SUN3_ARATH,SUN domain-containing protein 3,SUN3,Arabidopsis thaliana,660,"50-75, 93-120, 141-194, 418-496"
+F4IIS5 · KN5A_ARATH,Kinesin-like protein KIN-5A,KIN5A,Arabidopsis thaliana,1042,"1-45, 1021-1042"
+F4JS25 · SRFR1_ARATH,Suppressor of RPS4-RLD 1,SRFR1,Arabidopsis thaliana,1052,"131-181, 704-739"
+F4JZY1 · CIP1_ARATH,COP1-interactive protein 1,CIP1,Arabidopsis thaliana,1586,"88-119, 249-286, 325-353, 430-456, 965-985"
+F4KAF2 · MORC4_ARATH,Protein MICRORCHIDIA 4,MORC4,Arabidopsis thaliana,800,"1-76, 552-702"
+F6ZDS4 · TPR_MOUSE,Nucleoprotein TPR,Tpr,Mus musculus,2431,"1-48, 989-1011, 1689-1744, 1873-2193, 2295-2431"
+G3X9J0 · SI1L3_MOUSE,Signal-induced proliferation-associated 1-like protein 3,Sipa1l3,Mus musculus,1776,"41-157, 240-325, 438-461, 1040-1104, 1117-1164, 1184-1632, 1678-1705"
+G5EFT5 · HSF1_CAEEL,Heat shock transcription factor hsf-1,hsf-1,Caenorhabditis elegans,671,"1-61, 329-423, 437-493, 526-552, 612-671"
+G5EFV3 · RSA2_CAEEL,Regulator of spindle assembly protein 2,rsa-2,Caenorhabditis elegans,947,"20-148, 173-211, 407-453, 575-594, 600-662, 681-705"
+H2KZW3 · M3K20_CAEEL,Mitogen-activated protein kinase kinase kinase zak-1,zak-1,Caenorhabditis elegans,745,693-745
+O08815 · SLK_RAT,STE20-like serine/threonine-protein kinase,Slk,Rattus norvegicus,1206,"308-352, 364-440, 515-761, 773-792, 1079-1100, 1181-1206"
+O08838 · AMPH_RAT,Amphiphysin,Amph,Rattus norvegicus,683,"244-311, 421-443, 455-599"
+O08839 · BIN1_RAT,Myc box-dependent-interacting protein 1,Bin1,Rattus norvegicus,588,"279-355, 448-483"
+O15743 · SPNA_DICDI,Protein spalten,spnA,Dictyostelium discoideum,975,"1-31, 64-99, 455-520, 541-700"
+O23144 · PPI1_ARATH,Proton pump-interactor 1,PPI1,Arabidopsis thaliana,612,"1-58, 374-572"
+O23304 · BLUS1_ARATH,Serine/threonine-protein kinase BLUS1,BLUS1,Arabidopsis thaliana,487,363-389
+O35219 · KCNH2_MOUSE,Voltage-gated inwardly rectifying potassium channel KCNH2,Kcnh2,Mus musculus,1162,"233-316, 873-991, 1125-1162"
+O35309 · NMI_MOUSE,N-myc-interactor,Nmi,Mus musculus,314,1-24
+O35382 · EXOC4_MOUSE,Exocyst complex component 4,Exoc4,Mus musculus,975,211-230
+O35601 · FYB1_MOUSE,FYN-binding protein 1,Fyb1,Mus musculus,819,"1-490, 589-635, 649-728"
+O48946 · CESA1_ARATH,Cellulose synthase A catalytic subunit 1 [UDP-forming],CESA1,Arabidopsis thaliana,1081,118-195
+O54748 · STK3_RAT,Serine/threonine-protein kinase 3,Stk3,Rattus norvegicus,491,"301-343, 370-392"
+O55029 · COPB2_MOUSE,Coatomer subunit beta',Copb2,Mus musculus,905,837-873
+O65020 · ETO1_ARATH,Ethylene-overproduction protein 1,ETO1,Arabidopsis thaliana,951,15-52
+O70374 · MTG8R_MOUSE,Protein CBFA2T2,Cbfa2t2,Mus musculus,594,"48-96, 220-257, 388-416, 538-594"
+O70566 · DIAP2_MOUSE,Protein diaphanous homolog 2,Diaph2,Mus musculus,1098,"1-62, 537-565, 578-611, 679-699, 1007-1047, 1063-1098"
+O76924 · ARI2_DROME,Potential E3 ubiquitin-protein ligase ariadne-2,ari-2,Drosophila melanogaster,509,1-23
+O80450 · TGT3B_ARATH,Trihelix transcription factor GT-3b,GT-3B,Arabidopsis thaliana,289,137-200
+O80653 · SKIP_ARATH,SNW/SKI-interacting protein,SKIP,Arabidopsis thaliana,613,"219-252, 315-437, 513-613"
+O80796 · VIPP1_ARATH,"Membrane-associated protein VIPP1, chloroplastic",VIPP1,Arabidopsis thaliana,330,287-312
+O88597 · BECN1_MOUSE,Beclin-1,Becn1,Mus musculus,448,47-66
+O88664 · TAOK1_RAT,Serine/threonine-protein kinase TAO1,Taok1,Rattus norvegicus,1001,"324-380, 404-431, 567-587, 905-1001"
+O88735 · MAP7_MOUSE,Ensconsin,Map7,Mus musculus,730,"1-183, 291-388, 403-669"
+O88974 · SETB1_MOUSE,Histone-lysine N-methyltransferase SETDB1,Setdb1,Mus musculus,1307,"127-148, 404-424, 444-512, 531-570, 885-1174"
+O96923 · GNRA_DICDI,Gelsolin-related protein of 125 kDa,gnrA,Dictyostelium discoideum,1087,"1-40, 555-592, 732-1087"
+P02564 · MYH7_RAT,Myosin-7,Myh7,Rattus norvegicus,1935,1915-1935
+P02672 · FIBA_BOVIN,Fibrinogen alpha chain,FGA,Bos taurus,615,"267-427, 530-615"
+P04104 · K2C1_MOUSE,"Keratin, type II cytoskeletal 1",Krt1,Mus musculus,637,"505-533, 563-637"
+P04692 · TPM1_RAT,Tropomyosin alpha-1 chain,Tpm1,Rattus norvegicus,284,"1-38, 116-136"
+P06102 · NOT3_YEAST,General negative regulator of transcription subunit 3,NOT3,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),836,"252-284, 296-391, 410-471, 513-532, 537-583"
+P08661 · MBL2_RAT,Mannose-binding protein C,Mbl2,Rattus norvegicus,244,43-99
+P0AF36 · ZAPB_ECOLI,Cell division protein ZapB,zapB,Escherichia coli (strain K12),81,36-67
+P0C2J7 · YH41B_YEAST,Transposon Ty4-H Gag-Pol polyprotein,TY4B-H,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1802,1223-1248
+P0C605 · KGP1_MOUSE,cGMP-dependent protein kinase 1,Prkg1,Mus musculus,671,635-671
+P11557 · DAMX_ECOLI,Cell division protein DamX,damX,Escherichia coli (strain K12),428,"1-99, 149-190, 226-344"
+P12847 · MYH3_RAT,Myosin-3,Myh3,Rattus norvegicus,1940,1260-1289
+P16568 · BICD_DROME,Protein bicaudal D,BicD,Drosophila melanogaster,782,744-782
+P16926 · MREC_ECOLI,Cell shape-determining protein MreC,mreC,Escherichia coli (strain K12),367,300-367
+P17119 · KAR3_YEAST,Kinesin-like protein KAR3,KAR3,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),729,1-48
+P20480 · NCD_DROME,Protein claret segregational,ncd,Drosophila melanogaster,700,"141-185, 681-700"
+P21271 · MYO5B_MOUSE,Unconventional myosin-Vb,Myo5b,Mus musculus,1818,"1086-1120, 1161-1188"
+P22293 · SUS_DROME,Protein suppressor of sable,su(sable),Drosophila melanogaster,1325,"1-36, 74-326, 499-535, 588-622, 639-695, 710-745, 780-835, 979-1058, 1143-1170, 1295-1325"
+P25386 · USO1_YEAST,Intracellular protein transport protein USO1,USO1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1790,"452-484, 1185-1221, 1326-1351, 1485-1547, 1645-1667, 1722-1742, 1762-1790"
+P28661 · SEPT4_MOUSE,Septin-4,Septin4,Mus musculus,478,"1-115, 428-449"
+P28738 · KIF5C_MOUSE,Kinesin heavy chain isoform 5C,Kif5c,Mus musculus,956,910-956
+P29974 · CNGA1_MOUSE,Cyclic nucleotide-gated channel alpha-1,Cnga1,Mus musculus,684,34-145
+P30427 · PLEC_RAT,Plectin,Plec,Rattus norvegicus,4687,"111-158, 1623-1647, 1741-1764, 1796-1846, 2096-2139, 2164-2188, 2218-2307, 2671-2710, 4614-4687"
+P31111 · ZIP1_YEAST,Synaptonemal complex protein ZIP1,ZIP1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),875,"47-67, 127-152, 738-831"
+P31976 · EZRI_BOVIN,Ezrin,EZR,Bos taurus,581,"306-341, 534-560"
+P32389 · MET4_YEAST,Transcriptional activator of sulfur metabolism MET4,MET4,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),672,"1-44, 157-265, 299-347, 475-574"
+P33174 · KIF4_MOUSE,Chromosome-associated kinesin KIF4,Kif4,Mus musculus,1231,1189-1212
+P34078 · LTV1_YEAST,Protein LTV1,LTV1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),463,"37-63, 284-345, 426-463"
+P34216 · EDE1_YEAST,EH domain-containing and endocytosis protein 1,EDE1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1381,"389-535, 898-919, 933-1202, 1214-1285, 1298-1322"
+P34611 · NCL1_CAEEL,B-box type zinc finger protein ncl-1,ncl-1,Caenorhabditis elegans,851,"71-91, 176-211"
+P36094 · SPC42_YEAST,Spindle pole body component SPC42,SPC42,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),363,"160-184, 310-363"
+P38806 · YNG2_YEAST,Chromatin modification-related protein YNG2,YNG2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),282,123-217
+P39743 · RV167_YEAST,Reduced viability upon starvation protein 167,RVS167,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),482,382-407
+P40477 · NU159_YEAST,Nucleoporin NUP159,NUP159,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1460,"401-435, 483-504, 533-619, 647-704, 727-824, 861-1092"
+P40797 · PNUT_DROME,Protein peanut,pnut,Drosophila melanogaster,539,"29-90, 513-539"
+P40957 · MAD1_YEAST,Spindle assembly checkpoint component MAD1,MAD1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),749,"39-59, 323-370"
+P42527 · MHCKA_DICDI,Myosin heavy chain kinase A,mhkA,Dictyostelium discoideum,1146,"1-25, 158-191, 521-540"
+P43254 · COP1_ARATH,E3 ubiquitin-protein ligase COP1,COP1,Arabidopsis thaliana,675,"1-40, 261-290"
+P43609 · RSC8_YEAST,Chromatin structure-remodeling complex protein RSC8,RSC8,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),557,"1-44, 510-544"
+P47024 · YJ41B_YEAST,Transposon Ty4-J Gag-Pol polyprotein,TY4B-J,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1803,1224-1250
+P47068 · BBC1_YEAST,Myosin tail region-interacting protein MTI1,BBC1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1157,"68-116, 135-156, 231-256, 284-888"
+P53168 · DUO1_YEAST,DASH complex subunit DUO1,DUO1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),247,"27-47, 172-247"
+P53261 · PESC_YEAST,Pescadillo homolog,NOP7,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),605,"297-342, 459-605"
+P53298 · CENPQ_YEAST,Inner kinetochore subunit OKP1,OKP1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),406,"1-37, 59-122, 379-406"
+P53564 · CUX1_MOUSE,Homeobox protein cut-like 1,Cux1,Mus musculus,1515,"393-453, 509-546, 644-666, 680-702, 769-871, 884-923, 1032-1105, 1207-1242, 1307-1488"
+P54256 · HAP1_RAT,Huntingtin-associated protein 1,Hap1,Rattus norvegicus,629,"1-71, 213-261, 363-412, 458-531, 563-629"
+P61265 · STX1B_RAT,Syntaxin-1B,Stx1b,Rattus norvegicus,288,1-20
+P63041 · CPLX1_RAT,Complexin-1,Cplx1,Rattus norvegicus,134,"1-60, 74-114"
+P69771 · DID2_YEAST,Vacuolar protein-sorting-associated protein 46,DID2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),204,185-204
+P70278 · STRA8_MOUSE,Stimulated by retinoic acid gene 8 protein,Stra8,Mus musculus,393,"1-25, 124-201"
+P70569 · MYO5B_RAT,Unconventional myosin-Vb,Myo5b,Rattus norvegicus,1846,"599-629, 1088-1122"
+P79100 · TRPC4_BOVIN,Short transient receptor potential channel 4,TRPC4,Bos taurus,979,762-790
+P79114 · MYO10_BOVIN,Unconventional myosin-X,MYO10,Bos taurus,2052,"819-843, 964-1093"
+P82458 · TRI18_RAT,E3 ubiquitin-protein ligase Midline-1,Mid1,Rattus norvegicus,667,471-524
+P82804 · PYM_DROME,Partner of Y14 and mago,Pym,Drosophila melanogaster,207,"1-28, 52-133"
+P84309 · ADCY5_MOUSE,Adenylate cyclase type 5,Adcy5,Mus musculus,1262,1-194
+P91193 · MACO1_CAEEL,Macoilin,maco-1,Caenorhabditis elegans,897,"291-375, 403-535, 724-770"
+P97433 · ARG28_MOUSE,Rho guanine nucleotide exchange factor 28,Arhgef28,Mus musculus,1700,"288-343, 483-532, 1184-1205, 1289-1328, 1602-1700"
+P97434 · MPRIP_MOUSE,Myosin phosphatase Rho-interacting protein,Mprip,Mus musculus,1024,"152-262, 274-301, 328-379, 486-583, 972-995"
+P97500 · MYT1L_MOUSE,Myelin transcription factor 1-like protein,Myt1l,Mus musculus,1187,"1-22, 56-178, 221-248, 343-422, 450-514, 686-710"
+P97577 · FEZ1_RAT,Fasciculation and elongation protein zeta-1,Fez1,Rattus norvegicus,393,"1-41, 130-154"
+Q00174 · LAMA_DROME,Laminin subunit alpha,LanA,Drosophila melanogaster,3712,3244-3297
+Q01590 · SED5_YEAST,Integral membrane protein SED5,SED5,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),340,"31-51, 180-231"
+Q03388 · VPS72_YEAST,Vacuolar protein sorting-associated protein 72,VPS72,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),795,"40-179, 314-406, 462-510, 554-585"
+Q03410 · SYCP1_RAT,Synaptonemal complex protein 1,Sycp1,Rattus norvegicus,997,828-863
+Q04272 · VPS20_YEAST,Vacuolar protein sorting-associated protein 20,VPS20,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),221,170-221
+Q05BC3 · EMAL1_MOUSE,Echinoderm microtubule-associated protein-like 1,Eml1,Mus musculus,814,77-180
+Q06344 · ESF1_YEAST,Pre-rRNA-processing protein ESF1,ESF1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),628,"78-147, 192-229, 412-541, 582-628"
+Q06440 · CORO_YEAST,Coronin-like protein,CRN1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),651,408-609
+Q06704 · IMH1_YEAST,Golgin IMH1,IMH1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),911,"16-41, 271-314, 814-850"
+Q07970 · KN14C_ARATH,Kinesin-like protein KIN-14C,KIN14C,Arabidopsis thaliana,793,1-43
+Q08179 · MDM38_YEAST,Mitochondrial distribution and morphology protein 38,MDM38,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),573,"417-455, 477-573"
+Q08550 · MPC54_YEAST,Meiotic plaque component protein 54,MPC54,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),464,71-102
+Q09994 · ANI2_CAEEL,Anillin-like protein 2,ani-2,Caenorhabditis elegans,1009,"1-29, 272-295, 539-558"
+Q0DAJ3 · WRK28_ORYSJ,WRKY transcription factor WRKY28,WRKY28,Oryza sativa subsp. japonica,396,"157-178, 306-335"
+Q0JJ05 · NMCPB_ORYSJ,Nuclear matrix constituent protein 1b,NMCP1B,Oryza sativa subsp. japonica,987,"1-25, 752-775, 887-987"
+Q0KK55 · KNDC1_MOUSE,Kinase non-catalytic C-lobe domain-containing protein 1,Kndc1,Mus musculus,1742,"215-288, 365-455, 703-727, 744-876, 948-1006, 1028-1076"
+Q12315 · GLE1_YEAST,mRNA export factor GLE1,GLE1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),538,"9-39, 151-226"
+Q12466 · TCB1_YEAST,Tricalbin-1,TCB1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1186,1-50
+Q155U0 · VPS51_DANRE,Vacuolar protein sorting-associated protein 51 homolog,vps51,Danio rerio,827,279-304
+Q17353 · PAR3_CAEEL,Partitioning defective protein 3,par-3,Caenorhabditis elegans,1379,"1-32, 208-335, 767-873, 887-918, 949-1085, 1273-1301, 1350-1379"
+Q1KPV0 · FZL_ARATH,"Probable transmembrane GTPase FZO-like, chloroplastic",FZL,Arabidopsis thaliana,912,51-71
+Q1LWH4 · FAN1_DANRE,Fanconi-associated nuclease 1,fan1,Danio rerio,988,"1-39, 87-115, 164-256, 269-307"
+Q20010 · SAS5_CAEEL,Spindle assembly abnormal protein 5,sas-5,Caenorhabditis elegans,404,"192-214, 306-325, 376-404"
+Q20435 · ATF6H_CAEEL,Transcription factor atf-6 homolog,atf-6,Caenorhabditis elegans,589,1-82
+Q21029 · NSY1_CAEEL,Mitogen-activated protein kinase kinase kinase nsy-1,nsy-1,Caenorhabditis elegans,1498,"1-35, 190-209, 1022-1050, 1461-1498"
+Q21086 · GNL3_CAEEL,Guanine nucleotide-binding protein-like 3 homolog,nst-1,Caenorhabditis elegans,556,"29-50, 461-508, 525-556"
+Q21441 · KI26L_CAEEL,Kinesin-like protein vab-8,vab-8,Caenorhabditis elegans,1066,"328-367, 387-411, 471-491, 569-592, 784-815, 827-957"
+Q22472 · RIC3_CAEEL,Resistance to inhibitors of cholinesterase protein 3,ric-3,Caenorhabditis elegans,378,"1-32, 74-105, 155-179, 207-246, 267-378"
+Q24141 · SGO1_DROME,Shugoshin,mei-S332,Drosophila melanogaster,401,"82-197, 338-401"
+Q24167 · SIMA_DROME,Protein similar,sima,Drosophila melanogaster,1507,"1-85, 433-459, 541-588, 706-832, 900-951, 1204-1228, 1251-1287, 1356-1460"
+Q24547 · STX1A_DROME,Syntaxin-1A,Syx1A,Drosophila melanogaster,291,1-20
+Q27934 · PHYL_DROME,Protein phyllopod,phyl,Drosophila melanogaster,400,"125-145, 346-382"
+Q2KN99 · CYTSA_RAT,Cytospin-A,Specc1l,Rattus norvegicus,1118,"1-50, 75-175, 294-324, 359-391, 916-999"
+Q2TV84 · TRPM1_MOUSE,Transient receptor potential cation channel subfamily M member 1,Trpm1,Mus musculus,1622,"1-25, 64-95, 450-490, 618-641, 822-856, 1354-1383, 1389-1408, 1567-1622"
+Q38HM4 · TRI63_MOUSE,E3 ubiquitin-protein ligase TRIM63,Trim63,Mus musculus,350,325-350
+Q39237 · TGA1_ARATH,Transcription factor TGA1,TGA1,Arabidopsis thaliana,368,53-83
+Q3B7Z2 · OSBP1_MOUSE,Oxysterol-binding protein 1,Osbp,Mus musculus,805,"18-83, 331-351, 369-388, 708-764"
+Q3KNY0 · IGFN1_MOUSE,Immunoglobulin-like and fibronectin type III domain-containing protein 1,Igfn1,Mus musculus,2849,"82-108, 577-600, 652-760, 864-924, 962-981, 1061-1103, 1221-1258, 1312-1338, 1350-1384, 1498-1523, 1654-1675, 1724-1780, 1827-2055"
+Q3MHS2 · ZN830_RAT,Zinc finger protein 830,Znf830,Rattus norvegicus,370,"1-21, 75-220"
+Q3SWS9 · JKIP1_RAT,Janus kinase and microtubule-interacting protein 1,Jakmip1,Rattus norvegicus,626,"1-25, 452-481"
+Q3TRR0 · MAP9_MOUSE,Microtubule-associated protein 9,Map9,Mus musculus,646,"75-226, 242-418, 491-511, 531-554, 570-597, 609-646"
+Q3TVI8 · PBIP1_MOUSE,Pre-B-cell leukemia transcription factor-interacting protein 1,Pbxip1,Mus musculus,727,"1-169, 446-565, 694-727"
+Q3UIL6 · PKHA7_MOUSE,Pleckstrin homology domain-containing family A member 7,Plekha7,Mus musculus,1118,"100-145, 334-512, 528-629, 839-873, 886-968, 1003-1024"
+Q3UKC1 · TAXB1_MOUSE,Tax1-binding protein 1 homolog,Tax1bp1,Mus musculus,814,701-733
+Q3UMU9 · HDGR2_MOUSE,Hepatoma-derived growth factor-related protein 2,Hdgfl2,Mus musculus,669,"87-469, 558-669"
+Q3UP38 · EFC4B_MOUSE,EF-hand calcium-binding domain-containing protein 4B,Cracr2a,Mus musculus,726,1-30
+Q3UPP8 · CEP63_MOUSE,Centrosomal protein of 63 kDa,Cep63,Mus musculus,700,570-603
+Q3UQN2 · FCHO2_MOUSE,F-BAR domain only protein 2,Fcho2,Mus musculus,809,"301-352, 390-422, 435-536"
+Q3URD3 · SLMAP_MOUSE,Sarcolemmal membrane-associated protein,Slmap,Mus musculus,845,451-484
+Q3USJ8 · FCSD2_MOUSE,F-BAR and double SH3 domains protein 2,Fchsd2,Mus musculus,740,"303-323, 629-740"
+Q3UU96 · MRCKA_MOUSE,Serine/threonine-protein kinase MRCK alpha,Cdc42bpa,Mus musculus,1719,1579-1719
+Q3UZP0 · MALD2_MOUSE,MARVEL domain-containing protein 2,Marveld2,Mus musculus,555,"1-71, 118-142"
+Q3V1T4 · P3H1_MOUSE,Prolyl 3-hydroxylase 1,P3h1,Mus musculus,739,702-739
+Q3ZK22 · VEZA_MOUSE,Vezatin,Vezt,Mus musculus,780,"620-718, 757-780"
+Q4U2R1 · HERC2_MOUSE,E3 ubiquitin-protein ligase HERC2,Herc2,Mus musculus,4836,"58-90, 2351-2376, 2928-2947, 3479-3499, 3517-3537, 3604-3632, 4806-4836"
+Q4U4S6 · XIRP2_MOUSE,Xin actin-binding repeat-containing protein 2,Xirp2,Mus musculus,3784,"173-234, 1864-1889, 1963-1982, 2018-2124, 2152-2190, 2203-2279, 2293-2354, 2461-2489, 2551-2573, 2640-2676, 2801-2922, 3478-3518, 3536-3561"
+Q4V885 · COL12_RAT,Collectin-12,Colec12,Rattus norvegicus,742,439-608
+Q52KG5 · KI26A_MOUSE,Kinesin-like protein KIF26A,Kif26a,Mus musculus,1881,"20-66, 145-193, 309-330, 718-778, 794-827, 846-982, 1078-1104, 1118-1266, 1328-1425, 1442-1633, 1652-1698"
+Q54HT1 · TIRA_DICDI,Protein tirA,tirA,Dictyostelium discoideum,1336,"186-213, 1120-1140"
+Q54KF1 · FORC_DICDI,Formin-C,forC,Dictyostelium discoideum,1158,"8-29, 417-523, 990-1052"
+Q54TL0 · KIF7_DICDI,Kinesin-related protein 7,kif7,Dictyostelium discoideum,1255,"1-26, 454-503, 530-564, 579-628, 661-686, 795-864, 915-934"
+Q54UC0 · PRKDC_DICDI,DNA-dependent protein kinase catalytic subunit,dnapkcs,Dictyostelium discoideum,4299,"557-577, 613-633, 878-917, 1206-1230, 2832-2881, 3535-3559"
+Q54WH2 · FORA_DICDI,Formin-A,forA,Dictyostelium discoideum,1218,"634-762, 1153-1179, 1198-1218"
+Q55AP1 · GRLA_DICDI,Metabotropic glutamate receptor-like protein A,grlA,Dictyostelium discoideum,798,752-798
+Q55CK2 · MGP2_DICDI,GTPase activating protein homolog 2,mgp2,Dictyostelium discoideum,877,"589-612, 644-704, 749-800"
+Q56A18 · SMCE1_RAT,SWI/SNF-related matrix-associated actin-dependent regulator of chromatin subfamily E member 1,Smarce1,Rattus norvegicus,376,"1-36, 118-140, 261-376"
+Q571B6 · WHAMM_MOUSE,"WASP homolog-associated protein with actin, membranes and microtubules",Whamm,Mus musculus,793,"556-661, 675-699, 772-793"
+Q5DTM8 · BRE1A_MOUSE,E3 ubiquitin-protein ligase BRE1A,Rnf20,Mus musculus,973,"1-37, 128-153, 507-620"
+Q5DU37 · ZFY26_MOUSE,Zinc finger FYVE domain-containing protein 26,Zfyve26,Mus musculus,2529,"584-650, 689-709, 733-810, 1258-1286, 1762-1799, 1865-1884"
+Q5F2E8 · TAOK1_MOUSE,Serine/threonine-protein kinase TAO1,Taok1,Mus musculus,1001,"324-380, 404-433, 567-587, 905-1001"
+Q5PQT2 · MTMR3_RAT,"Phosphatidylinositol-3,5-bisphosphate 3-phosphatase MTMR3",Mtmr3,Rattus norvegicus,1194,"583-609, 693-731, 852-871, 876-897, 932-971, 988-1017"
+Q5RHB5 · IRAG2_DANRE,"Inositol 1,4,5-triphosphate receptor associated 2",irag2,Danio rerio,1447,"64-96, 420-439, 790-828, 841-860, 991-1132, 1267-1289, 1355-1379"
+Q5S003 · SPG17_MOUSE,Sperm-associated antigen 17,Spag17,Mus musculus,2320,"139-211, 388-407, 682-739, 894-928, 950-1001, 1084-1118, 1191-1221, 1334-1367, 1393-1416, 1983-2028, 2080-2101"
+Q5S006 · LRRK2_MOUSE,Leucine-rich repeat serine/threonine-protein kinase 2,Lrrk2,Mus musculus,2527,957-979
+Q5SPC5 · OTOF_DANRE,Otoferlin,otof,Danio rerio,1992,"655-699, 1288-1311, 1354-1399"
+Q5SXA9 · KIBRA_MOUSE,Protein KIBRA,Wwc1,Mus musculus,1104,"429-449, 509-547, 822-949"
+Q5XIN6 · LETM1_RAT,Mitochondrial proton/calcium exchanger protein,Letm1,Rattus norvegicus,739,717-739
+Q60865 · CAPR1_MOUSE,Caprin-1,Caprin1,Mus musculus,707,"1-48, 325-347, 412-496, 526-558, 570-707"
+Q61771 · KIF3B_MOUSE,Kinesin-like protein KIF3B,Kif3b,Mus musculus,747,"374-412, 698-747"
+Q62205 · SCN9A_MOUSE,Sodium channel protein type 9 subunit alpha,Scn9a,Mus musculus,1984,"26-55, 458-540, 574-609, 1015-1039, 1089-1145, 1933-1984"
+Q62209 · SYCP1_MOUSE,Synaptonemal complex protein 1,Sycp1,Mus musculus,993,824-861
+Q62383 · SPT6H_MOUSE,Transcription elongation factor SPT6,Supt6h,Mus musculus,1726,"1-197, 489-520, 1636-1726"
+Q62688 · PLCL1_RAT,Inactive phospholipase C-like protein 1,Plcl1,Rattus norvegicus,1096,"1-101, 1067-1096"
+Q62739 · RAB3I_RAT,Rab-3A-interacting protein,Rab3ip,Rattus norvegicus,460,246-280
+Q62812 · MYH9_RAT,Myosin-9,Myh9,Rattus norvegicus,1961,"1035-1057, 1331-1353, 1878-1910, 1938-1961"
+Q62901 · RERE_RAT,Arginine-glutamic acid dipeptide repeats protein,Rere,Rattus norvegicus,1559,"1-89, 463-494, 541-1125, 1154-1239"
+Q63083 · NUCB1_RAT,Nucleobindin-1,Nucb1,Rattus norvegicus,459,"192-220, 393-459"
+Q63164 · DYH1_RAT,Dynein axonemal heavy chain 1,Dnah1,Rattus norvegicus,4516,78-160
+Q63520 · SYCP3_RAT,Synaptonemal complex protein 3,Sycp3,Rattus norvegicus,257,23-66
+Q63803 · GNAS1_RAT,Guanine nucleotide-binding protein G(s) subunit alpha isoforms XLas,Gnas,Rattus norvegicus,1144,"1-186, 316-558, 622-657, 735-772, 818-840"
+Q63850 · NUP62_MOUSE,Nuclear pore glycoprotein p62,Nup62,Mus musculus,526,"43-82, 128-148"
+Q63862 · MYH11_RAT,Myosin-11,Myh11,Rattus norvegicus,1327,"1127-1149, 1222-1327"
+Q640L3 · CCPG1_MOUSE,Cell cycle progression protein 1,Ccpg1,Mus musculus,753,"57-211, 457-484, 553-606"
+Q66H15 · RMD3_RAT,Regulator of microtubule dynamics protein 3,Rmdn3,Rattus norvegicus,471,168-203
+Q66PG2 · LARG1_DANRE,Xylosyl- and glucuronyltransferase LARGE1,large1,Danio rerio,757,76-127
+Q68FF6 · GIT1_MOUSE,ARF GTPase-activating protein GIT1,Git1,Mus musculus,770,"363-425, 578-615"
+Q6AYX5 · ODFP2_RAT,Outer dense fiber protein 2,Odf2,Rattus norvegicus,825,27-46
+Q6EVK6 · BRM_ARATH,ATP-dependent helicase BRM,BRM,Arabidopsis thaliana,2193,"1-126, 175-231, 293-466, 511-558, 580-649, 1583-1775, 1789-1894, 2022-2193"
+Q6GYP7 · RGPA1_MOUSE,Ral GTPase-activating protein subunit alpha-1,Ralgapa1,Mus musculus,2035,"343-384, 477-496, 714-752, 807-834, 848-911, 986-1011"
+Q6IMY8 · HNRPU_RAT,Heterogeneous nuclear ribonucleoprotein U,Hnrnpu,Rattus norvegicus,798,"41-229, 645-727, 743-772"
+Q6P1E7 · PRIPO_MOUSE,DNA-directed primase/polymerase protein,Primpol,Mus musculus,537,462-481
+Q6P9S0 · MTSS2_MOUSE,Protein MTSS 2,Mtss2,Mus musculus,715,"253-405, 420-485, 527-562, 661-690"
+Q6PB44 · PTN23_MOUSE,Tyrosine-protein phosphatase non-receptor type 23,Ptpn23,Mus musculus,1692,"711-788, 884-923, 944-1199, 1574-1638"
+Q6PD31 · TRAK1_MOUSE,Trafficking kinesin-binding protein 1,Trak1,Mus musculus,939,472-492
+Q6Q152 · CPY57_ARATH,Peptidyl-prolyl cis-trans isomerase CYP57,CYP57,Arabidopsis thaliana,504,"237-374, 416-441, 482-504"
+Q6QD51 · CCD80_RAT,Coiled-coil domain-containing protein 80,Ccdc80,Rattus norvegicus,949,"24-79, 289-360, 408-609"
+Q6QHD1 · WRK71_ORYSJ,WRKY transcription factor WRKY71,WRKY71,Oryza sativa subsp. japonica,348,"91-141, 246-287"
+Q6TXD4 · DNMBP_MOUSE,Dynamin-binding protein,Dnmbp,Mus musculus,1580,"211-245, 304-446, 500-546, 589-688, 1356-1384, 1426-1514"
+Q6V3W6 · DRC7_MOUSE,Dynein regulatory complex subunit 7,Drc7,Mus musculus,876,"1-40, 385-412"
+Q6WKZ7 · NOSTN_MOUSE,Nostrin,Nostrin,Mus musculus,506,413-435
+Q6XUX2 · DUSTY_RAT,Dual serine/threonine and tyrosine protein kinase,Dstyk,Rattus norvegicus,927,1-21
+Q6YZ52 · KN7D_ORYSJ,"Kinesin-like protein KIN-7D, chloroplastic",KIN7D,Oryza sativa subsp. japonica,1007,"1-79, 579-607, 901-941"
+Q6ZPY2 · SMG5_MOUSE,Nonsense-mediated mRNA decay factor SMG5,Smg5,Mus musculus,1017,"406-562, 597-640"
+Q70FJ1 · AKAP9_MOUSE,A-kinase anchor protein 9,Akap9,Mus musculus,3797,"1-140, 1643-1668, 2323-2343, 2419-2454, 2604-2695, 3271-3296"
+Q70KF4 · CMYA5_MOUSE,Cardiomyopathy-associated protein 5,Cmya5,Mus musculus,3739,"1-205, 268-814, 835-884, 967-1270, 1288-1313, 1325-1637, 1650-1969, 1986-2016, 2065-2246, 2273-2318, 2377-2498, 2513-2532, 2579-2616, 2667-2725, 2742-2773, 2791-2835, 2881-2959, 3027-3047, 3111-3174"
+Q75JT4 · GRLJ_DICDI,Metabotropic glutamate receptor-like protein J,grlJ,Dictyostelium discoideum,783,"647-696, 731-783"
+Q793F9 · VPS4A_RAT,Vacuolar protein sorting-associated protein 4A,Vps4a,Rattus norvegicus,437,75-106
+Q7KNF2 · PABP2_DROME,Polyadenylate-binding protein 2,Pabp2,Drosophila melanogaster,224,1-40
+Q7SZK7 · OFD1_DANRE,Centriole and centriolar satellite protein ofd1,ofd1,Danio rerio,901,"541-563, 585-697, 709-901"
+Q7TN08 · DACT2_MOUSE,Dapper homolog 2,Dact2,Mus musculus,757,"486-540, 584-684, 696-728"
+Q7TSH4 · CP110_MOUSE,Centriolar coiled-coil protein of 110 kDa,Ccp110,Mus musculus,1004,"147-194, 239-279, 401-433, 955-1004"
+Q7TSY8 · SGO2A_MOUSE,Shugoshin 2A,Sgo2a,Mus musculus,1164,"160-269, 287-314, 390-492, 521-541, 917-992, 1092-1164"
+Q7TT50 · MRCKB_MOUSE,Serine/threonine-protein kinase MRCK beta,Cdc42bpb,Mus musculus,1713,"971-1022, 1616-1713"
+Q7YSW8 · PP2BA_DICDI,Serine/threonine-protein phosphatase 2B catalytic subunit,canA,Dictyostelium discoideum,623,"1-53, 577-623"
+Q7ZUQ3 · STK3_DANRE,Serine/threonine-protein kinase 3,stk3,Danio rerio,492,297-339
+Q7ZWE3 · LARP7_DANRE,La-related protein 7,larp7,Danio rerio,555,218-327
+Q80T41 · GABR2_MOUSE,Gamma-aminobutyric acid type B receptor subunit 2,Gabbr2,Mus musculus,940,762-789
+Q80TA9 · EPG5_MOUSE,Ectopic P granules protein 5 homolog,Epg5,Mus musculus,2572,"1-68, 84-125"
+Q80UF4 · SDCG8_MOUSE,Serologically defined colon cancer antigen 8 homolog,Sdccag8,Mus musculus,717,84-115
+Q80US4 · ARP5_MOUSE,Actin-related protein 5,Actr5,Mus musculus,605,581-605
+Q80WE4 · KI20B_MOUSE,Kinesin-like protein KIF20B,Kif20b,Mus musculus,1774,"538-557, 740-799, 1625-1663"
+Q80WG7 · TRI36_MOUSE,E3 ubiquitin-protein ligase Trim36,Trim36,Mus musculus,729,606-626
+Q80X56 · TRI69_MOUSE,E3 ubiquitin-protein ligase TRIM69,Trim69,Mus musculus,500,1-22
+Q80YR6 · CTIP_MOUSE,DNA endonuclease RBBP8,Rbbp8,Mus musculus,893,"296-324, 869-893"
+Q80ZI6 · LRSM1_MOUSE,E3 ubiquitin-protein ligase LRSAM1,Lrsam1,Mus musculus,727,227-248
+Q811D2 · ANR26_MOUSE,Ankyrin repeat domain-containing protein 26,Ankrd26,Mus musculus,1581,"1-22, 225-270, 299-343, 361-381, 488-652"
+Q84JA6 · CESA4_ARATH,Cellulose synthase A catalytic subunit 4 [UDP-forming],CESA4,Arabidopsis thaliana,1049,76-98
+Q84JG2 · SWI3B_ARATH,SWI/SNF complex subunit SWI3B,SWI3B,Arabidopsis thaliana,469,"1-42, 293-314, 360-387"
+Q84TI3 · OBE4_ARATH,Protein OBERON 4,OBE4,Arabidopsis thaliana,1162,"1-235, 251-307, 321-346, 441-485"
+Q865S1 · AP3D1_BOVIN,AP-3 complex subunit delta-1,AP3D1,Bos taurus,1207,"630-695, 731-970"
+Q86JF2 · LVSB_DICDI,BEACH domain-containing protein lvsB,lvsB,Dictyostelium discoideum,4118,"1-35, 236-267, 332-382, 621-644, 1155-1213, 1599-1622, 1643-1681, 1928-1968, 2015-2044, 2537-2574, 2702-2741, 2754-2791, 2902-3007, 3245-3265, 3348-3418"
+Q8BGD7 · NPAS4_MOUSE,Neuronal PAS domain-containing protein 4,Npas4,Mus musculus,802,470-554
+Q8BH66 · ATLA1_MOUSE,Atlastin-1,Atl1,Mus musculus,558,1-28
+Q8BJF9 · CHM2B_MOUSE,Charged multivesicular body protein 2b,Chmp2b,Mus musculus,213,179-199
+Q8BKX1 · BAIP2_MOUSE,BAR/IMD domain-containing adapter protein 2,Baiap2,Mus musculus,535,"299-370, 445-477"
+Q8BNV1 · TRM2A_MOUSE,tRNA (uracil-5-)-methyltransferase homolog A,Trmt2a,Mus musculus,613,1-46
+Q8BPZ8 · ABRX1_MOUSE,BRCA1-A complex subunit Abraxas 1,Abraxas1,Mus musculus,407,344-407
+Q8BR07 · BICD1_MOUSE,Protein bicaudal D homolog 1,Bicd1,Mus musculus,835,"278-297, 545-616, 800-835"
+Q8BRE0 · RD3_MOUSE,Protein RD3,Rd3,Mus musculus,195,168-195
+Q8BRM2 · GORAB_MOUSE,RAB6-interacting golgin,Gorab,Mus musculus,368,"1-43, 55-133, 302-368"
+Q8C2K5 · RASL3_MOUSE,RAS protein activator like-3,Rasal3,Mus musculus,1041,"1-59, 234-256, 790-910, 1016-1041"
+Q8CDJ3 · BAKOR_MOUSE,Beclin 1-associated autophagy-related key regulator,Atg14,Mus musculus,492,"410-439, 451-471"
+Q8CEE0 · CEP57_MOUSE,Centrosomal protein of 57 kDa,Cep57,Mus musculus,500,"1-59, 256-275, 432-478"
+Q8CFC9 · LZTS1_RAT,Leucine zipper putative tumor suppressor 1,Lzts1,Rattus norvegicus,601,135-190
+Q8CFW7 · C2D2A_MOUSE,Coiled-coil and C2 domain-containing protein 2A,Cc2d2a,Mus musculus,1633,"1-188, 200-245, 590-673, 1068-1094"
+Q8CGF7 · TCRG1_MOUSE,Transcription elongation regulator 1,Tcerg1,Mus musculus,1100,"1-90, 258-332, 461-528, 616-642, 872-897, 1078-1100"
+Q8CGS4 · CHMP3_RAT,Charged multivesicular body protein 3,Chmp3,Rattus norvegicus,223,180-223
+Q8CGU1 · CACO1_MOUSE,Calcium-binding and coiled-coil domain-containing protein 1,Calcoco1,Mus musculus,691,512-605
+Q8CJH3 · PLXB1_MOUSE,Plexin-B1,Plxnb1,Mus musculus,2119,"683-724, 741-818, 1867-1892"
+Q8CJH6 · NPAS4_RAT,Neuronal PAS domain-containing protein 4,Npas4,Rattus norvegicus,802,472-555
+Q8GUN5 · PHL1_ARATH,Protein PHR1-LIKE 1,PHL1,Arabidopsis thaliana,413,"171-196, 208-233, 363-413"
+Q8GW44 · KN1_ARATH,Kinesin-like protein KIN-1,KIN1,Arabidopsis thaliana,465,338-358
+Q8GXA4 · WIP1_ARATH,WPP domain-interacting protein 1,WIP1,Arabidopsis thaliana,489,"49-73, 195-264"
+Q8IPM8 · CPLX_DROME,Complexin,cpx,Drosophila melanogaster,142,"13-70, 83-105"
+Q8K0X8 · FEZ1_MOUSE,Fasciculation and elongation protein zeta-1,Fez1,Mus musculus,392,"1-36, 175-196"
+Q8K1A6 · C2D1A_MOUSE,Coiled-coil and C2 domain-containing protein 1A,Cc2d1a,Mus musculus,943,"186-250, 300-337, 430-483"
+Q8K1J5 · SDE2_MOUSE,Splicing regulator SDE2,Sde2,Mus musculus,448,"175-252, 264-372"
+Q8K1R7 · NEK9_MOUSE,Serine/threonine-protein kinase Nek9,Nek9,Mus musculus,984,"14-43, 744-790, 940-984"
+Q8K212 · PACS1_MOUSE,Phosphofurin acidic cluster sorting protein 1,Pacs1,Mus musculus,961,"1-70, 76-95, 260-297, 375-426, 475-540, 758-802"
+Q8K3H0 · DP13A_MOUSE,DCC-interacting protein 13-alpha,Appl1,Mus musculus,707,"397-433, 466-490, 636-707"
+Q8K3W3 · CASC3_MOUSE,Protein CASC3,Casc3,Mus musculus,698,"1-229, 241-457, 488-533, 575-614, 629-698"
+Q8K3X6 · ANS4B_MOUSE,Ankyrin repeat and SAM domain-containing protein 4B,Anks4b,Mus musculus,423,"158-181, 207-227, 303-335"
+Q8K450 · SPG16_MOUSE,Sperm-associated antigen 16 protein,Spag16,Mus musculus,639,280-333
+Q8K4G5 · ABLM1_MOUSE,Actin-binding LIM protein 1,Ablim1,Mus musculus,861,"374-414, 459-590, 634-682, 713-748"
+Q8L7E9 · MCAC1_ARATH,Protein MID1-COMPLEMENTING ACTIVITY 1,MCA1,Arabidopsis thaliana,421,233-288
+Q8L7Y8 · KN12B_ARATH,Kinesin-like protein KIN-12B,KIN12B,Arabidopsis thaliana,1313,"1-74, 685-709"
+Q8LC68 · NRP2_ARATH,NAP1-related protein 2,NRP2,Arabidopsis thaliana,255,213-255
+Q8R0W1 · CIPC_MOUSE,CLOCK-interacting pacemaker,Cipc,Mus musculus,432,"71-98, 194-315, 408-432"
+Q8R1A4 · DOCK7_MOUSE,Dedicator of cytokinesis protein 7,Dock7,Mus musculus,2130,"137-175, 888-966"
+Q8R1T1 · CHMP7_MOUSE,Charged multivesicular body protein 7,Chmp7,Mus musculus,451,"1-22, 431-451"
+Q8R326 · PSPC1_MOUSE,Paraspeckle component 1,Pspc1,Mus musculus,523,460-523
+Q8R331 · ZNHI1_MOUSE,Zinc finger HIT domain-containing protein 1,Znhit1,Mus musculus,154,1-73
+Q8R332 · NUP58_MOUSE,Nucleoporin p58/p45,Nup58,Mus musculus,587,"196-236, 565-587"
+Q8R3B7 · BRD8_MOUSE,Bromodomain-containing protein 8,Brd8,Mus musculus,951,"161-273, 520-547, 584-745, 900-922"
+Q8R3P7 · CLUA1_MOUSE,Clusterin-associated protein 1,Cluap1,Mus musculus,413,303-413
+Q8R550 · SH3K1_MOUSE,SH3 domain-containing kinase-binding protein 1,Sh3kbp1,Mus musculus,709,"221-242, 289-309, 372-485, 511-650"
+Q8R5M4 · OPTN_RAT,Optineurin,Optn,Rattus norvegicus,585,"1-32, 200-220, 269-299"
+Q8RWU4 · ATML1_ARATH,Homeobox-leucine zipper protein MERISTEM L1,ATML1,Arabidopsis thaliana,762,13-72
+Q8RXD3 · AIP2_ARATH,E3 ubiquitin-protein ligase AIP2,AIP2,Arabidopsis thaliana,310,285-310
+Q8T390 · SH3G3_DROME,Endophilin-A,EndoA,Drosophila melanogaster,369,266-295
+Q8UVK2 · SPT6H_DANRE,Transcription elongation factor SPT6,supt6h,Danio rerio,1726,"1-196, 219-248, 482-512, 1611-1726"
+Q8VDP3 · MICA1_MOUSE,[F-actin]-monooxygenase MICAL1,Mical1,Mus musculus,1048,"488-508, 643-676, 741-787, 805-825, 839-873"
+Q8VHG2 · AMOT_MOUSE,Angiomotin,Amot,Mus musculus,1126,"22-87, 188-252, 302-403, 745-764, 813-855, 1019-1102"
+Q8VIJ6 · SFPQ_MOUSE,"Splicing factor, proline- and glutamine-rich",Sfpq,Mus musculus,699,"1-265, 571-699"
+Q8VZ95 · VAP11_ARATH,Vesicle-associated protein 1-1,PVA11,Arabidopsis thaliana,256,142-169
+Q8W4L5 · VAL1_ARATH,B3 domain-containing transcription repressor VAL1,VAL1,Arabidopsis thaliana,790,"234-260, 400-429, 446-468, 689-737"
+Q91YU6 · LZTS2_MOUSE,Leucine zipper putative tumor suppressor 2,Lzts2,Mus musculus,671,"1-131, 149-324"
+Q91Z63 · TRI63_RAT,E3 ubiquitin-protein ligase TRIM63,Trim63,Rattus norvegicus,351,326-351
+Q91Z67 · SRGP2_MOUSE,SLIT-ROBO Rho GTPase-activating protein 2,Srgap2,Mus musculus,1071,"181-211, 700-726, 795-819, 838-918, 984-1012, 1029-1071"
+Q91Z79 · LIPA3_RAT,Liprin-alpha-3,Ppfia3,Rattus norvegicus,1192,"1-23, 201-239, 521-587, 623-815, 1155-1192"
+Q91ZN1 · COR1A_RAT,Coronin-1A,Coro1a,Rattus norvegicus,461,407-431
+Q91ZU9 · NMD3B_MOUSE,"Glutamate receptor ionotropic, NMDA 3B",Grin3b,Mus musculus,1003,883-912
+Q91ZV0 · MIA2_MOUSE,Melanoma inhibitory activity protein 2,Mia2,Mus musculus,1396,"197-288, 331-361, 396-421, 525-557, 1103-1396"
+Q920B9 · SP16H_MOUSE,FACT complex subunit SPT16,Supt16h,Mus musculus,1047,"491-518, 918-1047"
+Q921M4 · GOGA2_MOUSE,Golgin subfamily A member 2,Golga2,Mus musculus,999,"1-80, 244-288, 444-468"
+Q922J3 · CLIP1_MOUSE,CAP-Gly domain-containing linker protein 1,Clip1,Mus musculus,1391,"1-53, 129-182, 302-336, 1251-1272"
+Q924H7 · WAC_MOUSE,WW domain-containing adapter protein with coiled-coil,Wac,Mus musculus,646,"1-138, 158-352, 428-541"
+Q925B0 · PAWR_MOUSE,PRKC apoptosis WT1 regulator protein,Pawr,Mus musculus,333,1-262
+Q925Q9 · SH3K1_RAT,SH3 domain-containing kinase-binding protein 1,Sh3kbp1,Rattus norvegicus,709,"221-242, 289-309, 373-487, 511-651"
+Q93ZE2 · TGA7_ARATH,Transcription factor TGA7,TGA7,Arabidopsis thaliana,368,70-89
+Q941L0 · CESA3_ARATH,Cellulose synthase A catalytic subunit 3 [UDP-forming],CESA3,Arabidopsis thaliana,1065,643-672
+Q94A57 · PHL2_ARATH,Protein PHR1-LIKE 2,PHL2,Arabidopsis thaliana,295,96-138
+Q95KU9 · NEMO_BOVIN,NF-kappa-B essential modulator,IKBKG,Bos taurus,419,"1-48, 356-394"
+Q95RR8 · PAN3_DROME,PAN2-PAN3 deadenylation complex subunit PAN3,PAN3,Drosophila melanogaster,790,"166-191, 235-259"
+Q95Y80 · BET1_CAEEL,Bromodomain-containing protein bet-1,bet-1,Caenorhabditis elegans,853,"1-22, 141-245, 369-418, 594-814, 819-838"
+Q99K41 · EMIL1_MOUSE,EMILIN-1,Emilin1,Mus musculus,1017,"134-180, 259-289, 383-403, 811-866"
+Q99KJ8 · DCTN2_MOUSE,Dynactin subunit 2,Dctn2,Mus musculus,402,1-27
+Q99LQ4 · SVBP_MOUSE,Small vasohibin-binding protein,Svbp,Mus musculus,66,1-30
+Q99NH2 · PARD3_MOUSE,Partitioning defective 3 homolog,Pard3,Mus musculus,1333,"143-262, 369-388, 397-441, 861-884, 928-1011, 1024-1071, 1110-1267, 1283-1333"
+Q99PN3 · TRI26_MOUSE,Tripartite motif-containing protein 26,Trim26,Mus musculus,545,382-443
+Q99PQ2 · TRI11_MOUSE,E3 ubiquitin-protein ligase TRIM11,Trim11,Mus musculus,467,304-324
+Q99PW8 · KIF17_MOUSE,Kinesin-like protein KIF17,Kif17,Mus musculus,1038,"379-401, 503-559, 636-657, 916-940, 976-1038"
+Q9BPU3 · KIF2_DICDI,Kinesin-related protein 2,kif2,Dictyostelium discoideum,792,"22-50, 162-183"
+Q9C9F5 · C3H15_ARATH,Zinc finger CCCH domain-containing protein 15,C3H15,Arabidopsis thaliana,308,"1-21, 110-190"
+Q9C9X7 · IDD14_ARATH,Protein indeterminate-domain 14,IDD14,Arabidopsis thaliana,419,"1-58, 200-259, 298-318"
+Q9CA42 · CRWN3_ARATH,Protein CROWDED NUCLEI 3,CRWN3,Arabidopsis thaliana,1085,"801-997, 1020-1077"
+Q9CA59 · NRP1_ARATH,NAP1-related protein 1,NRP1,Arabidopsis thaliana,256,220-256
+Q9CQ10 · CHMP3_MOUSE,Charged multivesicular body protein 3,Chmp3,Mus musculus,224,180-224
+Q9CWV6 · PKRI1_MOUSE,PRKR-interacting protein 1,Prkrip1,Mus musculus,186,116-186
+Q9D024 · CCD47_MOUSE,PAT complex subunit CCDC47,Ccdc47,Mus musculus,483,"46-119, 424-483"
+Q9D0L1 · ZBED3_MOUSE,Zinc finger BED domain-containing protein 3,Zbed3,Mus musculus,228,"95-114, 183-228"
+Q9D2H2 · KAD7_MOUSE,Adenylate kinase 7,Ak7,Mus musculus,614,308-327
+Q9D2N4 · DTNA_MOUSE,Dystrobrevin alpha,Dtna,Mus musculus,746,"555-577, 646-667, 684-721"
+Q9D394 · RUFY3_MOUSE,Protein RUFY3,Rufy3,Mus musculus,469,321-342
+Q9D3R9 · TAF7L_MOUSE,Transcription initiation factor TFIID subunit 7-like,Taf7l,Mus musculus,471,"1-84, 192-211, 328-377"
+Q9D439 · CFA53_MOUSE,Cilia- and flagella-associated protein 53,Cfap53,Mus musculus,514,"261-296, 495-514"
+Q9D4G2 · HSF2B_MOUSE,Heat shock factor 2-binding protein,Hsf2bp,Mus musculus,338,1-20
+Q9D818 · SAPC2_MOUSE,Suppressor APC domain-containing protein 2,Sapcd2,Mus musculus,391,1-20
+Q9D8B3 · CHM4B_MOUSE,Charged multivesicular body protein 4b,Chmp4b,Mus musculus,224,"1-23, 185-224"
+Q9D952 · EVPL_MOUSE,Envoplakin,Evpl,Mus musculus,2035,"1-37, 63-84, 400-419, 1607-1637"
+Q9DB96 · NGDN_MOUSE,Neuroguidin,Ngdn,Mus musculus,315,"123-190, 212-243, 284-315"
+Q9DC33 · HM20A_MOUSE,High mobility group protein 20A,Hmg20a,Mus musculus,346,"1-112, 178-210"
+Q9DCD5 · TJAP1_MOUSE,Tight junction-associated protein 1,Tjap1,Mus musculus,549,"1-34, 207-226, 266-322, 359-404, 410-429, 434-549"
+Q9EP53 · TSC1_MOUSE,Hamartin,Tsc1,Mus musculus,1161,"296-336, 353-591, 1003-1077, 1092-1161"
+Q9EPK5 · WWTR1_MOUSE,WW domain-containing transcription regulator protein 1,Wwtr1,Mus musculus,395,"52-116, 277-308"
+Q9EQJ0 · TPC1_MOUSE,Two pore calcium channel protein 1,Tpcn1,Mus musculus,817,"20-65, 785-817"
+Q9EQN5 · SMBP2_RAT,DNA-binding protein SMUBP-2,Ighmbp2,Rattus norvegicus,988,"651-722, 765-820, 835-872, 943-988"
+Q9EQW7 · KI13A_MOUSE,Kinesin-like protein KIF13A,Kif13a,Mus musculus,1749,"633-652, 834-853, 1370-1402, 1417-1436, 1584-1665, 1698-1749"
+Q9ES39 · NDE1_RAT,Nuclear distribution protein nudE homolog 1,Nde1,Rattus norvegicus,344,"30-65, 181-243, 279-337"
+Q9ESF1 · OTOF_MOUSE,Otoferlin,Otof,Mus musculus,1997,"140-167, 643-692, 1253-1272, 1296-1326, 1343-1402"
+Q9ESQ7 · PSD1_RAT,PH and SEC7 domain-containing protein 1,Psd,Rattus norvegicus,649,"1-22, 57-161, 601-649"
+Q9FF75 · SUN1_ARATH,SUN domain-containing protein 1,SUN1,Arabidopsis thaliana,471,19-98
+Q9FF81 · VPS36_ARATH,Vacuolar protein sorting-associated protein 36,VPS36,Arabidopsis thaliana,440,144-163
+Q9FH18 · WIP2_ARATH,WPP domain-interacting protein 2,WIP2,Arabidopsis thaliana,509,"1-33, 126-198, 210-256, 304-330"
+Q9FHM4 · MA653_ARATH,65-kDa microtubule-associated protein 3,MAP65-3,Arabidopsis thaliana,707,495-574
+Q9FJL0 · SMC4_ARATH,Structural maintenance of chromosomes protein 4,SMC4,Arabidopsis thaliana,1241,1-22
+Q9FK47 · PHLA_ARATH,Myb-related protein 1,MYR1,Arabidopsis thaliana,402,"238-266, 344-363, 382-402"
+Q9FLL1 · NOB1_ARATH,RNA-binding NOB1-like protein,NOB1,Arabidopsis thaliana,602,"1-25, 258-278, 301-331"
+Q9FNN3 · ILP1_ARATH,Transcriptional repressor ILP1,ILP1,Arabidopsis thaliana,908,"1-113, 238-277, 513-574"
+Q9FNY0 · E2FA_ARATH,Transcription factor E2FA,E2FA,Arabidopsis thaliana,485,"1-69, 114-159"
+Q9FNY3 · DPA_ARATH,Transcription factor-like protein DPA,DPA,Arabidopsis thaliana,292,"1-25, 246-280"
+Q9FT72 · RQL3_ARATH,ATP-dependent DNA helicase Q-like 3,RECQL3,Arabidopsis thaliana,713,"465-499, 638-657, 694-713"
+Q9FX31 · HDG11_ARATH,Homeobox-leucine zipper protein HDG11,HDG11,Arabidopsis thaliana,722,1-42
+Q9GKI7 · CERT_BOVIN,Ceramide transfer protein,CERT1,Bos taurus,624,1-24
+Q9I7U4 · TITIN_DROME,Titin,sls,Drosophila melanogaster,18141,"1-69, 236-266, 2338-2357, 2731-2750, 4226-4254, 4299-4336, 4803-4891, 5318-5368, 5413-5648, 5667-5701, 5718-5748, 5775-5982, 6034-6350, 6364-6393, 7773-7793, 9414-9440, 9485-9510, 9556-9582, 9627-9652, 9698-9724, 9769-9796, 9838-9865, 9911-9937, 9982-10008, 10053-10080, 10125-10149, 10195-10220, 10266-10291, 10337-10364, 10408-10433, 10479-10504, 10550-10576, 10621-10648, 10692-10717, 10763-10788, 10834-10860, 10905-10932, 11047-11073, 11118-11143, 11189-11216, 11260-11286, 11679-11703, 11767-11795, 12003-12201, 12451-12471, 12685-12767, 12943-12971, 13131-13154, 13325-13349, 13471-13492, 13554-13576, 13702-13792, 13891-13914, 13951-13994, 14073-14094, 14109-14322, 14354-14377, 14414-14448, 14533-14566, 14583-14720, 14756-14789, 14956-15208, 15301-15329, 15425-15448, 15578-15597, 15697-15722, 15825-15876, 15951-15973, 16181-16206, 17741-17771"
+Q9JHL4 · DBNL_RAT,Drebrin-like protein,Dbnl,Rattus norvegicus,436,185-371
+Q9JJC6 · RIPL1_MOUSE,RILP-like protein 1,Rilpl1,Mus musculus,406,"255-280, 330-354"
+Q9JJG0 · TACC2_MOUSE,Transforming acidic coiled-coil-containing protein 2,Tacc2,Mus musculus,1149,"1-73, 91-227, 247-430, 463-617, 636-665, 696-719, 756-780"
+Q9JJZ5 · EGFL6_MOUSE,Epidermal growth factor-like protein 6,Egfl6,Mus musculus,550,295-354
+Q9JL04 · FMN2_MOUSE,Formin-2,Fmn2,Mus musculus,1578,"1-73, 208-230, 244-383, 401-458, 587-634, 714-765, 786-836, 880-944, 1037-1108"
+Q9JL60 · GMEB1_MOUSE,Glucocorticoid modulatory element-binding protein 1,Gmeb1,Mus musculus,562,360-384
+Q9JLQ0 · CD2AP_MOUSE,CD2-associated protein,Cd2ap,Mus musculus,637,"166-209, 226-254, 333-455, 488-555"
+Q9JLS3 · TAOK2_RAT,Serine/threonine-protein kinase TAO2,Taok2,Rattus norvegicus,1235,"318-457, 892-941, 1210-1235"
+Q9LD83 · SLAC1_ARATH,Guard cell S-type anion channel SLAC1,SLAC1,Arabidopsis thaliana,556,1-103
+Q9LEX1 · CLB_ARATH,Calcium-dependent lipid-binding protein,CLB,Arabidopsis thaliana,510,484-510
+Q9LJ98 · PFD2_ARATH,Prefoldin subunit 2,PFD2,Arabidopsis thaliana,148,122-148
+Q9LJL9 · CAMK2_ARATH,CDPK-related kinase 2,CRK2,Arabidopsis thaliana,599,1-128
+Q9LSE2 · ICE1_ARATH,Transcription factor ICE1,SCRM,Arabidopsis thaliana,494,"1-58, 240-264, 281-306, 363-384"
+Q9LTK3 · HDG7_ARATH,Homeobox-leucine zipper protein HDG7,HDG7,Arabidopsis thaliana,682,33-65
+Q9LUI2 · NET1A_ARATH,Protein NETWORKED 1A,NET1A,Arabidopsis thaliana,1728,1419-1441
+Q9LUM0 · FAB1B_ARATH,1-phosphatidylinositol-3-phosphate 5-kinase FAB1B,FAB1B,Arabidopsis thaliana,1791,"166-186, 279-370, 770-790, 834-859, 1151-1242, 1769-1791"
+Q9LW85 · MFP1_ARATH,MAR-binding filament-like protein 1,MFP1,Arabidopsis thaliana,726,678-726
+Q9LX99 · KN14A_ARATH,Kinesin-like protein KIN-14A,KIN14A,Arabidopsis thaliana,1273,"1-52, 827-847, 1136-1157"
+Q9LXR8 · PMD1_ARATH,Peroxisomal and mitochondrial division factor 1,PMD1,Arabidopsis thaliana,318,1-39
+Q9M2X3 · TRB3_ARATH,Telomere repeat-binding factor 3,TRB3,Arabidopsis thaliana,295,"100-120, 191-220"
+Q9N1F0 · IRAG1_BOVIN,"Inositol 1,4,5-triphosphate receptor associated 1",IRAG1,Bos taurus,911,"1-21, 39-122, 174-405, 478-498, 706-766, 787-829"
+Q9NAG4 · MAC1_CAEEL,Protein mac-1,mac-1,Caenorhabditis elegans,813,"97-131, 152-193"
+Q9NEL2 · SSL1_CAEEL,Helicase ssl-1,ssl-1,Caenorhabditis elegans,2395,"1-62, 354-404, 444-504, 963-982, 1615-1706, 1977-2073, 2092-2143, 2276-2306, 2350-2395"
+Q9QUH3 · APOA5_RAT,Apolipoprotein A-V,Apoa5,Rattus norvegicus,367,305-332
+Q9QWI6 · SRCN1_MOUSE,SRC kinase signaling inhibitor 1,Srcin1,Mus musculus,1250,"19-78, 352-448, 538-710, 924-982, 1016-1094, 1155-1250"
+Q9QWT9 · KIFC1_MOUSE,Kinesin-like protein KIFC1,Kifc1,Mus musculus,674,"66-96, 327-366"
+Q9QWW1 · HOME2_MOUSE,Homer protein homolog 2,Homer2,Mus musculus,354,110-166
+Q9QXL1 · KI21B_MOUSE,Kinesin-like protein KIF21B,Kif21b,Mus musculus,1668,"553-629, 837-866, 1199-1253"
+Q9QXY2 · SRCN1_RAT,SRC kinase signaling inhibitor 1,Srcin1,Rattus norvegicus,1197,"19-80, 319-415, 501-676, 891-949, 983-1065, 1141-1163"
+Q9QY06 · MYO9B_MOUSE,Unconventional myosin-IXb,Myo9b,Mus musculus,2114,"714-734, 1045-1279, 1300-1378, 1392-1447, 1940-2006, 2092-2114"
+Q9QY53 · NPHP1_MOUSE,Nephrocystin-1,Nphp1,Mus musculus,687,"111-154, 215-237"
+Q9QYF3 · MYO5A_RAT,Unconventional myosin-Va,Myo5a,Rattus norvegicus,1828,"599-633, 1105-1147"
+Q9R182 · ANGL3_MOUSE,Angiopoietin-related protein 3,Angptl3,Mus musculus,455,202-242
+Q9R1C0 · TAF7_MOUSE,Transcription initiation factor TFIID subunit 7,Taf7,Mus musculus,341,187-212
+Q9R1M7 · NMD3A_RAT,"Glutamate receptor ionotropic, NMDA 3A",Grin3a,Rattus norvegicus,1135,60-117
+Q9SGH2 · MBD9_ARATH,Methyl-CpG-binding domain-containing protein 9,MBD9,Arabidopsis thaliana,2176,"1-20, 28-85, 1472-1553, 1565-1595, 2136-2176"
+Q9SHC8 · VAP12_ARATH,Vesicle-associated protein 1-2,PVA12,Arabidopsis thaliana,239,123-174
+Q9SRU2 · BIG_ARATH,Auxin transport protein BIG,BIG,Arabidopsis thaliana,5098,"1539-1562, 3149-3174, 4891-4915"
+Q9SU08 · AUXI1_ARATH,Auxilin-related protein 1,AUXI1,Arabidopsis thaliana,904,"46-99, 150-731, 749-776"
+Q9SUG7 · ATG11_ARATH,Autophagy-related protein 11,ATG11,Arabidopsis thaliana,1148,"699-727, 754-777, 784-803"
+Q9SV36 · KINUC_ARATH,Kinesin-like protein KIN-UC,KINUC,Arabidopsis thaliana,1051,"1-39, 51-109, 753-788"
+Q9SX85 · SEC3A_ARATH,Exocyst complex component SEC3A,SEC3A,Arabidopsis thaliana,887,542-581
+Q9SYX2 · SPA1_ARATH,Protein SUPPRESSOR OF PHYA-105 1,SPA1,Arabidopsis thaliana,1029,"42-69, 213-269, 347-392, 653-679"
+Q9V4P1 · ANLN_DROME,Anillin,scra,Drosophila melanogaster,1239,"32-67, 230-265, 493-621, 684-716"
+Q9VB25 · KL98A_DROME,Kinesin-like protein Klp98A,Klp98A,Drosophila melanogaster,1265,"597-621, 828-864, 884-954"
+Q9VC45 · ASP_DROME,Protein abnormal spindle,asp,Drosophila melanogaster,1954,"134-155, 476-548"
+Q9VDY1 · INO80_DROME,Chromatin-remodeling ATPase INO80,Ino80,Drosophila melanogaster,1638,"41-93, 201-259, 499-528, 1335-1364, 1463-1638"
+Q9VL63 · ARGL1_DROME,Arginine and glutamate-rich protein 1,Arglu1,Drosophila melanogaster,290,"1-137, 193-216, 249-290"
+Q9VRP9 · BRE1_DROME,E3 ubiquitin-protein ligase Bre1,Bre1,Drosophila melanogaster,1044,"182-214, 312-335, 546-586, 615-664"
+Q9VS48 · SLX4_DROME,Structure-specific endonuclease subunit SLX4,mus312,Drosophila melanogaster,1145,"48-108, 382-442, 613-634, 666-689"
+Q9VWS4 · WGN_DROME,Tumor necrosis factor receptor superfamily member wgn,wgn,Drosophila melanogaster,343,"1-44, 74-96"
+Q9W148 · URI_DROME,Unconventional prefoldin RPB5 interactor-like protein,uri,Drosophila melanogaster,731,"205-224, 259-302, 370-396, 508-527, 567-682, 694-731"
+Q9W1B0 · GEK_DROME,Serine/threonine-protein kinase Genghis Khan,gek,Drosophila melanogaster,1637,"538-575, 952-971, 1611-1637"
+Q9W420 · SPT6H_DROME,Transcription elongation factor SPT6,Spt6,Drosophila melanogaster,1831,"1-99, 117-199, 221-240, 470-501, 1531-1587, 1602-1716, 1730-1831"
+Q9WV63 · KIF2A_RAT,Kinesin-like protein KIF2A,Kif2a,Rattus norvegicus,705,65-185
+Q9WV89 · STXB4_MOUSE,Syntaxin-binding protein 4,Stxbp4,Mus musculus,557,142-214
+Q9WVH6 · ANGP4_MOUSE,Angiopoietin-4,Angpt4,Mus musculus,509,416-436
+Q9XFH4 · DDM1_ARATH,ATP-dependent DNA helicase DDM1,DDM1,Arabidopsis thaliana,764,"1-42, 129-152"
+Q9XUS7 · TOCA2_CAEEL,Transducer of Cdc42-dependent actin assembly protein 2 homolog,toca-2,Caenorhabditis elegans,610,"283-315, 436-487, 499-519"
+Q9Z0H8 · CLIP2_MOUSE,CAP-Gly domain-containing linker protein 2,Clip2,Mus musculus,1047,"1-71, 144-164, 196-216, 314-340, 1022-1047"
+Q9Z0P4 · PALM_MOUSE,Paralemmin-1,Palm,Mus musculus,383,"51-163, 242-295, 334-375"
+Q9Z0W5 · PACN1_RAT,Protein kinase C and casein kinase substrate in neurons protein 1,Pacsin1,Rattus norvegicus,441,310-380
+Q9Z1Z0 · USO1_MOUSE,General vesicular transport factor p115,Uso1,Mus musculus,959,925-959
+Q9ZUP3 · NAP1B_ARATH,Nucleosome assembly protein 1;2,NAP1;2,Arabidopsis thaliana,379,298-379
+U3JAG9 · CP131_DANRE,Centrosomal protein of 131 kDa,cep131,Danio rerio,1113,"78-97, 232-267, 306-331, 368-401, 438-458"
+U4PAZ9 · PTRN1_CAEEL,Patronin (microtubule-binding protein) homolog,ptrn-1,Caenorhabditis elegans,1112,"324-358, 485-504, 542-566, 788-834, 916-965"
+A0A096MJN4 · SEPT4_RAT,Septin-4,Septin4,Rattus norvegicus,459,"18-52, 70-98, 410-430"
+A0A2R8QCI3 · DAPLE_DANRE,Protein Daple,ccdc88c,Danio rerio,2023,"1013-1035, 1441-1824, 1837-2023"
+A1A5Q0 · LMOD2_RAT,Leiomodin-2,Lmod2,Rattus norvegicus,549,"91-166, 179-200, 358-455, 469-534"
+A2A884 · ZEP3_MOUSE,Transcription factor HIVEP3,Hivep3,Mus musculus,2348,"1-105, 239-401, 475-532, 561-628, 692-1098, 1229-1274, 1386-1427, 1441-1555, 1654-1694, 1786-1990, 2009-2038, 2184-2265, 2284-2348"
+A2ASS6 · TITIN_MOUSE,Titin,Ttn,Mus musculus,35213,"243-315, 854-889, 1405-1449, 4205-4243, 9873-9910, 9962-9984, 9999-10025, 10163-10258, 10275-10318, 10371-10401, 10436-10513, 10525-10566, 10585-10719, 10859-11270, 11370-11460, 11572-11602, 11630-11655, 11671-12421, 12454-12501, 12561-12894, 15753-15777, 16772-16801, 20167-20195, 20268-20289, 27952-27974, 31800-31832, 32102-32129, 34010-34031, 34080-34118, 34449-34506, 34611-34635"
+A2RVJ8 · HIT4_ARATH,Protein HEAT INTOLERANT 4,HIT4,Arabidopsis thaliana,434,1-131
+A2VDM8 · BAP1_BOVIN,Ubiquitin carboxyl-terminal hydrolase BAP1,BAP1,Bos taurus,711,"255-337, 354-420, 446-506, 557-605, 685-711"
+A4GG66 · CXG1_RAT,Gap junction gamma-1 protein,Gjc1,Rattus norvegicus,396,"145-165, 357-396"
+A8MQL1 · TRF1B_ARATH,TNF receptor-associated factor homolog 1b,TRAF1B,Arabidopsis thaliana,1082,"1-54, 358-388, 440-666, 697-762, 780-800, 812-841, 858-889"
+B0BN28 · SKA1_RAT,SKA complex subunit 1,Ska1,Rattus norvegicus,254,97-127
+B1WC58 · CTIP_RAT,DNA endonuclease RBBP8,Rbbp8,Rattus norvegicus,893,"306-333, 744-763, 870-893"
+B2RW38 · CFA58_MOUSE,Cilia- and flagella-associated protein 58,Cfap58,Mus musculus,873,202-221
+B9EKI3 · TMF1_MOUSE,TATA element modulatory factor,Tmf1,Mus musculus,1091,"42-86, 100-280, 360-443"
+C5H8J1 · EME1B_ARATH,Crossover junction endonuclease EME1B,EME1B,Arabidopsis thaliana,551,"1-55, 187-239"
+D3ZBP4 · MICA1_RAT,[F-actin]-monooxygenase MICAL1,Mical1,Rattus norvegicus,1047,"644-672, 739-787, 849-872"
+D3ZFD0 · MY18A_RAT,Unconventional myosin-XVIIIa,Myo18a,Rattus norvegicus,2044,"1-34, 140-167, 982-1004, 1045-1065, 1450-1471, 1840-1891, 1950-2044"
+D3ZVM4 · LIN41_RAT,E3 ubiquitin-protein ligase TRIM71,Trim71,Rattus norvegicus,855,"26-48, 126-177"
+E9PV24 · FIBA_MOUSE,Fibrinogen alpha chain,Fga,Mus musculus,789,"263-420, 526-555"
+E9PV87 · TALD3_MOUSE,Protein TALPID3,Talpid3,Mus musculus,1520,"322-370, 568-632, 759-793, 826-848, 1060-1093, 1145-1170, 1184-1230, 1500-1520"
+E9Q7G0 · NUMA1_MOUSE,Nuclear mitotic apparatus protein 1,Numa1,Mus musculus,2094,"617-636, 723-759, 921-1000, 1081-1143, 1173-1223, 1718-1743, 1760-1795, 1807-1883, 1937-2094"
+E9Q9F7 · CC146_MOUSE,Coiled-coil domain-containing protein 146,Ccdc146,Mus musculus,977,1-48
+F1LVW7 · DIAP3_RAT,Protein diaphanous homolog 3,Diaph3,Rattus norvegicus,1172,"1-36, 57-96, 535-586"
+F1M3G7 · AKP13_RAT,A-kinase anchor protein 13,Akap13,Rattus norvegicus,2760,"356-388, 442-517, 530-577, 604-711, 729-857, 890-940, 954-1029, 1132-1162, 1392-1411, 1425-1508, 1520-1539, 1592-1628, 1733-1755, 2422-2450, 2568-2588, 2660-2760"
+F4HVG8 · CSK_ARATH,"Chloroplast sensor kinase, chloroplastic",CSK,Arabidopsis thaliana,611,"17-50, 385-420"
+F4HWY6 · MYO11_ARATH,Myosin-11,XI-E,Arabidopsis thaliana,1529,"993-1031, 1096-1115"
+F4ICX9 · TSA1_ARATH,TSK-associating protein 1,TSA1,Arabidopsis thaliana,759,"55-74, 154-184, 200-219, 271-332, 393-414"
+F4J8D3 · TPLAT_ARATH,Protein TPLATE,TPLATE,Arabidopsis thaliana,1176,1088-1149
+F4JTN2 · LAZ1_ARATH,Protein LAZ1,LAZ1,Arabidopsis thaliana,485,400-485
+F4JWB3 · MYTM2_ARATH,Phosphatidylinositol-3-phosphatase myotubularin-2,MTM2,Arabidopsis thaliana,833,"503-530, 753-772"
+F4K5J1 · MYO17_ARATH,Myosin-17,XI-K,Arabidopsis thaliana,1531,1071-1090
+G3UYQ4 · KAD9_MOUSE,Adenylate kinase 9,Ak9,Mus musculus,1894,"188-211, 492-533, 710-789, 876-911, 1223-1243"
+G3UZ78 · ADGB_MOUSE,Androglobin,Adgb,Mus musculus,1657,"1-40, 321-398, 1184-1226, 1288-1356, 1422-1459, 1638-1657"
+G4SLH0 · TTN1_CAEEL,Titin homolog,ttn-1,Caenorhabditis elegans,18562,"384-404, 1336-1360, 2155-2177, 2298-2459, 2614-2637, 3362-3692, 4553-4599, 4634-4699, 4750-4814, 4826-4855, 4912-4931, 4950-4969, 4989-5216, 5267-5294, 5306-5325, 5345-5372, 5428-6101, 6127-6157, 6214-6900, 6930-8453, 8599-8626, 9079-9104, 9147-9436, 9481-9609, 9702-10224, 10239-10274, 10539-11018, 11030-11111, 11123-11213, 11225-11387, 11420-11592, 11624-11825, 11872-11955, 11996-12054, 12397-12418, 12537-12974, 13026-13045, 13065-13261, 13283-13514, 13553-13574, 13594-13874, 15011-15180, 15470-15503, 16805-16827, 17121-17169"
+G5EBZ8 · ARK1_CAEEL,Ack-related non-receptor tyrosine kinase,ark-1,Caenorhabditis elegans,1043,"443-481, 514-644, 790-842, 859-898, 932-993"
+G5EC32 · SRBS1_CAEEL,Sorbin and SH3 domain-containing protein 1 homolog,sorb-1,Caenorhabditis elegans,1005,"1-31, 61-86, 99-153, 243-292, 386-409, 427-475, 542-622"
+G5EF60 · STIM1_CAEEL,Stromal interaction molecule 1,stim-1,Caenorhabditis elegans,530,409-447
+G5EG14 · CATIN_CAEEL,Splicing factor Cactin,cacn-1,Caenorhabditis elegans,657,"1-83, 369-406, 472-503"
+G5EG44 · MDL1_CAEEL,Mad-like protein 1,mdl-1,Caenorhabditis elegans,281,"71-105, 189-213"
+G5EGE9 · DPY26_CAEEL,Condensin complex subunit dpy-26,dpy-26,Caenorhabditis elegans,1263,"1-29, 1098-1118, 1225-1263"
+H2L0Q3 · GABR1_CAEEL,Gamma-aminobutyric acid type B receptor subunit 1,gbb-1,Caenorhabditis elegans,899,870-899
+I6PL68 · HEI10_ORYSJ,E3 ubiquitin-protein ligase CCNB1IP1 homolog,HEI10,Oryza sativa subsp. japonica,303,201-268
+M0R8U1 · DYH5_RAT,Dynein axonemal heavy chain 5,Dnah5,Rattus norvegicus,3470,899-918
+M9MRD1 · MS300_DROME,Muscle-specific protein 300 kDa,Msp300,Drosophila melanogaster,12345,"1-68, 121-152, 295-325, 387-488, 504-526, 2699-2724, 6631-6657, 8583-8616, 8966-9023, 9131-9158, 9361-9459, 9502-9735, 9769-9797, 12253-12272"
+M9MRI4 · TRIM9_DROME,E3 ubiquitin-protein ligase TRIM9,Trim9,Drosophila melanogaster,740,64-114
+O00910 · STATA_DICDI,Signal transducer and activator of transcription A,dstA,Dictyostelium discoideum,707,70-246
+O01583 · MRCK_CAEEL,Serine/threonine-protein kinase mrck-1,mrck-1,Caenorhabditis elegans,1592,782-801
+O01789 · SMC1_CAEEL,Structural maintenance of chromosomes protein 1,him-1,Caenorhabditis elegans,1262,965-994
+O02298 · GCY35_CAEEL,Soluble guanylate cyclase gcy-35,gcy-35,Caenorhabditis elegans,688,644-688
+O08852 · PKD1_MOUSE,Polycystin-1,Pkd1,Mus musculus,4293,"613-632, 4150-4197, 4235-4293"
+O16844 · COS_DROME,Kinesin-like protein costa,cos,Drosophila melanogaster,1201,"23-92, 502-536, 565-606, 618-639"
+O22040 · ANP1_ARATH,Mitogen-activated protein kinase kinase kinase ANP1,ANP1,Arabidopsis thaliana,666,"452-481, 536-592, 635-666"
+O22265 · SR43C_ARATH,"Signal recognition particle 43 kDa protein, chloroplastic",CAO,Arabidopsis thaliana,373,65-85
+O22873 · BZP18_ARATH,bZIP transcription factor 18,BZIP18,Arabidopsis thaliana,367,"1-57, 79-124, 294-330, 343-367"
+O35119 · TRPC4_RAT,Short transient receptor potential channel 4,Trpc4,Rattus norvegicus,977,767-790
+O35180 · SH3G3_RAT,Endophilin-A3,Sh3gl3,Rattus norvegicus,347,255-284
+O35274 · NEB2_RAT,Neurabin-2,Ppp1r9b,Rattus norvegicus,817,"1-93, 117-166, 216-445"
+O35551 · RABE1_MOUSE,Rab GTPase-binding effector protein 1,Rabep1,Mus musculus,862,315-374
+O45962 · RLE1_CAEEL,Regulation of longevity by E3 ubiquitin-protein ligase,rle-1,Caenorhabditis elegans,952,"410-431, 445-528"
+O48847 · LUH_ARATH,Transcriptional corepressor LEUNIG_HOMOLOG,LUH,Arabidopsis thaliana,787,299-413
+O49397 · ARR10_ARATH,Two-component response regulator ARR10,ARR10,Arabidopsis thaliana,552,139-181
+O54774 · AP3D1_MOUSE,AP-3 complex subunit delta-1,Ap3d1,Mus musculus,1199,"623-695, 724-963"
+O54852 · KCNH7_RAT,Voltage-gated inwardly rectifying potassium channel KCNH7,Kcnh7,Rattus norvegicus,1195,"194-216, 894-914, 958-987, 1144-1174"
+O54874 · MRCKA_RAT,Serine/threonine-protein kinase MRCK alpha,Cdc42bpa,Rattus norvegicus,1732,"973-1002, 1592-1732"
+O54931 · AKAP2_MOUSE,PALM2-AKAP2 fusion protein,Pakap,Mus musculus,1089,"165-194, 210-231, 289-362, 429-517, 592-644, 712-783, 800-899, 915-934, 946-1021"
+O55034 · SPAG4_RAT,Sperm-associated antigen 4 protein,Spag4,Rattus norvegicus,444,1-109
+O55165 · KIF3C_RAT,Kinesin-like protein KIF3C,Kif3c,Rattus norvegicus,796,"251-292, 397-421, 754-796"
+O70257 · STX7_RAT,Syntaxin-7,Stx7,Rattus norvegicus,261,128-148
+O70277 · TRIM3_RAT,Tripartite motif-containing protein 3,Trim3,Rattus norvegicus,744,420-462
+O76878 · RIPL_DROME,RILP-like protein homolog,Rilpl,Drosophila melanogaster,443,311-394
+O80996 · BRIZ2_ARATH,BRAP2 RING ZnF UBP domain-containing protein 2,BRIZ2,Arabidopsis thaliana,479,434-479
+O82345 · BAG6_ARATH,BAG family molecular chaperone regulator 6,BAG6,Arabidopsis thaliana,1043,"253-294, 311-331, 343-366, 410-500, 533-566, 724-749, 764-799, 817-975, 1015-1043"
+O88447 · KLC1_MOUSE,Kinesin light chain 1,Klc1,Mus musculus,541,"156-201, 493-541"
+O88658 · KIF1B_RAT,Kinesin-like protein KIF1B,Kif1b,Rattus norvegicus,1816,"431-450, 1550-1570, 1620-1659"
+O88778 · BSN_RAT,Protein bassoon,Bsn,Rattus norvegicus,3938,"1-158, 228-346, 361-456, 523-921, 934-1247, 1294-1541, 1561-1611, 1914-1964, 2280-2305, 2318-2343, 2461-2486, 2513-2648, 2839-2859, 3055-3148, 3162-3399, 3414-3546, 3569-3910"
+O88871 · GABR2_RAT,Gamma-aminobutyric acid type B receptor subunit 2,Gabbr2,Rattus norvegicus,940,762-789
+P01096 · ATIF1_BOVIN,"ATPase inhibitor, mitochondrial",ATP5IF1,Bos taurus,109,26-52
+P02566 · MYO4_CAEEL,Myosin-4,unc-54,Caenorhabditis elegans,1963,"970-990, 1125-1146, 1317-1336, 1912-1963"
+P06399 · FIBA_RAT,Fibrinogen alpha chain,Fga,Rattus norvegicus,782,"264-374, 522-542"
+P09495 · TPM4_RAT,Tropomyosin alpha-4 chain,Tpm4,Rattus norvegicus,248,18-49
+P0CE41 · HAP1_YEAST,Heme-responsive zinc finger transcription factor HAP1,HAP1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1502,"1-56, 126-208, 432-458, 706-767, 1384-1411"
+P11260 · LORF1_MOUSE,LINE-1 retrotransposable element ORF1 protein,Lire1,Mus musculus,357,1-40
+P12804 · FGL2_MOUSE,Fibroleukin,Fgl2,Mus musculus,432,100-122
+P12844 · MYO3_CAEEL,Myosin-3,myo-3,Caenorhabditis elegans,1969,"942-966, 1006-1029, 1131-1213, 1234-1255"
+P13541 · MYH3_MOUSE,Myosin-3,Myh3,Mus musculus,1940,1260-1289
+P13542 · MYH8_MOUSE,Myosin-8,Myh8,Mus musculus,1937,1125-1171
+P17536 · TPM1_YEAST,Tropomyosin-1,TPM1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),199,"59-81, 102-147"
+P17839 · AG_ARATH,Floral homeotic protein AGAMOUS,AG,Arabidopsis thaliana,252,1-20
+P19426 · NELFE_MOUSE,Negative elongation factor E,Nelfe,Mus musculus,375,"30-58, 79-262"
+P25582 · SPB1_YEAST,27S pre-rRNA (guanosine(2922)-2'-O)-methyltransferase,SPB1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),841,"480-534, 565-654"
+P25604 · STP22_YEAST,Suppressor protein STP22 of temperature-sensitive alpha-factor receptor and arginine permease,STP22,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),385,155-219
+P28023 · DCTN1_RAT,Dynactin subunit 1,Dctn1,Rattus norvegicus,1280,"1-26, 99-223, 1064-1089"
+P28740 · KIF2A_MOUSE,Kinesin-like protein KIF2A,Kif2a,Mus musculus,705,65-186
+P28741 · KIF3A_MOUSE,Kinesin-like protein KIF3A,Kif3a,Mus musculus,701,"373-423, 665-701"
+P28743 · KIP2_YEAST,Kinesin-like protein KIP2,KIP2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),706,"1-139, 413-445"
+P30181 · TOP1A_ARATH,DNA topoisomerase 1 alpha,TOP1A,Arabidopsis thaliana,916,1-369
+P31977 · EZRI_RAT,Ezrin,Ezr,Rattus norvegicus,586,306-338
+P33175 · KIF5A_MOUSE,Kinesin heavy chain isoform 5A,Kif5a,Mus musculus,1027,906-937
+P33332 · SEC3_YEAST,Exocyst complex component SEC3,SEC3,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1336,"1-74, 252-300, 429-467"
+P34609 · JIP_CAEEL,JNK-interacting protein,unc-16,Caenorhabditis elegans,1190,"1-35, 263-364, 775-829"
+P34927 · ASGR1_MOUSE,Asialoglycoprotein receptor 1,Asgr1,Mus musculus,284,1-25
+P36116 · VPS51_YEAST,Vacuolar protein sorting-associated protein 51,VPS51,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),164,30-93
+P38257 · MMS4_YEAST,Crossover junction endonuclease MMS4,MMS4,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),691,201-240
+P38650 · DYHC1_RAT,Cytoplasmic dynein 1 heavy chain 1,Dync1h1,Rattus norvegicus,4644,2389-2409
+P38853 · KEL1_YEAST,Kelch repeat-containing protein 1,KEL1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1164,"1-106, 550-589"
+P38934 · BFR1_YEAST,Nuclear segregation protein BFR1,BFR1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),470,"346-368, 447-470"
+P40450 · BNR1_YEAST,BNI1-related protein 1,BNR1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1375,"661-684, 764-785, 817-839, 1285-1309"
+P40645 · SOX6_MOUSE,Transcription factor SOX-6,Sox6,Mus musculus,827,"1-51, 334-361, 379-470, 752-772, 786-827"
+P41046 · CORTO_DROME,Centrosomal and chromosomal factor,corto,Drosophila melanogaster,550,"21-145, 208-320, 361-380, 392-465"
+P41697 · BUD6_YEAST,Bud site selection protein 6,BUD6,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),788,"140-253, 298-338"
+P45970 · LIN5_CAEEL,Spindle apparatus protein lin-5,lin-5,Caenorhabditis elegans,821,"161-199, 736-758, 779-821"
+P46677 · TAF1_YEAST,Transcription initiation factor TFIID subunit 1,TAF1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1066,"836-856, 989-1036"
+P47025 · MDV1_YEAST,Mitochondrial division protein 1,MDV1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),714,323-354
+P47069 · MPS3_YEAST,Spindle pole body assembly component MPS3,MPS3,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),682,"1-23, 82-111, 641-682"
+P48616 · VIME_BOVIN,Vimentin,VIM,Bos taurus,466,1-31
+P48996 · DPY27_CAEEL,Chromosome condensation protein dpy-27,dpy-27,Caenorhabditis elegans,1469,"1-25, 758-781, 1404-1469"
+P49455 · TPM4_DROME,"Tropomyosin-1, isoforms 33/34",Tm1,Drosophila melanogaster,518,"101-125, 288-518"
+P49704 · PRP31_YEAST,Pre-mRNA-processing factor 31,PRP31,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),494,344-370
+P50090 · KEL2_YEAST,Kelch repeat-containing protein 2,KEL2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),882,"41-60, 480-516"
+P53855 · ATG2_YEAST,Autophagy-related protein 2,ATG2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1592,264-286
+P53935 · NST1_YEAST,Stress response protein NST1,NST1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),1240,"1-76, 446-593, 634-744, 951-980, 998-1029, 1214-1240"
+P61264 · STX1B_MOUSE,Syntaxin-1B,Stx1b,Mus musculus,288,1-20
+P70475 · MYT1L_RAT,Myelin transcription factor 1-like protein,Myt1l,Rattus norvegicus,1187,"1-20, 56-178, 221-248, 343-422, 450-509, 684-708"
+P70581 · NUP58_RAT,Nucleoporin p58/p45,Nup58,Rattus norvegicus,585,"194-232, 563-585"
+P91928 · MIC60_DROME,MICOS complex subunit Mic60,Mitofilin,Drosophila melanogaster,739,"23-63, 154-219"
+P92199 · ROCK_CAEEL,Rho-associated protein kinase let-502,let-502,Caenorhabditis elegans,1173,1154-1173
+P97329 · KI20A_MOUSE,Kinesin-like protein KIF20A,Kif20a,Mus musculus,887,"527-553, 826-875"
+P97690 · SMC3_RAT,Structural maintenance of chromosomes protein 3,Smc3,Rattus norvegicus,1191,"242-268, 1059-1090"
+Q00194 · CNGA1_BOVIN,Cyclic nucleotide-gated channel alpha-1,CNGA1,Bos taurus,690,"33-76, 88-151"
+Q00195 · CNGA2_RAT,Cyclic nucleotide-gated channel alpha-2,Cnga2,Rattus norvegicus,664,1-51
+Q00958 · LFY_ARATH,Protein LEAFY,LFY,Arabidopsis thaliana,420,153-231
+Q01649 · CIK1_YEAST,Spindle pole body-associated protein CIK1,CIK1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),594,1-29
+Q03173 · ENAH_MOUSE,Protein enabled homolog,Enah,Mus musculus,802,"143-166, 245-287, 341-622, 639-675, 691-764"
+Q03344 · ATIF1_RAT,"ATPase inhibitor, mitochondrial",Atp5if1,Rattus norvegicus,107,25-58
+Q03944 · VPS64_YEAST,Vacuolar protein sorting-associated protein 64,VPS64,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),604,"1-89, 539-561"
+Q04087 · LRS4_YEAST,Monopolin complex subunit LRS4,LRS4,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),347,"112-183, 208-230"
+Q04461 · EUC1_YEAST,Transcription factor-like protein EUC1,EUC1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),462,"11-43, 66-97, 190-214, 226-289, 441-462"
+Q04921 · SPR28_YEAST,Sporulation-regulated protein 28,SPR28,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),423,360-385
+Q05021 · TAF7_YEAST,Transcription initiation factor TFIID subunit 7,TAF7,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),590,"1-65, 325-453, 489-579"
+Q05166 · NUP59_YEAST,Nucleoporin ASM4,ASM4,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),528,"23-64, 88-144"
+Q06324 · MMR1_YEAST,Mitochondrial MYO2 receptor-related protein 1,MMR1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),491,419-491
+Q06340 · ESC2_YEAST,Protein ESC2,ESC2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),456,1-154
+Q06493 · YLH47_YEAST,"LETM1 domain-containing protein YLH47, mitochondrial",YLH47,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),454,"51-73, 420-454"
+Q07457 · BRE1_YEAST,E3 ubiquitin-protein ligase BRE1,BRE1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),700,200-250
+Q07657 · SHS1_YEAST,Seventh homolog of septin 1,SHS1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),551,"381-417, 515-551"
+Q08144 · TLG2_YEAST,t-SNARE affecting a late Golgi compartment protein 2,TLG2,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),397,341-397
+Q08245 · ZEO1_YEAST,Protein ZEO1,ZEO1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),113,1-96
+Q08581 · SLK19_YEAST,Kinetochore protein SLK19,SLK19,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),821,"1-52, 99-153, 274-298, 699-720"
+Q08DZ8 · PRIPO_BOVIN,DNA-directed primase/polymerase protein,PRIMPOL,Bos taurus,555,"210-230, 480-503"
+Q0VD48 · VPS4B_BOVIN,Vacuolar protein sorting-associated protein 4B,VPS4B,Bos taurus,444,77-117
+Q10F03 · FLO6_ORYSJ,"Protein FLOURY ENDOSPERM 6, chloroplastic",FLO6,Oryza sativa subsp. japonica,529,"1-22, 39-77, 166-275"
+Q19187 · GCY12_CAEEL,Receptor-type guanylate cyclase gcy-12,gcy-12,Caenorhabditis elegans,1679,"1412-1434, 1534-1580, 1623-1679"
+Q19336 · PCGF3_CAEEL,Polycomb group RING finger protein 3 homolog mig-32,mig-32,Caenorhabditis elegans,549,1-263
+Q1L8J7 · YAP1_DANRE,Transcriptional coactivator YAP1,yap1,Danio rerio,442,"51-89, 97-116, 230-254, 286-374"
+Q1PDW3 · LIPG1_ARATH,Receptor-like kinase LIP1,LIP1,Arabidopsis thaliana,636,"18-57, 389-636"
+Q1W617 · SHRM4_MOUSE,Protein Shroom4,Shroom4,Mus musculus,1475,"151-175, 202-321, 432-523, 542-577, 610-644, 658-688, 727-753, 772-791, 1022-1041, 1055-1185"
+Q21361 · NFIL3_CAEEL,Transcription factor atf-2,atf-2,Caenorhabditis elegans,401,"19-78, 181-256, 273-345"
+Q23243 · MORC1_CAEEL,ATPase morc-1,morc-1,Caenorhabditis elegans,845,"566-590, 628-739"
+Q23658 · CAPS_CAEEL,Calcium-dependent secretion activator,unc-31,Caenorhabditis elegans,1378,1-138
+Q27249 · TPM3_CAEEL,Tropomyosin isoforms c/e,lev-11,Caenorhabditis elegans,256,"21-52, 75-116"
+Q27IK6 · KN12D_ARATH,Kinesin-like protein KIN-12D,KIN12D,Arabidopsis thaliana,2771,"1-73, 117-139, 2727-2771"
+Q2HJA5 · DTBP1_BOVIN,Dysbindin,DTNBP1,Bos taurus,342,263-342
+Q2HWF0 · FBP1L_RAT,Formin-binding protein 1-like,Fnbp1l,Rattus norvegicus,605,"325-345, 480-539"
+Q2IBD4 · CTTB2_RAT,Cortactin-binding protein 2,Cttnbp2,Rattus norvegicus,1649,"1-27, 322-439, 451-476, 492-604, 1438-1471, 1527-1649"
+Q2KJC1 · CDC5L_BOVIN,Cell division cycle 5-like protein,CDC5L,Bos taurus,802,"108-143, 246-278, 409-459"
+Q2KN98 · CYTSA_MOUSE,Cytospin-A,Specc1l,Mus musculus,1118,"1-63, 75-176, 294-324, 359-391, 921-999"
+Q2TA49 · VASP_BOVIN,Vasodilator-stimulated phosphoprotein,VASP,Bos taurus,383,112-349
+Q2VPQ9 · EAF6_MOUSE,Chromatin modification-related protein MEAF6,Meaf6,Mus musculus,191,104-191
+Q336R3 · BRE1B_ORYSJ,E3 ubiquitin-protein ligase BRE1-like 2,HUB2,Oryza sativa subsp. japonica,844,244-269
+Q338B0 · HFA2C_ORYSJ,Heat stress transcription factor A-2c,HSFA2C,Oryza sativa subsp. japonica,358,1-39
+Q39160 · MYO5_ARATH,Myosin-5,XI-1,Arabidopsis thaliana,1520,1062-1100
+Q39234 · TGA3_ARATH,Transcription factor TGA3,TGA3,Arabidopsis thaliana,384,"36-70, 76-95"
+Q3KRE0 · ATD3A_RAT,ATPase family AAA domain-containing protein 3A,Atad3a,Rattus norvegicus,591,1-52
+Q3TUF7 · YETS2_MOUSE,YEATS domain-containing protein 2,Yeats2,Mus musculus,1407,"116-196, 462-540, 791-833"
+Q3UHC0 · TNR6C_MOUSE,Trinucleotide repeat-containing gene 6C protein,Tnrc6c,Mus musculus,1690,"1-42, 158-202, 226-848, 863-928, 1212-1337, 1351-1380, 1397-1421, 1441-1486, 1600-1625"
+Q3UJU9 · RMD3_MOUSE,Regulator of microtubule dynamics protein 3,Rmdn3,Mus musculus,470,168-205
+Q3URY2 · GEMC1_MOUSE,Geminin coiled-coil domain-containing protein 1,Gmnc,Mus musculus,333,145-165
+Q3UYV9 · NCBP1_MOUSE,Nuclear cap-binding protein subunit 1,Ncbp1,Mus musculus,790,"1-26, 666-685"
+Q3V079 · BBOF1_MOUSE,Basal body-orientation factor 1,Bbof1,Mus musculus,533,"1-30, 507-533"
+Q3V1G4 · OLM2B_MOUSE,Olfactomedin-like protein 2B,Olfml2b,Mus musculus,746,"346-393, 454-479"
+Q3ZBT5 · STX7_BOVIN,Syntaxin-7,STX7,Bos taurus,261,129-150
+Q499U4 · DRC4_RAT,Dynein regulatory complex subunit 4,Gas8,Rattus norvegicus,478,1-32
+Q4G017 · NISCH_RAT,Nischarin,Nisch,Rattus norvegicus,1502,"481-501, 524-549, 628-684, 1014-1101"
+Q4KSH7 · MP2K7_RAT,Dual specificity mitogen-activated protein kinase kinase 7,Map2k7,Rattus norvegicus,419,18-77
+Q4QQV8 · CHMP5_RAT,Charged multivesicular body protein 5,Chmp5,Rattus norvegicus,219,"1-21, 188-219"
+Q4V920 · PACN1_DANRE,Protein kinase C and casein kinase substrate in neurons protein 1,pacsin1b,Danio rerio,445,327-390
+Q54BD4 · STATC_DICDI,Signal transducer and activator of transcription C,dstC,Dictyostelium discoideum,931,"1-83, 98-151, 304-340, 396-430"
+Q54HI5 · LMNB1_DICDI,Lamin-like protein,lmnB,Dictyostelium discoideum,716,"1-107, 519-584"
+Q54I71 · AARA_DICDI,Protein aardvark,aarA,Dictyostelium discoideum,757,"39-63, 122-166, 256-285"
+Q54K81 · TALB_DICDI,Talin-B,talB,Dictyostelium discoideum,2614,"393-421, 2454-2557"
+Q54NF8 · SCAR_DICDI,Protein SCAR,scrA,Dictyostelium discoideum,443,"176-197, 220-386"
+Q54W90 · SEY1_DICDI,Protein SEY1 homolog,,Dictyostelium discoideum,894,1-97
+Q55DM1 · LVSA_DICDI,BEACH domain-containing protein lvsA,lvsA,Dictyostelium discoideum,3619,"1-117, 648-709, 1101-1129, 1367-1390, 1636-1658, 1893-1924, 1964-1999, 2403-2457, 2596-2785, 2940-2971, 3516-3539"
+Q55F94 · DLPA_DICDI,Dynamin-like protein A,dlpA,Dictyostelium discoideum,880,"1-124, 532-551"
+Q55FT4 · TSUA_DICDI,Probable serine/threonine-protein kinase tsuA,tsuA,Dictyostelium discoideum,2247,"271-313, 332-393, 417-447, 473-503, 524-636, 702-757, 899-943, 1098-1136, 1222-1247, 1353-1391, 1529-1570, 1593-1618, 2106-2126"
+Q55GF9 · ICPA_DICDI,Inner centromere protein A,icpA,Dictyostelium discoideum,1320,"53-75, 426-447, 611-679, 701-877, 896-1215"
+Q571K4 · TAB3_MOUSE,TGF-beta-activated kinase 1 and MAP3K7-binding protein 3,Tab3,Mus musculus,716,"141-189, 227-349, 373-433, 479-513"
+Q58CP9 · STIM1_BOVIN,Stromal interaction molecule 1,STIM1,Bos taurus,683,"488-535, 597-683"
+Q5BJN8 · SDE2_RAT,UBL fusion protein SDE2,Sde2,Rattus norvegicus,448,"178-208, 221-372"
+Q5DTT2 · PSD1_MOUSE,PH and SEC7 domain-containing protein 1,Psd,Mus musculus,1024,"67-96, 154-195, 250-277, 307-401, 434-536, 976-1024"
+Q5E994 · CHM1B_BOVIN,Charged multivesicular body protein 1b,CHMP1B,Bos taurus,199,167-199
+Q5EIC4 · I2BPL_RAT,Probable E3 ubiquitin-protein ligase IRF2BPL,Irf2bpl,Rattus norvegicus,783,"94-131, 162-331, 502-544, 572-692"
+Q5GIG6 · TNI3K_MOUSE,Serine/threonine-protein kinase TNNI3K,Tnni3k,Mus musculus,834,815-834
+Q5I0E8 · KIF22_RAT,Kinesin-like protein KIF22,Kif22,Rattus norvegicus,657,"1-33, 388-415"
+Q5K6N0 · TM232_MOUSE,Transmembrane protein 232,Tmem232,Mus musculus,675,605-624
+Q5PQX1 · TOIP1_RAT,Torsin-1A-interacting protein 1,Tor1aip1,Rattus norvegicus,583,23-208
+Q5SX40 · MYH1_MOUSE,Myosin-1,Myh1,Mus musculus,1942,1156-1175
+Q5U2Z7 · RHG24_RAT,Rho GTPase-activating protein 24,Arhgap24,Rattus norvegicus,748,"328-476, 582-640"
+Q5W7F2 · AGD3_ARATH,ADP-ribosylation factor GTPase-activating protein AGD3,AGD3,Arabidopsis thaliana,827,"246-269, 439-467"
+Q5XI63 · KIFC1_RAT,Kinesin-like protein KIFC1,Kifc1,Rattus norvegicus,693,"1-24, 48-156"
+Q60520 · SIN3A_MOUSE,Paired amphipathic helix protein Sin3a,Sin3a,Mus musculus,1274,"1-26, 85-110, 205-297, 398-443, 835-865, 1137-1157"
+Q60575 · KIF1B_MOUSE,Kinesin-like protein KIF1B,Kif1b,Mus musculus,1816,"1522-1571, 1620-1659"
+Q60664 · IRAG2_MOUSE,"Inositol 1,4,5-triphosphate receptor associated 2",Irag2,Mus musculus,539,"1-21, 69-98, 147-171, 334-353, 418-449"
+Q60698 · SKI_MOUSE,Ski oncogene,Ski,Mus musculus,725,"1-77, 319-352, 457-521, 697-725"
+Q60779 · DRC4_MOUSE,Dynein regulatory complex subunit 4,Gas8,Mus musculus,478,1-29
+Q60780 · GAS7_MOUSE,Growth arrest-specific protein 7,Gas7,Mus musculus,421,1-117
+Q60952 · CP250_MOUSE,Centrosome-associated protein CEP250,Cep250,Mus musculus,2414,"356-384, 672-707, 1191-1212, 1269-1303, 2050-2071, 2194-2238, 2275-2317, 2390-2414"
+Q60953 · PML_MOUSE,Protein PML,Pml,Mus musculus,885,"1-48, 404-434, 500-599"
+Q61033 · LAP2A_MOUSE,"Lamina-associated polypeptide 2, isoforms alpha/zeta",Tmpo,Mus musculus,693,"48-113, 148-211, 227-270, 332-351, 412-442"
+Q61187 · TS101_MOUSE,Tumor susceptibility gene 101 protein,Tsg101,Mus musculus,391,197-220
+Q61210 · ARHG1_MOUSE,Rho guanine nucleotide exchange factor 1,Arhgef1,Mus musculus,920,"231-404, 764-797, 840-864"
+Q61510 · TRI25_MOUSE,E3 ubiquitin/ISG15 ligase TRIM25,Trim25,Mus musculus,634,353-437
+Q61644 · PACN1_MOUSE,Protein kinase C and casein kinase substrate in neurons protein 1,Pacsin1,Mus musculus,441,297-380
+Q62398 · CNGA2_MOUSE,Cyclic nucleotide-gated channel alpha-2,Cnga2,Mus musculus,664,1-61
+Q62418 · DBNL_MOUSE,Drebrin-like protein,Dbnl,Mus musculus,436,185-341
+Q62504 · MINT_MOUSE,Msx2-interacting protein,Spen,Mus musculus,3644,"103-124, 170-209, 225-331, 625-673, 716-1413, 1494-1538, 1557-2447, 2453-2472, 2481-2528, 2745-2781, 2829-2849, 2974-3023, 3310-3473"
+Q62770 · UN13C_RAT,Protein unc-13 homolog C,Unc13c,Rattus norvegicus,2204,"28-55, 128-169, 419-515, 587-635, 647-770"
+Q62839 · GOGA2_RAT,Golgin subfamily A member 2,Golga2,Rattus norvegicus,998,"1-81, 246-288, 443-468"
+Q62909 · KIF2C_RAT,Kinesin-like protein KIF2C,Kif2c,Rattus norvegicus,671,"37-58, 115-138, 533-568"
+Q62931 · GOSR1_RAT,Golgi SNAP receptor complex member 1,Gosr1,Rattus norvegicus,250,37-59
+Q68FH0 · PKP4_MOUSE,Plakophilin-4,Pkp4,Mus musculus,1190,"1-32, 73-347, 772-809"
+Q69ZS8 · KAZRN_MOUSE,Kazrin,Kazn,Mus musculus,779,"295-366, 403-429, 685-779"
+Q69ZW3 · EHBP1_MOUSE,EH domain-binding protein 1,Ehbp1,Mus musculus,1231,"266-310, 356-452, 627-689, 759-817, 839-868, 1030-1067, 1198-1231"
+Q6A065 · CE170_MOUSE,Centrosomal protein of 170 kDa,Cep170,Mus musculus,1588,"121-172, 299-323, 338-447, 461-508, 602-854, 899-1222, 1228-1247, 1315-1334, 1370-1398, 1511-1540"
+Q6AW69 · CGNL1_MOUSE,Cingulin-like protein 1,Cgnl1,Mus musculus,1297,"161-208, 245-306, 364-396, 428-467, 586-608"
+Q6GMN2 · BAIP2_RAT,BAR/IMD domain-containing adapter protein 2,Baiap2,Rattus norvegicus,535,"308-370, 445-486"
+Q6IR42 · ZCPW1_MOUSE,Zinc finger CW-type PWWP domain protein 1,Zcwpw1,Mus musculus,630,"1-99, 130-184, 430-595"
+Q6JHU9 · CBP_RAT,Histone lysine acetyltransferase CREBBP,Crebbp,Rattus norvegicus,2442,"1-40, 74-168, 261-290, 792-1084, 1557-1616, 1875-1960, 2112-2421"
+Q6KAU8 · A16L2_MOUSE,Protein Atg16l2,Atg16l2,Mus musculus,623,64-93
+Q6P1G2 · KDM2B_MOUSE,Lysine-specific demethylase 2B,Kdm2b,Mus musculus,1309,"378-476, 700-816, 828-1005"
+Q6P2L6 · NSD3_MOUSE,Histone-lysine N-methyltransferase NSD3,Nsd3,Mus musculus,1439,"121-151, 181-247, 344-367, 401-466, 540-695"
+Q6P6L0 · FIL1L_MOUSE,Filamin A-interacting protein 1-like,Filip1l,Mus musculus,1131,1-62
+Q6P6T5 · OCLN_RAT,Occludin,Ocln,Rattus norvegicus,523,"1-20, 302-338, 363-408"
+Q6P730 · DAB2P_RAT,Disabled homolog 2-interacting protein,Dab2ip,Rattus norvegicus,996,"460-486, 522-545, 611-630, 650-672, 702-805, 822-841, 971-996"
+Q6P926 · SPA24_MOUSE,Spermatogenesis-associated protein 24,Spata24,Mus musculus,205,185-205
+Q6P9P6 · KIF11_MOUSE,Kinesin-like protein KIF11,Kif11,Mus musculus,1052,"950-1026, 1033-1052"
+Q6PA06 · ATLA2_MOUSE,Atlastin-2,Atl2,Mus musculus,583,1-45
+Q6QLM7 · KIF5A_RAT,Kinesin heavy chain isoform 5A,Kif5a,Rattus norvegicus,1027,906-936
+Q6RT24 · CENPE_MOUSE,Centromere-associated protein E,Cenpe,Mus musculus,2474,"2196-2217, 2371-2441"
+Q6S5G3 · TOC90_ARATH,"Translocase of chloroplast 90, chloroplastic",TOC90,Arabidopsis thaliana,793,22-59
+Q6URW6 · MYH14_MOUSE,Myosin-14,Myh14,Mus musculus,2000,"1173-1197, 1260-1311, 1597-1629, 1720-1751, 1910-1942, 1967-2000"
+Q6WKZ8 · UBR2_MOUSE,E3 ubiquitin-protein ligase UBR2,Ubr2,Mus musculus,1755,1012-1033
+Q7JXF5 · NUP62_DROME,Nuclear pore glycoprotein p62,Nup62,Drosophila melanogaster,394,45-73
+Q7KVY7 · STX4_DROME,Syntaxin-4,Syx4,Drosophila melanogaster,333,50-81
+Q7M6Z4 · KIF27_MOUSE,Kinesin-like protein KIF27,Kif27,Mus musculus,1394,"559-582, 642-665, 886-916, 1267-1319, 1325-1344"
+Q7TME2 · SPAG5_MOUSE,Sperm-associated antigen 5,Spag5,Mus musculus,1165,"1-23, 431-457, 875-907"
+Q7TNC4 · LC7L2_MOUSE,Putative RNA-binding protein Luc7-like 2,Luc7l2,Mus musculus,392,235-392
+Q7TP54 · RIPR2_RAT,Rho family-interacting cell polarization regulator 2,Ripor2,Rattus norvegicus,1310,588-639
+Q7XU27 · BRE1A_ORYSJ,E3 ubiquitin-protein ligase BRE1-like 1,HUB1,Oryza sativa subsp. japonica,884,"1-37, 107-127"
+Q80TS7 · DEND_MOUSE,Dendrin,Ddn,Mus musculus,710,"1-22, 62-195, 213-274, 324-375, 390-422, 469-508, 521-710"
+Q80TV8 · CLAP1_MOUSE,CLIP-associating protein 1,Clasp1,Mus musculus,1535,"237-290, 543-600, 612-782, 1078-1157, 1200-1233, 1245-1266"
+Q80TZ9 · RERE_MOUSE,Arginine-glutamic acid dipeptide repeats protein,Rere,Mus musculus,1558,"1-90, 464-495, 542-1125, 1154-1238"
+Q80UW5 · MRCKG_MOUSE,Serine/threonine-protein kinase MRCK gamma,Cdc42bpg,Mus musculus,1551,"578-605, 820-886, 1441-1551"
+Q80YX1 · TENA_MOUSE,Tenascin,Tnc,Mus musculus,2110,69-91
+Q811S9 · GNL3_RAT,Guanine nucleotide-binding protein-like 3,Gnl3,Rattus norvegicus,538,"1-125, 460-538"
+Q86GV3 · GCY28_CAEEL,Receptor-type guanylate cyclase gcy-28,gcy-28,Caenorhabditis elegans,1276,"562-601, 635-709"
+Q8BHS8 · SYBU_MOUSE,Syntabulin,Sybu,Mus musculus,665,1-271
+Q8BI79 · CCD40_MOUSE,Coiled-coil domain-containing protein 40,Ccdc40,Mus musculus,1192,"1-78, 126-153, 173-196, 211-246, 261-289"
+Q8BJQ9 · CGAT1_MOUSE,Chondroitin sulfate N-acetylgalactosaminyltransferase 1,Csgalnact1,Mus musculus,530,88-107
+Q8BKT7 · THOC5_MOUSE,THO complex subunit 5 homolog,Thoc5,Mus musculus,683,"1-42, 301-336"
+Q8BMK4 · CKAP4_MOUSE,Cytoskeleton-associated protein 4,Ckap4,Mus musculus,575,1-73
+Q8BQ48 · CE295_MOUSE,Centrosomal protein of 295 kDa,Cep295,Mus musculus,2412,"600-641, 739-762, 871-891, 973-1005, 1158-1178, 1216-1240, 1820-1895, 1916-1937, 2028-2048, 2089-2111"
+Q8BT14 · CNOT4_MOUSE,CCR4-NOT transcription complex subunit 4,Cnot4,Mus musculus,575,"256-370, 424-459, 553-575"
+Q8BUK6 · HOOK3_MOUSE,Protein Hook homolog 3,Hook3,Mus musculus,718,682-718
+Q8BVN8 · IDLC_MOUSE,Axonemal dynein light intermediate polypeptide 1,Dnali1,Mus musculus,258,"1-60, 202-231"
+Q8BXR5 · NALCN_MOUSE,Sodium leak channel NALCN,Nalcn,Mus musculus,1738,"762-785, 1602-1679"
+Q8BYC6 · TAOK3_MOUSE,Serine/threonine-protein kinase TAO3,Taok3,Mus musculus,898,"316-375, 405-424, 565-596"
+Q8C0E3 · TRI47_MOUSE,E3 ubiquitin-protein ligase TRIM47,Trim47,Mus musculus,641,"81-123, 396-416"
+Q8C0V0 · TLK1_MOUSE,Serine/threonine-protein kinase tousled-like 1,Tlk1,Mus musculus,766,"1-198, 344-381, 745-766"
+Q8C0V1 · TERB1_MOUSE,Telomere repeats-binding bouquet formation protein 1,Terb1,Mus musculus,768,"422-441, 454-475"
+Q8C115 · PKHH2_MOUSE,Pleckstrin homology domain-containing family H member 2,Plekhh2,Mus musculus,1491,"232-435, 506-546, 612-668, 1466-1491"
+Q8C170 · MYO9A_MOUSE,Unconventional myosin-IXa,Myo9a,Mus musculus,2542,"1221-1276, 1342-1401, 1650-1675, 1693-1727, 1767-1793, 1806-1841, 2361-2443, 2465-2530"
+Q8CCF0 · PRP31_MOUSE,U4/U6 small nuclear ribonucleoprotein Prp31,Prpf31,Mus musculus,499,"1-43, 334-357"
+Q8CE90 · MP2K7_MOUSE,Dual specificity mitogen-activated protein kinase kinase 7,Map2k7,Mus musculus,535,63-93
+Q8CFE3 · RCOR1_MOUSE,REST corepressor 1,Rcor1,Mus musculus,480,"1-105, 238-308, 436-466"
+Q8CG70 · P3H3_MOUSE,Prolyl 3-hydroxylase 3,P3h3,Mus musculus,732,"15-35, 676-732"
+Q8CI11 · GNL3_MOUSE,Guanine nucleotide-binding protein-like 3,Gnl3,Mus musculus,538,"1-57, 69-126, 460-538"
+Q8I0F4 · LIS1_DICDI,Lissencephaly-1 homolog,lis1,Dictyostelium discoideum,419,74-100
+Q8I4N4 · DAF11_CAEEL,Receptor-type guanylate cyclase daf-11,daf-11,Caenorhabditis elegans,1077,1048-1077
+Q8IRB5 · CLSPN_DROME,Claspin,Claspin,Drosophila melanogaster,1465,"1-490, 544-566, 585-636, 845-977, 1058-1154"
+Q8JI10 · DMX1A_DANRE,Diencephalon/mesencephalon homeobox protein 1-A,dmbx1a,Danio rerio,388,129-272
+Q8K299 · SCAR5_MOUSE,Scavenger receptor class A member 5,Scara5,Mus musculus,491,301-380
+Q8K2F0 · BRD3_MOUSE,Bromodomain-containing protein 3,Brd3,Mus musculus,726,"1-34, 147-172, 236-308, 418-576, 638-726"
+Q8K2Q9 · SHOT1_MOUSE,Shootin-1,Shtn1,Mus musculus,631,"343-404, 417-508, 530-631"
+Q8K2T8 · PAF1_MOUSE,RNA polymerase II-associated factor 1 homolog,Paf1,Mus musculus,535,"1-23, 361-535"
+Q8K3K8 · OPTN_MOUSE,Optineurin,Optn,Mus musculus,584,"1-32, 267-302"
+Q8K3M6 · ERC2_RAT,ERC protein 2,Erc2,Rattus norvegicus,957,"1-44, 918-957"
+Q8K4I6 · CBY1_RAT,Protein chibby homolog 1,Cby1,Rattus norvegicus,127,1-25
+Q8K4P8 · HECW1_MOUSE,E3 ubiquitin-protein ligase HECW1,Hecw1,Mus musculus,1604,"350-539, 572-604, 642-667, 727-826, 890-936"
+Q8L3P4 · THAL_ARATH,Protein THALLO,THAL,Arabidopsis thaliana,654,"1-23, 35-145, 164-212, 362-397, 470-492, 509-654"
+Q8L5W8 · PIL1_ARATH,Transcription factor PIL1,PIL1,Arabidopsis thaliana,416,"1-24, 89-113, 197-231"
+Q8LEG3 · MA652_ARATH,65-kDa microtubule-associated protein 2,MAP65-2,Arabidopsis thaliana,578,473-578
+Q8LPR8 · TI100_ARATH,Protein TIC 100,TIC100,Arabidopsis thaliana,871,"1-85, 631-654, 669-721"
+Q8MRW5 · ET96B_DROME,ETV5-related protein Ets96B,Ets96B,Drosophila melanogaster,640,"315-375, 609-628"
+Q8QZS3 · FLCN_MOUSE,Folliculin,Flcn,Mus musculus,579,"31-82, 294-323"
+Q8QZV6 · F161A_MOUSE,Protein FAM161A,Fam161a,Mus musculus,475,"53-107, 314-337, 389-441"
+Q8R0W0 · EPIPL_MOUSE,Epiplakin,Eppk1,Mus musculus,6548,"2578-2626, 3093-3144, 3608-3659, 4123-4174, 4638-4689, 5153-5204, 5668-5719, 6183-6234"
+Q8R4D5 · TRPM8_MOUSE,Transient receptor potential cation channel subfamily M member 8,Trpm8,Mus musculus,1104,1-22
+Q8R511 · FNBP1_RAT,Formin-binding protein 1,Fnbp1,Rattus norvegicus,616,"280-314, 332-365, 494-531"
+Q8R5I7 · MYCD_RAT,Myocardin,Myocd,Rattus norvegicus,938,"37-64, 155-282, 339-381, 501-521, 586-606, 667-734"
+Q8RWD9 · ACBP5_ARATH,Acyl-CoA-binding domain-containing protein 5,ACBP5,Arabidopsis thaliana,648,625-648
+Q8RWY3 · ISW2_ARATH,ISWI chromatin-remodeling complex ATPase CHR11,CHR11,Arabidopsis thaliana,1056,"1-80, 133-175, 738-774, 814-833, 1011-1056"
+Q8SX68 · CT2NL_DROME,CTTNBP2 N-terminal-like protein,Naus,Drosophila melanogaster,609,"1-29, 556-584"
+Q8SX83 · SPEN_DROME,Protein split ends,spen,Drosophila melanogaster,5560,"42-72, 114-145, 166-204, 236-287, 326-366, 425-545, 814-876, 1027-1054, 1089-1114, 1131-1150, 1196-1298, 1386-1521, 1640-2428, 2450-2537, 2565-2637, 2665-2695, 2736-2832, 2844-3215, 3257-3313, 3341-3487, 3572-3597, 3673-3750, 3787-3807, 3821-4024, 4036-4075, 4098-4138, 4248-4306, 4426-4453, 4471-4558, 4723-4771, 4920-4963, 4984-5009, 5176-5197, 5220-5241"
+Q8T135 · KIF5_DICDI,Kinesin-related protein 5,kif5,Dictyostelium discoideum,990,"401-485, 732-788"
+Q8T7K0 · ALIX_DICDI,ALG-2 interacting protein X,alxA,Dictyostelium discoideum,794,695-794
+Q8VDI1 · ESIP1_MOUSE,Epithelial-stromal interaction protein 1,Epsti1,Mus musculus,314,"1-72, 227-272, 289-314"
+Q8VDP4 · CCAR2_MOUSE,Cell cycle and apoptosis regulator protein 2,Ccar2,Mus musculus,922,"1-39, 178-219, 280-307, 446-508, 567-638"
+Q8VHI6 · WASF3_MOUSE,Actin-binding protein WASF3,Wasf3,Mus musculus,501,170-443
+Q8VWF1 · SH3P2_ARATH,SH3 domain-containing protein 2,SH3P2,Arabidopsis thaliana,368,258-281
+Q8VWI7 · KN10A_ARATH,Kinesin-like protein KIN-10A,KIN10A,Arabidopsis thaliana,869,1-50
+Q8VY15 · RBM25_ARATH,RNA-binding motif protein 25,RBM25,Arabidopsis thaliana,899,"1-112, 298-572, 611-778"
+Q8W1Y3 · KN14F_ARATH,Kinesin-like protein KIN-14F,KIN14F,Arabidopsis thaliana,1087,"136-155, 740-858, 923-949, 1004-1087"
+Q91XJ1 · BECN1_RAT,Beclin-1,Becn1,Rattus norvegicus,448,47-72
+Q91Y44 · BRDT_MOUSE,Bromodomain testis-specific protein,Brdt,Mus musculus,956,"210-239, 391-420, 442-508, 607-747, 859-934"
+Q91YE5 · BAZ2A_MOUSE,Bromodomain adjacent to zinc finger domain protein 2A,Baz2a,Mus musculus,1889,"1-59, 384-433, 479-526, 638-791, 1039-1063, 1147-1247, 1269-1397, 1720-1778"
+Q91Z83 · MYH7_MOUSE,Myosin-7,Myh7,Mus musculus,1935,1915-1935
+Q93833 · CHE13_CAEEL,Intraflagellar transport protein che-13,che-13,Caenorhabditis elegans,412,"1-21, 162-193"
+Q93V99 · PDF2_ARATH,Homeobox-leucine zipper protein PROTODERMAL FACTOR 2,PDF2,Arabidopsis thaliana,743,1-72
+Q940B8 · KN13A_ARATH,Kinesin-like protein KIN-13A,KIN13A,Arabidopsis thaliana,794,525-699
+Q94F30 · ESD4_ARATH,Ubiquitin-like-specific protease ESD4,ESD4,Arabidopsis thaliana,489,43-66
+Q95RG8 · GIT_DROME,ARF GTPase-activating protein Git,Git,Drosophila melanogaster,731,"124-145, 435-461, 537-582"
+Q960V3 · MILT_DROME,Trafficking kinesin-binding protein milt,milt,Drosophila melanogaster,1122,"1-31, 536-561, 750-775, 805-830, 852-871, 955-1101"
+Q99222 · AFI1_YEAST,ARF3-interacting protein 1,AFI1,Saccharomyces cerevisiae (strain ATCC 204508 / S288c),893,841-893
+Q99JB2 · STML2_MOUSE,"Stomatin-like protein 2, mitochondrial",Stoml2,Mus musculus,353,324-353
+Q99JP6 · HOME3_MOUSE,Homer protein homolog 3,Homer3,Mus musculus,356,"136-169, 244-295"

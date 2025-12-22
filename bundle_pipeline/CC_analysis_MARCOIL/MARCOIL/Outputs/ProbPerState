@@ -1,0 +1,916 @@
+ COILED-COIL PROBABILITY LIST PER RESIDUE, PER EACH HEPTAD POSITION
+
+
+>TANGO1_LAB002   ## 1 
+MDSVPATVPS IAATPGDPEL VGPLSVLYAA FIAKLLELVA TLPDDVQPGP DFYGLPWKPV
+FITAFLGIAS FAIFLWRTVL VVKDRVYQVT EQQISEKLKT IMKENTELVQ KLSNYEQKIK
+ESKKHVQETR KQNMILSDEA IKYKDKIKTL EKNQEILDDT AKNLRVMLES EREQNVKNQD
+LISENKKSIE KLKDVISMNA SEFSEVQIAL NEAKLSEEKV KSECHRVQEE NARLKKKKEQ
+LQQEIEDWSK LHAELSEQIK SFEKSQKDLE VALTHKDDNI NALTNCITQL NLLECESESE
+GQNKGGNDSD ELANGEVGGD RNEKMKNQIK QMMDVSRTQT AISVVEEDLK LLQLKLRASV
+STKCNLEDQV KKLEDDRNSL QAAKAGLEDE CKTLRQKVEI LNELYQQKEM ALQKKLSQEE
+YERQEREHRL SAADEKAVSA AEEVKTYKRR IEEMEDELQK TERSFKNQIA THEKKAHENW
+LKARAAERAI AEEKREAANL RHKLLELTQK MAMLQEEPVI VKPMPGKPNT QNPPRRGPLS
+QNGSFGPSPV SGGECSPPLT VEPPVRPLSA TLNRRDMPRS EFGSVDGPLP HPRWSAEASG
+KPSPSDPGSG TATMMNSSSR GSSPTRVLDE GKVNMAPKGP PPFPGVPLMS TPMGGPVPPP
+IRYGPPPQLC GPFGPRPLPP PFGPGMRPPL GLREFAPGVP PGRRDLPLHP RGFLPGHAPF
+RPLGSLGPRE YFIPGTRLPP PTHGPQEYPP PPAVRDLLPS GSRDEPPPAS QSTSQDCSQA
+LKQSP*
+
+ coiled-coil probability in percent per each heptad position
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=   1M    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00 CC-ph: a ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  78T    0.00    0.86    0.00    0.00    0.00    0.00    0.01    0.87 CC-ph: b ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  79V    0.01    0.00    1.50    0.00    0.00    0.00    0.00    1.51 CC-ph: c ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  80L    0.00    0.01    0.00    2.75    0.00    0.00    0.00    2.77 CC-ph: d ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  81V    0.00    0.00    0.01    0.00    3.05    0.00    0.00    3.07 CC-ph: e ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  82V    0.00    0.00    0.00    0.02    0.00    3.77    0.00    3.80 CC-ph: f ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  83K    0.00    0.00    0.00    0.01    0.02    0.00    5.40    5.43 CC-ph: g ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  84D    6.13    0.00    0.00    0.00    0.01    0.03    0.00    6.18 CC-ph: a ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  85R    0.00   12.46    0.00    0.00    0.00    0.02    0.03   12.51 CC-ph: b ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  86V    0.03    0.00   17.19    0.00    0.00    0.00    0.02   17.24 CC-ph: c ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  87Y    0.03    0.02    0.00   26.53    0.00    0.00    0.00   26.58 CC-ph: d ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  88Q    0.00    0.04    0.02    0.00   34.57    0.00    0.01   34.64 CC-ph: e ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  89V    0.01    0.00    0.04    0.03    0.00   37.77    0.00   37.85 CC-ph: f ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  90T    0.00    0.01    0.00    0.05    0.03    0.00   44.96   45.05 CC-ph: g ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  91E   53.98    0.01    0.01    0.00    0.06    0.03    0.00   54.08 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  92Q    0.00   75.12    0.01    0.00    0.00    0.06    0.02   75.21 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  93Q    0.01    0.00   84.60    0.00    0.00    0.00    0.06   84.67 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  94I    0.05    0.00    0.00   88.68    0.00    0.00    0.00   88.74 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  95S    0.00    0.04    0.00    0.00   91.86    0.00    0.00   91.91 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  96E    0.00    0.00    0.03    0.00    0.00   96.31    0.00   96.34 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  97K    0.00    0.00    0.00    0.01    0.00    0.00   98.03   98.05 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  98L   98.81    0.00    0.00    0.00    0.01    0.00    0.00   98.83 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos=  99K    0.00   99.11    0.00    0.00    0.00    0.01    0.00   99.12 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 100T    0.00    0.00   99.26    0.00    0.00    0.00    0.01   99.27 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 101I    0.01    0.00    0.00   99.43    0.00    0.00    0.00   99.44 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 102M    0.00    0.00    0.00    0.00   99.57    0.00    0.00   99.57 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 103K    0.00    0.00    0.00    0.00    0.00   99.77    0.00   99.78 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 104E    0.00    0.00    0.00    0.00    0.00    0.00   99.88   99.88 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 105N   99.91    0.00    0.00    0.00    0.00    0.00    0.00   99.91 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 106T    0.00   99.93    0.00    0.00    0.00    0.00    0.00   99.94 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 107E    0.00    0.00   99.97    0.00    0.00    0.00    0.00   99.97 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 108L    0.00    0.00    0.00   99.98    0.00    0.00    0.00   99.98 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 109V    0.00    0.00    0.00    0.00   99.98    0.00    0.00   99.99 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 110Q    0.00    0.00    0.00    0.00    0.00   99.99    0.00   99.99 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 111K    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 112L  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 113S    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 114N    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 115Y    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 116E    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 117Q    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 118K    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 119I  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 120K    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 121E    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 122S    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 123K    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 124K    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 125H    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 126V  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 127Q    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 128E    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 129T    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 130R    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 131K    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 132Q    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 133N  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 134M    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 135I    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 136L    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 137S    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 138D    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 139E    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 140A  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 141I    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 142K    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 143Y    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 144K    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 145D    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 146K    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 147I  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 148K    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 149T    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 150L    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 151E    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 152K    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 153N    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 154Q  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 155E    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 156I    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 157L    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 158D    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 159D    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 160T    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 161A  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 162K    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 163N    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 164L    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 165R    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 166V    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 167M    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 168L  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 169E    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 170S    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 171E    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 172R    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 173E    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 174Q    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 175N  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 176V    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 177K    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 178N    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 179Q    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 180D    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 181L    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 182I  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 183S    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 184E    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 185N    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 186K    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 187K    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 188S    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 189I  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 190E    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 191K    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 192L    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 193K    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 194D    0.00    0.00    0.00    0.00    0.00   99.99    0.00   99.99 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 195V    0.00    0.00    0.00    0.00    0.00    0.00   99.99   99.99 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 196I   99.99    0.00    0.00    0.00    0.00    0.00    0.00   99.99 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 197S    0.00   99.98    0.00    0.00    0.00    0.00    0.00   99.98 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 198M    0.00    0.00   99.98    0.00    0.00    0.00    0.00   99.98 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 199N    0.00    0.00    0.00   99.98    0.00    0.00    0.00   99.98 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 200A    0.00    0.00    0.00    0.00   99.98    0.00    0.00   99.98 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 201S    0.00    0.00    0.00    0.00    0.00   99.98    0.00   99.98 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 202E    0.00    0.00    0.00    0.00    0.00    0.00   99.99   99.99 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 203F   99.99    0.00    0.00    0.00    0.00    0.00    0.00   99.99 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 204S    0.00   99.99    0.00    0.00    0.00    0.00    0.00   99.99 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 205E    0.00    0.00   99.99    0.00    0.00    0.00    0.00   99.99 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 206V    0.00    0.00    0.00   99.99    0.00    0.00    0.00   99.99 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 207Q    0.00    0.00    0.00    0.00   99.99    0.00    0.00   99.99 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 208I    0.00    0.00    0.00    0.00    0.00   99.99    0.00   99.99 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 209A    0.00    0.00    0.00    0.00    0.00    0.00   99.99   99.99 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 210L  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 211N    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 212E    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 213A    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 214K    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 215L    0.00    0.00    0.00    0.00    0.00   99.99    0.00   99.99 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 216S    0.00    0.00    0.00    0.00    0.00    0.00   99.99   99.99 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 217E   99.99    0.00    0.00    0.00    0.00    0.00    0.00   99.99 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 218E    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 219K    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 220V    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 221K    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 222S    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 223E    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 224C  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 225H    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 226R    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 227V    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 228Q    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 229E    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 230E    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 231N  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 232A    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 233R    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 234L    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 235K    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 236K    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 237K    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 238K  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 239E    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 240Q    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 241L    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 242Q    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 243Q    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 244E    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 245I  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 246E    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 247D    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 248W    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 249S    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 250K    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 251L    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 252H  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 253A    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 254E    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 255L    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 256S    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 257E    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 258Q    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 259I   99.99    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 260K    0.00   99.99    0.00    0.00    0.00    0.00    0.00   99.99 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 261S    0.00    0.00   99.98    0.00    0.00    0.00    0.00   99.98 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 262F    0.00    0.00    0.00   99.97    0.00    0.00    0.00   99.97 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 263E    0.00    0.00    0.00    0.00   99.96    0.00    0.00   99.96 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 264K    0.00    0.00    0.00    0.00    0.00   99.93    0.00   99.93 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 265S    0.00    0.00    0.00    0.00    0.00    0.00   99.87   99.88 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 266Q   99.84    0.00    0.00    0.00    0.00    0.00    0.00   99.84 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 267K    0.00   99.82    0.00    0.00    0.00    0.00    0.00   99.82 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 268D    0.00    0.00   99.77    0.00    0.00    0.00    0.00   99.78 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 269L    0.00    0.00    0.00   99.70    0.00    0.00    0.00   99.70 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 270E    0.00    0.01    0.00    0.00   99.37    0.00    0.00   99.38 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 271V    0.00    0.00    0.01    0.00    0.00   98.07    0.00   98.07 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 272A    0.00    0.00    0.00    0.01    0.00    0.00   97.49   97.49 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 273L   97.01    0.00    0.00    0.00    0.01    0.00    0.00   97.01 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 274T    0.00   95.75    0.00    0.00    0.00    0.01    0.00   95.76 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 275H    0.00    0.00   94.89    0.00    0.00    0.00    0.01   94.90 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 276K    0.01    0.00    0.00   94.40    0.00    0.00    0.00   94.41 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 277D    0.00    0.01    0.00    0.00   94.17    0.00    0.00   94.18 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 278D    0.00    0.00    0.01    0.00    0.00   94.00    0.00   94.01 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 279N    0.00    0.00    0.00    0.01    0.00    0.00   93.72   93.73 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 280I   93.48    0.00    0.00    0.00    0.01    0.00    0.00   93.49 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 281N    0.00   92.89    0.00    0.00    0.00    0.01    0.00   92.90 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 282A    0.00    0.00   92.15    0.00    0.00    0.00    0.02   92.17 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 283L    0.02    0.00    0.00   91.35    0.00    0.00    0.00   91.37 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 284T    0.00    0.02    0.00    0.00   88.02    0.00    0.00   88.04 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 285N    0.00    0.00    0.02    0.00    0.00   84.97    0.00   85.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 286C    0.00    0.00    0.00    0.03    0.00    0.00   79.61   79.64 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 287I   78.67    0.00    0.00    0.00    0.03    0.00    0.00   78.70 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 288T    0.00   76.41    0.01    0.00    0.00    0.05    0.00   76.47 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 289Q    0.00    0.00   74.87    0.01    0.00    0.00    0.07   74.95 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 290L    0.08    0.00    0.00   71.29    0.02    0.01    0.00   71.40 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 291N    0.00    0.09    0.02    0.00   56.39    0.04    0.02   56.56 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 292L    0.03    0.00    0.10    0.03    0.00   38.11    0.06   38.34 CC-ph: f ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 293L    0.08    0.03    0.00    0.11    0.03    0.01   30.59   30.85 CC-ph: g ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 294E   25.23    0.08    0.04    0.00    0.11    0.03    0.01   25.50 CC-ph: a ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 295C    0.01   22.94    0.08    0.04    0.00    0.10    0.03   23.20 CC-ph: b ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 296E    0.03    0.01   22.60    0.08    0.04    0.00    0.10   22.86 CC-ph: c ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 297S    0.09    0.03    0.01   21.59    0.09    0.04    0.00   21.85 CC-ph: d ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 298E    0.00    0.08    0.03    0.01   21.17    0.11    0.04   21.44 CC-ph: e ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 299S    0.03    0.01    0.06    0.03    0.01   19.51    0.11   19.76 CC-ph: f ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 300E    0.12    0.03    0.01    0.05    0.03    0.01   17.72   17.97 CC-ph: g ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 301G   11.69    0.15    0.02    0.01    0.04    0.03    0.00   11.94 CC-ph: a ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 302Q    0.00   10.76    0.21    0.02    0.02    0.03    0.03   11.07 CC-ph: b ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 303N    0.03    0.01    8.70    0.23    0.02    0.02    0.02    9.03 CC-ph: c ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 304K    0.02    0.03    0.01    5.97    0.32    0.02    0.02    6.37 CC-ph: d ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 305G    0.02    0.01    0.02    0.00    4.68    0.36    0.01    5.10 CC-ph: e ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 306G    0.00    0.02    0.00    0.01    0.01    4.29    0.44    4.78 CC-ph: f ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 307N    0.81    0.00    0.03    0.00    0.01    0.01    4.08    4.95 CC-ph: g ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 308D    3.90    1.10    0.00    0.04    0.00    0.01    0.01    5.07 CC-ph: a ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 309S    0.01    3.90    1.25    0.00    0.06    0.00    0.01    5.24 CC-ph: b ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 310D    0.01    0.01    3.90    1.39    0.00    0.09    0.00    5.40 CC-ph: c ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 311E    0.00    0.02    0.01    3.87    1.87    0.00    0.11    5.88 CC-ph: d ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 312L    0.12    0.00    0.02    0.01    3.86    1.99    0.00    5.99 CC-ph: e ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 313A    0.00    0.12    0.00    0.02    0.01    3.86    2.27    6.28 CC-ph: f ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 314N    2.62    0.00    0.12    0.00    0.02    0.00    3.85    6.62 CC-ph: g ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 315G    3.85    2.89    0.00    0.12    0.00    0.02    0.00    6.89 CC-ph: a ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 316E    0.00    3.97    3.67    0.00    0.13    0.01    0.02    7.79 CC-ph: b ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 317V    0.02    0.00    4.00    3.93    0.00    0.13    0.01    8.09 CC-ph: c ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 318G    0.01    0.02    0.00    4.07    4.19    0.00    0.13    8.42 CC-ph: e ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 319G    0.15    0.03    0.02    0.00    4.60    5.01    0.00    9.81 CC-ph: f ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 320D    0.00    0.30    0.08    0.02    0.00    6.31    6.62   13.34 CC-ph: g ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 321R    7.84    0.00    0.37    0.11    0.02    0.00    7.37   15.72 CC-ph: a ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 322N    7.94    9.35    0.00    0.43    0.22    0.03    0.00   17.97 CC-ph: b ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 323E    0.00    8.36   10.55    0.00    0.58    0.31    0.03   19.83 CC-ph: c ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 324K    0.02    0.00    8.48   10.95    0.00    0.61    0.34   20.42 CC-ph: d ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 325M    0.35    0.02    0.00    8.54   11.82    0.00    0.63   21.37 CC-ph: e ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 326K    0.65    0.36    0.02    0.00    8.58   13.15    0.00   22.77 CC-ph: f ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 327N    0.01    0.66    0.36    0.02    0.00    8.60   13.83   23.48 CC-ph: g ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 328Q   14.61    0.01    0.67    0.36    0.02    0.00    8.59   24.26 CC-ph: a ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 329I    8.52   16.01    0.00    0.67    0.36    0.01    0.00   25.58 CC-ph: b ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 330K    0.00    8.24   20.85    0.00    0.66    0.37    0.01   30.15 CC-ph: c ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 331Q    0.01    0.01    7.75   23.96    0.00    0.65    0.36   32.74 CC-ph: d ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 332M    0.34    0.00    0.00    6.50   28.34    0.00    0.60   35.79 CC-ph: e ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 333M    0.55    0.29    0.00    0.00    4.74   35.31    0.00   40.91 CC-ph: f ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 334D    0.00    0.43    0.25    0.00    0.00    3.20   48.19   52.07 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 335V   58.58    0.00    0.24    0.19    0.00    0.00    1.28   60.30 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 336S    0.81   63.78    0.00    0.18    0.15    0.00    0.00   64.92 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 337R    0.00    0.65   68.84    0.00    0.16    0.12    0.00   69.78 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 338T    0.00    0.00    0.48   72.50    0.00    0.13    0.08   73.19 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 339Q    0.05    0.00    0.00    0.30   78.49    0.00    0.10   78.94 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 340T    0.06    0.04    0.00    0.00    0.22   80.88    0.00   81.20 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 341A    0.00    0.04    0.03    0.00    0.00    0.15   84.21   84.43 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 342I   88.25    0.00    0.01    0.02    0.00    0.00    0.04   88.32 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 343S    0.02   89.91    0.00    0.00    0.01    0.00    0.00   89.95 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 344V    0.00    0.01   91.58    0.00    0.00    0.01    0.00   91.60 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 345V    0.00    0.00    0.01   94.87    0.00    0.00    0.00   94.88 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 346E    0.00    0.00    0.00    0.00   98.06    0.00    0.00   98.06 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 347E    0.00    0.00    0.00    0.00    0.00   98.85    0.00   98.85 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 348D    0.00    0.00    0.00    0.00    0.00    0.00   99.15   99.16 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 349L   99.38    0.00    0.00    0.00    0.00    0.00    0.00   99.38 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 350K    0.00   99.47    0.00    0.00    0.00    0.00    0.00   99.47 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 351L    0.00    0.00   99.51    0.00    0.00    0.00    0.00   99.51 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 352L    0.00    0.00    0.00   99.61    0.00    0.00    0.00   99.61 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 353Q    0.00    0.00    0.00    0.00   99.63    0.00    0.00   99.63 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 354L    0.00    0.00    0.00    0.00    0.00   99.64    0.00   99.64 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 355K    0.00    0.00    0.00    0.00    0.00    0.00   99.66   99.66 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 356L   99.67    0.00    0.00    0.00    0.00    0.00    0.00   99.67 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 357R    0.00   99.66    0.00    0.00    0.00    0.00    0.00   99.66 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 358A    0.00    0.00   99.65    0.00    0.00    0.00    0.00   99.65 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 359S    0.00    0.00    0.00   99.64    0.00    0.00    0.00   99.64 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 360V    0.00    0.00    0.00    0.00   99.65    0.00    0.00   99.65 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 361S    0.00    0.00    0.00    0.00    0.00   99.66    0.00   99.66 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 362T    0.00    0.00    0.00    0.00    0.00    0.00   99.68   99.68 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 363K   99.70    0.00    0.00    0.00    0.00    0.00    0.00   99.70 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 364C    0.00   99.72    0.00    0.00    0.00    0.00    0.00   99.72 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 365N    0.00    0.00   99.86    0.00    0.00    0.00    0.00   99.86 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 366L    0.00    0.00    0.00   99.96    0.00    0.00    0.00   99.96 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 367E    0.00    0.00    0.00    0.00   99.99    0.00    0.00   99.99 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 368D    0.00    0.00    0.00    0.00    0.00   99.99    0.00   99.99 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 369Q    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 370V  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 371K    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 372K    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 373L    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 374E    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 375D    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 376D    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 377R  100.00    0.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 378N    0.00  100.00    0.00    0.00    0.00    0.00    0.00  100.00 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 379S    0.00    0.00  100.00    0.00    0.00    0.00    0.00  100.00 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 380L    0.00    0.00    0.00  100.00    0.00    0.00    0.00  100.00 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 381Q    0.00    0.00    0.00    0.00  100.00    0.00    0.00  100.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 382A    0.00    0.00    0.00    0.00    0.00  100.00    0.00  100.00 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 383A    0.00    0.00    0.00    0.00    0.00    0.00  100.00  100.00 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 384K   99.99    0.00    0.00    0.00    0.00    0.00    0.00   99.99 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 385A    0.00   99.99    0.00    0.00    0.00    0.00    0.00   99.99 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 386G    0.00    0.00   99.99    0.00    0.00    0.00    0.00   99.99 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 387L    0.00    0.00    0.00   99.99    0.00    0.00    0.00   99.99 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 388E    0.00    0.00    0.00    0.00   99.99    0.00    0.00   99.99 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 389D    0.00    0.02    0.00    0.00    0.00   99.97    0.00   99.98 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 390E    0.00    0.00    0.03    0.00    0.00    0.00   99.94   99.97 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 391C   99.89    0.00    0.00    0.05    0.00    0.00    0.00   99.93 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 392K    0.00   99.84    0.00    0.00    0.08    0.00    0.00   99.92 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 393T    0.00    0.00   99.77    0.00    0.00    0.12    0.00   99.89 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 394L    0.00    0.00    0.00   99.70    0.00    0.00    0.17   99.88 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 395R    0.42    0.00    0.00    0.00   99.38    0.00    0.00   99.80 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 396Q    0.00    0.95    0.00    0.00    0.00   98.80    0.00   99.75 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 397K    0.00    0.00    1.45    0.00    0.00    0.00   98.17   99.62 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 398V   97.21    0.00    0.00    2.12    0.00    0.00    0.00   99.33 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 399E    0.00   95.58    0.00    0.00    3.35    0.00    0.00   98.93 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 400I    0.00    0.00   93.13    0.00    0.00    4.27    0.01   97.42 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 401L    0.01    0.00    0.00   91.85    0.00    0.00    5.49   97.35 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 402N   10.91    0.01    0.00    0.00   85.67    0.00    0.00   96.60 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 403E    0.00   16.34    0.01    0.00    0.00   79.89    0.00   96.25 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 404L    0.00    0.00   20.49    0.02    0.00    0.00   73.24   93.75 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 405Y   65.82    0.00    0.00   28.37    0.01    0.00    0.00   94.22 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 406Q    0.01   60.24    0.00    0.00   35.33    0.01    0.00   95.60 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 407Q    0.00    0.02   54.61    0.00    0.01   40.64    0.02   95.29 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 408K    0.02    0.01    0.03   47.22    0.00    0.01   45.99   93.28 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 409E   47.54    0.02    0.01    0.04   45.04    0.01    0.01   92.66 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 410M    0.01   58.45    0.01    0.01    0.06   31.93    0.00   90.48 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 411A    0.00    0.01   70.09    0.01    0.01    0.08   23.14   93.33 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 412L   16.94    0.00    0.00   80.45    0.00    0.01    0.10   97.50 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 413Q    0.15   12.82    0.00    0.00   85.34    0.00    0.01   98.33 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 414K    0.01    0.33    8.86    0.00    0.00   89.25    0.00   98.46 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 415K    0.00    0.02    0.47    5.51    0.00    0.00   92.42   98.42 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 416L   93.35    0.00    0.02    0.52    4.70    0.00    0.00   98.60 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 417S    0.00   93.68    0.00    0.02    0.54    4.39    0.00   98.63 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 418Q    0.01    0.00   94.04    0.00    0.03    0.55    4.07   98.70 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 419E    3.53    0.01    0.00   94.34    0.00    0.03    0.57   98.48 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 420E    0.57    3.27    0.01    0.00   94.64    0.00    0.03   98.54 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 421Y    0.03    0.59    2.79    0.01    0.00   94.80    0.00   98.22 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 422E    0.00    0.03    0.67    2.55    0.01    0.00   95.53   98.79 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 423R   95.73    0.00    0.03    0.70    2.48    0.01    0.00   98.96 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 424Q    0.00   96.02    0.00    0.03    0.82    2.36    0.01   99.23 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 425E    0.01    0.00   96.18    0.00    0.03    0.88    2.22   99.32 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 426R    1.96    0.01    0.00   96.30    0.00    0.03    0.92   99.21 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 427E    0.95    1.61    0.01    0.00   96.70    0.00    0.02   99.30 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 428H    0.02    1.08    1.06    0.01    0.00   96.94    0.00   99.10 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 429R    0.00    0.01    1.23    0.63    0.00    0.00   97.31   99.19 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 430L   97.44    0.00    0.00    1.30    0.55    0.00    0.00   99.30 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 431S    0.00   97.48    0.00    0.00    1.32    0.52    0.00   99.33 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 432A    0.00    0.00   97.53    0.00    0.00    1.34    0.49   99.36 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 433A    0.46    0.00    0.00   97.57    0.00    0.00    1.36   99.40 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 434D    1.38    0.44    0.00    0.00   97.60    0.00    0.00   99.42 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 435E    0.00    1.62    0.32    0.00    0.00   97.64    0.00   99.58 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 436K    0.00    0.00    1.75    0.18    0.00    0.00   97.66   99.59 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 437A   97.66    0.00    0.00    1.81    0.14    0.00    0.00   99.61 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 438V    0.00   97.65    0.00    0.00    1.85    0.11    0.00   99.62 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 439S    0.00    0.00   97.66    0.00    0.00    1.92    0.10   99.68 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 440A    0.09    0.00    0.00   97.67    0.00    0.00    1.98   99.75 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 441A    2.07    0.08    0.00    0.00   97.67    0.00    0.00   99.82 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 442E    0.00    2.14    0.07    0.00    0.00   97.68    0.00   99.88 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 443E    0.00    0.00    2.17    0.05    0.00    0.00   97.68   99.90 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 444V   97.67    0.00    0.00    2.18    0.05    0.00    0.00   99.90 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 445K    0.00   97.66    0.00    0.00    2.19    0.05    0.00   99.90 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 446T    0.00    0.00   97.63    0.00    0.00    2.21    0.04   99.88 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 447Y    0.04    0.00    0.00   97.60    0.00    0.00    2.22   99.87 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 448K    2.31    0.04    0.00    0.00   97.54    0.00    0.00   99.89 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 449R    0.00    2.42    0.03    0.00    0.00   97.45    0.00   99.91 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 450R    0.00    0.00    2.56    0.02    0.00    0.00   97.34   99.92 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 451I   97.19    0.00    0.00    2.72    0.02    0.00    0.00   99.93 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 452E    0.00   96.94    0.00    0.00    2.98    0.02    0.00   99.94 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 453E    0.00    0.00   96.70    0.00    0.00    3.18    0.02   99.90 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 454M    0.02    0.00    0.00   96.35    0.00    0.00    3.40   99.77 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 455E    3.73    0.02    0.00    0.00   95.92    0.00    0.00   99.67 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 456D    0.00    6.62    0.01    0.00    0.00   92.93    0.00   99.57 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 457E    0.00    0.00    9.19    0.01    0.00    0.00   90.43   99.62 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 458L   87.43    0.00    0.00   12.00    0.01    0.00    0.00   99.43 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 459Q    0.00   85.02    0.00    0.00   13.75    0.01    0.00   98.78 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 460K    0.00    0.00   82.03    0.00    0.00   15.33    0.01   97.37 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 461T    0.01    0.00    0.00   78.51    0.00    0.00   16.67   95.18 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 462E   17.92    0.01    0.00    0.00   76.28    0.00    0.00   94.20 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 463R    0.00   27.58    0.00    0.00    0.00   63.27    0.00   90.86 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 464S    0.00    0.00   39.82    0.00    0.00    0.00   46.36   86.18 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 465F   36.04    0.00    0.00   49.12    0.00    0.00    0.00   85.16 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 466K    0.00   28.28    0.00    0.00   60.85    0.00    0.00   89.13 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 467N    0.01    0.00   19.29    0.00    0.00   71.18    0.00   90.48 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 468Q    0.00    0.01    0.00   12.05    0.00    0.00   78.80   90.87 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 469I   81.38    0.00    0.01    0.00    9.27    0.00    0.00   90.67 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 470A    0.00   82.21    0.00    0.01    0.00    8.36    0.00   90.58 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 471T    0.00    0.00   82.91    0.00    0.01    0.00    7.32   90.24 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 472H    6.48    0.00    0.00   83.69    0.00    0.01    0.00   90.19 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 473E    0.00    5.86    0.00    0.00   85.12    0.00    0.02   91.00 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 474K    0.02    0.00    4.72    0.00    0.00   85.67    0.00   90.41 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 475K    0.00    0.02    0.00    3.11    0.00    0.00   86.03   89.17 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 476A   86.15    0.00    0.02    0.00    2.42    0.00    0.00   88.60 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 477H    0.00   86.23    0.00    0.02    0.00    2.00    0.00   88.25 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 478E    0.00    0.01   86.34    0.00    0.02    0.00    1.79   88.16 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 479N    1.13    0.00    0.01   86.37    0.00    0.02    0.00   87.53 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 480W    0.00    0.24    0.00    0.00   86.54    0.00    0.02   86.81 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 481L    0.02    0.00    0.15    0.00    0.00   88.41    0.00   88.58 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 482K    0.00    0.01    0.00    0.08    0.00    0.00   92.88   92.98 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 483A   94.90    0.00    0.01    0.00    0.06    0.00    0.00   94.98 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 484R    0.00   96.50    0.00    0.01    0.00    0.05    0.00   96.57 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 485A    0.00    0.00   97.70    0.00    0.01    0.00    0.04   97.75 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 486A    0.04    0.00    0.00   98.81    0.00    0.01    0.00   98.85 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 487E    0.00    0.03    0.00    0.00   99.45    0.00    0.01   99.49 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 488R    0.01    0.00    0.03    0.00    0.00   99.61    0.00   99.65 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 489A    0.00    0.01    0.00    0.02    0.00    0.00   99.71   99.74 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 490I   99.83    0.00    0.01    0.00    0.02    0.00    0.00   99.85 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 491A    0.00   99.88    0.00    0.01    0.00    0.01    0.00   99.90 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 492E    0.00    0.00   99.92    0.00    0.01    0.00    0.01   99.94 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 493E    0.01    0.00    0.00   99.93    0.00    0.01    0.00   99.95 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 494K    0.00    0.01    0.00    0.00   99.95    0.00    0.01   99.97 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 495R    0.00    0.00    0.01    0.00    0.00   99.96    0.00   99.98 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 496E    0.00    0.00    0.00    0.01    0.00    0.00   99.97   99.98 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 497A   99.97    0.00    0.00    0.00    0.01    0.00    0.00   99.98 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 498A    0.00   99.97    0.00    0.00    0.00    0.01    0.00   99.98 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 499N    0.00    0.00   99.97    0.00    0.00    0.00    0.01   99.98 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 500L    0.01    0.00    0.00   99.97    0.00    0.00    0.00   99.98 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 501R    0.00    0.01    0.00    0.00   99.97    0.00    0.00   99.98 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 502H    0.00    0.00    0.01    0.00    0.00   99.95    0.00   99.97 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 503K    0.00    0.00    0.00    0.01    0.00    0.00   99.95   99.96 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 504L   99.94    0.00    0.00    0.00    0.01    0.00    0.00   99.95 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 505L    0.00   99.91    0.00    0.00    0.00    0.01    0.00   99.92 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 506E    0.00    0.00   99.90    0.00    0.00    0.00    0.01   99.91 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 507L    0.01    0.00    0.00   99.88    0.00    0.00    0.00   99.89 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 508T    0.00    0.01    0.00    0.00   99.77    0.00    0.00   99.78 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 509Q    0.00    0.00    0.01    0.00    0.00   99.67    0.00   99.67 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 510K    0.00    0.00    0.00    0.00    0.00    0.00   99.45   99.46 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 511M   98.98    0.00    0.00    0.00    0.00    0.00    0.00   98.99 CC-ph: a ; max-st: a
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 512A    0.00   98.15    0.00    0.00    0.00    0.01    0.00   98.16 CC-ph: b ; max-st: b
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 513M    0.00    0.00   97.02    0.00    0.00    0.00    0.01   97.03 CC-ph: c ; max-st: c
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 514L    0.01    0.00    0.00   96.42    0.00    0.00    0.00   96.42 CC-ph: d ; max-st: d
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 515Q    0.00    0.01    0.00    0.00   93.89    0.00    0.00   93.90 CC-ph: e ; max-st: e
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 516E    0.00    0.00    0.01    0.00    0.00   87.56    0.00   87.57 CC-ph: f ; max-st: f
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 517E    0.00    0.00    0.00    0.00    0.00    0.00   71.08   71.09 CC-ph: g ; max-st: g
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 518P   15.40    0.00    0.00    0.00    0.00    0.00    0.00   15.40 CC-ph: a ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 519V    0.00    7.89    0.00    0.00    0.00    0.00    0.00    7.89 CC-ph: b ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 520I    0.00    0.00    4.77    0.00    0.00    0.00    0.00    4.78 CC-ph: c ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 521V    0.00    0.00    0.00    3.67    0.00    0.00    0.00    3.67 CC-ph: d ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 522K    0.00    0.00    0.00    0.00    2.53    0.00    0.00    2.53 CC-ph: e ; max-st: 0
+     state:   a      b       c       d       e       f       g      cc(sum) 
+pos= 785P    0.00    0.00    0.00    0.00    0.00    0.00    0.00    0.00 CC-ph: b ; max-st: 0
+
+****************************************************************************************************************************************************************

@@ -1,0 +1,40 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(cat:*)",
+      "Bash(timeout 60 python IDR_CCsearch.py)",
+      "Bash(if [ -f coiled_coil_with_disorder.csv ])",
+      "Bash(then wc -l coiled_coil_with_disorder.csv)",
+      "Bash(else echo \"まだ処理中...\")",
+      "Bash(fi)",
+      "Bash(if [ -f \"/Users/kodamatakumi/Desktop/IDR+CC DB/coiled_coil_with_disorder.csv\" ])",
+      "Bash(then wc -l \"/Users/kodamatakumi/Desktop/IDR+CC DB/coiled_coil_with_disorder.csv\")",
+      "Read(//Users/kodamatakumi/Desktop/**)",
+      "Bash(curl -s \"https://rest.uniprot.org/uniprotkb/search?query=keyword:KW-0175&format=list&size=1\")",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(grep:*)",
+      "Bash(wc:*)",
+      "Bash(ls:*)",
+      "Bash(head:*)",
+      "Bash(/bashes)",
+      "Bash(awk:*)",
+      "Bash(for:*)",
+      "Bash(do echo \"=== $file ===\")",
+      "Bash(tail:*)",
+      "Bash(done)",
+      "Bash(do if [ -f \"$file\" ])",
+      "Bash(then echo \"=== $file ===\")",
+      "Bash(ps:*)",
+      "Bash(lsof:*)",
+      "Bash(pwdx:*)",
+      "Bash(kill:*)",
+      "Bash(rm:*)",
+      "Bash(mv:*)",
+      "Bash(mkdir:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
