@@ -128,6 +128,7 @@ _load_location_classes()
 
 app = Flask(__name__)
 app.secret_key = SESSION_KEY
+MAX_UPLOAD_BYTES = 5 * 1024 * 1024  # 5 MB default guard
 app.config["MAX_CONTENT_LENGTH"] = MAX_UPLOAD_BYTES
 
 PROTEIN_DISPLAY_COLUMNS: List[Tuple[str, str]] = [
@@ -179,7 +180,6 @@ IDR_DISPLAY_COLUMNS: List[Tuple[str, str]] = PROTEIN_DISPLAY_COLUMNS + [
 ]
 
 PREDICTION_ROOT.mkdir(exist_ok=True)
-MAX_UPLOAD_BYTES = 5 * 1024 * 1024  # 5 MB default guard
 
 
 def _bundle_env() -> Dict[str, str]:
