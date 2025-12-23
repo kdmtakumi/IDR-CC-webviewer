@@ -67,10 +67,32 @@ h1 {
   align-items: flex-start;
 }
 
+.location-class-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 320px;
+}
+
 .location-class-label {
   min-width: 220px;
   font-weight: 600;
   color: #003a70;
+}
+
+.location-class-toggle {
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: #2d3a4f;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.location-class-toggle:hover {
+  border-color: #97b3d8;
+  background: #f2f6fb;
 }
 
 .location-class-tabs {
@@ -78,6 +100,10 @@ h1 {
   flex-direction: column;
   gap: 8px;
   min-width: 320px;
+}
+
+.location-class-tabs.is-collapsed {
+  display: none;
 }
 
 .location-class-tab {

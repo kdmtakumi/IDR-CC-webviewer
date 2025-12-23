@@ -43,6 +43,15 @@
           });
         });
       });
+      document.querySelectorAll('.location-class-row').forEach((row) => {
+        const toggle = row.querySelector('.location-class-toggle');
+        const tabs = row.querySelector('.location-class-tabs');
+        if (!toggle || !tabs) return;
+        toggle.addEventListener('click', () => {
+          tabs.classList.toggle('is-collapsed');
+          toggle.setAttribute('aria-expanded', String(!tabs.classList.contains('is-collapsed')));
+        });
+      });
     </script>
     {% block scripts %}{% endblock %}
   </body>

@@ -138,7 +138,10 @@
         />
       </div>
       <div class="filter-row filter-row-keywords location-class-row">
-        <label class="location-class-label">Subcellular class (20-cat)</label>
+        <div class="location-class-header">
+          <label class="location-class-label">Subcellular class (20-cat)</label>
+          <button type="button" class="location-class-toggle" aria-expanded="true">開閉</button>
+        </div>
         <div class="location-class-tabs" role="tablist" aria-label="Subcellular class 20 categories">
           <div class="location-class-tab {% if not location_class %}active{% endif %}" data-value="">
             <button type="button" class="location-class-tab-button" role="tab">
