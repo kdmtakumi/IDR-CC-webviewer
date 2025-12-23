@@ -76,6 +76,7 @@ h1 {
 .location-class-select {
   position: relative;
   min-width: 440px;
+  width: 440px;
 }
 
 .location-class-trigger {
@@ -334,6 +335,8 @@ h1 {
   cursor: pointer;
   border-radius: 4px;
   font-weight: 600;
+  color: #2d3a4f;
+  text-decoration: none;
 }
 
 .tab.active {
@@ -909,6 +912,7 @@ footer {
 
   .location-class-select {
     min-width: 100%;
+    width: 100%;
   }
 
   .location-class-panel {
