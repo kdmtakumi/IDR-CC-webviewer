@@ -736,6 +736,7 @@ def _swap_pair(row: Dict[str, Any]) -> None:
     swap_fields = [
         ("a_id", "b_id"),
         ("a_gene", "b_gene"),
+        ("a_len", "b_len"),
         ("a_idr_len", "b_idr_len"),
         ("a_cc_len", "b_cc_len"),
         ("a_loc", "b_loc"),
