@@ -29,27 +29,56 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-      document.querySelectorAll('.location-class-tabs').forEach((tabs) => {
-        const input = tabs.parentElement.querySelector('.location-class-input');
-        if (!input) return;
-        const items = tabs.querySelectorAll('.location-class-tab');
-        items.forEach((item) => {
-          const button = item.querySelector('.location-class-tab-button');
+      document.querySelectorAll('.location-class-select').forEach((select) => {
+        const trigger = select.querySelector('.location-class-trigger');
+        const label = select.querySelector('.location-class-trigger-label');
+        const menu = select.querySelector('.location-class-menu');
+        const input = select.querySelector('.location-class-input');
+        const options = select.querySelectorAll('.location-class-option');
+        if (!trigger || !label || !menu || !input) return;
+        const setActiveOption = (option) => {
+          options.forEach((item) => {
+            item.classList.remove('active');
+            const optionButton = item.querySelector('.location-class-option-button');
+            if (optionButton) {
+              optionButton.setAttribute('aria-selected', 'false');
+            }
+          });
+          option.classList.add('active');
+          const optionButton = option.querySelector('.location-class-option-button');
+          if (optionButton) {
+            optionButton.setAttribute('aria-selected', 'true');
+          }
+          const value = option.dataset.value || '';
+          input.value = value;
+          label.textContent = option.dataset.label || 'All';
+        };
+
+        const activeOption = select.querySelector('.location-class-option.active');
+        if (activeOption) {
+          setActiveOption(activeOption);
+        }
+
+        trigger.addEventListener('click', () => {
+          const isOpen = menu.classList.toggle('is-open');
+          trigger.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        options.forEach((option) => {
+          const button = option.querySelector('.location-class-option-button');
           if (!button) return;
           button.addEventListener('click', () => {
-            items.forEach((el) => el.classList.remove('active'));
-            item.classList.add('active');
-            input.value = item.dataset.value || '';
+            setActiveOption(option);
+            menu.classList.remove('is-open');
+            trigger.setAttribute('aria-expanded', 'false');
           });
         });
-      });
-      document.querySelectorAll('.location-class-row').forEach((row) => {
-        const toggle = row.querySelector('.location-class-toggle');
-        const tabs = row.querySelector('.location-class-tabs');
-        if (!toggle || !tabs) return;
-        toggle.addEventListener('click', () => {
-          tabs.classList.toggle('is-collapsed');
-          toggle.setAttribute('aria-expanded', String(!tabs.classList.contains('is-collapsed')));
+
+        document.addEventListener('click', (event) => {
+          if (!select.contains(event.target)) {
+            menu.classList.remove('is-open');
+            trigger.setAttribute('aria-expanded', 'false');
+          }
         });
       });
     </script>

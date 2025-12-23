@@ -67,50 +67,68 @@ h1 {
   align-items: flex-start;
 }
 
-.location-class-header {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  min-width: 320px;
-}
-
 .location-class-label {
   min-width: 220px;
   font-weight: 600;
   color: #003a70;
 }
 
-.location-class-toggle {
-  border: 1px solid #cbd5e1;
-  background: #ffffff;
-  color: #2d3a4f;
-  font-weight: 600;
-  padding: 6px 10px;
-  border-radius: 999px;
-  cursor: pointer;
+.location-class-select {
+  position: relative;
+  min-width: 320px;
 }
 
-.location-class-toggle:hover {
+.location-class-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background: #ffffff;
+  cursor: pointer;
+  color: #2d3a4f;
+  font-weight: 600;
+}
+
+.location-class-trigger:hover {
   border-color: #97b3d8;
   background: #f2f6fb;
 }
 
-.location-class-tabs {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  min-width: 320px;
+.location-class-trigger-caret {
+  margin-left: 10px;
+  font-size: 0.9rem;
 }
 
-.location-class-tabs.is-collapsed {
+.location-class-menu {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 6px;
+  box-shadow: 0 6px 18px rgba(31, 41, 55, 0.12);
   display: none;
+  z-index: 12;
 }
 
-.location-class-tab {
+.location-class-menu.is-open {
+  display: block;
+}
+
+.location-class-option {
   position: relative;
 }
 
-.location-class-tab-button {
+.location-class-option + .location-class-option {
+  margin-top: 6px;
+}
+
+.location-class-option-button {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -124,12 +142,12 @@ h1 {
   font-weight: 600;
 }
 
-.location-class-tab-button:hover {
+.location-class-option-button:hover {
   background: #e7edf7;
   border-color: #c8d4e7;
 }
 
-.location-class-tab.active .location-class-tab-button {
+.location-class-option.active .location-class-option-button {
   background: #2d7ff9;
   color: #fff;
   border-color: #2d7ff9;
@@ -157,8 +175,8 @@ h1 {
   z-index: 10;
 }
 
-.location-class-tab:hover .location-class-panel,
-.location-class-tab.active .location-class-panel {
+.location-class-option:hover .location-class-panel,
+.location-class-option.active .location-class-panel {
   display: block;
 }
 
@@ -884,7 +902,7 @@ footer {
     min-width: auto;
   }
 
-  .location-class-tabs {
+  .location-class-select {
     min-width: 100%;
   }
 

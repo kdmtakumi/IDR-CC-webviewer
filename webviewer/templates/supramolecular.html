@@ -148,39 +148,42 @@
           />
         </div>
         <div class="filter-row filter-row-keywords location-class-row">
-          <div class="location-class-header">
-            <label class="location-class-label">Subcellular class (20-cat)</label>
-            <button type="button" class="location-class-toggle" aria-expanded="true">開閉</button>
-          </div>
-          <div class="location-class-tabs" role="tablist" aria-label="Subcellular class 20 categories">
-            <div class="location-class-tab {% if not location_class %}active{% endif %}" data-value="">
-              <button type="button" class="location-class-tab-button" role="tab">
-                All
-                <span class="location-class-arrow">‹</span>
-              </button>
-              <div class="location-class-panel" role="tabpanel">
-                <div class="location-class-panel-title">All classes</div>
-                <div class="location-class-panel-body">Select a category to filter.</div>
-              </div>
-            </div>
-            {% for cid, label in LOCATION_CLASS_OPTIONS %}
-              <div class="location-class-tab {% if location_class == cid %}active{% endif %}" data-value="{{ cid }}">
-                <button type="button" class="location-class-tab-button" role="tab">
-                  {{ label }}
+          <label class="location-class-label">Subcellular class (20-cat)</label>
+          <div class="location-class-select" aria-label="Subcellular class 20 categories">
+            <button type="button" class="location-class-trigger" aria-expanded="false">
+              <span class="location-class-trigger-label">All</span>
+              <span class="location-class-trigger-caret">▾</span>
+            </button>
+            <div class="location-class-menu" role="listbox">
+              <div class="location-class-option {% if not location_class %}active{% endif %}" data-value="" data-label="All">
+                <button type="button" class="location-class-option-button" role="option" aria-selected="{% if not location_class %}true{% else %}false{% endif %}">
+                  All
                   <span class="location-class-arrow">‹</span>
                 </button>
                 <div class="location-class-panel" role="tabpanel">
-                  <div class="location-class-panel-title">{{ label }}</div>
-                  <ul class="location-class-list">
-                    {% for term in LOCATION_CLASS_TOKENS.get(cid, []) %}
-                      <li>{{ term }}</li>
-                    {% endfor %}
-                  </ul>
+                  <div class="location-class-panel-title">All classes</div>
+                  <div class="location-class-panel-body">Select a category to filter.</div>
                 </div>
               </div>
-            {% endfor %}
+              {% for cid, label in LOCATION_CLASS_OPTIONS %}
+                <div class="location-class-option {% if location_class == cid %}active{% endif %}" data-value="{{ cid }}" data-label="{{ label }}">
+                  <button type="button" class="location-class-option-button" role="option" aria-selected="{% if location_class == cid %}true{% else %}false{% endif %}">
+                    {{ label }}
+                    <span class="location-class-arrow">‹</span>
+                  </button>
+                  <div class="location-class-panel" role="tabpanel">
+                    <div class="location-class-panel-title">{{ label }}</div>
+                    <ul class="location-class-list">
+                      {% for term in LOCATION_CLASS_TOKENS.get(cid, []) %}
+                        <li>{{ term }}</li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                </div>
+              {% endfor %}
+            </div>
+            <input type="hidden" class="location-class-input" name="location_class" value="{{ location_class if location_class is not none else '' }}" />
           </div>
-          <input type="hidden" class="location-class-input" name="location_class" value="{{ location_class if location_class is not none else '' }}" />
           <label class="checkbox-inline" for="require_both_locations">
             <input type="checkbox" id="require_both_locations" name="require_both_locations" value="1" {% if require_both_locations %}checked{% endif %} />
             Both partners in class
