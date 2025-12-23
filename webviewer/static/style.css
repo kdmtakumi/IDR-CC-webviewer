@@ -70,7 +70,7 @@ h1 {
 .location-class-label {
   min-width: 220px;
   font-weight: 600;
-  color: #003a70;
+  color: #2d3a4f;
 }
 
 .location-class-select {
@@ -183,7 +183,7 @@ h1 {
 
 .location-class-panel-title {
   font-weight: 700;
-  color: #003a70;
+  color: #2d3a4f;
   margin-bottom: 6px;
 }
 
@@ -275,6 +275,20 @@ h1 {
 
 .filter-form button:hover {
   opacity: 0.9;
+}
+
+.filter-form .location-class-trigger,
+.filter-form .location-class-option-button {
+  background-color: #fff;
+  color: #2d3a4f;
+  border-color: #cbd5e1;
+}
+
+.filter-form .location-class-trigger:hover,
+.filter-form .location-class-option-button:hover {
+  opacity: 1;
+  background-color: #f7f9fc;
+  border-color: #b3c0d3;
 }
 
 .filter-form .clear-filter {
