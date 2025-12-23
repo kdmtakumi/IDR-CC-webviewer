@@ -6,4 +6,4 @@ matplotlib>=3.8
 numpy>=1.26
 Pillow>=10.0
 # Optional for DeepTMHMM overlay (downloads model on first run)
-biolib>=3.10
+biolib>=0.1.9

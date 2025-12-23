@@ -11,9 +11,21 @@ __pycache__/
 ver6_all_analysis/csv/
 ver6_all_analysis/png/
 webviewer/prediction_runs/
+CC_DB/
+IDR+CC_DB_ver1-4/
 IDR+CC_DB_ver5-/
+IDR_DB/
+IDR_ver4/
 IDR_ver9_original_analysis_1000scramble/
 IDR_sequences_30aa+_ver9.csv
+interaction_final_predictions/
 interaction_database/
 Reviewed human proteins/
 staged_backup.patch
+tmp_worktree/
+/all_human_protein_database*.csv
+/all_human_protein_database_with_IDR-CCinformation_10k_with_location*.csv
+/human_protein_details*.csv
+/protein_details_*.csv
+/proteins_*IDR*CC*.csv
+/uniprotkb_proteome_UP000005640_2025_10_29_canonical*.fasta
