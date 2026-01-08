@@ -408,11 +408,11 @@ class ProteinRecord:
     gene_name: str
     protein_name: str
     subcellular_location: str
-    subcellular_location_display: Optional[str] = None
     sequence_length: Optional[float]
     idr_percentage: Optional[float]
     cc_percentage: Optional[float]
     row: Optional[Dict[str, Any]] = None
+    subcellular_location_display: Optional[str] = None
 
 
 def get_db_connection():
