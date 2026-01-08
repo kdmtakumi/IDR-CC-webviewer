@@ -220,7 +220,7 @@
           <td class="col-wide">{{ record.protein_name }}</td>
           <td class="col-wide">
             {% if record.subcellular_location %}
-              <span class="location-text" title="{{ record.subcellular_location }}">{{ record.subcellular_location }}</span>
+              <span class="location-text" title="{{ record.subcellular_location }}">{{ record.subcellular_location_display or record.subcellular_location }}</span>
             {% else %}
               —
             {% endif %}

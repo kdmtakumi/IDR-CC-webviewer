@@ -126,6 +126,36 @@ def _load_location_classes() -> None:
 
 _load_location_classes()
 
+
+def _split_location_terms(raw: str) -> List[str]:
+    return [part.strip() for part in raw.split(",") if part.strip()]
+
+
+def _classify_location_term(term: str) -> Optional[int]:
+    lowered = term.lower()
+    for cid in sorted(LOCATION_CLASS_LABELS):
+        tokens = LOCATION_CLASS_TOKENS.get(cid, [])
+        for token in tokens:
+            if token.lower() in lowered:
+                return cid
+    return None
+
+
+def format_location_with_class(raw: str) -> str:
+    if not raw:
+        return ""
+    terms = _split_location_terms(raw)
+    if not terms:
+        return raw
+    annotated: List[str] = []
+    for term in terms:
+        cid = _classify_location_term(term)
+        if cid:
+            annotated.append(f"{term}({cid})")
+        else:
+            annotated.append(term)
+    return ", ".join(annotated)
+
 app = Flask(__name__)
 app.secret_key = SESSION_KEY
 MAX_UPLOAD_BYTES = 5 * 1024 * 1024  # 5 MB default guard
@@ -378,6 +408,7 @@ class ProteinRecord:
     gene_name: str
     protein_name: str
     subcellular_location: str
+    subcellular_location_display: Optional[str] = None
     sequence_length: Optional[float]
     idr_percentage: Optional[float]
     cc_percentage: Optional[float]
@@ -862,12 +893,14 @@ def fetch_protein_page(
         with conn.cursor(cursor_factory=RealDictCursor) as cur:
             cur.execute(select_sql, params + [per_page, offset])
             for row in cur.fetchall():
+                raw_location = row.get("subcellular_location", "") or ""
                 records.append(
                     ProteinRecord(
                         uniprot_id=row.get("uniprot_id", ""),
                         gene_name=row.get("gene_name", ""),
                         protein_name=row.get("protein_name", ""),
-                        subcellular_location=row.get("subcellular_location", "") or "",
+                        subcellular_location=raw_location,
+                        subcellular_location_display=format_location_with_class(raw_location),
                         sequence_length=row.get("sequence_length"),
                         idr_percentage=row.get("idr_percentage"),
                         cc_percentage=row.get("cc_percentage"),
