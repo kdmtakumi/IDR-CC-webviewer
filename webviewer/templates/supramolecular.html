@@ -48,6 +48,7 @@
               </option>
             {% endfor %}
           </select>
+          <span class="filter-break"></span>
           <label for="idr_len_min">IDR length (aa) ≥</label>
           <input
             type="number"
@@ -254,13 +255,13 @@
           <td class="col-small">{{ r.source }}</td>
           <td class="col-small"><a href="{{ url_for('protein_detail', uniprot_id=r.a_id, return_to=request.full_path) }}">{{ r.a_id }}</a></td>
           <td class="col-gene">{{ r.a_gene }}</td>
-          <td class="col-loc"><span class="location-text">{{ r.a_loc }}</span></td>
+          <td class="col-loc"><span class="location-text">{{ r.a_loc_display or r.a_loc }}</span></td>
           <td class="col-small">{{ r.a_len if r.a_len is not none else "" }}</td>
           <td class="col-small">{{ r.a_idr_len if r.a_idr_len is not none else "" }}</td>
           <td class="col-small">{{ r.a_cc_len if r.a_cc_len is not none else "" }}</td>
           <td class="col-small"><a href="{{ url_for('protein_detail', uniprot_id=r.b_id, return_to=request.full_path) }}">{{ r.b_id }}</a></td>
           <td class="col-gene">{{ r.b_gene }}</td>
-          <td class="col-loc"><span class="location-text">{{ r.b_loc }}</span></td>
+          <td class="col-loc"><span class="location-text">{{ r.b_loc_display or r.b_loc }}</span></td>
           <td class="col-small">{{ r.b_len if r.b_len is not none else "" }}</td>
           <td class="col-small">{{ r.b_idr_len if r.b_idr_len is not none else "" }}</td>
           <td class="col-small">{{ r.b_cc_len if r.b_cc_len is not none else "" }}</td>

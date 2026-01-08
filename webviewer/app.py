@@ -1544,6 +1544,8 @@ def supramolecular():
             rows = cur.fetchall()
             for row in rows:
                 row = _orient_pair(row, target_ids)
+                a_loc = row.get("a_loc") or ""
+                b_loc = row.get("b_loc") or ""
                 records.append(
                     {
                         "source": row.get("source"),
@@ -1553,13 +1555,15 @@ def supramolecular():
                         "a_len": row.get("a_len"),
                         "a_idr_len": row.get("a_idr_len"),
                         "a_cc_len": row.get("a_cc_len"),
-                        "a_loc": row.get("a_loc"),
+                        "a_loc": a_loc,
+                        "a_loc_display": format_location_with_class(a_loc),
                         "b_id": row.get("b_id"),
                         "b_gene": row.get("b_gene"),
                         "b_len": row.get("b_len"),
                         "b_idr_len": row.get("b_idr_len"),
                         "b_cc_len": row.get("b_cc_len"),
-                        "b_loc": row.get("b_loc"),
+                        "b_loc": b_loc,
+                        "b_loc_display": format_location_with_class(b_loc),
                     }
                 )
 
@@ -1793,6 +1797,8 @@ def supramolecular_reviewed():
             rows = cur.fetchall()
             for row in rows:
                 row = _orient_pair(row, target_ids)
+                a_loc = row.get("a_loc") or ""
+                b_loc = row.get("b_loc") or ""
                 records.append(
                     {
                         "source": row.get("source"),
@@ -1802,13 +1808,15 @@ def supramolecular_reviewed():
                         "a_len": row.get("a_len"),
                         "a_idr_len": row.get("a_idr_len"),
                         "a_cc_len": row.get("a_cc_len"),
-                        "a_loc": row.get("a_loc"),
+                        "a_loc": a_loc,
+                        "a_loc_display": format_location_with_class(a_loc),
                         "b_id": row.get("b_id"),
                         "b_gene": row.get("b_gene"),
                         "b_len": row.get("b_len"),
                         "b_idr_len": row.get("b_idr_len"),
                         "b_cc_len": row.get("b_cc_len"),
-                        "b_loc": row.get("b_loc"),
+                        "b_loc": b_loc,
+                        "b_loc_display": format_location_with_class(b_loc),
                     }
                 )
 

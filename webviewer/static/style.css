@@ -261,6 +261,11 @@ h1 {
   min-width: 260px;
 }
 
+.filter-form .filter-break {
+  flex-basis: 100%;
+  height: 0;
+}
+
 .filter-form .range-separator {
   padding: 0 4px;
   color: #555;
