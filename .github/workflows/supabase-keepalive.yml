@@ -1,0 +1,37 @@
+name: Supabase Keepalive
+
+on:
+  schedule:
+    - cron: "15 3 * * *" # daily 03:15 UTC
+  workflow_dispatch:
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Insert keepalive row
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          if [ -z "$SUPABASE_URL" ] || [ -z "$SUPABASE_ANON_KEY" ]; then
+            echo "Missing SUPABASE_URL or SUPABASE_ANON_KEY secrets." >&2
+            exit 1
+          fi
+          curl -sS -f \
+            -X POST "$SUPABASE_URL/rest/v1/github_keepalive" \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $SUPABASE_ANON_KEY" \
+            -H "Content-Type: application/json" \
+            -H "Prefer: return=minimal" \
+            -d '[{"response":"pong","source":"github_action_keepalive"}]'
+      - name: Cleanup old rows (30+ days)
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
+          SUPABASE_ANON_KEY: ${{ secrets.SUPABASE_ANON_KEY }}
+        run: |
+          cutoff=$(date -u -d '30 days ago' +"%Y-%m-%dT%H:%M:%SZ")
+          curl -sS -f \
+            -X DELETE "$SUPABASE_URL/rest/v1/github_keepalive?ping_at=lt.$cutoff" \
+            -H "apikey: $SUPABASE_ANON_KEY" \
+            -H "Authorization: Bearer $SUPABASE_ANON_KEY"
